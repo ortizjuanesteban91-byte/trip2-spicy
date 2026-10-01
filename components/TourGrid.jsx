@@ -7,7 +7,7 @@ export default function TourGrid({ tours, cats: C, initial }) {
   const cats = [["all", "All"], ...C];
   const [c, setC] = useState(initial);
   const [qq, setQq] = useState("");
-  const list = tours.filter((t) => (c === "all" || t.cat === c) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
+  const list = tours.filter((t) => (c === "all" || t.cats.includes(c)) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
   return (
     <>
       <div className="mt-8 flex flex-wrap justify-center gap-2">
