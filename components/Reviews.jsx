@@ -1,4 +1,4 @@
-import { getReviews, GOOGLE_WRITE } from "@/lib/reviews";
+import { getReviews, GOOGLE_WRITE, TA_WRITE } from "@/lib/reviews";
 const Stars = ({ n, cls = "" }) => <span className={`tracking-tight text-amber-400 ${cls}`} aria-label={`${n} out of 5`}>{"★".repeat(Math.round(n))}<span className="text-slate-300">{"★".repeat(5 - Math.round(n))}</span></span>;
 const SRC = { Google: "bg-blue-50 text-blue-700", TripAdvisor: "bg-emerald-50 text-emerald-700", Direct: "bg-amber-50 text-amber-700", Other: "bg-slate-100 text-slate-600" };
 const GoogleWord = () => <span className="text-xl font-extrabold tracking-tight" aria-label="Google"><span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span></span>;
@@ -20,7 +20,8 @@ export default async function Reviews() {
               <p className="mt-2 text-sm font-bold text-ink/60">{count} Google reviews</p>
               <a href={google} target="_blank" rel="noopener noreferrer" className="mt-4 w-full rounded-full bg-white px-4 py-2.5 text-sm font-extrabold text-brand ring-1 ring-sky-200 hover:bg-sky-50">Read all reviews ↗</a>
               <a href={GOOGLE_WRITE} target="_blank" rel="noopener noreferrer" className="mt-2 w-full rounded-full bg-brand px-4 py-2.5 text-sm font-extrabold text-white hover:bg-brand-hover">Write a review ★</a>
-              {tripadvisor && <a href={tripadvisor} target="_blank" rel="noopener noreferrer" className="mt-2 w-full rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-extrabold text-white hover:bg-emerald-700">See us on TripAdvisor ↗</a>}
+              {tripadvisor && <a href={tripadvisor} target="_blank" rel="noopener noreferrer" className="mt-2 w-full rounded-full bg-white px-4 py-2.5 text-sm font-extrabold text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-50">See us on TripAdvisor ↗</a>}
+              <a href={TA_WRITE} target="_blank" rel="noopener noreferrer" className="mt-2 w-full rounded-full bg-emerald-600 px-4 py-2.5 text-sm font-extrabold text-white hover:bg-emerald-700">Review us on TripAdvisor ★</a>
             </div>
           )}
           {items.length > 0 && (
