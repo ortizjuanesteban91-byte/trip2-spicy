@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
 import { whatsappLink } from "@/lib/site";
+import { PUNTA_CANA_HOTELS as PC, MICHES_HOTELS as MICHES } from "@/data/hotels";
 import { CalendarDays, Users, Sun, BedDouble, Zap, MessageCircle, ShieldCheck, ChevronDown } from "lucide-react";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
-const MICHES = ["Viva Miches by Wyndham", "Marriott Miches Beach Resort", "Club Med Miches Playa Esmeralda", "Zemi Miches Beach Resort by Hilton", "Dreams Playa Esmeralda by Hyatt", "Secrets Playa Esmeralda"];
-const PC = ["Barceló Bávaro Palace", "Breathless Punta Cana", "Catalonia Bávaro", "Club Med Punta Cana", "Dreams Macao Beach", "Dreams Onyx", "Excellence Punta Cana", "Grand Palladium Punta Cana", "Hard Rock Hotel & Casino Punta Cana", "Hyatt Ziva Cap Cana", "Iberostar Selection Bávaro", "Lopesan Costa Bávaro", "Majestic Elegance Punta Cana", "Meliá Caribe Beach", "Nickelodeon Hotels & Resorts Punta Cana", "Occidental Punta Cana", "Paradisus Palma Real", "Riu Palace Bávaro", "Riu Palace Punta Cana", "Riu República", "Royalton Bávaro", "Secrets Cap Cana", "TRS Turquesa", "The Westin Puntacana Resort", "Villa / Airbnb / other"];
 const field = "relative";
 const sel = "w-full appearance-none rounded-2xl border border-sky-200 bg-sky-50/70 py-4 pl-12 pr-10 text-[15px] text-ink";
 const Ic = ({ children }) => <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-brand">{children}</span>;
@@ -53,10 +52,9 @@ export default function BookingBox({ tour }) {
                 </select><Chev /></div>
             ))}
           </div>
-          <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>Morning</option><option>Afternoon</option></select><Chev /></div>
+          <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>{miches ? "Morning (7AM)" : "Morning"}</option><option>{miches ? "Afternoon (1PM)" : "Afternoon"}</option></select><Chev /></div>
           <div className={field}><Ic><BedDouble className="h-5 w-5" /></Ic><select name="hotel" required value={hotel} onChange={(e) => setHotel(e.target.value)} className={sel}><option value="" disabled>Hotels*</option>
-            <optgroup label={miches ? "Miches" : "Bávaro / Punta Cana"}>{(miches ? MICHES : PC).map((h) => <option key={h}>{h}</option>)}</optgroup>
-            <optgroup label={miches ? "Bávaro / Punta Cana" : "Miches"}>{(miches ? PC : MICHES).map((h) => <option key={h}>{h}</option>)}</optgroup>
+            {(miches ? MICHES : PC).map((h) => <option key={h}>{h}</option>)}
             <option>Other</option></select><Chev /></div>
           {hotel === "Other" && <input name="hotelOther" required placeholder="Hotel / address *" className={plain} />}
           <div className="grid grid-cols-2 gap-3"><input name="first" required placeholder="First name *" className={plain} /><input name="last" required placeholder="Last name *" className={plain} /></div>
