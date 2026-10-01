@@ -1,22 +1,25 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { tours, tourBySlug, grad, catOf, CATS } from "@/lib/content";
+import { tours as baseTours, grad, catOf, CATS } from "@/lib/content";
+import { allTours, getTour } from "@/lib/tours";
 import { SITE, whatsappLink } from "@/lib/site";
 import BookingBox from "@/components/BookingBox";
 import Sections from "@/components/Sections";
 import { Clock, Users, Car, Languages } from "@/components/Icon";
 import { Zap } from "lucide-react";
-export function generateStaticParams() { return tours.map((t) => ({ slug: t.slug })); }
+export const revalidate = 60;
+export function generateStaticParams() { return baseTours.map((t) => ({ slug: t.slug })); }
 export async function generateMetadata({ params }) {
-  const t = tourBySlug((await params).slug);
+  const t = await getTour((await params).slug);
   if (!t) return {};
   const url = t.canonical || `${SITE}/tour/${t.slug}/`;
   return { title: t.metaTitle, description: t.meta, alternates: { canonical: url }, openGraph: { title: t.metaTitle, description: t.meta, url } };
 }
 export default async function Tour({ params }) {
-  const t = tourBySlug((await params).slug);
+  const t = await getTour((await params).slug);
   if (!t) notFound();
-  const i = tours.indexOf(t);
+  const i = baseTours.findIndex((x) => x.slug === t.slug);
+  const ph = t.photos || [];
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
   const ld = [t.schema]; // JSON-LD copied from the zip SEO Settings (TouristTrip + BreadcrumbList + FAQPage)
@@ -29,9 +32,9 @@ export default async function Tour({ params }) {
         <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
         <a href="#book" className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover"><Zap className="h-4 w-4" />BOOK NOW</a>
         <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
-          <div className={`h-64 rounded-2xl bg-gradient-to-br sm:col-span-2 sm:row-span-2 sm:h-auto ${grad(i)}`} role="img" aria-label={t.alts[0] || t.h1} />
-          <div className={`h-32 rounded-2xl bg-gradient-to-br sm:col-span-2 ${grad(i + 1)}`} role="img" aria-label={t.alts[1] || t.h1} />
-          <div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 2)}`} /><div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 3)}`} />
+          {[["h-64 sm:col-span-2 sm:row-span-2 sm:h-auto", 0, t.alts[0] || t.h1], ["h-32 sm:col-span-2", 1, t.alts[1] || t.h1], ["h-32", 2, t.h1], ["h-32", 3, t.h1]].map(([c, k, alt]) => (
+            <div key={k} className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${c} ${grad(i + k)}`} role="img" aria-label={alt}>{ph[k] && <img src={ph[k]} alt={alt} loading={k ? "lazy" : "eager"} className="absolute inset-0 h-full w-full object-cover" />}</div>
+          ))}
         </div>
         <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
           <div className="min-w-0">

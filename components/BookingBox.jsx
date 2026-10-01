@@ -29,9 +29,10 @@ export default function BookingBox({ tour }) {
     if (!lines.length || tooFew || closed) return;
     setState("sending");
     const f = Object.fromEntries(new FormData(e.target));
-    const details = { Tour: tour.name, Date: f.date, Time: f.time, Hotel: f.hotel === "Other" ? f.hotelOther : f.hotel, Guests: String(people), Order: lines.map((l) => `${l.label} · ${l.qty} × ${money(l.price)} = ${money(l.qty * l.price)}`).join(" | "), Total: money(total) };
     try {
-      const r = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind: "booking", name: `${f.first} ${f.last}`.trim(), email: f.email, phone: f.phone, message: f.notes, website: f.website, details }) });
+      const r = await fetch("/api/book", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tour: tour.slug, date: f.date, time: f.time, hotel: f.hotel === "Other" ? f.hotelOther : f.hotel, qty: q, name: `${f.first} ${f.last}`.trim(), email: f.email, phone: f.phone, notes: f.notes, website: f.website }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.url) { window.location.href = j.url; return; }
       setState(r.ok ? "done" : "error");
     } catch { setState("error"); }
   }

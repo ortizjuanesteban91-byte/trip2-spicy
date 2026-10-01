@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { tours, catOf, catsOf, CATS } from "@/lib/content";
+import { allTours } from "@/lib/tours";
 import { SITE } from "@/lib/site";
 import TourGrid from "@/components/TourGrid";
 
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }) {
 }
 export default async function Page({ params }) {
   const { cat } = await params; const c = find(cat); if (!c) notFound();
-  const list = tours.map((t, i) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, from: t.from, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i }));
+  const list = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, from: t.from, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i: tours.findIndex((x) => x.slug === t.slug) }));
   return (
     <main>
       <section className="bg-brand px-5 py-16 text-center text-white"><h1 className="text-4xl font-black" data-aos="zoom-in">{c[1]}</h1><p className="mx-auto mt-3 max-w-2xl text-sm text-white/85">{c[2]}</p></section>

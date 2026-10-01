@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { photo } from "@/data/photos";
-import { tours as allTours } from "@/lib/content";
+import { allTours as getAll } from "@/lib/tours";
+export const revalidate = 60;
 import { trust, categories, advantages, reviews, itinerary, guides, whatsapp } from "@/data/site";
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", nightlife: "coco-bongo", miches: "atv-miches" };
 const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", family: "family-experiences", eco: "eco-nature", culture: "culture-city", nightlife: "shows-nightlife", miches: "things-to-do-in-miches" };
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-brand/70">{children}</p>;
 const H2 = ({ children }) => <h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2>;
 const Btn = ({ href, children, ghost }) => <Link href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-white/20 text-white backdrop-blur hover:bg-white/30" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</Link>;
-export default function Home() {
+export default async function Home() {
+  const allTours = await getAll();
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
