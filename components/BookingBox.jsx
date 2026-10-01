@@ -48,7 +48,7 @@ export default function BookingBox({ tour }) {
               <div key={i} className={field}><Ic><Users className="h-5 w-5" /></Ic>
                 <select value={q[i] || 0} onChange={(e) => setQ((s) => ({ ...s, [i]: Number(e.target.value) }))} className={sel + " text-sm"} aria-label={o.label}>
                   <option value={0}>{o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")}</option>
-                  {Array.from({ length: 10 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(o.price)}</option>)}
+                  {Array.from({ length: 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(o.price)}</option>)}
                 </select><Chev /></div>
             ))}
           </div>
