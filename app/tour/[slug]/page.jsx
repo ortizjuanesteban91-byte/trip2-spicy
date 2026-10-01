@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { tours, tourBySlug, grad } from "@/lib/content";
+import { tours, tourBySlug, grad, catOf, CATS } from "@/lib/content";
 import { SITE, whatsappLink } from "@/lib/site";
 import BookingBox from "@/components/BookingBox";
 import Sections from "@/components/Sections";
@@ -15,6 +15,7 @@ export default async function Tour({ params }) {
   const t = tourBySlug((await params).slug);
   if (!t) notFound();
   const i = tours.indexOf(t);
+  const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
   const faq = t.sections.find((s) => s.type === "faq");
   const ld = [
@@ -24,9 +25,9 @@ export default async function Tour({ params }) {
   return (
     <main>
       {ld.map((o, k) => <script key={k} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />)}
-      <div className="bg-sky-50/80 py-3"><div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-5 text-xs text-ink/60"><p><Link href="/" className="hover:text-brand">Home</Link> › <Link href="/tours" className="hover:text-brand">Excursions</Link> › {t.cat} › {t.name}</p><p className="flex flex-wrap gap-2 font-bold"><span className="rounded-full bg-white px-3 py-1 text-brand">{duration}</span><span className="rounded-full bg-white px-3 py-1 text-amber-700">Free Cancellation up to 24h</span></p></div></div>
+      <div className="bg-sky-50/80 py-3"><div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-5 text-xs text-ink/60"><p><Link href="/" className="hover:text-brand">Home</Link> › <Link href="/tours" className="hover:text-brand">Excursions</Link> › {catName} › {t.name}</p><p className="flex flex-wrap gap-2 font-bold"><span className="rounded-full bg-white px-3 py-1 text-brand">{duration}</span><span className="rounded-full bg-white px-3 py-1 text-amber-700">Free Cancellation up to 24h</span></p></div></div>
       <div className="mx-auto max-w-6xl px-5 pt-8">
-        <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{t.cat}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
+        <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{catName}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
         <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
         <a href="#book" className="mt-5 inline-block rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover">⚡ BOOK NOW</a>
         <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
