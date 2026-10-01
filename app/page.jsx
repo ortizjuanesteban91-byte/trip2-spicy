@@ -56,8 +56,10 @@ export default function Home() {
         <p className="mt-4 text-center text-sm font-bold text-ink/70">4.9 / 5 · Google Reviews • Tripadvisor Certificate of Excellence • Trustpilot · 1,200+ Travelers</p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">{reviews.map(([q, n, t], i) => <figure key={n} data-aos="zoom-in" data-aos-delay={i * 120} className="rounded-2xl bg-white p-6 shadow ring-1 ring-sky-100"><p className="text-amber-500">★★★★★</p><blockquote className="mt-3 text-sm leading-6 text-ink/80">"{q}"</blockquote><figcaption className="mt-4"><b className="block">{n}</b><span className="text-xs text-ink/60">{t}</span></figcaption></figure>)}</div>
       </section>
-      <section className="bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-20 text-white">
-        <div className="mx-auto max-w-3xl text-center" data-aos="zoom-in">
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-20 text-white">
+        {photo("saona-island") && <img src={photo("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 to-cyan-800/70" />
+        <div className="relative mx-auto max-w-3xl text-center" data-aos="zoom-in">
           <p className="text-[11px] font-extrabold tracking-[.25em] text-sky-100">THE #1 MUST-DO EXCURSION</p>
           <h2 className="mt-2 text-4xl font-black md:text-5xl">ESCAPE TO SAONA ISLAND</h2>
           <h3 className="mt-3 text-xl font-bold text-sky-100">Turquoise water. White-sand beaches. Caribbean paradise.</h3>
@@ -67,7 +69,7 @@ export default function Home() {
         </div>
       </section>
       <section className="grid md:grid-cols-2">
-        <div className="min-h-72 overflow-hidden"><div data-aos="zoom-out-right" className="h-full min-h-72 bg-gradient-to-br from-emerald-300 to-green-800" /></div>
+        <div className="min-h-72 overflow-hidden"><div className="relative h-full min-h-72"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-green-800" />{photo("montana-redonda-atv-miches") && <img data-aos="zoom-out-right" src={photo("montana-redonda-atv-miches")} alt="Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}</div></div>
         <div className="px-6 py-14 md:px-14" data-aos="zoom-out-left"><p className="text-[11px] font-extrabold tracking-[.25em] text-brand/70">UNSPOILED DOMINICAN REPUBLIC</p><h3 className="mt-1 text-sm font-bold text-ink/60">Montaña Redonda & Emerald Coast</h3><p className="mt-5 text-[11px] font-extrabold tracking-[.25em] text-brand/70">OFF THE BEATEN PATH</p><h2 className="text-4xl font-black text-brand">DISCOVER MICHES</h2><p className="mt-3 text-sm leading-6 text-ink/75">Go beyond the typical resort corridors and discover the raw ecological beauty, virgin beaches, towering mountaintop swings, and authentic fishing communities of the emerging Miches coastline.</p><ul className="mt-4 grid grid-cols-2 gap-2 text-sm font-bold text-brand">{["Montaña Redonda Swings", "ATV Mountain Trails", "Untouched Emerald Coast", "Laguna Limón Nature", "Private Guided Excursions"].map((x) => <li key={x}>✓ {x}</li>)}</ul><div className="mt-6"><Btn href="/tours?dest=miches">EXPLORE MICHES TOURS</Btn></div></div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16">
