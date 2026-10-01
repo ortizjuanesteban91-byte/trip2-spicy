@@ -10,7 +10,7 @@ export function generateStaticParams() { return tours.map((t) => ({ slug: t.slug
 export async function generateMetadata({ params }) {
   const t = tourBySlug((await params).slug);
   if (!t) return {};
-  const url = `${SITE}/tour/${t.slug}/`;
+  const url = t.canonical || `${SITE}/tour/${t.slug}/`;
   return { title: t.metaTitle, description: t.meta, alternates: { canonical: url }, openGraph: { title: t.metaTitle, description: t.meta, url } };
 }
 export default async function Tour({ params }) {
@@ -19,11 +19,7 @@ export default async function Tour({ params }) {
   const i = tours.indexOf(t);
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
-  const faq = t.sections.find((s) => s.type === "faq");
-  const ld = [
-    { "@context": "https://schema.org", "@type": "TouristTrip", name: t.h1, description: t.meta, url: `${SITE}/tour/${t.slug}/`, offers: t.from ? { "@type": "Offer", price: String(t.from), priceCurrency: "USD", availability: "https://schema.org/InStock" } : undefined, provider: { "@type": "TravelAgency", name: "Trip2 Punta Cana" } },
-    faq && { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
-  ].filter(Boolean);
+  const ld = [t.schema]; // JSON-LD copied from the zip SEO Settings (TouristTrip + BreadcrumbList + FAQPage)
   return (
     <main>
       {ld.map((o, k) => <script key={k} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />)}

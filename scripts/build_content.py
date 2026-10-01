@@ -120,6 +120,23 @@ def fix_family(t):
     if isinstance(t, list): return [fix_family(x) for x in t]
     if isinstance(t, dict): return {k: fix_family(v) for k, v in t.items()}
     return t
+def parse_schema(path):
+    txt = pdf(path)
+    i = txt.find("Schema JSON-LD")
+    if i < 0: return None
+    body = txt[i + len("Schema JSON-LD"):]
+    lines = [l for l in body.split("\n") if not re.match(r"^\s*(TRIP2 ·|\d+\s*$)", l)]
+    raw = " ".join(l.strip() for l in lines)
+    a = raw.find("{"); b = raw.rfind("}")
+    if a < 0 or b < 0: return None
+    raw = raw[a:b + 1]
+    for fix in (lambda r: r, lambda r: re.sub(r"(\}\s+)(?=\"@type\": \"Question\")", "}, { ", re.sub(r",\s*\}\s*,\s*\{\s*\"name\"", ', "name"', r)), lambda r: re.sub(r",\s*\}\s*,\s*\{\s*\"name\"", ', "name"', r), lambda r: re.sub(r"\}\s*,\s*\{\s*(\"(?:name|text|@type|acceptedAnswer)\")", r", \1", r)):
+        try: return json.loads(fix(raw))
+        except Exception: pass
+    try:
+        import json_repair
+        return json_repair.loads(raw)
+    except Exception: return None
 def build(kind, folder, copyname):
     seo = parse_seo(os.path.join(folder, "2 - SEO Settings.pdf"))
     slug = join(seo.get("URL slug", [])).strip("/").split("/")[-1]
@@ -160,7 +177,7 @@ def build(kind, folder, copyname):
     allp = [int(x.replace(",", "")) for x in re.findall(r"\$\s?(\d[\d,]*)", prices or meta)]
     d = {"slug": slug, "title": title, "metaTitle": title, "meta": meta, "h1": h1, "keyword": join(seo.get("Focus keyword", [])),
          "intro": paras(intro_lines), "sections": sections, "prices": prices, "from": FROM.get(os.path.basename(folder)[:2], next((a for a in allp if a), None)), "options": options(os.path.basename(folder)[:2], prices), "min2": os.path.basename(folder)[:2] in MIN2,
-         "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2], "cat": (lambda b: "Miches" if "Miches" in b else "Boats & Water" if "Boats" in b else "Adventures" if "Adventures" in b else "Day Trips")(join(seo.get("Breadcrumb", [])) or "")}
+         "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2], "schema": parse_schema(os.path.join(folder, "2 - SEO Settings.pdf")), "canonical": join(seo.get("Canonical", [])).replace(" ", ""), "cat": (lambda b: "Miches" if "Miches" in b else "Boats & Water" if "Boats" in b else "Adventures" if "Adventures" in b else "Day Trips")(join(seo.get("Breadcrumb", [])) or "")}
     return fix_family(d)
 tours, posts, warn = [], [], []
 for pack, sub in [("45119b76-Trip2_31_Tours_PDF5", "Trip2_31_Tours"), ("82b38293-Trip2_RunnersAdventures_Tours_PDF5", "Trip2_Ohana_Tours")]:
@@ -177,8 +194,20 @@ for f in sorted(os.listdir(base)):
     if os.path.isdir(p):
         b = build("blog", p, "1 - Blog Copy.pdf"); b["name"] = f[5:]; posts.append(b)
         if not b["slug"] or not b["sections"]: warn.append(("post", f, bool(b["slug"]), len(b["sections"]), len(b["intro"])))
+def sane(t):
+    sc = t.get("schema")
+    if not sc: return
+    faq = next((x["faq"] for x in t["sections"] if x["type"] == "faq"), [])
+    for node in sc.get("@graph", []):
+        if node.get("@type") == "FAQPage":
+            me = node.get("mainEntity", [])
+            ok = len(me) == len(faq) and all(isinstance(q, dict) and q.get("name") and isinstance(q.get("acceptedAnswer"), dict) and q["acceptedAnswer"].get("text") for q in me)
+            if not ok:
+                node["mainEntity"] = [{"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]
+                t["schema_faq_rebuilt"] = True
+for t in tours: sane(t)
 tours=[t for t in tours if t["slug"] and t["sections"] and t["intro"]]
 os.makedirs("/home/claude/trip2-spicy/data", exist_ok=True)
 json.dump(tours, open("/home/claude/trip2-spicy/data/tours.json", "w"), ensure_ascii=False, indent=1)
 json.dump(posts, open("/home/claude/trip2-spicy/data/posts.json", "w"), ensure_ascii=False, indent=1)
-print(len(tours), "tours", len(posts), "posts"); print("warnings:", warn)
+print("faq rebuilt:", [t["slug"] for t in tours if t.get("schema_faq_rebuilt")]); print("no schema:", [t["slug"] for t in tours if not t.get("schema")], [t["slug"] for t in posts if not t.get("schema")]); print(len(tours), "tours", len(posts), "posts"); print("warnings:", warn)

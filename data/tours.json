@@ -189,6 +189,142 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Catamaran Party Boat",
   "num": "01",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/catamaran-party-boat/#trip",
+     "name": "Catamaran Party Boat Punta Cana",
+     "description": "Catamaran Punta Cana party boat off Bávaro: reef snorkeling, natural pool, open bar and music. Hotel pickup, 10 AM or 1 PM. Free cancellation.",
+     "url": "https://www.trip2puntacana.com/tour/catamaran-party-boat/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "59",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catamaran-party-boat/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "35",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catamaran-party-boat/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catamaran-party-boat/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Catamaran Party Boat",
+       "item": "https://www.trip2puntacana.com/tour/catamaran-party-boat/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Kids 4–9 are $35, infants 0–3 ride free, and everyone   10+ pays the adult price of $59. Life vests are on board."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM or 1:00 PM. We send your exact hotel pickup time on WhatsApp the night before."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I need to swim?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Life vests are provided at the snorkel stop."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What drinks are included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An open bar with rum, beer, soda, juice and water, served after the snorkel stop, plus nachos with salsa and fresh fruit."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 1.5 to 2 hours on the catamaran, with 20 to 30 minutes of snorkeling and 20 to 30 minutes at the natural pool."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can we book the whole boat?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ask on WhatsApp for a private-group quote."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour. Private groups and private bookings: up to 72 hours before."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/catamaran-party-boat/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Catamaran Party Boat Punta Cana"
@@ -374,6 +510,138 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Catamaran + Parasail + Snorkel",
   "num": "02",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/catamaran-parasailingsnorkeling/#trip",
+     "name": "Catamaran + Parasail + Snorkel Combo",
+     "description": "Catamaran, parasailing and snorkeling in Punta Cana in one half day off Bávaro. Drinks on board, hotel pickup, 10 AM or 12 PM. $125 per person, min. 2.",
+     "url": "https://www.trip2puntacana.com/tour/catamaran-parasailingsnorkeling/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Per person (minimum 2)",
+       "price": "125",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catamaran-parasailingsnorkeling/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Catamaran + Parasail + Snorkel",
+       "item": "https://www.trip2puntacana.com/tour/catamaran-parasailingsnorkeling/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "9 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum number of people?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, bookings start at 2 people ($125 per person)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM or 12:00 PM. We send your exact pickup time the night before."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the parasail flight?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 8 minutes in the air."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: up to 450 lb (204 kg) combined per flight and 264 lb (120 kg) per person."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are drinks included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: rum, beer, soft drinks, juice and water on board."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I fly alone?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo or tandem, depending on weight and wind on the day."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/catamaran-parasailing-snorkeling/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Catamaran + Parasail + Snorkel Combo"
@@ -559,9 +827,126 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Hip Hop Party Boat",
   "num": "03",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/hip-hop-party-boat/#trip",
+     "name": "Hip Hop Party Boat Punta Cana",
+     "description": "Adults-only hip hop, reggaeton and R&B catamaran in Punta Cana: open bar, reef snorkel, natural pool and water slide. Hotel pickup. $65 per person.",
+     "url": "https://www.trip2puntacana.com/tour/hip-hop-party-boat/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (18+)",
+       "price": "65",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/hip-hop-party-boat/"
+      }
+     ],
+     "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": 18
+     }
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Hip Hop Party Boat",
+       "item": "https://www.trip2puntacana.com/tour/hip-hop-party-boat/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is it really adults only?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 18+ with ID."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the cruise?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 3 hours on the boat, including the snorkel stop and the natural pool."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is food included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BBQ and hookah are on-board extras, not included."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can we book the whole boat?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for private groups of 11–20 or 21–49 people. Ask on WhatsApp for a quote."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM or 1:00 PM. We send your exact pickup time the evening before."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour. Private groups and private bookings: up to 72 hours before."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/hip-hop-party-boat/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
-  "name": "Hip Hop Party Boat Punta Cana"
+  "name": "Hip Hop Party Boat Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "speedboat",
@@ -753,6 +1138,154 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Speedboat",
   "num": "04",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/speedboat/#trip",
+     "name": "Speedboat Punta Cana",
+     "description": "Drive your own speedboat along the Bávaro coast of Punta Cana and snorkel a reef. Guide boat, gear, pickup. From $50 per person (Double boat). Min. 2.",
+     "url": "https://www.trip2puntacana.com/tour/speedboat/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, per boat)",
+       "price": "75",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/speedboat/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, per boat)",
+       "price": "99",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/speedboat/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      },
+      {
+       "@type": "Offer",
+       "name": "Family (2 adults + 1 child, up to 3 people), per boat",
+       "price": "160",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/speedboat/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Speedboat",
+       "item": "https://www.trip2puntacana.com/tour/speedboat/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do I need a boat licence?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A guide boat leads the group."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum driver age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "18. Kids ride as passengers from age 5."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many people per boat?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single 1 person ($75), Double 2 people ($99), Family 2 adults + 1 child, up to 3 people ($160)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum number of people?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 2 people per booking. Book a Double, a Family boat or 2 Singles."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What does the Family boat include?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One boat for 2 adults + 1 child (up to 3 people), at $160."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 3 hours."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/speedboat/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Speedboat Punta Cana"
@@ -944,9 +1477,154 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Speedboat + Parasail + Snorkel",
   "num": "05",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/speedboat-parasailingsnorkeling/#trip",
+     "name": "Speedboat + Parasail + Snorkel Combo",
+     "description": "Speedboat + parasailing + snorkeling Punta Cana combo: drive your own boat, parasail over Bávaro, snorkel a reef. Hotel pickup. From $125 per person.",
+     "url": "https://www.trip2puntacana.com/tour/speedboat-parasailingsnorkeling/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Double (2 people)",
+       "price": "250",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/speedboat-parasailingsnorkeling/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      },
+      {
+       "@type": "Offer",
+       "name": "Family (3 adults + 1 child)",
+       "price": "299",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/speedboat-parasailingsnorkeling/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Speedboat + Parasail + Snorkel",
+       "item": "https://www.trip2puntacana.com/tour/speedboat-parasailingsnorkeling/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How many people per boat?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Double 2, Family 3 adults + 1 child."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 2 people per booking; there is no single-rider option."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kids ride on the boat from age 5; parasail flyers must be at least 7."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the parasail flight?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 12 minutes in the air."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, up to 450 lb (204 kg) combined per parasail flight."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM or 12:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I need a boat licence?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, a guide boat leads the group."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/speedboat-parasailing-snorkeling/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
-  "name": "Speedboat + Parasail + Snorkel Combo"
+  "name": "Speedboat + Parasail + Snorkel Combo",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "parasailing",
@@ -1139,6 +1817,162 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Parasailing",
   "num": "06",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/parasailing/#trip",
+     "name": "Parasailing Punta Cana",
+     "description": "Parasail high above Bávaro Beach in Punta Cana: solo, tandem or family flights of about 8 minutes. Hotel pickup, 10 AM or 1 PM. From $67.50 per person.",
+     "url": "https://www.trip2puntacana.com/tour/parasailing/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single",
+       "price": "75",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/parasailing/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      },
+      {
+       "@type": "Offer",
+       "name": "Double",
+       "price": "135",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/parasailing/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      },
+      {
+       "@type": "Offer",
+       "name": "Family",
+       "price": "160",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/parasailing/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Parasailing",
+       "item": "https://www.trip2puntacana.com/tour/parasailing/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Single, Double or Family?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single is one flyer, Double is two flying together, Family is up to 3 flyers on one flight."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum number of people?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 2 people per booking. Book a Double, a Family flight or 2 Singles."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the flight?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 8 minutes in the air."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: up to 450 lb (204 kg) combined per flight and 264 lb (120 kg) per person. Flyers under about 90 lb fly tandem."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times are the flights?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is hotel pickup included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, round-trip from most Bávaro / Punta Cana hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/parasailing/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Parasailing Punta Cana"
@@ -1334,9 +2168,146 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Deep Sea Fishing",
   "num": "07",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/deep-sea-fishing/#trip",
+     "name": "Deep Sea Fishing Punta Cana",
+     "description": "Shared deep sea fishing charter in Punta Cana: about 4 hours trolling for mahi-mahi, wahoo, tuna and seasonal marlin. Gear, hotel pickup. $119 per angler.",
+     "url": "https://www.trip2puntacana.com/tour/deep-sea-fishing/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Angler (shared seat)",
+       "price": "119",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/deep-sea-fishing/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Observer (non-fishing guest)",
+       "price": "69",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/deep-sea-fishing/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats",
+       "item": "https://www.trip2puntacana.com/boat-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Deep Sea Fishing",
+       "item": "https://www.trip2puntacana.com/tour/deep-sea-fishing/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Shared or private?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The $119 price is a seat on a shared boat. Private charters are quoted on WhatsApp."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long are we on the water?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 4 hours of fishing."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can non-anglers come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as an observer for $69."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What will we catch?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the season: mahi-mahi, wahoo, tuna, barracuda and marlin. A catch isn't guaranteed."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do we keep the fish?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The crew keeps the catch, and guests can take some fish."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What about seasickness?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take seasickness medicine before boarding."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour. Private groups and private bookings: up to 72 hours before."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/deep-sea-fishing/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
-  "name": "Deep Sea Fishing Punta Cana"
+  "name": "Deep Sea Fishing Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "saona-island",
@@ -1539,6 +2510,150 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Saona Island Tour",
   "num": "08",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/saona-island/#trip",
+     "name": "Saona Island Tour from Punta Cana",
+     "description": "Full-day Saona Island trip from Punta Cana: speedboat and catamaran, natural pool, BBQ buffet lunch and open bar. Hotel pickup. Adults $79, kids $50.",
+     "url": "https://www.trip2puntacana.com/tour/saona-island/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "79",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/saona-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "50",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/saona-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/saona-island/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Saona Island Tour",
+       "item": "https://www.trip2puntacana.com/tour/saona-island/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is the trip?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full day. We send your exact pickup time after booking."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Where do the boats leave from?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bayahíbe, about 1 hour by road from Punta Cana hotels (up to 2 hours with group pickups)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Infants 0–3 free, children 4–9 $50, adults 10+ $79."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a BBQ buffet lunch and an open bar."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can we touch the starfish?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Look, but leave them in the water."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do you pick up in Miches?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Saona pickups are from Punta Cana area hotels only."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Saona or Catalina?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saona for the beach and the natural pool; Catalina for snorkeling."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/saona-island/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Saona Island Tour from Punta Cana"
@@ -1756,6 +2871,157 @@
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Dolphin Explorer",
   "num": "09",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/dolphin-explorer/#trip",
+     "name": "Dolphin Explorer Punta Cana",
+     "description": "Swim with dolphins in Punta Cana at Dolphin Explorer: Funtastic 40 min, Explorer 50 min swim ($120), Royal 60 min ($199). Observers $35.",
+     "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Dolphin Encounter Funtastic (per person)",
+       "price": "120",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Dolphin Swim Explorer (per person)",
+       "price": "120",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Royal Dolphin Swim Excellence (per person)",
+       "price": "199",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Observer / Companion, no swim – Adult (13+)",
+       "price": "35",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Observer / Companion, no swim – Child (0–12)",
+       "price": "25",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/dolphin-explorer/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Boats"
+      },
+      {
+       "item": "https://www.trip2puntacana.com/tour/dolphin-explorer/",
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Dolphin Explorer"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Which programs actually swim?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Explorer and Royal Excellence (swimmers only, kids at least 1 m tall). Funtastic needs no swimming."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Some of us don't swim. Can they come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Book Funtastic, which needs no swimming, or join as an observer for $35 (kids $25). Observers watch and enjoy the sea lion show and birds, but don't swim with the dolphins."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much does it cost?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per person, the same for adults and kids: Funtastic $120, Explorer $120, Royal Excellence $199. Observers who don't swim: $35 adults, $25 kids."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I bring my camera?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in the water. The park sells photos."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can pregnant guests join?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on Explorer or Royal Excellence."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Where is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The beach park at Cabeza de Toro, next to Catalonia."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/dolphin-explorer/",
   "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Dolphin Explorer Punta Cana"
@@ -2005,6 +3271,171 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Catalina Island Tour",
   "num": "10",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/catalina-island/#trip",
+     "name": "Catalina Island Tour from Punta Cana",
+     "description": "Full-day Catalina Island trip from Punta Cana: guided snorkel at The Wall, Dominican BBQ lunch, drinks and beach time. Add Altos de Chavón. From $99.",
+     "url": "https://www.trip2puntacana.com/tour/catalina-island/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Catalina Island – Adult (10+)",
+       "price": "99",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Catalina Island – Child (4–9)",
+       "price": "50",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Catalina Island – Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Catalina + Altos de Chavón – Adult (10+)",
+       "price": "119",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Catalina + Altos de Chavón – Child (4–9)",
+       "price": "60",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Catalina + Altos de Chavón – Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/catalina-island/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem"
+      },
+      {
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/",
+       "@type": "ListItem"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Catalina Island Tour",
+       "item": "https://www.trip2puntacana.com/tour/catalina-island/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Saona or Catalina: which should I pick?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saona for the beach and the natural pool; Catalina for snorkeling."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What days does it run?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monday, Wednesday and Friday."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What's the difference between the two options?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Catalina Island ($99) is snorkeling, lunch, drinks and beach time. Catalina + Altos de Chavón ($119 adult, $60 child 4–9) adds a stop with entry at Altos de Chavón, with lunch buffet and open bar."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a dress code at Altos de Chavón?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No swimsuits, so bring a cover-up."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What time is pickup?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Early morning; your exact time is confirmed after booking."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children 4–9 are $50 on the Catalina Island option and $60 on Catalina + Altos de Chavón. Under 4 are free (Catalina Island option: minimum age 2)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can pregnant guests join?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on the Catalina Island option."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour. Private groups and private bookings: up to 72 hours before."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/catalina-island/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Catalina Island Tour from Punta Cana"
@@ -2188,6 +3619,126 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › ATV Tour Punta Cana",
   "num": "11",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/atv-punta-cana/#trip",
+     "name": "ATV Tour Punta Cana",
+     "description": "ATV Punta Cana ride on mud trails to Macao Beach, with a cave swim and a Dominican house tasting. Hotel pickup, guide. Single $70, Double $90 (2 people).",
+     "url": "https://www.trip2puntacana.com/tour/atv-punta-cana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, 1 ATV)",
+       "price": "70",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/atv-punta-cana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, 1 ATV)",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/atv-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "ATV Tour Punta Cana",
+       "item": "https://www.trip2puntacana.com/tour/atv-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do I need a driver's licence?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No licence needed."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers must be 16 or older and ride with an adult; passengers from age 7."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can two people share one ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, book Double ($90 per ATV)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Will I get dirty?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wear clothes and closed shoes you don't mind getting muddy, and bring a bandana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM, 10:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/atv-punta-cana/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "ATV Tour Punta Cana"
@@ -2381,6 +3932,134 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Buggy Tour Punta Cana",
   "num": "12",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/buggy/#trip",
+     "name": "Buggy Tour Punta Cana",
+     "description": "Punta Cana buggy tour on muddy trails to Macao Beach, with a cave swim and a coffee, cacao and mamajuana tasting. From $45 per person (Double buggy).",
+     "url": "https://www.trip2puntacana.com/tour/buggy/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, per buggy)",
+       "price": "69",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, per buggy)",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Family (up to 4 people, per buggy)",
+       "price": "130",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Buggy Tour Punta Cana",
+       "item": "https://www.trip2puntacana.com/tour/buggy/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Single, Double or Family: which should I book?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single = 1 person, 1 buggy ($69). Double = 2 people share a   buggy ($90, or $45 per person). Family = up to 4 people in one buggy ($130)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers must be 16 or older and ride with an adult; passengers from age 5."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long do we drive?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 1.5 to 2 hours of driving, plus about 20 minutes at the cave and 20 minutes at Macao Beach."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Will I swim?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at the cave, so bring a swimsuit and towel."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Old clothes, closed or water shoes, sunglasses and a bandana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/buggy/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Buggy Tour Punta Cana"
@@ -2578,9 +4257,146 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Polaris UTV",
   "num": "13",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/polaris-utv/#trip",
+     "name": "Polaris UTV Punta Cana",
+     "description": "Drive a Polaris UTV on Punta Cana trails to Macao Beach, a cave swim and a Dominican house tasting. Hotel pickup. Single $149, Double $199, Family $280.",
+     "url": "https://www.trip2puntacana.com/tour/polaris-utv/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (per vehicle)",
+       "price": "149",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/polaris-utv/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (per vehicle)",
+       "price": "199",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/polaris-utv/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Family (up to 4, per vehicle)",
+       "price": "280",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/polaris-utv/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Polaris UTV",
+       "item": "https://www.trip2puntacana.com/tour/polaris-utv/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How many people fit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single 1, Double 2, Family up to 4."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum driver age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16, with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids ride as passengers?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from age 6 and at least 1.30 m (4 ft 3 in) tall."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What stops are on the route?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Macao Beach, a Taíno cave swim and a typical Dominican house tasting."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM, 10:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I book a private UTV group?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, ask on WhatsApp."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/polaris-utv/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
-  "name": "Polaris UTV Punta Cana"
+  "name": "Polaris UTV Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "horseback-riding-punta-cana",
@@ -2763,6 +4579,134 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Horseback Riding Punta Cana",
   "num": "14",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/horseback-riding-puntacana/#trip",
+     "name": "Horseback Riding Punta Cana",
+     "description": "Guided horseback ride through Punta Cana countryside trails with a Bávaro Beach stop. Beginner-friendly, hotel pickup, $75 per person. Minimum age 5.",
+     "url": "https://www.trip2puntacana.com/tour/horseback-riding-punta-cana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Per person",
+       "price": "75",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/horseback-riding-puntacana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Horseback Riding Punta Cana",
+       "item": "https://www.trip2puntacana.com/tour/horseback-riding-puntacana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Do I need riding experience?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the calm pace suits beginners."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the ride?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 2 hours on horseback."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Where does the ride go?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Countryside trails near Punta Cana, with a beach stop on Bávaro Beach."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "5 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 250 lb (113 kg) per rider."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long pants, closed shoes and sunscreen."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/horseback-riding-punta-cana/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Horseback Riding Punta Cana"
@@ -2947,9 +4891,138 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Zipline Punta Cana",
   "num": "15",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/zipline-punta-cana/#trip",
+     "name": "Zipline Punta Cana",
+     "description": "Fly 12 ziplines over the jungle canopy near Punta Cana. Safety gear, briefing and hotel pickup included. Adults $89, kids $65. Min age 6.",
+     "url": "https://www.trip2puntacana.com/tour/zipline-punta-cana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "89",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/zipline-punta-cana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (6–9)",
+       "price": "65",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/zipline-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Zipline Punta Cana",
+       "item": "https://www.trip2puntacana.com/tour/zipline-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is it safe for first-timers?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Guides fit your harness and give a safety briefing first."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many ziplines are there?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12 ziplines and 18 platforms; the longest is about 800 m (2,500 ft)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "6 years. Kids 6–12 stop at line 8."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: 44–280 lb (20–127 kg), with a maximum waist of 44 in (112 cm)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closed shoes, and no loose items."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/zipline-punta-cana/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
-  "name": "Zipline Punta Cana"
+  "name": "Zipline Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "monkeyland",
@@ -3130,9 +5203,130 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Monkey Land",
   "num": "16",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/monkeyland/#trip",
+     "name": "Monkey Land Punta Cana",
+     "description": "Hand-feed squirrel monkeys at Monkeyland, ride an open safari truck and taste coffee and cacao. Punta Cana hotel pickup. Adults $95, kids $65.",
+     "url": "https://www.trip2puntacana.com/tour/monkeyland/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "95",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/monkeyland/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "65",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/monkeyland/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/monkeyland/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Monkey Land",
+       "item": "https://www.trip2puntacana.com/tour/monkeyland/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is it good for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from age 3. Kids 4–9 are $65 and infants are free."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are the monkeys safe to touch?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, when you follow the guide's rules."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I bring?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A camera, closed shoes and bug spray."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/monkeyland/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
-  "name": "Monkey Land Punta Cana"
+  "name": "Monkey Land Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "monkeyland-zipline",
@@ -3315,6 +5509,134 @@
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Monkey Land + Zipline",
   "num": "17",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/monkeyland-zipline/#trip",
+     "name": "Monkey Land + Zipline Combo",
+     "description": "Punta Cana combo: jungle ziplines plus hand-feeding squirrel monkeys at Monkeyland, lunch included. Full day, hotel pickup. Adults $129, kids $85.",
+     "url": "https://www.trip2puntacana.com/tour/monkeyland-zipline/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "129",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/monkeyland-zipline/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "85",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/monkeyland-zipline/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventure-tours/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Monkey Land + Zipline",
+       "item": "https://www.trip2puntacana.com/tour/monkeyland-zipline/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is the day?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full day, about 8 hours."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, lunch and drinks are included."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age to zip?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "6 years; kids 6–12 stop at line 8. Monkeyland is for all  ages."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: 44–280 lb (20–127 kg) on the ziplines, maximum waist 44 in (112 cm)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children 4–9 are $85."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What shoes should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closed sneakers."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/monkeyland-zipline/",
   "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Monkey Land + Zipline Combo"
@@ -3507,6 +5829,134 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Santo Domingo Tour",
   "num": "19",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/santo-domingo/#trip",
+     "name": "Santo Domingo Tour from Punta Cana",
+     "description": "Full-day trip from Punta Cana to Santo Domingo's UNESCO Colonial Zone: English-speaking guide, lunch, drinks, entrance fees and hotel pickup. From $85.",
+     "url": "https://www.trip2puntacana.com/tour/santo-domingo/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "85",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/santo-domingo/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "50",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/santo-domingo/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/santo-domingo/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Santo Domingo Tour",
+       "item": "https://www.trip2puntacana.com/tour/santo-domingo/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is the day?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full day, with a long drive each way. Your pickup time is sent after booking."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What will we see?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los Tres Ojos, the Columbus Lighthouse, the Alcázar de Colón, Calle Las Damas, the National Pantheon, the First Cathedral of the Americas and the National Palace (outside)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, lunch and drinks are included, and so are entrance fees."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a dress code?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shoulders and knees covered for the Cathedral."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from age 3. Children 4–9 $50."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/santo-domingo/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Santo Domingo Tour from Punta Cana"
@@ -3703,9 +6153,146 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Los Haitises Tour",
   "num": "20",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/los-haitises/#trip",
+     "name": "Los Haitises Tour from Punta Cana",
+     "description": "Full-day Los Haitises day trip from Punta Cana: boat through mangroves, Taíno caves, lunch at Caño Hondo. Bilingual guide, park entry, pickup. From $130.",
+     "url": "https://www.trip2puntacana.com/tour/los-haitises/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "130",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/los-haitises/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "70",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/los-haitises/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/los-haitises/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Los Haitises Tour",
+       "item": "https://www.trip2puntacana.com/tour/los-haitises/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How far is Los Haitises from Punta Cana?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 2.5–3 hours by road each way, so it's a full day."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What days does it run?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuesday and Friday."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at the Paraíso Caño Hondo eco-lodge, with time to swim in the river pools."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Where does the boat leave from?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sabana de la Mar, from the Caño Hondo pier."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are the caves hard to walk?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Short walks with some uneven steps. Wear closed-toe shoes."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children 4–9 $70, under 4 free."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/los-haitises/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
-  "name": "Los Haitises Tour from Punta Cana"
+  "name": "Los Haitises Tour from Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "montana-redonda-from-punta-cana",
@@ -3909,6 +6496,166 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda Tour",
   "num": "21",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/#trip",
+     "name": "Montaña Redonda Tour from Punta Cana",
+     "description": "Half-day trip from Punta Cana to Montaña Redonda in Miches: 4x4 ride to the top, summit swings and 360° views. Hotel pickup. Adults $90, kids $45.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "45",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Montaña Redonda Tour",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-from-puntacana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What time does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM from Punta Cana / Bávaro hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. No hiking needed, but the ride up is bumpy."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Infants 0–3 free, children 4–9 $45, adults 10+ $90."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Infants 0–3 ride free. Not recommended during pregnancy (bumpy 4x4 ride)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are entry and the swings included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Photos at the summit cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There's a restaurant at the summit (bring cash)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Miches?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda tour from Miches hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I add an ATV or a zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: Montaña Redonda + ATV, or Montaña Redonda + ATV + Zipline from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-from-punta-cana/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda Tour from Punta Cana"
@@ -4106,6 +6853,142 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda + ATV",
   "num": "22",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-atv-from-puntacana/#trip",
+     "name": "Montaña Redonda + ATV Combo from Punta Cana",
+     "description": "Half-day trip from Punta Cana to Miches: guided ATV trail ride plus Montaña Redonda summit swings and 360° views. 10 AM hotel pickup. From $120 pp.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-from-puntacana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 rider)",
+       "price": "140",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-frompunta-cana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people sharing 1 ATV)",
+       "price": "240",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-frompunta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Montaña Redonda + ATV",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-atv-frompunta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. That can be one   Double (2 people sharing 1 ATV) or 2 Singles, each on their own ATV. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What time is pickup?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM from Punta Cana / Bávaro hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A half day."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Single or double ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single $140 for 1 rider; Double $240 for 2 people on one ATV."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Miches?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda + ATV combo from Miches hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-atv-from-punta-cana/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV Combo from Punta Cana"
@@ -4314,9 +7197,170 @@
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda + ATV + Zipline",
   "num": "23",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinefrom-punta-cana/#trip",
+     "name": "Montaña Redonda + ATV + Zipline Combo from Punta Cana",
+     "description": "Montaña Redonda + ATV + zipline from Punta Cana: a Montaña Redonda zipline tour from Punta Cana with ATV trails and summit swings. Half day, 10 AM pickup.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinefrom-punta-cana/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 rider)",
+       "price": "165",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinefrom-punta-cana/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people sharing 1 ATV)",
+       "price": "280",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinefrom-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Montaña Redonda + ATV + Zipline",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-atvzipline-from-punta-cana/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. That can be one Double (2 people sharing 1 ATV) or 2 Singles, each on their own ATV. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many ziplines are there?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two ziplines at the top of Montaña Redonda. Both are included in the combo price, with no separate zipline fee."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What time is pickup?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10:00 AM from Punta Cana / Bávaro hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A half day."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit on the zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 250 lb (113 kg)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Bring cash for the summit restaurant."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Single or double ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single $165 for 1 rider; Double $280 for 2 people on one ATV."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Miches?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda + ATV + Zipline combo from Miches hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-atv-zipline-from-punta-cana/",
   "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
-  "name": "Montaña Redonda + ATV + Zipline Combo from Punta Cana"
+  "name": "Montaña Redonda + ATV + Zipline Combo from Punta Cana",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "atv-miches",
@@ -4501,6 +7545,128 @@
   ],
   "breadcrumb": "Home › Miches › ATV Tour Miches",
   "num": "25",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/atv-miches/#trip",
+     "name": "ATV Tour Miches",
+     "description": "Ride an ATV through Miches mud trails, palm groves and coastal tracks. 7 AM or 1 PM pickup from Miches hotels. Single $89, Double $130. Book now.",
+     "url": "https://www.trip2puntacana.com/tour/atv-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, 1 ATV)",
+       "price": "89",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/atv-miches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, 1 ATV)",
+       "price": "130",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/atv-miches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child passenger",
+       "price": "50",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/atv-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "ATV Tour Miches",
+       "item": "https://www.trip2puntacana.com/tour/atv-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Can two people share one ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Double is $130 per ATV for 2 riders; Single is $89."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Passengers from 7. A child passenger is $50."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is hotel pickup included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, round-trip from Miches-area hotels (Viva Miches, Club Med Miches, Zemi Miches, Dreams / Secrets Playa Esmeralda, Marriott Miches)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Will I get muddy?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Wear old clothes and closed shoes."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/atv-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "ATV Tour Miches"
@@ -4694,9 +7860,140 @@
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + ATV Combo",
   "num": "26",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-atvmiches/#trip",
+     "name": "Montaña Redonda + ATV Combo (Miches)",
+     "description": "Montaña Redonda + ATV combo in Miches: off-road trails, summit swings and 360° views in one half day. 7 AM or 1 PM hotel pickup. Single $140, Double $280.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single",
+       "price": "140",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-miches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people sharing 1 ATV)",
+       "price": "280",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Montaña Redonda + ATV Combo",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-atvmiches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. That can be one Double (2 people sharing 1 ATV) or 2 Singles, each on their own ATV. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Single or double ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single $140 for one rider; Double $280 for two people on one ATV."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour Miches."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clothes that can get muddy, closed shoes, sunglasses and a bandana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Punta Cana?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda + ATV tour from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-atv-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
-  "name": "Montaña Redonda + ATV Combo (Miches)"
+  "name": "Montaña Redonda + ATV Combo (Miches)",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "montana-redonda-atv-zipline-miches",
@@ -4896,6 +8193,152 @@
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + ATV + Zipline Combo",
   "num": "27",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinemiches/#trip",
+     "name": "Montaña Redonda + ATV + Zipline Combo (Miches)",
+     "description": "Montaña Redonda + ATV + zipline Miches tour: ATV trails, summit swings, 360° views and two ziplines at the top. Half day, 7 AM or 1 PM pickup. From $140.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinemiches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single",
+       "price": "165",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinemiches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people sharing 1 ATV)",
+       "price": "280",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-atv-ziplinemiches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Montaña Redonda + ATV + Zipline Combo",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-atvzipline-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. That can be one Double (2 people sharing 1 ATV) or 2 Singles, each on their own ATV. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many ziplines are there?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two ziplines at the top of Montaña Redonda. Both are included in the combo price, with no separate zipline fee."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How is it different from the Montaña Redonda + ATV combo?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same ATV ride and summit, plus the zipline."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Single or double ATV?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single $165 for one rider; Double $280 for two people on one ATV."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times does it leave?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour Miches."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit on the zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 250 lb (113 kg)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Punta Cana?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda + ATV + Zipline tour from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-atv-zipline-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV + Zipline Combo (Miches)"
@@ -5072,9 +8515,128 @@
   ],
   "breadcrumb": "Home › Miches › Horseback Riding Miches",
   "num": "28",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/horseback-riding-miches/#trip",
+     "name": "Horseback Riding Miches",
+     "description": "Guided horseback ride through Miches countryside with a beach stop to swim. 7 AM or 1 PM pickup from Miches hotels. Minimum 2 riders, $85 per person.",
+     "url": "https://www.trip2puntacana.com/tour/horseback-riding-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Per person (minimum 2)",
+       "price": "85",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/horseback-riding-miches/",
+       "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "minValue": 2
+       }
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Horseback Riding Miches",
+       "item": "https://www.trip2puntacana.com/tour/horseback-riding-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum number of riders?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, bookings start at 2 people ($85 per person)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I need riding experience?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Guides keep a beginner pace."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 250 lb (113 kg) per rider."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times are available?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM pickup from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Want to see Montaña Redonda too?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda + Horseback combo."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/horseback-riding-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
-  "name": "Horseback Riding Miches"
+  "name": "Horseback Riding Miches",
+  "schema_faq_rebuilt": true
  },
  {
   "slug": "montana-redonda-miches",
@@ -5269,6 +8831,152 @@
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda Tour Miches",
   "num": "29",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-miches/#trip",
+     "name": "Montaña Redonda Tour Miches",
+     "description": "Montaña Redonda Miches tour: 4x4 ride to the summit, swings and 360° lagoon and ocean views. Half day, 7 AM or 1 PM pickup from Miches hotels. From $90.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-miches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "45",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-miches/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Montaña Redonda Tour Miches",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is it good for kids and seniors?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. No hiking or fitness is needed, but the ride up is bumpy."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Infants 0–3 free, children 4–9 $45, adults 10+ $90."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are entry and the swings included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Photos at the summit cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Which departure has better light for photos?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 AM has softer light; 1 PM has brighter colors."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Staying in Punta Cana?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Book the Montaña Redonda tour from Punta Cana."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I add an ATV, horses or a zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, see the Montaña Redonda combos."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda Tour Miches"
@@ -5455,6 +9163,136 @@
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + Horseback + Zipline Combo",
   "num": "31",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-horsebackriding-zipline-miches/#trip",
+     "name": "Montaña Redonda + Horseback + Zipline Combo",
+     "description": "Montaña Redonda summit swings, two ziplines at the top and a countryside horseback ride in one half day. 7 AM or 1 PM pickup from Miches hotels.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-horsebackriding-zipline-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "155",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-horsebackriding-zipline-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Montaña Redonda + Horseback + Zipline Combo",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-horsebackriding-zipline-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How many ziplines are there?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two ziplines at the top of Montaña Redonda. Both are included in the combo price, with no separate zipline fee."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour Miches."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I need riding experience?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the ride is guided at a walking pace."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit on the zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 250 lb (113 kg)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Prefer an ATV to horses?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose the Montaña Redonda + ATV + Zipline combo."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times are available?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-zipline-miches/",
   "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + Horseback + Zipline Combo"
@@ -5637,6 +9475,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching + Cayo do",
   "num": "32",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/whale-watching-cayolevantado/#trip",
+     "name": "Whale Watching + Cayo Levantado from Punta Cana",
+     "description": "Humpback whales in Samaná Bay plus Cayo Levantado beach, buffet lunch and drinks. Full day from Punta Cana with hotel pickup. Adults $159, kids $99.",
+     "url": "https://www.trip2puntacana.com/tour/whale-watching-cayolevantado/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "159",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-cayolevantado/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "99",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-cayolevantado/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Whale Watching + Cayo Levantado",
+       "item": "https://www.trip2puntacana.com/tour/whale-watchingcayo-levantado/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "When can I see the whales?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Humpback whales visit Samaná Bay from mid-January to mid-April. The tour runs only in that season."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the day?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 10 hours, with an early hotel pickup between 6:00 and 7:00 AM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A buffet lunch with two drinks on Cayo Levantado, plus water, rum and soft drinks on the boat."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $99 and must be with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can't take this tour?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It isn't available during pregnancy or for guests with heart conditions or limited mobility, and isn't recommended with back problems."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/whale-watching-cayo-levantado/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching + Cayo Levantado from Punta Cana"
@@ -5822,6 +9780,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching + El Limón",
   "num": "33",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/whale-watching-ellimon/#trip",
+     "name": "Whale Watching + El Limón Waterfall from Punta Cana",
+     "description": "Humpback whales in Samaná Bay plus a horseback ride to 130-ft El Limón Waterfall. Lunch, drinks and hotel pickup from Punta Cana. Adults $169, kids $99.",
+     "url": "https://www.trip2puntacana.com/tour/whale-watching-ellimon/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "169",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-ellimon/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "99",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-ellimon/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Whale Watching + El Limón",
+       "item": "https://www.trip2puntacana.com/tour/whale-watching-ellimon/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "When can I see the whales?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Humpback whales visit Samaná Bay from mid-January to mid-April. The tour runs only in that season."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the waterfall?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By horse, about 30 minutes each way through coffee, cocoa and fruit trees."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How high is El Limón Waterfall?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 130 feet (40 m)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A buffet lunch with two drinks, plus unlimited water, rum and soft drinks on the boat."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $99 and must be with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/whale-watching-el-limon/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching + El Limón Waterfall from Punta Cana"
@@ -6000,6 +10078,118 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching Half Day",
   "num": "34",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/whale-watching-halfday/#trip",
+     "name": "Whale Watching Half Day from Punta Cana",
+     "description": "Half-day catamaran trip to see humpback whales in Samaná Bay, mid-Jan to mid-Apr. Snacks and hotel pickup from Punta Cana. Adults $120, kids $60.",
+     "url": "https://www.trip2puntacana.com/tour/whale-watching-halfday/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "120",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-halfday/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "60",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/whale-watching-halfday/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Whale Watching Half Day",
+       "item": "https://www.trip2puntacana.com/tour/whale-watchinghalf-day/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "When can I see the whales?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Humpback whales visit Samaná Bay from mid-January to mid-April. The tour runs only in that season."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the trip?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 6–7 hours. Pickup is 6:00–7:00 AM and you're back around 2:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is food included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snacks, water on the boat and a coffee break at Las Cañitas. Lunch isn't included."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $60 and must be with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/whale-watching-half-day/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching Half Day from Punta Cana"
@@ -6182,6 +10372,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › El Limón Waterfall + Cayo do",
   "num": "35",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/el-limon-cayolevantado/#trip",
+     "name": "El Limón Waterfall + Cayo Levantado from Punta Cana",
+     "description": "Catamaran to Samaná, horseback ride to 130-ft El Limón Waterfall and beach time on Cayo Levantado. Lunch, drinks and hotel pickup. Adults $149, kids $89.",
+     "url": "https://www.trip2puntacana.com/tour/el-limon-cayolevantado/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "149",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/el-limon-cayolevantado/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "89",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/el-limon-cayolevantado/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "El Limón Waterfall + Cayo Levantado",
+       "item": "https://www.trip2puntacana.com/tour/el-limon-cayolevantado/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How do we get to the waterfall?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By horse, about 30 minutes each way through coffee, cocoa and fruit trees."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How high is El Limón Waterfall?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 130 feet (40 m)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I swim?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at the waterfall pool and on Cayo Levantado. Bring a swimsuit and towel."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A buffet lunch with two drinks, plus unlimited water, rum and soft drinks on the boat."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $89 and must be with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/el-limon-cayo-levantado/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "El Limón Waterfall + Cayo Levantado from Punta Cana"
@@ -6366,6 +10676,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Playa Rincón + Cayo do",
   "num": "36",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/playa-rincon-cayolevantado/#trip",
+     "name": "Playa Rincón + Cayo Levantado from Punta Cana",
+     "description": "Full day from Punta Cana to Samaná: 4 km Playa Rincón, lobster lunch on the beach and Cayo Levantado. Catamaran and hotel pickup. Adults $169, kids $99.",
+     "url": "https://www.trip2puntacana.com/tour/playa-rincon-cayolevantado/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (11+)",
+       "price": "169",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/playa-rincon-cayolevantado/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–10)",
+       "price": "99",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/playa-rincon-cayolevantado/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Playa Rincón + Cayo Levantado",
+       "item": "https://www.trip2puntacana.com/tour/playa-rincon-cayolevantado/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is the day?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 12 hours. Pickup is 5:00–6:00 AM and you're back around 6:30 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What's special about Playa Rincón?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's more than 4 km long with no resorts, hotels or buildings behind it."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A typical Dominican buffet lunch with fresh lobster, plus water, rum and soft drinks."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is the horseback ride included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The beach horseback ride is optional; ask your guide on the day."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–10 are $99."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/playa-rincon-cayo-levantado/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Playa Rincón + Cayo Levantado from Punta Cana"
@@ -6545,6 +10975,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Higüey City Tour",
   "num": "37",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/higuey-city-tour/#trip",
+     "name": "Higüey City Tour from Punta Cana",
+     "description": "Half-day Higüey tour from Punta Cana: Basilica of La Altagracia, San Dionisio church, local market and tobacco and rum stop. Guide and pickup. From $55.",
+     "url": "https://www.trip2puntacana.com/tour/higuey-city-tour/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "55",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/higuey-city-tour/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "28",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/higuey-city-tour/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Higüey City Tour",
+       "item": "https://www.trip2puntacana.com/tour/higuey-city-tour/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is the tour?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 5 hours. Pickup is 7:00–8:00 AM and you're back around 1:30 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What will we see?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Basilica of La Altagracia, the Church of San Dionisio, the Higüey market and a tobacco and rum demonstration."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a dress code?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shoulders and knees covered inside the churches."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are entrance fees included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for the Basilica and the Church of San Dionisio."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $28."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/higuey-city-tour/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Higüey City Tour from Punta Cana"
@@ -6740,6 +11290,142 @@
   ],
   "breadcrumb": "Punta Cana › Adventures › Buggy + Monkey Land",
   "num": "38",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/buggy-monkeyland/#trip",
+     "name": "Buggy + Monkey Land Combo",
+     "description": "Drive a 4×4 buggy in the Anamuya mountains, swim in the river and hand-feed squirrel monkeys at Monkeyland. Snacks and hotel pickup. From $130.50 pp.",
+     "url": "https://www.trip2puntacana.com/tour/buggy-monkeyland/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, 1 buggy)",
+       "price": "179",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-monkeyland/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, 1 buggy)",
+       "price": "261",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-monkeyland/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Triple (3 people, 1 buggy)",
+       "price": "347",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-monkeyland/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Quadruple (4 people, 1 buggy)",
+       "price": "433",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-monkeyland/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventures/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Buggy + Monkey Land",
+       "item": "https://www.trip2puntacana.com/tour/buggy-monkeyland/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How is the price set?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per buggy: Single (1 person) $179, Double $261, Triple $347, Quadruple $433. You pay the option you select."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can drive?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers must be 18+ with a valid license and at least 1 year of driving experience."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from age 6, as passengers."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I wear sunscreen?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at Monkeyland: sunscreen and bug repellent are harmful to the monkeys."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can't take this tour?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It isn't available during pregnancy or for guests with heart conditions, limited mobility, colds or severe peanut allergies."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/buggy-monkeyland/",
   "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Buggy + Monkey Land Combo"
@@ -6934,6 +11620,142 @@
   ],
   "breadcrumb": "Punta Cana › Adventures › Buggy + Zipline",
   "num": "39",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/buggy-zipline/#trip",
+     "name": "Buggy + Zipline Combo",
+     "description": "4×4 buggy trail and river swim in the Anamuya mountains, then 12 ziplines with an 800 m line. Snacks and hotel pickup. From $124.50 per person.",
+     "url": "https://www.trip2puntacana.com/tour/buggy-zipline/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, 1 buggy)",
+       "price": "179",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-zipline/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, 1 buggy)",
+       "price": "249",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-zipline/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Triple (3 people, 1 buggy)",
+       "price": "329",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-zipline/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Quadruple (4 people, 1 buggy)",
+       "price": "409",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/buggy-zipline/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventures/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Buggy + Zipline",
+       "item": "https://www.trip2puntacana.com/tour/buggy-zipline/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How is the price set?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per buggy: Single (1 person) $179, Double $249, Triple $329, Quadruple $409. You pay the option you select."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can drive?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers must be 18+ with a valid license and at least 1 year of driving experience."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: 60–285 lb on the ziplines, maximum waist 44 in."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, from age 6."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What shoes should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closed shoes. No flip-flops."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/buggy-zipline/",
   "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Buggy + Zipline Combo"
@@ -7131,6 +11953,142 @@
   ],
   "breadcrumb": "Punta Cana › Adventures › Triple Adventure",
   "num": "40",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/triple-adventure/#trip",
+     "name": "Triple Adventure (Buggy + Zipline + Monkey Land)",
+     "description": "Ziplines, Monkeyland and a 4×4 buggy with a river swim in one day, plus lunch at a Dominican house. Hotel pickup from Punta Cana. From $175.50 pp.",
+     "url": "https://www.trip2puntacana.com/tour/triple-adventure/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Single (1 person, 1 buggy)",
+       "price": "209",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/triple-adventure/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Double (2 people, 1 buggy)",
+       "price": "351",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/triple-adventure/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Triple (3 people, 1 buggy)",
+       "price": "467",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/triple-adventure/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Quadruple (4 people, 1 buggy)",
+       "price": "553",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/triple-adventure/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Adventures",
+       "item": "https://www.trip2puntacana.com/adventures/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Triple Adventure",
+       "item": "https://www.trip2puntacana.com/tour/triple-adventure/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How is the price set?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per buggy: Single (1 person) $209, Double $351, Triple $467, Quadruple $553. You pay the option you select."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, lunch at a typical Dominican house, plus fruit, coffee and chocolate tasting."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can drive?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drivers must be 18+ with a valid license and at least 1 year of driving experience."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a weight limit?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: 60–285 lb on the ziplines, maximum waist 44 in."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "6 years."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/triple-adventure/",
   "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Triple Adventure (Buggy + Zipline + Monkey Land)"
@@ -7316,6 +12274,126 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Bávaro Runners",
   "num": "41",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/bavaro-runners/#trip",
+     "name": "Bávaro Runners",
+     "description": "Ohana's own Bávaro Runners safari trucks: handrolled cigars, a sugar cane farm, a coffee farm and Macao Beach. Lunch included. Adults $90, kids $45.",
+     "url": "https://www.trip2puntacana.com/tour/bavaro-runners/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (13+)",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/bavaro-runners/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (3–12)",
+       "price": "45",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/bavaro-runners/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Bávaro Runners",
+       "item": "https://www.trip2puntacana.com/tour/bavaro-runners/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "What is Bávaro Runners?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ohana Tours' own full-day safari truck excursion, with its own trucks, guides and route, separate from other Punta Cana countryside tours."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How long is the day?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 8 hours. Pickup is 7:00–8:00 AM and you're back around 4:00 PM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at a Dominican family's ranch, with water, soft drinks and rum."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, children 3–12 are $45 and must be with an adult."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Who can't take this tour?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It isn't available during pregnancy or for guests with heart conditions, disabilities or mobility problems."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/bavaro-runners/",
   "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Bávaro Runners"
