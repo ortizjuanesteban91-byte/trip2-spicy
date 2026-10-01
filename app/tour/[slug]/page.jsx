@@ -41,7 +41,7 @@ export default async function Tour({ params }) {
         <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
           <div className="min-w-0">
             <div className="grid grid-cols-2 gap-5 rounded-3xl border border-sky-100 bg-ice p-5 sm:grid-cols-4" data-aos="zoom-out-right">
-              {[["DURATION", duration, Clock], ["GROUP SIZE", "Small groups", Users], ["PICKUP", "Resorts", Car], ["LANGUAGE", "Eng & Spa", Languages]].map(([k, v, Ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-brand"><Ic className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
+              {[["DURATION", duration, Clock], ["GROUP SIZE", "Small groups", Users], ["PICKUP", <>Resort round trip <span className="text-emerald-600">✓</span></>, Car], ["LANGUAGE", "Eng & Spa", Languages]].map(([k, v, Ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-brand"><Ic className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
             </div>
             <h2 className="mb-3 mt-10 text-lg font-extrabold text-ink">Tour Details</h2>
             <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>

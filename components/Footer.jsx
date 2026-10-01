@@ -12,7 +12,7 @@ export default async function Footer() {
           <p className="mt-2 max-w-xs text-sm leading-6">Handcrafted excursions and VIP transfer experiences in Punta Cana. Curated luxury, licensed local captains, and guaranteed unforgettable memories.</p>
           <p className="mt-4 space-y-1 text-sm"><a className="block hover:text-white" href={whatsapp}>WhatsApp Direct Support</a><a className="block hover:text-white" href={`tel:${phone.replace(/[^+\d]/g, "")}`}>{phone}</a><a className="block hover:text-white" href={`mailto:${email}`}>{email}</a></p>
         </div>
-        {col("Explore", [["Home", "/"], ["Tours", "/tours"], ["Travel Tips", "/travel-tips"], ["Blogs", "/blog"]])}
+        {col("Explore", [["Home", "/"], ["Tours", "/tours"], ["Travel Tips", "/travel-tips"], ["Blogs", "/blog"], ["Affiliates", "/affiliates"]])}
         {col("Customer Support", [["WhatsApp", whatsapp], ["Phone", `tel:${phone.replace(/[^+\d]/g, "")}`], ["Email", `mailto:${email}`], ["Contact Us", "/contact"]])}
         {col("Information", [["Cancellation Policy"], ["Refund Policy"], ["Terms of Service"], ["Privacy Policy"]])}
       </div>

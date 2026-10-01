@@ -56,3 +56,35 @@ create table if not exists posts (
   data jsonb not null default '{}'::jsonb   -- title, intro, meta, image, body
 );
 alter table posts enable row level security;  -- server-only via service key
+
+-- Affiliates (people who send guests with a personal link and get paid weekly)
+create table if not exists affiliates (
+  id bigint generated always as identity primary key,
+  created_at timestamptz default now(),
+  name text not null,
+  email text unique not null,
+  phone text,
+  country text,
+  method text,                 -- Bank transfer | PayPal | Zelle | Other
+  payout text,                 -- account details they entered (private)
+  code text unique not null,   -- used in ?ref=code
+  pass text not null,          -- scrypt hash
+  status text default 'pending' -- pending | approved | disabled
+);
+alter table affiliates enable row level security;
+create table if not exists payouts (
+  id bigint generated always as identity primary key,
+  created_at timestamptz default now(),
+  affiliate_id bigint references affiliates(id),
+  amount numeric not null,
+  bookings int,
+  method text,
+  note text
+);
+alter table payouts enable row level security;
+alter table leads add column if not exists aff text;                -- affiliate code that brought this booking
+alter table leads add column if not exists cost numeric;            -- supplier cost (private)
+alter table leads add column if not exists commission numeric;      -- affiliate commission for this booking
+alter table leads add column if not exists completed_at timestamptz;-- tour done: commission is earned
+alter table leads add column if not exists paid_at timestamptz;     -- commission paid out
+alter table leads add column if not exists payout_id bigint;

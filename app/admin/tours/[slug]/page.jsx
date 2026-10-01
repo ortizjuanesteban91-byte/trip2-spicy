@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession, can, firstArea } from "@/lib/admin";
-import { getTour } from "@/lib/tours";
+import { getTour, tourPrivate } from "@/lib/tours";
 import AdminPhotos from "@/components/AdminPhotos";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Edit tour | Admin", robots: { index: false, follow: false } };
@@ -15,6 +15,7 @@ export default async function Page({ params, searchParams }) {
   if (!can(session, "tours")) redirect(firstArea(session));
   const t = await getTour(slug, { includeHidden: true, fresh: true });
   if (!t) redirect("/admin/tours");
+  const pv = await tourPrivate(slug);
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <Link href="/admin/tours" className="text-sm font-bold text-brand">← All tours</Link>
@@ -38,6 +39,18 @@ export default async function Page({ params, searchParams }) {
               <F label="Weekend"><input name={`wknd_${i}`} type="number" step="0.01" inputMode="decimal" defaultValue={o.priceWknd || ""} className={inp} /></F>
             </div>
           ))}
+        </section>
+        <section className="grid gap-4 rounded-2xl bg-white p-5 shadow">
+          <h2 className="text-lg font-bold">Supplier &amp; affiliate commission <span className="ml-1 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-800">PRIVATE</span></h2>
+          <p className="text-sm text-[#667085]">Never shown on the website. Commission is a percentage of our margin (price minus supplier cost). If no supplier cost is entered, it is a percentage of the price. Leave 0 for no commission.</p>
+          <F label="Supplier name"><input name="supplier" defaultValue={pv.supplier} className={inp} /></F>
+          {t.options.map((o, i) => (
+            <div key={i} className="grid grid-cols-[1fr_130px] items-end gap-3">
+              <p className="pb-3 text-sm font-bold">{o.label} <span className="font-normal text-[#667085]">sells at ${o.price}{pv.costs[i] > 0 ? ` · margin $${(o.price - pv.costs[i]).toFixed(2)}` : ""}</span></p>
+              <F label="Supplier cost"><input name={`cost_${i}`} type="number" step="0.01" inputMode="decimal" defaultValue={pv.costs[i] || ""} className={inp} /></F>
+            </div>
+          ))}
+          <F label="Affiliate commission % for this tour"><input name="rate" type="number" step="0.1" min="0" max="100" inputMode="decimal" defaultValue={pv.rate || ""} className={inp} /></F>
         </section>
         <section className="grid gap-3 rounded-2xl bg-white p-5 shadow">
           <h2 className="text-lg font-bold">Photos</h2>

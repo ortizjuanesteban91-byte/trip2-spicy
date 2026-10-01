@@ -49,6 +49,13 @@ export default async function Admin({ searchParams }) {
             {l.details && Object.keys(l.details).length > 0 && (
               <dl className="mt-3 grid gap-1 text-sm sm:grid-cols-2">{Object.entries(l.details).map(([k, v]) => /^https?:\/\//.test(String(v)) || k === "Photos" ? <div key={k} className="sm:col-span-2"><dt className="font-bold">{k}</dt><dd className="flex flex-wrap gap-2">{String(v).split(/\s+/).filter(Boolean).map((u) => <a key={u} href={u} target="_blank" rel="noreferrer"><img src={u} alt="" className="h-20 w-20 rounded-lg object-cover" /></a>)}</dd></div> : <div key={k}><dt className="inline font-bold">{k}: </dt><dd className="inline">{v}</dd></div>)}</dl>
             )}
+            {l.aff && (
+              <form method="post" action="/api/admin/affiliates" className="mt-3 flex flex-wrap items-center gap-2 rounded-xl bg-[#f4f7fc] p-3 text-sm">
+                <input type="hidden" name="lead" value={l.id} /><input type="hidden" name="back" value="/admin" />
+                <span>Affiliate <b>{l.aff}</b> · commission <b>${Number(l.commission || 0).toFixed(2)}</b> · {l.paid_at ? "paid" : l.completed_at ? "earned" : "waiting for tour"}</span>
+                {can(session, "affiliates") && !l.paid_at && (l.completed_at ? <button name="act" value="uncomplete" className="rounded-full bg-[#eef2f6] px-3 py-1 text-xs font-bold">Undo</button> : <button name="act" value="complete" className="rounded-full bg-emerald-600 px-3 py-1 text-xs font-bold text-white">Tour completed</button>)}
+              </form>
+            )}
             <form method="post" action="/api/admin/status" className="mt-3 flex gap-2">
               <input type="hidden" name="id" value={l.id} />
               {["new", "contacted", "closed"].map((s) => <button key={s} name="status" value={s} className={`rounded-full px-3 py-1 text-xs font-bold ${(l.status || "new") === s ? "bg-brand text-white" : "bg-[#eef2f6]"}`}>{s}</button>)}

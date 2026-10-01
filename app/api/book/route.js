@@ -1,5 +1,6 @@
-import { headers } from "next/headers";
-import { getTour } from "@/lib/tours";
+import { headers, cookies } from "next/headers";
+import { getTour, tourPrivate } from "@/lib/tours";
+import { affiliateByCode } from "@/lib/affiliates";
 import { quote } from "@/lib/pricing";
 import { getPayments, createBookingCheckout } from "@/lib/pay";
 import { sendLeadAlert } from "@/lib/notify";
@@ -29,7 +30,20 @@ export async function POST(req) {
   };
   const url = process.env.SUPABASE_URL, key = process.env.SUPABASE_SERVICE_KEY;
   if (!url || !key) return Response.json({ ok: false, error: "not-configured" }, { status: 503 });
-  const ins = await fetch(`${url}/rest/v1/leads`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=representation" }, body: JSON.stringify(lead) });
+  // Private extras: supplier cost, and the affiliate (cookie from their ?ref= link) with the commission earned if the tour is completed.
+  const pv = await tourPrivate(tour.slug);
+  const cost = Math.round((tour.options || []).reduce((a, o, i) => a + Math.max(0, Math.min(20, Math.floor(Number(b.qty?.[i]) || 0))) * (pv.costs[i] || 0), 0) * 100) / 100;
+  const aff = await affiliateByCode((await cookies()).get("aff")?.value);
+  const extra = {};
+  if (cost > 0) extra.cost = cost;
+  if (aff && aff.status === "approved") {
+    const basis = cost > 0 ? Math.max(0, q.total - cost) : q.total;
+    extra.aff = aff.code; extra.commission = Math.round(basis * pv.rate) / 100;
+    lead.details.Affiliate = `${aff.name} (${aff.code})`;
+  }
+  const post = (row) => fetch(`${url}/rest/v1/leads`, { method: "POST", headers: { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json", Prefer: "return=representation" }, body: JSON.stringify(row) });
+  let ins = await post({ ...lead, ...extra });
+  if (!ins.ok && Object.keys(extra).length) ins = await post(lead); // booking is never lost if the new columns are not in the database yet
   if (!ins.ok) return Response.json({ ok: false, error: "db" }, { status: 503 });
   const id = (await ins.json().catch(() => []))?.[0]?.id;
   await sendLeadAlert(lead);

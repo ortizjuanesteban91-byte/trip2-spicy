@@ -12,7 +12,8 @@ export async function POST(req) {
   if (!t) return go("/admin/tours");
   const options = t.options.map((_, i) => ({ price: num(f.get(`price_${i}`)) ?? "", priceWknd: num(f.get(`wknd_${i}`)) || "" }));
   const photos = String(f.get("photos") || "").split(/\s+/).filter((u) => /^https:\/\//.test(u)).slice(0, 40);
-  const data = { from: num(f.get("from")) || "", options, photos, by: session.name || "Owner" };
+  const costs = t.options.map((_, i) => num(f.get(`cost_${i}`)) || 0);
+  const data = { from: num(f.get("from")) || "", options, photos, by: session.name || "Owner", supplier: String(f.get("supplier") || "").trim().slice(0, 120), costs, rate: Math.min(100, num(f.get("rate")) || 0) };
   const ok = await saveTour(slug, { hidden: f.get("hidden") === "on", data });
   revalidatePath("/", "layout");
   return go(ok ? "/admin/tours?saved=1" : `/admin/tours/${slug}?e=1`);
