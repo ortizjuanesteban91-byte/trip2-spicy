@@ -87,10 +87,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 59,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "01",
+  "cat": "Day Trips",
   "name": "Best Punta Cana Tours"
  },
  {
@@ -139,10 +142,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 125,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "02",
+  "cat": "Day Trips",
   "name": "Saona Island vs. Catalina Island — Which to Pick"
  },
  {
@@ -209,9 +215,12 @@
   ],
   "prices": "",
   "from": null,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "03",
+  "cat": "Day Trips",
   "name": "Complete Guide to ATV & Buggy Tours in Punta Cana"
  },
  {
@@ -270,10 +279,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 50,
+  "options": [],
+  "min2": true,
   "alts": [],
   "breadcrumb": "",
   "num": "04",
+  "cat": "Day Trips",
   "name": "Montaña Redonda: Every Way to See It"
  },
  {
@@ -328,10 +340,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 125,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "05",
+  "cat": "Day Trips",
   "name": "Best Boat Parties & Catamaran Tours in Punta Cana"
  },
  {
@@ -376,10 +391,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 67.5,
+  "options": [],
+  "min2": true,
   "alts": [],
   "breadcrumb": "",
   "num": "06",
+  "cat": "Day Trips",
   "name": "Monkey Land & Zipline: Family Adventure Guide"
  },
  {
@@ -424,10 +442,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 119,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "07",
+  "cat": "Day Trips",
   "name": "Day Trip from Punta Cana: Santo Domingo, Los Haitises & More"
  },
  {
@@ -480,9 +501,12 @@
   ],
   "prices": "",
   "from": null,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "08",
+  "cat": "Day Trips",
   "name": "Whale Watching Season in Samaná — What to Know"
  },
  {
@@ -555,10 +579,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 120,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "09",
+  "cat": "Day Trips",
   "name": "Things to Do in Miches — Complete Guide"
  },
  {
@@ -610,10 +637,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 99,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "10",
+  "cat": "Day Trips",
   "name": "Coco Bongo Nightlife Guide — Which Ticket to Choose"
  },
  {
@@ -666,10 +696,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 45,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "11",
+  "cat": "Day Trips",
   "name": "Money Exchange Tips for Punta Cana"
  },
  {
@@ -735,10 +768,13 @@
    }
   ],
   "prices": "",
-  "from": null,
+  "from": 45,
+  "options": [],
+  "min2": false,
   "alts": [],
   "breadcrumb": "",
   "num": "12",
+  "cat": "Day Trips",
   "name": "Recommended Restaurants in Punta Cana"
  }
 ]

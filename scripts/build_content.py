@@ -70,6 +70,37 @@ def sectionize(lines, h2s):
         for i in range(pos, len(lines)):
             if norm(lines[i]) == norm(h): idx.append((h, i)); pos = i + 1; break
     return idx
+FROM = {"01":59,"02":125,"04":50,"05":125,"06":67.5,"07":119,"09":120,"10":99,"11":45,"12":45,"13":100,"17":129,"18":85,"19":85,"20":130,"22":120,"23":140,"25":105,"26":140,"27":140,"29":90,"30":105,"31":155,"35":149,"37":55,"38":130.5,"39":124.5,"40":175.5,"41":90}
+MIN2 = {"04","06","21","22","23","26","27","29","30","31"}
+MULTI = {"38":["Single","Double","Triple","Quadruple"],"39":["Single","Double","Triple","Quadruple"],"40":["Single","Double","Triple","Quadruple"]}
+def options(num, prices):
+    out = []
+    parts = [x.strip() for x in prices.split("·")]
+    # re-merge pieces that lost their price tag (wrapped text)
+    for k, x in enumerate(parts):
+        m = re.search(r"\$\s?(\d[\d,.]*)\s*$", x)
+        if not m: continue
+        label = x[:m.start()].strip(); price = float(m.group(1).replace(",", ""))
+        out.append([label, price])
+    if num in MULTI:
+        out = [[n, o[1]] for n, o in zip(MULTI[num], out)]
+    res = []
+    for label, price in out:
+        l = label.lower(); people = 1; unit = "person"
+        mm = re.search(r"\((\d)\s*(?:person|people|rider)", l)
+        if "single" in l: people = 1
+        elif "double" in l: people = 2
+        elif "triple" in l: people = 3
+        elif "quadruple" in l: people = 4
+        elif "family" in l: people = 3 if num in ("04","05","06") else 4
+        elif mm: people = int(mm.group(1))
+        if re.search(r"single|double|triple|quadruple|family|rider|per boat|per vehicle|per buggy", l) : unit = "group"
+        if "infant" in l: people = 1
+        label = re.sub(r"^\(1 rider\)", "Single (1 rider)", label) if label.startswith("(") else label
+        label = re.sub(r"^(?:1 rider|10\+|13\+|11\+)\)", lambda m: "Adult (" + m.group(0), label)
+        label = ("Observer / C" + label) if label.startswith("ompanion") else label
+        res.append({"label": label.strip(" ·"), "price": price, "people": people, "group": unit == "group"})
+    return res
 def build(kind, folder, copyname):
     seo = parse_seo(os.path.join(folder, "2 - SEO Settings.pdf"))
     slug = join(seo.get("URL slug", [])).strip("/").split("/")[-1]
@@ -108,8 +139,8 @@ def build(kind, folder, copyname):
     prices = join(seo.get("Schema prices", []))
     allp = [int(x.replace(",", "")) for x in re.findall(r"\$\s?(\d[\d,]*)", prices or meta)]
     d = {"slug": slug, "title": title, "metaTitle": title, "meta": meta, "h1": h1, "keyword": join(seo.get("Focus keyword", [])),
-         "intro": paras(intro_lines), "sections": sections, "prices": prices, "from": next((a for a in allp if a), None),
-         "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2]}
+         "intro": paras(intro_lines), "sections": sections, "prices": prices, "from": FROM.get(os.path.basename(folder)[:2], next((a for a in allp if a), None)), "options": options(os.path.basename(folder)[:2], prices), "min2": os.path.basename(folder)[:2] in MIN2,
+         "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2], "cat": (lambda b: "Miches" if "Miches" in b else "Boats & Water" if "Boats" in b else "Adventures" if "Adventures" in b else "Day Trips")(join(seo.get("Breadcrumb", [])) or "")}
     return d
 tours, posts, warn = [], [], []
 for pack, sub in [("45119b76-Trip2_31_Tours_PDF5", "Trip2_31_Tours"), ("82b38293-Trip2_RunnersAdventures_Tours_PDF5", "Trip2_Ohana_Tours")]:

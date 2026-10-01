@@ -157,12 +157,34 @@
   ],
   "prices": "Adult (10+) $59 · Child (4–9) $35 · Infant (0–3) $0",
   "from": 59,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 59.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 35.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Guests dancing on the Trip2 party catamaran off Bávaro Beach",
    "Friends in the natural pool sandbar, Punta Cana"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Catamaran Party Boat",
   "num": "01",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Catamaran Party Boat Punta Cana"
  },
@@ -332,12 +354,22 @@
   ],
   "prices": "Per person (minimum 2) $125",
   "from": 125,
+  "options": [
+   {
+    "label": "Per person (minimum 2)",
+    "price": 125.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Parasail over Bávaro Beach with the catamaran below",
    "Snorkeling reef stop on the Punta Cana combo tour"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Catamaran + Parasail + Snorkel",
   "num": "02",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Catamaran + Parasail + Snorkel Combo"
  },
@@ -507,12 +539,22 @@
   ],
   "prices": "Adult (18+) $65",
   "from": 65,
+  "options": [
+   {
+    "label": "Adult (18+)",
+    "price": 65.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Adults dancing on the hip hop catamaran off Bávaro",
    "Water slide from the party catamaran into the sea"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Hip Hop Party Boat",
   "num": "03",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Hip Hop Party Boat Punta Cana"
  },
@@ -678,13 +720,35 @@
    }
   ],
   "prices": "Single (1 person, per boat) $75 · Double (2 people, per boat) $99 · Family (2 adults + 1 child, or up to 4 adults), per boat $160",
-  "from": 75,
+  "from": 50,
+  "options": [
+   {
+    "label": "Single (1 person, per boat)",
+    "price": 75.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people, per boat)",
+    "price": 99.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Family (2 adults + 1 child, or up to 4 adults), per boat",
+    "price": 160.0,
+    "people": 3,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "Couple driving a two-seat speedboat along Bávaro Beach",
    "Speedboats following the guide boat off Punta Cana"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Speedboat",
   "num": "04",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Speedboat Punta Cana"
  },
@@ -853,13 +917,29 @@
    }
   ],
   "prices": "Double (2 people) $250 · Family (3 adults + 1 child) $299",
-  "from": 250,
+  "from": 125,
+  "options": [
+   {
+    "label": "Double (2 people)",
+    "price": 250.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Family (3 adults + 1 child)",
+    "price": 299.0,
+    "people": 3,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "Tandem parasail above Bávaro Beach, Punta Cana",
    "Guests driving their own speedboat on the combo tour"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Speedboat + Parasail + Snorkel",
   "num": "05",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Speedboat + Parasail + Snorkel Combo"
  },
@@ -1026,13 +1106,35 @@
    }
   ],
   "prices": "Single $75 · Double $135 · Family $160",
-  "from": 75,
+  "from": 67.5,
+  "options": [
+   {
+    "label": "Single",
+    "price": 75.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double",
+    "price": 135.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Family",
+    "price": 160.0,
+    "people": 3,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "Tandem parasail flying over Bávaro Beach, Punta Cana",
    "Crew clipping riders into the parasail harness"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Parasailing",
   "num": "06",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Parasailing Punta Cana"
  },
@@ -1201,12 +1303,28 @@
   ],
   "prices": "Angler (shared seat) $119 · Observer (non-fishing guest) $69",
   "from": 119,
+  "options": [
+   {
+    "label": "Angler (shared seat)",
+    "price": 119.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Observer (non-fishing guest)",
+    "price": 69.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Angler reeling in a mahi-mahi off Punta Cana",
    "Sport-fishing boat trolling lines offshore"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Deep Sea Fishing",
   "num": "07",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Deep Sea Fishing Punta Cana"
  },
@@ -1384,12 +1502,34 @@
   ],
   "prices": "Adult (10+) $79 · Child (4–9) $50 · Infant (0–3) $0",
   "from": 79,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 79.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 50.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Saona Island tour Punta Cana: starfish in the natural pool",
    "Palm-lined beach on Saona Island"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Saona Island Tour",
   "num": "08",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Saona Island Tour from Punta Cana"
  },
@@ -1568,12 +1708,40 @@
   ],
   "prices": "Dolphin Encounter Funtastic (per person) $120 · Dolphin Swim Explorer (per person) $120 · Royal Dolphin Swim Excellence (per · Observer / Companion, no swim – Adult (13+) $35 · ompanion, no swim – Child (0–12) $25",
   "from": 120,
+  "options": [
+   {
+    "label": "Dolphin Encounter Funtastic (per person)",
+    "price": 120.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Dolphin Swim Explorer (per person)",
+    "price": 120.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Observer / Companion, no swim – Adult (13+)",
+    "price": 35.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Observer / Companion, no swim – Child (0–12)",
+    "price": 25.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Child meeting a dolphin at Dolphin Explorer, Cabeza de Toro",
    "Belly ride on the Dolphin Swim Explorer program"
   ],
   "breadcrumb": "Home › Punta Cana › Boats › Dolphin Explorer",
   "num": "09",
+  "cat": "Boats & Water",
   "pack": "Trip2_31_Tours",
   "name": "Dolphin Explorer Punta Cana"
  },
@@ -1783,12 +1951,52 @@
   ],
   "prices": "Catalina Island – Adult (10+) $99 · Catalina Island – Child (4–9) $50 · Catalina Island – Infant (0–3) $0 · Catalina + Altos de Chavón ) $119 · Catalina + Altos de Chavón – Child (4–9) $60 · ltos de Chavón – Infant (0–3) $0",
   "from": 99,
+  "options": [
+   {
+    "label": "Catalina Island – Adult (10+)",
+    "price": 99.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Catalina Island – Child (4–9)",
+    "price": 50.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Catalina Island – Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Catalina + Altos de Chavón )",
+    "price": 119.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Catalina + Altos de Chavón – Child (4–9)",
+    "price": 60.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "ltos de Chavón – Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Snorkelers at the reef off Catalina Island",
    "Stone amphitheater at Altos de Chavón, La Romana"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Catalina Island Tour",
   "num": "10",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Catalina Island Tour from Punta Cana"
  },
@@ -1949,13 +2157,29 @@
    }
   ],
   "prices": "Single (1 person, 1 ATV) $70 · Double (2 people, 1 ATV) $90",
-  "from": 70,
+  "from": 45,
+  "options": [
+   {
+    "label": "Single (1 person, 1 ATV)",
+    "price": 70.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people, 1 ATV)",
+    "price": 90.0,
+    "people": 2,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "Couple driving an ATV through a muddy trail in Punta Cana",
    "ATV group stopped at Macao Beach"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › ATV Tour Punta Cana",
   "num": "11",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "ATV Tour Punta Cana"
  },
@@ -2120,13 +2344,35 @@
    }
   ],
   "prices": "Single (1 person, per buggy) $69 · Double (2 people, per buggy) $90 · Family (up to 4 people, per buggy) $130",
-  "from": 69,
+  "from": 45,
+  "options": [
+   {
+    "label": "Single (1 person, per buggy)",
+    "price": 69.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people, per buggy)",
+    "price": 90.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Family (up to 4 people, per buggy)",
+    "price": 130.0,
+    "people": 4,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "Family of four in a buggy on a muddy Punta Cana trail",
    "Mamajuana and cacao tasting at a Dominican country house"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Buggy Tour Punta Cana",
   "num": "12",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Buggy Tour Punta Cana"
  },
@@ -2295,13 +2541,35 @@
    }
   ],
   "prices": "Single (per vehicle) $149 · Double (per vehicle) $199 · Family (up to 4, per vehicle) $280",
-  "from": 149,
+  "from": 100,
+  "options": [
+   {
+    "label": "Single (per vehicle)",
+    "price": 149.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (per vehicle)",
+    "price": 199.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Family (up to 4, per vehicle)",
+    "price": 280.0,
+    "people": 4,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "Polaris UTV driving through a muddy trail near Punta Cana",
    "Family of four in a Polaris UTV"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Polaris UTV",
   "num": "13",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Polaris UTV Punta Cana"
  },
@@ -2471,12 +2739,22 @@
   ],
   "prices": "Per person $75",
   "from": 75,
+  "options": [
+   {
+    "label": "Per person",
+    "price": 75.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Guests on horseback on a countryside trail near Punta Cana",
    "Horseback riders on Bávaro Beach, Punta Cana"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Horseback Riding Punta Cana",
   "num": "14",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Horseback Riding Punta Cana"
  },
@@ -2639,12 +2917,28 @@
   ],
   "prices": "Adult (10+) $89 · Child (6–9) $65",
   "from": 89,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 89.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (6–9)",
+    "price": 65.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Woman ziplining above the tropical forest near Punta Cana",
    "Guide checking a harness before the first zipline"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Zipline Punta Cana",
   "num": "15",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Zipline Punta Cana"
  },
@@ -2800,12 +3094,34 @@
   ],
   "prices": "Adult (10+) $95 · Child (4–9) $65 · Infant (0–3) $0",
   "from": 95,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 95.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 65.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Squirrel monkey eating from a child's hand at Monkeyland",
    "Family with monkeys on their shoulders, Punta Cana"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Monkey Land",
   "num": "16",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Monkey Land Punta Cana"
  },
@@ -2969,12 +3285,28 @@
   ],
   "prices": "Adult (10+) $129 · Child (4–9) $85",
   "from": 129,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 129.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 85.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Child on a zipline over the jungle canopy, Punta Cana",
    "Squirrel monkey on a guest's shoulder at Monkeyland"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Monkey Land + Zipline",
   "num": "17",
+  "cat": "Adventures",
   "pack": "Trip2_31_Tours",
   "name": "Monkey Land + Zipline Combo"
  },
@@ -3140,12 +3472,34 @@
   ],
   "prices": "Adult (10+) $85 · Child (4–9) $50 · Infant (0–3) $0",
   "from": 85,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 85.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 50.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Cathedral of Santa María la Menor in the Colonial Zone",
    "Calle Las Damas cobblestone street, Santo Domingo"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Santo Domingo Tour",
   "num": "19",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Santo Domingo Tour from Punta Cana"
  },
@@ -3314,12 +3668,34 @@
   ],
   "prices": "Adult (10+) $130 · Child (4–9) $70 · Infant (0–3) $0",
   "from": 130,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 130.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 70.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Boat in the mangrove channels of Los Haitises National Park",
    "Taíno pictographs on a cave wall in Los Haitises"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Los Haitises Tour",
   "num": "20",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Los Haitises Tour from Punta Cana"
  },
@@ -3498,12 +3874,34 @@
   ],
   "prices": "Adult (10+) $90 · Child (4–9) $45 · Infant (0–3) $0",
   "from": 90,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 90.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 45.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": true,
   "alts": [
    "Swing at the Montaña Redonda summit on a trip from Punta Cana",
    "Lagoons seen from the top of Montaña Redonda"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda Tour",
   "num": "21",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda Tour from Punta Cana"
  },
@@ -3678,13 +4076,29 @@
    }
   ],
   "prices": "(1 rider) $140 · Double (2 people sharing 1 ATV) $240",
-  "from": 140,
+  "from": 120,
+  "options": [
+   {
+    "label": "Single (1 rider)",
+    "price": 140.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people sharing 1 ATV)",
+    "price": 240.0,
+    "people": 2,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "ATV riders on a Miches trail on the tour from Punta Cana",
    "Double ATV crossing a muddy track near Miches"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda + ATV",
   "num": "22",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV Combo from Punta Cana"
  },
@@ -3870,13 +4284,29 @@
    }
   ],
   "prices": "(1 rider) $165 · Double (2 people sharing 1 ATV) $280",
-  "from": 165,
+  "from": 140,
+  "options": [
+   {
+    "label": "Single (1 rider)",
+    "price": 165.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people sharing 1 ATV)",
+    "price": 280.0,
+    "people": 2,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "Rider on a zipline at the top of Montaña Redonda",
    "Riders gearing up for the Montaña Redonda zipline"
   ],
   "breadcrumb": "Home › Punta Cana › Day trips › Montaña Redonda + ATV + Zipline",
   "num": "23",
+  "cat": "Day Trips",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV + Zipline Combo from Punta Cana"
  },
@@ -4035,13 +4465,35 @@
    }
   ],
   "prices": "Single (1 person, 1 ATV) $89 · Double (2 people, 1 ATV) $130 · Child passenger $50",
-  "from": 89,
+  "from": 105,
+  "options": [
+   {
+    "label": "Single (1 person, 1 ATV)",
+    "price": 89.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people, 1 ATV)",
+    "price": 130.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Child passenger",
+    "price": 50.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Couple riding a double ATV through a muddy trail in Miches",
    "ATVs parked at a beach stop on the Miches coast"
   ],
   "breadcrumb": "Home › Miches › ATV Tour Miches",
   "num": "25",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "ATV Tour Miches"
  },
@@ -4213,12 +4665,28 @@
   ],
   "prices": "Single $140 · Double (2 people sharing 1 ATV) $280",
   "from": 140,
+  "options": [
+   {
+    "label": "Single",
+    "price": 140.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people sharing 1 ATV)",
+    "price": 280.0,
+    "people": 2,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "ATV rider on a red-dirt trail below Montaña Redonda, Miches",
    "Couple on the Montaña Redonda summit swing after the ATV ride"
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + ATV Combo",
   "num": "26",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV Combo (Miches)"
  },
@@ -4398,13 +4866,29 @@
    }
   ],
   "prices": "Single $165 · Double (2 people sharing 1 ATV) $280",
-  "from": 165,
+  "from": 140,
+  "options": [
+   {
+    "label": "Single",
+    "price": 165.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double (2 people sharing 1 ATV)",
+    "price": 280.0,
+    "people": 2,
+    "group": true
+   }
+  ],
+  "min2": true,
   "alts": [
    "Rider on a zipline at the top of Montaña Redonda, Miches",
    "ATV convoy on a muddy trail to Montaña Redonda"
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + ATV + Zipline Combo",
   "num": "27",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + ATV + Zipline Combo (Miches)"
  },
@@ -4565,12 +5049,22 @@
   ],
   "prices": "Per person (minimum 2) $85",
   "from": 85,
+  "options": [
+   {
+    "label": "Per person (minimum 2)",
+    "price": 85.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Two riders on horseback along the beach in Miches",
    "Guide leading horses through a coconut palm grove in Miches"
   ],
   "breadcrumb": "Home › Miches › Horseback Riding Miches",
   "num": "28",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Horseback Riding Miches"
  },
@@ -4740,12 +5234,34 @@
   ],
   "prices": "Adult (10+) $90 · Child (4–9) $45 · Infant (0–3) $0",
   "from": 90,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 90.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 45.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": true,
   "alts": [
    "Traveler on the Montaña Redonda swing overlooking the lagoon, Miches",
    "360° view of lagoons and coast from Montaña Redonda"
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda Tour Miches",
   "num": "29",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda Tour Miches"
  },
@@ -4916,12 +5432,22 @@
   ],
   "prices": "10+) $155",
   "from": 155,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 155.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": true,
   "alts": [
    "Rider on a zipline at the top of Montaña Redonda, Miches",
    "Horseback riders on a palm-lined trail in Miches"
   ],
   "breadcrumb": "Home › Miches › Montaña Redonda + Horseback + Zipline Combo",
   "num": "31",
+  "cat": "Miches",
   "pack": "Trip2_31_Tours",
   "name": "Montaña Redonda + Horseback + Zipline Combo"
  },
@@ -5082,12 +5608,28 @@
   ],
   "prices": "13+) $159 · Child (3–12) $99",
   "from": 159,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 159.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 99.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "k whale tail above the water in Samaná Bay",
    "an anchored off Cayo Levantado beach, Samaná"
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching + Cayo do",
   "num": "32",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching + Cayo Levantado from Punta Cana"
  },
@@ -5251,12 +5793,28 @@
   ],
   "prices": "13+) $169 · Child (3–12) $99",
   "from": 169,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 169.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 99.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "k whale surfacing in Samaná Bay",
    "n Waterfall pool, Samaná Peninsula"
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching + El Limón",
   "num": "33",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching + El Limón Waterfall from Punta Cana"
  },
@@ -5413,12 +5971,28 @@
   ],
   "prices": "13+) $120 · Child (3–12) $60",
   "from": 120,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 120.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 60.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Humpback whale fin in Samaná Bay seen from the catamaran",
    "Catamaran at the Las Cañitas pier"
   ],
   "breadcrumb": "Punta Cana › Day trips › Whale Watching Half Day",
   "num": "34",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Whale Watching Half Day from Punta Cana"
  },
@@ -5579,12 +6153,28 @@
   ],
   "prices": "13+) $149 · Child (3–12) $89",
   "from": 149,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 149.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 89.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "n Waterfall falling into its pool, Samaná",
    "on horseback on the trail to El Limón Waterfall"
   ],
   "breadcrumb": "Punta Cana › Day trips › El Limón Waterfall + Cayo do",
   "num": "35",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "El Limón Waterfall + Cayo Levantado from Punta Cana"
  },
@@ -5747,12 +6337,28 @@
   ],
   "prices": "11+) $169 · Child (3–10) $99",
   "from": 169,
+  "options": [
+   {
+    "label": "Adult (11+)",
+    "price": 169.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–10)",
+    "price": 99.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "incón shoreline with palm trees, Samaná",
    "lunch served on the beach at Playa Rincón"
   ],
   "breadcrumb": "Punta Cana › Day trips › Playa Rincón + Cayo do",
   "num": "36",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Playa Rincón + Cayo Levantado from Punta Cana"
  },
@@ -5910,12 +6516,28 @@
   ],
   "prices": "13+) $55 · Child (3–12) $28",
   "from": 55,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 55.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 28.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Basilica of Nuestra Señora de la Altagracia, Higüey",
    "Church of San Dionisio in Higüey"
   ],
   "breadcrumb": "Punta Cana › Day trips › Higüey City Tour",
   "num": "37",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Higüey City Tour from Punta Cana"
  },
@@ -6076,13 +6698,41 @@
    }
   ],
   "prices": "(1 person, 1 buggy) $179 · Double (2 people, 1 $261 · Triple (3 people, 1 buggy) $347 · Quadruple le, 1 buggy) $433",
-  "from": 179,
+  "from": 130.5,
+  "options": [
+   {
+    "label": "Single",
+    "price": 179.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double",
+    "price": 261.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Triple",
+    "price": 347.0,
+    "people": 3,
+    "group": true
+   },
+   {
+    "label": "Quadruple",
+    "price": 433.0,
+    "people": 4,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "gy on a muddy trail in the Anamuya mountains, Punta",
    "l monkey eating from a guest's hand at Monkeyland"
   ],
   "breadcrumb": "Punta Cana › Adventures › Buggy + Monkey Land",
   "num": "38",
+  "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Buggy + Monkey Land Combo"
  },
@@ -6242,13 +6892,41 @@
    }
   ],
   "prices": "(1 person, 1 buggy) $179 · Double (2 people, 1 $249 · Triple (3 people, 1 buggy) $329 · Quadruple le, 1 buggy) $409",
-  "from": 179,
+  "from": 124.5,
+  "options": [
+   {
+    "label": "Single",
+    "price": 179.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double",
+    "price": 249.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Triple",
+    "price": 329.0,
+    "people": 3,
+    "group": true
+   },
+   {
+    "label": "Quadruple",
+    "price": 409.0,
+    "people": 4,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "Guests driving a 4×4 buggy on a jungle trail, Punta Cana",
    "Guest on the 800 m zipline over the Anamuya mountains"
   ],
   "breadcrumb": "Punta Cana › Adventures › Buggy + Zipline",
   "num": "39",
+  "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Buggy + Zipline Combo"
  },
@@ -6411,13 +7089,41 @@
    }
   ],
   "prices": "(1 person, 1 buggy) $209 · Double (2 people, 1 $351 · Triple (3 people, 1 buggy) $467 · Quadruple le, 1 buggy) $553",
-  "from": 209,
+  "from": 175.5,
+  "options": [
+   {
+    "label": "Single",
+    "price": 209.0,
+    "people": 1,
+    "group": true
+   },
+   {
+    "label": "Double",
+    "price": 351.0,
+    "people": 2,
+    "group": true
+   },
+   {
+    "label": "Triple",
+    "price": 467.0,
+    "people": 3,
+    "group": true
+   },
+   {
+    "label": "Quadruple",
+    "price": 553.0,
+    "people": 4,
+    "group": true
+   }
+  ],
+  "min2": false,
   "alts": [
    "n a zipline above the Anamuya mountains, Punta Cana",
    "l monkey on a guest's shoulder at Monkeyland"
   ],
   "breadcrumb": "Punta Cana › Adventures › Triple Adventure",
   "num": "40",
+  "cat": "Adventures",
   "pack": "Trip2_Ohana_Tours",
   "name": "Triple Adventure (Buggy + Zipline + Monkey Land)"
  },
@@ -6580,6 +7286,21 @@
   ],
   "prices": "13+) $90 · Child (3–12) $45",
   "from": 90,
+  "options": [
+   {
+    "label": "Adult (13+)",
+    "price": 90.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (3–12)",
+    "price": 45.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
   "alts": [
    "Ohana's Bávaro Runners safari truck on the road to Higüey",
    "Cigar roller demonstrating by hand on the Bávaro Runners",
@@ -6587,6 +7308,7 @@
   ],
   "breadcrumb": "Punta Cana › Day trips › Bávaro Runners",
   "num": "41",
+  "cat": "Day Trips",
   "pack": "Trip2_Ohana_Tours",
   "name": "Bávaro Runners"
  }
