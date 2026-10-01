@@ -26,7 +26,7 @@ export default function Home() {
       <section id="excursions" className="bg-ice px-5 py-16">
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
-        <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map(([t, d, g, k], i) => <Link key={t} href={`/tours?cat=${k}`} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} /><div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
