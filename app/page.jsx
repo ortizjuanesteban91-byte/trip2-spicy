@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { photo } from "@/data/photos";
 import { tours as allTours } from "@/lib/content";
 import { trust, categories, advantages, reviews, itinerary, guides, whatsapp } from "@/data/site";
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-brand/70">{children}</p>;
@@ -36,7 +37,7 @@ export default function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {["saona-island","atv-punta-cana","catamaran-party-boat"].map((x) => allTours.find((t) => t.slug === x)).filter(Boolean).map((t, i) => (
             <article key={t.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
-              <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-teal-700" /><span className="absolute left-3 top-3 z-10 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span></div>
+              <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-teal-700" />{photo(t.slug) && <img src={photo(t.slug)} alt={t.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<span className="absolute left-3 top-3 z-10 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span></div>
               <div className="p-5" data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t.name}</h3><p className="mt-2 text-xs text-ink/60">Half Day · Verified Guide</p>
                 <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)}</b> / person</p><Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs after:absolute after:inset-0 after:content-[''] font-extrabold text-white hover:bg-brand-hover">VIEW TOUR</Link></div></div>
             </article>

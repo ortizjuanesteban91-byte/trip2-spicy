@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { photo } from "@/data/photos";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const GR = ["from-sky-300 to-teal-700", "from-emerald-300 to-emerald-800", "from-amber-200 to-lime-700", "from-cyan-200 to-blue-700", "from-green-300 to-teal-800", "from-slate-300 to-slate-700"];
 export default function TourGrid({ tours, cats: C, initial, initialDest }) {
@@ -22,7 +23,7 @@ export default function TourGrid({ tours, cats: C, initial, initialDest }) {
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((t, i) => (
           <article key={t.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
-            <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${GR[t.i % 6]}`} /><span className="absolute left-3 top-3 z-10 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold text-ink">{(cats.find(([k]) => k === t.cat) || [0, ""])[1].toUpperCase()}</span></div>
+            <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${GR[t.i % 6]}`} />{photo(t.slug) && <img src={photo(t.slug)} alt={t.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<span className="absolute left-3 top-3 z-10 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold text-ink">{(cats.find(([k]) => k === t.cat) || [0, ""])[1].toUpperCase()}</span></div>
             <div className="p-5" data-aos="zoom-out-left">
               <p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p>
               <h2 className="mt-1 text-lg font-extrabold leading-snug">{t.title}</h2>
