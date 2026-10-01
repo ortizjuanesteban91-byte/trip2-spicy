@@ -25,40 +25,49 @@ export default function BookingBox({ tour }) {
     } catch { setState("error"); }
   }
   if (state === "done") return <p className="rounded-xl bg-white p-6 font-bold text-brand">Thank you! Your request is in. Our concierge will confirm your pickup on WhatsApp. You pay later.</p>;
+  const ic = "pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-lg";
+  const f = "w-full rounded-2xl border border-sky-200 bg-sky-50/60 py-4 pl-12 pr-4 text-sm text-ink";
   return (
-    <form onSubmit={submit} className="grid gap-4 rounded-2xl bg-white p-5 shadow ring-1 ring-sky-100">
-      <div className="-m-5 mb-0 rounded-t-2xl bg-sky-100 p-5"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">BEST RATE DIRECT · OFFICIAL TRIP2 GUARANTEE</p><p className="mt-1 text-3xl font-black text-brand">{money(tour.from)} <span className="text-xs font-bold text-ink/60">Base Price · per person</span></p></div>
-      <div className="grid gap-2">
-        {opts.map((o, i) => (
-          <div key={i} className="flex items-center justify-between gap-3 rounded-xl bg-ice p-3">
-            <div className="text-sm"><b>{o.label}</b><br /><span className="text-brand font-extrabold">{money(o.price)}</span></div>
-            <div className="flex items-center gap-2">
-              <button type="button" onClick={() => set(i, -1)} className="h-9 w-9 rounded-full bg-white text-lg font-black text-brand shadow">−</button>
-              <span className="w-6 text-center font-bold">{q[i] || 0}</span>
-              <button type="button" onClick={() => set(i, 1)} className="h-9 w-9 rounded-full bg-brand text-lg font-black text-white">+</button>
-            </div>
-          </div>
-        ))}
+    <form onSubmit={submit} className="grid gap-4 rounded-[28px] border border-sky-100 bg-white p-4 shadow-lg">
+      <div className="rounded-3xl bg-sky-50 p-4">
+        <span className="rounded-full bg-amber-200 px-3 py-1 text-[10px] font-extrabold tracking-wider text-amber-900">BEST RATE DIRECT</span>
+        <p className="mt-2 text-xs font-bold text-ink/60">Official Trip2 Guarantee</p>
+        <p className="mt-1 text-4xl font-black text-brand">{money(tour.from)} <span className="text-xs font-bold text-ink/50">Base Price · per person</span></p>
       </div>
-      {lines.length > 0 && (
-        <div className="rounded-xl border border-sky-100 p-3 text-sm">
-          {lines.map((l, i) => <p key={i} className="py-0.5">{tour.name} · {l.label} · {l.qty} × {money(l.price)} = <b>{money(l.qty * l.price)}</b></p>)}
-          <p className="mt-2 flex justify-between text-xs"><span>Resort Roundtrip Pickup</span><b>FREE</b></p><p className="mt-2 border-t pt-2 font-extrabold">Total Amount Due: {money(total)} ({people} {people === 1 ? "person" : "people"})</p>
+      <div className="grid gap-3 rounded-3xl bg-sky-50 p-4">
+        <div className="relative"><span className={ic}>📅</span><input name="date" type="date" required className={f} /></div>
+        <div className="grid gap-2">
+          {opts.map((o, i) => (
+            <div key={i} className="flex items-center justify-between gap-3 rounded-2xl border border-sky-200 bg-sky-50/60 p-3">
+              <div className="text-sm"><b>{o.label}</b><br /><span className="font-extrabold text-brand">{money(o.price)}</span></div>
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={() => set(i, -1)} className="h-9 w-9 rounded-full bg-white text-lg font-black text-brand shadow">−</button>
+                <span className="w-6 text-center font-bold">{q[i] || 0}</span>
+                <button type="button" onClick={() => set(i, 1)} className="h-9 w-9 rounded-full bg-brand text-lg font-black text-white">+</button>
+              </div>
+            </div>
+          ))}
         </div>
-      )}
-      {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
-      <p className="text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
-      <div className="grid grid-cols-2 gap-3"><input name="first" required placeholder="First name *" className={inp} /><input name="last" required placeholder="Last name *" className={inp} /></div>
-      <input name="email" type="email" required placeholder="Email *" className={inp} />
-      <input name="phone" required placeholder="Phone / WhatsApp *" className={inp} />
-      <input name="date" type="date" required className={inp} />
-      <select name="time" required defaultValue="" className={inp}><option value="" disabled>Time of day *</option><option>Morning</option><option>Afternoon</option></select>
-      <input name="hotel" required placeholder="Hotel *" className={inp} />
-      <textarea name="notes" rows={3} placeholder="Notes" className={inp} />
-      <input name="website" tabIndex={-1} autoComplete="off" className="hidden" />
-      <button disabled={!lines.length || tooFew || state === "sending"} className="rounded-full bg-brand px-6 py-3 text-sm font-extrabold text-white disabled:opacity-40">{state === "sending" ? "Sending…" : "RESERVE NOW"}</button>
+        <div className="relative"><span className={ic}>🌤️</span><select name="time" required defaultValue="" className={f}><option value="" disabled>Time of Day*</option><option>Morning</option><option>Afternoon</option></select></div>
+        <div className="relative"><span className={ic}>🛏️</span><input name="hotel" required placeholder="Hotels*" className={f} /></div>
+        <div className="grid grid-cols-2 gap-3"><input name="first" required placeholder="First name *" className={f.replace("pl-12", "pl-4")} /><input name="last" required placeholder="Last name *" className={f.replace("pl-12", "pl-4")} /></div>
+        <input name="email" type="email" required placeholder="Email *" className={f.replace("pl-12", "pl-4")} />
+        <input name="phone" required placeholder="Phone / WhatsApp *" className={f.replace("pl-12", "pl-4")} />
+        <textarea name="notes" rows={2} placeholder="Notes" className={f.replace("pl-12", "pl-4")} />
+        <input name="website" tabIndex={-1} autoComplete="off" className="hidden" />
+        <div className="border-t border-sky-200 pt-3 text-sm">
+          {lines.length > 0 ? lines.map((l, i) => <p key={i} className="flex justify-between gap-3 py-0.5"><span className="text-ink/70">{l.label} · {l.qty} × {money(l.price)}</span><b>{money(l.qty * l.price)}</b></p>) : <p className="flex justify-between"><span className="text-ink/70">Base Fee</span><b>{money(tour.from)}</b></p>}
+          <p className="mt-2 flex justify-between"><span className="text-ink/70">Resort Roundtrip Pickup</span><b className="text-brand">FREE</b></p>
+          {tour.num && /^(2[1-3]|2[6-9]|3[01])$/.test(tour.num) && <p className="mt-2 flex justify-between"><span className="text-ink/70">Montaña Redonda Entry &amp; Swings</span><b className="text-brand">FREE</b></p>}
+        </div>
+        <div className="flex items-end justify-between border-t border-sky-200 pt-3"><b className="text-brand">Total Amount Due</b><b className="text-3xl text-brand">{money(lines.length ? total : tour.from)}</b></div>
+        {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
+      </div>
+      <p className="px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
+      <button disabled={!lines.length || tooFew || state === "sending"} className="rounded-full bg-brand py-4 text-sm font-extrabold text-white disabled:bg-slate-300">{state === "sending" ? "Sending…" : "⚡ RESERVE NOW"}</button>
+      <a href="#book" className="rounded-full bg-sky-100 py-3 text-center text-sm font-bold text-brand">💬 Enquiry Form</a>
       {state === "error" && <p className="text-sm font-bold text-rose-600">Something went wrong. Please try again or use WhatsApp.</p>}
-      <p className="text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
+      <p className="text-center text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
     </form>
   );
 }

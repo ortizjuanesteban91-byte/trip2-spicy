@@ -1,17 +1,26 @@
 import Link from "next/link";
 import { tours, tourHref } from "@/lib/content";
 const aos = (i) => (i % 2 ? "zoom-out-left" : "zoom-out-right");
-const Li = ({ children }) => <li className="flex gap-2 text-sm leading-6 text-ink/80"><span className="mt-1 text-brand">✓</span><span>{children}</span></li>;
+const ICONS = [[/hour|day|time|morning|afternoon/i,"⏱️"],[/age|kid|child|famil/i,"👨‍👩‍👧"],[/boat|catamaran|sail|speed|fish/i,"⛵"],[/snork|swim|reef|water|pool/i,"🤿"],[/atv|buggy|polaris|off-road|trail/i,"🏍️"],[/view|mountain|montaña|swing|summit/i,"⛰️"],[/pickup|transport|hotel|round/i,"🚐"],[/photo|camera/i,"📸"],[/drink|bar|food|lunch|bbq/i,"🍹"],[/horse/i,"🐴"],[/zip/i,"🪂"],[/cancel|free/i,"✅"],[/min|shared|private|group/i,"👥"]];
+const icon = (t) => (ICONS.find(([r]) => r.test(t)) || [0, "✨"])[1];
+const Circle = ({ children, cls = "bg-ice" }) => <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg ${cls}`}>{children}</span>;
+const Check = ({ x }) => <span className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-black text-white ${x ? "bg-rose-500" : "bg-brand"}`}>{x ? "✕" : "✓"}</span>;
+const Card = ({ children, className = "" }) => <div className={`rounded-3xl border border-slate-200 bg-white p-5 ${className}`}>{children}</div>;
 export default function Sections({ sections }) {
-  return sections.map((s, i) => (
+  return sections.map((s, i) => {
+    const bring = /bring/i.test(s.h2);
+    const inc = s.type === "inc";
+    return (
     <section key={i} className="mt-10" data-aos={aos(i)}>
-      <h2 className="mb-3 text-2xl font-black text-brand">{s.h2}</h2>
+      {!inc && <h2 className="mb-4 text-2xl font-black text-ink">{s.h2}</h2>}
       {s.type === "text" && s.paras.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}
-      {s.type === "list" && <ul className="grid gap-2 sm:grid-cols-2">{s.items.map((x, k) => <Li key={k}>{x}</Li>)}</ul>}
-      {s.type === "steps" && <ol className="space-y-2">{s.items.map((x, k) => <li key={k} className="flex gap-3 rounded-xl bg-ice p-3 text-sm"><b className="text-brand">{k + 1}</b><span>{x}</span></li>)}</ol>}
-      {(s.type === "inc" || s.type === "pc") && <div className="grid gap-4 sm:grid-cols-2">{s.groups.map((g, k) => <div key={k} className="rounded-2xl bg-white p-5 shadow ring-1 ring-sky-100"><h3 className="mb-2 font-extrabold">{g.label}</h3><ul className="space-y-1.5">{g.items.map((x, n) => <li key={n} className="flex gap-2 text-sm leading-6 text-ink/80"><span className={/not|con/i.test(g.label) ? "text-rose-500" : "text-brand"}>{/not|con/i.test(g.label) ? "✕" : "✓"}</span><span>{x}</span></li>)}</ul></div>)}</div>}
-      {s.type === "faq" && <div className="space-y-2">{s.faq.map((f, k) => <details key={k} className="group rounded-xl bg-white p-4 shadow ring-1 ring-sky-100"><summary className="cursor-pointer font-bold">{f.q}</summary><p className="mt-2 text-sm leading-6 text-ink/75">{f.a}</p></details>)}</div>}
+      {s.type === "list" && !bring && <div className="grid gap-3 sm:grid-cols-2">{s.items.map((x, k) => <div key={k} className="flex items-center gap-3 rounded-3xl border border-slate-200 bg-white p-4"><Circle>{icon(x)}</Circle><span className="text-sm leading-6 text-ink/80">{x}</span></div>)}</div>}
+      {s.type === "list" && bring && <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">{s.items.map((x, k) => <div key={k} className="flex flex-col items-center gap-2 rounded-3xl border border-slate-200 bg-white p-4 text-center"><span className="text-2xl">{icon(x) === "✨" ? "🎒" : icon(x)}</span><span className="text-sm text-ink/80">{x}</span></div>)}</div>}
+      {s.type === "steps" && <ol className="space-y-2">{s.items.map((x, k) => <li key={k} className="flex items-center gap-3 rounded-3xl border border-slate-200 bg-white p-4 text-sm"><Circle cls="bg-brand text-sm font-black text-white">{k + 1}</Circle><span>{x}</span></li>)}</ol>}
+      {inc && <div className="space-y-4">{s.groups.map((g, k) => { const no = /not/i.test(g.label); return <Card key={k}><h3 className="mb-4 flex items-center gap-3 text-lg font-extrabold"><Check x={no} />{no ? "What's Not Included" : "What's Included"}</h3><ul className="space-y-3">{g.items.map((x, n) => <li key={n} className="flex gap-3 text-sm leading-6 text-ink/80"><span className={no ? "text-ink/50" : "text-emerald-600"}>{no ? "✕" : "✓"}</span><span>{x}</span></li>)}</ul></Card>; })}</div>}
+      {s.type === "pc" && <div className="space-y-4">{s.groups.map((g, k) => { const con = /con/i.test(g.label); return <Card key={k}><h3 className="mb-4 text-lg font-extrabold">{g.label}</h3><ul className="space-y-3">{g.items.map((x, n) => <li key={n} className="flex gap-3 text-sm leading-6 text-ink/80"><Check x={con} /><span>{x}</span></li>)}</ul></Card>; })}</div>}
+      {s.type === "faq" && <div className="space-y-2">{s.faq.map((f, k) => <details key={k} className="group rounded-2xl border border-slate-200 bg-white p-4"><summary className="cursor-pointer font-bold">{f.q}</summary><p className="mt-2 text-sm leading-6 text-ink/75">{f.a}</p></details>)}</div>}
       {s.type === "links" && <div className="flex flex-wrap gap-2">{s.items.map((x, k) => { const t = tours.find((t) => t.name.toLowerCase().startsWith(x.toLowerCase().slice(0, 12)) || t.title.toLowerCase().startsWith(x.toLowerCase().slice(0, 12))); return t ? <Link key={k} href={tourHref(t.slug)} className="rounded-full bg-ice px-4 py-2 text-sm font-bold text-brand hover:bg-brand hover:text-white">{x}</Link> : <span key={k} className="rounded-full bg-ice px-4 py-2 text-sm">{x}</span>; })}</div>}
     </section>
-  ));
+  ); });
 }
