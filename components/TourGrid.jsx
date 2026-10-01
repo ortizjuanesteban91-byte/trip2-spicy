@@ -3,14 +3,18 @@ import { useState } from "react";
 import Link from "next/link";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const GR = ["from-sky-300 to-teal-700", "from-emerald-300 to-emerald-800", "from-amber-200 to-lime-700", "from-cyan-200 to-blue-700", "from-green-300 to-teal-800", "from-slate-300 to-slate-700"];
-export default function TourGrid({ tours, cats: C, initial }) {
+export default function TourGrid({ tours, cats: C, initial, initialDest }) {
+  const [d, setD] = useState(initialDest);
   const cats = [["all", "All"], ...C];
   const [c, setC] = useState(initial);
   const [qq, setQq] = useState("");
-  const list = tours.filter((t) => (c === "all" || t.cats.includes(c)) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
+  const list = tours.filter((t) => (d === "all" || t.dest === d) && (c === "all" || t.cats.includes(c)) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
   return (
     <>
-      <div className="mt-8 flex flex-wrap justify-center gap-2">
+      <div className="mt-8 flex justify-center gap-2">
+        {[["all", "All destinations"], ["punta-cana", "Punta Cana"], ["miches", "Miches"]].map(([k, l]) => <button key={k} onClick={() => setD(k)} className={`rounded-full px-6 py-2.5 text-sm font-extrabold ${d === k ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-slate-200"}`}>{l}</button>)}
+      </div>
+      <div className="mt-4 flex flex-wrap justify-center gap-2">
         {cats.map(([x, lbl]) => <button key={x} onClick={() => setC(x)} className={`rounded-full px-5 py-2 text-xs font-extrabold ${c === x ? "bg-brand text-white" : "bg-white text-brand ring-1 ring-sky-200"}`}>{lbl.toUpperCase()}</button>)}
       </div>
       <input value={qq} onChange={(e) => setQq(e.target.value)} placeholder="Search tours" className="mx-auto mt-4 block w-full max-w-md rounded-full border border-sky-200 bg-white px-5 py-3 text-sm" />
