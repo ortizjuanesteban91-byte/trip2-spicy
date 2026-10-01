@@ -959,7 +959,7 @@
    "Hands on the wheel, spray in the air, turquoise water racing past. On this Speedboat Punta Cana tour you drive your own boat along the Bávaro coast, following our guide boat in a convoy.",
    "No boat licence needed (drivers 18+): you get a safety briefing first, and the guide boat leads the way. When it's time to slow down, we stop at a coral reef so you can snorkel clear water and colorful marine life before racing back.",
    "You see the Punta Cana coastline from the driver's seat, with speed, freedom and ocean views in about 3 hours.",
-   "From $50 per person on a Double boat. Choose a Single boat (1 person, $75), a Double (2 people, $99) or a Family boat ($160 for 2 adults + 1 child, up to 3 people). Minimum 2 people per booking, so a solo Single needs a second Single alongside it. Morning or afternoon departure, snorkel gear, safety equipment and round-trip hotel transport included, with free cancellation up to 24 hours before."
+   "From $50 per person on a Double boat. Choose a Single boat (1 person, $75), a Double (2 people, $99) or a Family boat ($160 for up to 3 adults + 1 child). Minimum 2 people per booking, so a solo Single needs a second Single alongside it. Morning or afternoon departure, snorkel gear, safety equipment and round-trip hotel transport included, with free cancellation up to 24 hours before."
   ],
   "sections": [
    {
@@ -969,7 +969,7 @@
      "Duration: about 3 hours",
      "Departures: 10:00 AM or 1:00 PM",
      "Drivers 18+ (no boat licence needed); kids ride as passengers from 5",
-     "Single 1 · Double 2 · Family: 2 adults + 1 child, up to 3 people",
+     "Single 1 · Double 2 · Family: up to 3 adults + 1 child",
      "Minimum 2 people per booking",
      "Round-trip hotel transport",
      "Free cancellation up to 24 hours before"
@@ -1078,7 +1078,7 @@
      },
      {
       "q": "How many people per boat?",
-      "a": "Single 1 person ($75), Double 2 people ($99), Family 2 adults + 1 child, up to 3 people ($160)."
+      "a": "Single 1 person ($75), Double 2 people ($99), Family up to 3 adults + 1 child ($160)."
      },
      {
       "q": "Is there a minimum number of people?",
@@ -1086,7 +1086,7 @@
      },
      {
       "q": "What does the Family boat include?",
-      "a": "One boat for 2 adults + 1 child (up to 3 people), at $160."
+      "a": "One boat for up to 3 adults + 1 child, at $160."
      },
      {
       "q": "How long is it?",
@@ -1109,7 +1109,7 @@
     ]
    }
   ],
-  "prices": "Single (1 person, per boat) $75 · Double (2 people, per boat) $99 · Family (2 adults + 1 child, up to 3 people), per boat $160",
+  "prices": "Single (1 person, per boat) $75 · Double (2 people, per boat) $99 · Family (up to 3 adults + 1 child), per boat $160",
   "from": 50,
   "options": [
    {
@@ -1125,9 +1125,9 @@
     "group": true
    },
    {
-    "label": "Family (2 adults + 1 child, up to 3 people), per boat",
+    "label": "Family (up to 3 adults + 1 child), per boat",
     "price": 160.0,
-    "people": 3,
+    "people": 4,
     "group": true
    }
   ],
@@ -1181,7 +1181,7 @@
       },
       {
        "@type": "Offer",
-       "name": "Family (2 adults + 1 child, up to 3 people), per boat",
+       "name": "Family (up to 3 adults + 1 child), per boat",
        "price": "160",
        "priceCurrency": "USD",
        "availability": "https://schema.org/InStock",
@@ -1246,7 +1246,7 @@
        "name": "How many people per boat?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Single 1 person ($75), Double 2 people ($99), Family 2 adults + 1 child, up to 3 people ($160)."
+        "text": "Single 1 person ($75), Double 2 people ($99), Family up to 3 adults + 1 child ($160)."
        }
       },
       {
@@ -1262,7 +1262,7 @@
        "name": "What does the Family boat include?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One boat for 2 adults + 1 child (up to 3 people), at $160."
+        "text": "One boat for up to 3 adults + 1 child, at $160."
        }
       },
       {
@@ -1300,7 +1300,7 @@
   "intro": [
    "Throttle forward, ocean breeze in your face, then up into the sky. This speedboat, parasailing and snorkeling combo in Punta Cana packs three water adventures into one half day.",
    "Take control of your own speedboat and cruise the turquoise Caribbean behind our guide boat (no boat licence needed). Then rise above the Bávaro coastline on a parasail flight of about 12 minutes for aerial views of the coast, before jumping into clear tropical water for a coral reef snorkel stop. It's made for couples, friends and families who want action, scenery and variety without spending the whole day at sea.",
-   "From $125 per person on a Double boat. Book a Double (2 people, $250, that's $125 each) or Family boat (3 adults + 1 child, $299); minimum 2 people. Departures at 10:00 AM or 12:00 PM with round-trip hotel transport and free cancellation up to 24 hours before."
+   "From $125 per person on a Double boat. Book a Double (2 people, $250, that's $125 each) or Family boat (up to 3 adults + 1 child, $299); minimum 2 people. Departures at 10:00 AM or 12:00 PM with round-trip hotel transport and free cancellation up to 24 hours before."
   ],
   "sections": [
    {
@@ -1309,7 +1309,7 @@
     "items": [
      "Duration: half day",
      "Departures: 10:00 AM or 12:00 PM",
-     "Double (2 people) or Family (3 adults + 1 child)",
+     "Double (2 people) or Family (up to 3 adults + 1 child)",
      "Kids ride from 5; parasail flyers from 7",
      "Minimum 2 people per booking",
      "Free cancellation up to 24 hours before"
@@ -1411,7 +1411,7 @@
     "faq": [
      {
       "q": "How many people per boat?",
-      "a": "Double 2, Family 3 adults + 1 child."
+      "a": "Double 2, Family up to 3 adults + 1 child."
      },
      {
       "q": "Is there a minimum?",
@@ -1454,7 +1454,7 @@
     ]
    }
   ],
-  "prices": "Double (2 people) $250 · Family (3 adults + 1 child) $299",
+  "prices": "Double (2 people) $250 · Family (up to 3 adults + 1 child) $299",
   "from": 125,
   "options": [
    {
@@ -1464,9 +1464,9 @@
     "group": true
    },
    {
-    "label": "Family (3 adults + 1 child)",
+    "label": "Family (up to 3 adults + 1 child)",
     "price": 299.0,
-    "people": 3,
+    "people": 4,
     "group": true
    }
   ],
@@ -1508,7 +1508,7 @@
       },
       {
        "@type": "Offer",
-       "name": "Family (3 adults + 1 child)",
+       "name": "Family (up to 3 adults + 1 child)",
        "price": "299",
        "priceCurrency": "USD",
        "availability": "https://schema.org/InStock",
@@ -1557,7 +1557,7 @@
        "name": "How many people per boat?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Double 2, Family 3 adults + 1 child."
+        "text": "Double 2, Family up to 3 adults + 1 child."
        }
       },
       {
@@ -3753,7 +3753,7 @@
   "intro": [
    "Adventure Mud splashing up the sides, the engine roaring, a cool cave waiting along the trail. This Buggy Tour Punta Cana puts you behind the wheel for muddy trails, a cave swim and Macao Beach in one half day. Spend 1.5 to 2 hours driving rugged countryside trails and muddy paths. Along the way, stop at a local Dominican house to see how coffee and chocolate are made and taste coffee, cacao and authentic mamajuana.",
    "Then cool off with about 20 minutes swimming in a natural cave, and finish with about 20 minutes at Macao Beach for ocean views, fresh breeze and photos. Looking for things to do in Punta Cana that get you muddy? This is it.",
-   "From $45 per person on a Double buggy. Book a Single ($69), a Double for 2 ($90, that's $45 each) or a Family buggy for up to 4 ($130). Departures at 7:00 AM, 10:00 AM or 1:00 PM with round-trip hotel transport, and free cancellation up to 24 hours before.",
+   "From $45 per person on a Double buggy. Book a Single ($69), a Double for 2 ($90, that's $45 each) or a Family buggy ($130). Departures at 7:00 AM, 10:00 AM or 1:00 PM with round-trip hotel transport, and free cancellation up to 24 hours before.",
    "Honest note This is one of our high-demand excursions, so on busy days your transport can run 15 to 20 minutes behind schedule because of island traffic and full pickup routes. It doesn't happen every time, but it does happen, and we'd rather tell you now than surprise you. We choose our operators carefully, so when it happens it's a short wait, not a missed tour."
   ],
   "sections": [
@@ -3764,7 +3764,7 @@
      "Duration: half day (1.5–2 hours of driving)",
      "Departures: 7:00 AM, 10:00 AM or 1:00 PM",
      "Drivers 16+ with an adult; passengers from 5",
-     "Single · Double · Family (up to 4)",
+     "Single · Double · Family",
      "Round-trip hotel transport",
      "Free cancellation up to 24 hours before"
     ]
@@ -3777,7 +3777,7 @@
      "Coffee, cacao and mamajuana tasting at a local Dominican house",
      "Cool off with a cave swim (about 20 minutes)",
      "Stop at Macao Beach (about 20 minutes) for ocean views and photos",
-     "Single, Double or Family buggies for up to 4 people",
+     "Single, Double or Family buggies",
      "Hotel pickup and three departures a day"
     ]
    },
@@ -3849,7 +3849,7 @@
       "label": "Pros",
       "items": [
        "Mud, a cave swim and Macao Beach in one tour",
-       "Family buggies for up to 4",
+       "Family buggies",
        "Three departure times"
       ]
      },
@@ -3868,7 +3868,7 @@
     "faq": [
      {
       "q": "Single, Double or Family: which should I book?",
-      "a": "Single = 1 person, 1 buggy ($69). Double = 2 people share a buggy ($90, or $45 per person). Family = up to 4 people in one buggy ($130)."
+      "a": "Single = 1 person, 1 buggy ($69). Double = 2 people share a buggy ($90, or $45 per person). Family = one buggy for the whole family ($130)."
      },
      {
       "q": "What is the minimum age?",
@@ -3903,7 +3903,7 @@
     ]
    }
   ],
-  "prices": "Single (1 person, per buggy) $69 · Double (2 people, per buggy) $90 · Family (up to 4 people, per buggy) $130",
+  "prices": "Single (1 person, per buggy) $69 · Double (2 people, per buggy) $90 · Family, per buggy $130",
   "from": 45,
   "options": [
    {
@@ -3919,7 +3919,7 @@
     "group": true
    },
    {
-    "label": "Family (up to 4 people, per buggy)",
+    "label": "Family, per buggy",
     "price": 130.0,
     "people": 4,
     "group": true
@@ -3927,7 +3927,7 @@
   ],
   "min2": false,
   "alts": [
-   "Family of four in a buggy on a muddy Punta Cana trail",
+   "Family in a buggy on a muddy Punta Cana trail",
    "Mamajuana and cacao tasting at a Dominican country house"
   ],
   "breadcrumb": "Home › Punta Cana › Adventures › Buggy Tour Punta Cana",
@@ -3967,7 +3967,7 @@
       },
       {
        "@type": "Offer",
-       "name": "Family (up to 4 people, per buggy)",
+       "name": "Family, per buggy",
        "price": "130",
        "priceCurrency": "USD",
        "availability": "https://schema.org/InStock",
@@ -4012,7 +4012,7 @@
        "name": "Single, Double or Family: which should I book?",
        "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Single = 1 person, 1 buggy ($69). Double = 2 people share a   buggy ($90, or $45 per person). Family = up to 4 people in one buggy ($130)."
+        "text": "Single = 1 person, 1 buggy ($69). Double = 2 people share a   buggy ($90, or $45 per person). Family = one buggy for the whole family ($130)."
        }
       },
       {
@@ -12242,7 +12242,7 @@
   "keyword": "buggy and monkey land punta cana",
   "intro": [
    "Monkeys Drive your own 4×4 buggy through the Anamuya mountains, swim in the river, then meet squirrel monkeys that sit on your shoulder. Two Punta Cana adventures in one day.",
-   "Guides teach you to drive the Honda Pioneer 700 buggies (up to 4 people each), then lead the trail through countryside to a swim stop in the Anamuya River.",
+   "Guides teach you to drive the Honda Pioneer 700 buggies, then lead the trail through countryside to a swim stop in the Anamuya River.",
    "Visit the Casa del Coco to see how coconut oil is made and taste coffee and fruit, watch a tobacco and trapiche demonstration, and spend about 45 minutes with the squirrel monkeys at Monkeyland. About 8 hours with round-trip hotel transport. Priced per buggy: Single $179, Double $261, Triple $347, Quadruple $433. Free cancellation up to 24 hours before."
   ],
   "sections": [
@@ -12251,7 +12251,7 @@
     "type": "list",
     "items": [
      "Duration: full day (about 8 hours)",
-     "Honda Pioneer 700 buggies, up to 4 per buggy",
+     "Honda Pioneer 700 buggies",
      "Swim in the Anamuya River",
      "About 45 minutes at Monkeyland",
      "From $130.50 per person (Double)",
@@ -12335,7 +12335,7 @@
       "items": [
        "Buggies and monkeys in one booking",
        "River swim included",
-       "Buggy seats up to 4"
+       "Single, Double and Family buggies"
       ]
      },
      {
@@ -12573,7 +12573,7 @@
   "keyword": "buggy and zipline punta cana",
   "intro": [
    "Drive a 4×4 buggy through the Anamuya mountains in the morning, then fly 12 ziplines across the same range. Two adrenaline activities in one Punta Cana day.",
-   "After a safety briefing, drive a Honda Pioneer 700 buggy (up to 4 people each) along countryside trails to a swim stop in the Anamuya River, then taste coconut, coffee and fruit at the Casa del Coco. In the afternoon, clip in at the zipline park: 18 platforms and 12 lines over about 2 km of mountain, including an 800-meter line, with a side-by-side cable to race a partner.",
+   "After a safety briefing, drive a Honda Pioneer 700 buggy along countryside trails to a swim stop in the Anamuya River, then taste coconut, coffee and fruit at the Casa del Coco. In the afternoon, clip in at the zipline park: 18 platforms and 12 lines over about 2 km of mountain, including an 800-meter line, with a side-by-side cable to race a partner.",
    "About 8 hours with round-trip hotel transport. Priced per buggy: Single $179, Double $249, Triple $329, Quadruple $409. Free cancellation up to 24 hours before."
   ],
   "sections": [
@@ -12582,7 +12582,7 @@
     "type": "list",
     "items": [
      "Duration: full day (about 8 hours)",
-     "Honda Pioneer 700 buggies, up to 4 per buggy",
+     "Honda Pioneer 700 buggies",
      "12 ziplines and 18 platforms, one line 800 m",
      "Swim in the Anamuya River",
      "From $124.50 per person (Double)",
@@ -12666,7 +12666,7 @@
       "items": [
        "Two adrenaline activities in one booking",
        "800 m zipline",
-       "Buggy seats up to 4"
+       "Single, Double and Family buggies"
       ]
      },
      {
@@ -12904,7 +12904,7 @@
   "intro": [
    "Day Ziplines in the morning, squirrel monkeys at midday, a 4×4 buggy in the afternoon. The Triple Adventure packs three Punta Cana activities and lunch into one day.",
    "Start at the zipline park with 12 lines and 18 platforms across the Anamuya range, including an 800meter line. Then spend time with the squirrel monkeys at Monkeyland and have lunch at a typical Dominican house.",
-   "In the afternoon, drive a Honda Pioneer 700 buggy (up to 4 people each) to the Anamuya River for a swim, and finish at the Casa del Coco with coffee, cacao and fruit.",
+   "In the afternoon, drive a Honda Pioneer 700 buggy to the Anamuya River for a swim, and finish at the Casa del Coco with coffee, cacao and fruit.",
    "About 8 hours with round-trip hotel transport. Priced per buggy: Single $209, Double $351, Triple $467, Quadruple $553. Free cancellation up to 24 hours before."
   ],
   "sections": [
@@ -12998,7 +12998,7 @@
       "items": [
        "Three activities and lunch in one day",
        "800 m zipline",
-       "Buggy seats up to 4"
+       "Single, Double and Family buggies"
       ]
      },
      {

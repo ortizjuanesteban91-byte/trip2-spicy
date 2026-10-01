@@ -39,3 +39,20 @@ const P = {
 // Home page header picture (TEMPORARY, change here or send the final photo).
 export const HERO = "catamaran-party-boat";
 export const photo = (slug) => (P[slug] ? B + P[slug] : null);
+
+// Combo tours show a strip of photos (one per part of the combo), like the Speedboat combo. Each panel uses the photo of that tour,
+// so when real photos are uploaded the strip updates by itself.
+const COMBO = {
+  "catamaran-parasailing-snorkeling": ["catamaran-party-boat", "parasailing"],
+  "monkeyland-zipline": ["monkeyland", "zipline-punta-cana"],
+  "buggy-monkeyland": ["buggy", "monkeyland"],
+  "buggy-zipline": ["buggy", "zipline-punta-cana"],
+  "triple-adventure": ["buggy", "zipline-punta-cana", "monkeyland"],
+  "montana-redonda-atv-from-punta-cana": ["montana-redonda-from-punta-cana", "atv-punta-cana"],
+  "montana-redonda-atv-zipline-from-punta-cana": ["montana-redonda-from-punta-cana", "atv-punta-cana", "zipline-punta-cana"],
+  "montana-redonda-atv-miches": ["montana-redonda-miches", "atv-miches"],
+  "montana-redonda-atv-zipline-miches": ["montana-redonda-miches", "atv-miches", "zipline-punta-cana"],
+  "montana-redonda-horseback-riding-miches": ["montana-redonda-miches", "horseback-riding-miches"],
+  "montana-redonda-horseback-riding-zipline-miches": ["montana-redonda-miches", "horseback-riding-miches", "zipline-punta-cana"],
+};
+export const strip = (slug) => { const u = (COMBO[slug] || []).map(photo).filter(Boolean); return u.length >= 2 ? u : null; };
