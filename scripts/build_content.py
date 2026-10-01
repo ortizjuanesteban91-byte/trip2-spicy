@@ -38,6 +38,14 @@ def paras(lines):
 def items(lines):
     r = [l for l in lines if l]
     return [re.sub(r"^[•·\-–]\s*", "", x) for x in r]
+def merge_items(lines):
+    out = []
+    for l in lines:
+        l = re.sub(r"^[•·\-–]\s*", "", l.strip())
+        if not l: continue
+        if out and (l[0].islower() or out[-1].endswith((" and", " to", " of", " the", " a", " in", " with", " or", " for", " from", " at", " on", ","))): out[-1] += " " + l
+        else: out.append(l)
+    return out
 def split_dash(lines):
     # "Included - a - b - c" style (may wrap)
     out = []; cur = None
@@ -138,12 +146,13 @@ def build(kind, folder, copyname):
         elif "included" in hl and "not" in hl: sections.append({"h2": h, "type": "inc", "groups": split_dash(body)})
         elif hl.startswith("pros"): sections.append({"h2": h, "type": "pc", "groups": split_dash(body)})
         elif hl.startswith("what to expect") or any(re.match(r"^\d+\.\s", b) for b in body if b):
-            sections.append({"h2": h, "type": "steps", "items": [re.sub(r"^\d+\.\s*", "", b) for b in body if b]})
+            sections.append({"h2": h, "type": "steps", "items": merge_items([re.sub(r"^\d+\.\s*", "", b) for b in body])})
         elif hl.startswith("related") or hl.startswith("you might also like"): sections.append({"h2": h, "type": "links", "items": items(body)})
+        elif hl.startswith("why"): sections.append({"h2": h, "type": "list", "items": merge_items(body)})
         else:
             nb = [b for b in body if b]
             if nb and all(len(b) < 85 and not re.search(r"[.?!]$", b) for b in nb) and len(nb) > 1:
-                sections.append({"h2": h, "type": "list", "items": items(body)})
+                sections.append({"h2": h, "type": "list", "items": merge_items(body)})
             else:
                 sections.append({"h2": h, "type": "text", "paras": paras(body)})
     meta = join(seo.get("Meta Description", [])); title = join(seo.get("SEO Title", []))

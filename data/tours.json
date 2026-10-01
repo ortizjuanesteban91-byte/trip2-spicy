@@ -27,9 +27,14 @@
    },
    {
     "h2": "Why Party Lovers Book This Punta Cana Catamaran",
-    "type": "text",
-    "paras": [
-     "Lively party atmosphere with music on board Open bar after the snorkel stop: rum, beer, soda, juice and water Snorkel a coral reef in clear turquoise Caribbean water Natural pool sandbar stop in the middle of the sea 1.5 to 2 hours on the catamaran, 20 to 30 minutes snorkeling, 20 to 30 minutes at the natural pool No swimming needed: life vests and snorkel gear provided"
+    "type": "list",
+    "items": [
+     "Lively party atmosphere with music on board",
+     "Open bar after the snorkel stop: rum, beer, soda, juice and water",
+     "Snorkel a coral reef in clear turquoise Caribbean water",
+     "Natural pool sandbar stop in the middle of the sea",
+     "1.5 to 2 hours on the catamaran, 20 to 30 minutes snorkeling, 20 to 30 minutes at the natural pool",
+     "No swimming needed: life vests and snorkel gear provided"
     ]
    },
    {
@@ -1165,9 +1170,14 @@
    },
    {
     "h2": "Why Fishing Lovers Book This Punta Cana Charter",
-    "type": "text",
-    "paras": [
-     "Punta Cana waters are known for mahi-mahi, tuna, wahoo, barracuda and seasonal marlin Experienced local captain and crew Rods, reels and tackle included Great for first-timers and anglers who want real action Non-anglers can join as observers Hotel pickup and drop-off included"
+    "type": "list",
+    "items": [
+     "Punta Cana waters are known for mahi-mahi, tuna, wahoo, barracuda and seasonal marlin",
+     "Experienced local captain and crew",
+     "Rods, reels and tackle included",
+     "Great for first-timers and anglers who want real action",
+     "Non-anglers can join as observers",
+     "Hotel pickup and drop-off included"
     ]
    },
    {
@@ -1559,9 +1569,14 @@
    },
    {
     "h2": "Why Families Love Dolphin Explorer Punta Cana",
-    "type": "text",
-    "paras": [
-     "Three programs: Funtastic (40 min), Explorer (50 min), Royal Excellence (60 min, 2 dolphins) No swimming needed on Funtastic, great for kids under 1 m Explorer $120 per person, adults and kids Observer / Companion ticket for non-swimmers: $35 adults, $25 kids Beach park in Cabeza de Toro, 3 shows daily Hotel pickup timed to your show"
+    "type": "list",
+    "items": [
+     "Three programs: Funtastic (40 min), Explorer (50 min), Royal Excellence (60 min, 2 dolphins)",
+     "No swimming needed on Funtastic, great for kids under 1 m",
+     "Explorer $120 per person, adults and kids",
+     "Observer / Companion ticket for non-swimmers: $35 adults, $25 kids",
+     "Beach park in Cabeza de Toro, 3 shows daily",
+     "Hotel pickup timed to your show"
     ]
    },
    {
@@ -1791,11 +1806,7 @@
      "Price (adult)",
      "$99",
      "$119",
-     "Snorkeling with",
-     "Guided snorkel at The Wall,",
-     "Included",
-     "gear",
-     "about 45 min",
+     "Snorkeling with Guided snorkel at The Wall, Included gear about 45 min",
      "Lunch",
      "Dominican BBQ lunch",
      "Lunch buffet",
@@ -1806,9 +1817,7 @@
      "—",
      "Stop with entry included",
      "Back on the mainland",
-     "Back on the mainland (Altos de Chavón stop included; the",
-     "around 2:30 PM",
-     "order on the road can vary by day)",
+     "Back on the mainland (Altos de Chavón stop included; the around 2:30 PM order on the road can vary by day)",
      "Chavón",
      "Return"
     ]
@@ -3355,8 +3364,7 @@
      "Drive to Santo Domingo",
      "Los Tres Ojos caves",
      "Columbus Lighthouse (photo stop outside)",
-     "Colonial Zone walk: Alcázar de Colón, Calle Las Damas, National Pantheon, First Cathedral of the",
-     "Americas",
+     "Colonial Zone walk: Alcázar de Colón, Calle Las Damas, National Pantheon, First Cathedral of the Americas",
      "Lunch",
      "National Palace (outside) and free time in the Colonial Zone",
      "Drive back",
