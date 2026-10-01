@@ -1,7 +1,7 @@
 export const brand = "Trip2 Spicy";
-export const phone = "+1 (809) 000-0000";
-export const email = "info@trip2puntacana.com";
-export const whatsapp = "https://wa.me/";
+export const phone = "+1 (809) 485-3099";
+export const email = "Contact@trip2puntacana.com";
+export const whatsapp = "https://wa.me/18094853099";
 export const nav = [["HOME", "/"], ["TOURS", "/tours"], ["TRAVEL TIPS", "/travel-tips"], ["BLOGS", "/blog"], ["CONTACT US", "/contact"]];
 export const trust = [["Local Punta Cana Experiences", "Handpicked Dominican adventures curated by licensed local experts."], ["Highly Rated Experiences", "Real guest ratings with a 4.9/5 satisfaction index across 1,200+ trips."], ["Secure Online Booking", "Safe, instant checkouts with Reserve Now — Pay Later flexibility."], ["WhatsApp Concierge", "Direct 24/7 localized support before, during, and after your journey."]];
 export const categories = [["Water Adventures", "Saona Island, Catalina, catamarans, speedboats, party boats, parasailing, fishing & beach days.", "from-sky-300 to-teal-700", "water"], ["Adventure & Safari", "ATV, buggy & Polaris trails, ziplines, horseback riding and Montaña Redonda.", "from-emerald-300 to-emerald-800", "adventure"], ["Family Experiences", "Dolphin encounters, Monkey Land and fun days out for all ages.", "from-amber-200 to-lime-700", "family"], ["Eco & Nature", "Los Haitises caves and mangroves, whale watching and El Limón waterfall.", "from-green-300 to-teal-800", "eco"], ["Culture & City", "Santo Domingo colonial zone and Higüey city tours.", "from-slate-300 to-slate-700", "culture"]];
