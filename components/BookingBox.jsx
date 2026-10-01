@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import SecurePay from "./SecurePay";
 import { PUNTA_CANA_HOTELS as PC, MICHES_HOTELS as MICHES } from "@/data/hotels";
 import { CalendarDays, Users, Sun, BedDouble, Zap, MessageCircle, ShieldCheck, ChevronDown } from "lucide-react";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
@@ -76,10 +77,12 @@ export default function BookingBox({ tour, wa }) {
         </div>
         <p className="mt-3 px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
         <button disabled={!lines.length || tooFew || state === "sending"} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand py-4 text-sm font-extrabold text-white disabled:bg-slate-300"><Zap className="h-4 w-4" />{state === "sending" ? "SENDING…" : "RESERVE NOW"}</button>
+        <p className="mt-2 flex items-center justify-center gap-1 text-[11px] font-bold text-ink/60"><span aria-hidden="true">🔒</span> Secure checkout · Powered by Stripe</p>
         <a href={`/contact?tour=${tour.slug}`} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sky-100 py-3 text-sm font-bold text-brand"><MessageCircle className="h-4 w-4" />Enquiry Form</a>
         <a href={`${wa || "https://wa.me/18094853099"}?text=${encodeURIComponent(`Hi, I have a question about: ${tour.name}`)}`} className="mt-2 block text-center text-xs font-bold text-brand underline">or ask on WhatsApp</a>
         {state === "error" && <p className="mt-3 text-sm font-bold text-rose-600">Something went wrong. Please try again or use WhatsApp.</p>}
         <p className="mt-3 text-center text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
+        <div className="mt-4 border-t border-sky-100 pt-3"><SecurePay /></div>
       </div>
     </form>
   );
