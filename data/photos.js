@@ -1,6 +1,9 @@
 // TEMP preview photos hotlinked from the live Trip2 site (look-only). Replace with real files before launch.
 const B = "https://www.trip2puntacana.com/wp-content/uploads/";
 const P = {
+  "safari": "2025/02/safari-punta-cana-tour-011-700x500.jpg",
+  "coco-bongo": "2025/02/MG_0181-700x500.webp",
+  "montana-redonda-horseback-riding-miches": "2025/02/IMG_2254-700x500.jpeg",
   "catamaran-party-boat": "2026/04/Punta-Cana-catamaran-excursion-group-enjoying-open-bar-700x500.jpg",
   "catamaran-parasailing-snorkeling": "2025/02/Catamaran-Parasailing-Snorkeling-700x500.png",
   "hip-hop-party-boat": "2026/05/f4a99bdf-659d-453d-84ff-dd8f5a2966ed-700x500.jpg",

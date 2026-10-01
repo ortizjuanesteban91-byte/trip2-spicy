@@ -15,7 +15,10 @@ export default function BookingBox({ tour }) {
   const [state, setState] = useState("idle");
   const miches = tour.breadcrumb.includes("Miches");
   const opts = tour.options || [];
-  const lines = opts.map((o, i) => ({ ...o, qty: q[i] || 0 })).filter((o) => o.qty > 0);
+  const dow = date ? new Date(date + "T12:00:00").getDay() : -1;
+  const closed = (tour.closedDays || []).includes(dow);
+  const px = (o) => (o.priceWknd && (dow === 5 || dow === 6) ? o.priceWknd : o.price);
+  const lines = opts.map((o, i) => ({ ...o, price: px(o), qty: q[i] || 0 })).filter((o) => o.qty > 0);
   const total = lines.reduce((a, l) => a + l.qty * l.price, 0);
   const people = lines.reduce((a, l) => a + l.qty * l.people, 0);
   const tooFew = tour.min2 && people > 0 && people < 2;
@@ -23,7 +26,7 @@ export default function BookingBox({ tour }) {
   const mr = /^(2[1-3]|2[6-9]|3[01])$/.test(tour.num);
   async function submit(e) {
     e.preventDefault();
-    if (!lines.length || tooFew) return;
+    if (!lines.length || tooFew || closed) return;
     setState("sending");
     const f = Object.fromEntries(new FormData(e.target));
     const details = { Tour: tour.name, Date: f.date, Time: f.time, Hotel: f.hotel === "Other" ? f.hotelOther : f.hotel, Guests: String(people), Order: lines.map((l) => `${l.label} · ${l.qty} × ${money(l.price)} = ${money(l.qty * l.price)}`).join(" | "), Total: money(total) };
@@ -48,7 +51,7 @@ export default function BookingBox({ tour }) {
               <div key={i} className={field}><Ic><Users className="h-5 w-5" /></Ic>
                 <select value={q[i] || 0} onChange={(e) => setQ((s) => ({ ...s, [i]: Number(e.target.value) }))} className={sel + " text-sm"} aria-label={o.label}>
                   <option value={0}>{o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")}</option>
-                  {Array.from({ length: 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(o.price)}</option>)}
+                  {Array.from({ length: 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(px(o))}</option>)}
                 </select><Chev /></div>
             ))}
           </div>
@@ -68,6 +71,7 @@ export default function BookingBox({ tour }) {
             {mr && <p className="flex justify-between py-1"><span className="text-ink/70">Montaña Redonda Entry &amp; Swings</span><b className="text-brand">FREE</b></p>}
           </div>
           <div className="flex items-end justify-between border-t border-sky-200 pt-4"><b className="text-lg text-brand">Total Amount Due</b><b className="text-3xl text-brand">{money(lines.length ? total : tour.from)}</b></div>
+          {closed && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Closed on Mondays. Please pick another date.</p>}
           {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
         </div>
         <p className="mt-3 px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>

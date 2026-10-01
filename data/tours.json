@@ -5642,6 +5642,322 @@
   "name": "Monkey Land + Zipline Combo"
  },
  {
+  "slug": "safari",
+  "title": "Safari Tour Punta Cana | Culture, Countryside & Local Life",
+  "metaTitle": "Safari Tour Punta Cana | Culture, Countryside & Local Life",
+  "meta": "Full-day Punta Cana safari: country home, coffee, cacao and tobacco tasting, Higüey Basilica, Dominican lunch and Macao Beach. Adults $85, kids $50.",
+  "h1": "Safari Tour Punta Cana – Culture, Countryside & Local Life",
+  "keyword": "safari tour punta cana",
+  "intro": [
+   "Step beyond the resorts and spend a full day in the real Dominican Republic. This Punta Cana safari takes you through the countryside to a country home, a plantation tasting, the Higüey Basilica, a Dominican lunch at the ranch and an hour at Macao Beach. Taste coffee, cacao and tobacco where they are grown, meet the people who work the land and see how local life runs away from the hotel zone. A local school visit is part of the route when school is in session (not guaranteed). The day lasts about 8 hours and includes round-trip hotel pickup. Adults (10+) $85, children (4–9) $50, infants (0–3) free. Free cancellation up to 24 hours before the tour."
+  ],
+  "sections": [
+   {
+    "h2": "Highlights",
+    "type": "list",
+    "items": [
+     "Duration: full day, about 8 hours",
+     "Country home, plantation tasting (cacao, coffee, tobacco)",
+     "Local school visit (when in session, not guaranteed)",
+     "Higüey Basilica",
+     "Dominican lunch at the ranch with drinks",
+     "About 1 hour at Macao Beach",
+     "Free cancellation up to 24 hours before"
+    ]
+   },
+   {
+    "h2": "Why Curious Travelers Choose This Punta Cana Safari Experience",
+    "type": "list",
+    "items": [
+     "Real Dominican countryside and local life, away from the resorts",
+     "Coffee, cacao and tobacco tasting included",
+     "Home-cooked Dominican buffet with soda, water, rum and beer",
+     "Higüey Basilica and Macao Beach in one day",
+     "Kid-friendly pricing: children 4–9 $50, under 4 free",
+     "Round-trip hotel pickup included"
+    ]
+   },
+   {
+    "h2": "What to Expect",
+    "type": "steps",
+    "items": [
+     "Hotel pickup",
+     "Country home visit",
+     "Plantation tasting: cacao, coffee and tobacco",
+     "Local school visit (when in session)",
+     "Higüey Basilica",
+     "Lunch at the ranch",
+     "About 1 hour at Macao Beach",
+     "Return and hotel drop-off"
+    ]
+   },
+   {
+    "h2": "What's Included / Not Included",
+    "type": "inc",
+    "groups": [
+     {
+      "label": "Included",
+      "items": [
+       "Open safari truck ride",
+       "Country home visit",
+       "Cacao, coffee and tobacco tasting",
+       "Higüey Basilica stop",
+       "Dominican buffet lunch with soda, water, rum and beer",
+       "About 1 hour at Macao Beach",
+       "Round-trip hotel pickup"
+      ]
+     },
+     {
+      "label": "Not included",
+      "items": [
+       "Tips",
+       "Personal purchases"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "Pickup Times & Zones",
+    "type": "text",
+    "paras": [
+     "Round-trip hotel pickup is included. We send your exact hotel pickup time on WhatsApp the night before."
+    ]
+   },
+   {
+    "h2": "What to Bring",
+    "type": "list",
+    "items": [
+     "Comfortable clothes and shoes",
+     "Elbows and knees covered for the Basilica",
+     "Swimsuit and towel for Macao Beach",
+     "Sunscreen and sunglasses",
+     "Cash for tips and souvenirs"
+    ]
+   },
+   {
+    "h2": "Pros & Cons",
+    "type": "pc",
+    "groups": [
+     {
+      "label": "Pros",
+      "items": [
+       "Real local culture and countryside",
+       "Tastings and lunch included",
+       "Beach stop at Macao"
+      ]
+     },
+     {
+      "label": "Cons",
+      "items": [
+       "Long day (about 8 hours)",
+       "Basilica dress code applies"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "FAQs",
+    "type": "faq",
+    "faq": [
+     {
+      "q": "How long is it?",
+      "a": "A full day, about 8 hours."
+     },
+     {
+      "q": "Is lunch included?",
+      "a": "Yes, a home-cooked Dominican buffet at the ranch, with soda, water, rum and beer."
+     },
+     {
+      "q": "What stops are on the route?",
+      "a": "A country home, a plantation tasting, a local school when in session, the Basilica in Higüey, lunch at the ranch and Macao Beach."
+     },
+     {
+      "q": "How much for kids?",
+      "a": "Children 4–9 $50, under 4 free."
+     },
+     {
+      "q": "What should I wear?",
+      "a": "Comfortable clothes and shoes, with elbows and knees covered for the Basilica. Bring a swimsuit for Macao Beach."
+     },
+     {
+      "q": "Can I cancel for free?",
+      "a": "Yes. Free cancellation up to 24 hours before the tour."
+     }
+    ]
+   },
+   {
+    "h2": "You Might Also Like",
+    "type": "links",
+    "items": [
+     "Santo Domingo Tour",
+     "Monkey Land Punta Cana",
+     "Horseback Riding Punta Cana",
+     "Los Haitises Tour"
+    ]
+   }
+  ],
+  "prices": "Adult (10+) $85 · Child (4–9) $50 · Infant (0–3) $0",
+  "from": 85,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 85.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Child (4–9)",
+    "price": 50.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Infant (0–3)",
+    "price": 0.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
+  "alts": [
+   "Open safari truck on a countryside road near Punta Cana",
+   "Guests tasting Dominican coffee and cacao at a local home"
+  ],
+  "breadcrumb": "Home › Punta Cana › Day trips › Safari Tour",
+  "num": "18",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/safari/#trip",
+     "name": "Safari Tour Punta Cana",
+     "description": "Full-day Punta Cana safari: country home, coffee, cacao and tobacco tasting, Higüey Basilica, Dominican lunch and Macao Beach. Adults $85, kids $50.",
+     "url": "https://www.trip2puntacana.com/tour/safari/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "85",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/safari/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Child (4–9)",
+       "price": "50",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/safari/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Infant (0–3)",
+       "price": "0",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/safari/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Punta Cana",
+       "item": "https://www.trip2puntacana.com/punta-cana/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Day trips",
+       "item": "https://www.trip2puntacana.com/day-trips/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 4,
+       "name": "Safari Tour",
+       "item": "https://www.trip2puntacana.com/tour/safari/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How long is it?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full day, about 8 hours."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is lunch included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a home-cooked Dominican buffet at the ranch, with soda, water, rum and beer."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What stops are on the route?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A country home, a plantation tasting, a local school when in session, the Basilica in Higüey, lunch at the ranch and Macao Beach."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How much for kids?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children 4–9 $50, under 4 free."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What should I wear?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comfortable clothes and shoes, with elbows and knees covered for the Basilica. Bring a swimsuit for Macao Beach."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/safari/",
+  "cat": "Day Trips",
+  "pack": "Trip2_31_Tours",
+  "name": "Safari Tour Punta Cana"
+ },
+ {
   "slug": "santo-domingo",
   "title": "Santo Domingo Tour from Punta Cana | Colonial Zone Day",
   "metaTitle": "Santo Domingo Tour from Punta Cana | Colonial Zone Day",
@@ -7363,6 +7679,530 @@
   "schema_faq_rebuilt": true
  },
  {
+  "slug": "coco-bongo",
+  "title": "Coco Bongo Punta Cana Tickets | Show, Open Bar & VIP Seating",
+  "metaTitle": "Coco Bongo Punta Cana Tickets | Show, Open Bar & VIP Seating",
+  "meta": "Coco Bongo Punta Cana: 9 PM live show, unlimited open bar, a snack and hotel transport. Regular, Premium, Gold Member and Front Row from $90. Adults 18+.",
+  "h1": "Coco Bongo Punta Cana Tickets – Show, Open Bar & VIP Seating",
+  "keyword": "coco bongo punta cana",
+  "intro": [
+   "Lights drop, the music hits, and the acrobats take over. Coco Bongo Punta Cana is a full night of Punta Cana nightlife: live performances, music, dancers, acrobatics, an unlimited open bar and a snack on every ticket.",
+   "The club is in Downtown Punta Cana, Bávaro. The lineup changes, and recent shows include a SpiderMan battle in mid-air over the crowd, a KISS tribute with pyrotechnics and a Michael Jackson tribute, plus the Kiss Cam and shot challenges on the giant screens. Pick one of four tickets: Regular, Premium, Gold Member or Front Row. Each one is explained below.",
+   "The show runs Tuesday to Sunday (closed Monday) and starts at 9:00 PM (the schedule may vary by season); the open bar runs from 8:00 PM to 1:00 AM. It's a night out for birthdays, couples, groups and VIP celebrations. Adults 18+ only, so bring your ID, and dress casual elegant.",
+   "Round-trip hotel transport with evening pickup. Prices per person, Tuesday to Thursday and Sunday: Regular $90, Premium $125, Gold Member $170, Front Row $190. Friday and Saturday: Regular $99, Premium $135, Gold Member $180, Front Row $200. Free cancellation up to 24 hours before. Honest note This is one of our high-demand excursions, so on busy days your transport can run 15 to 20 minutes behind schedule because of island traffic and full pickup routes. It doesn't happen every time, but it does happen, and we'd rather tell you now than surprise you. We choose our operators carefully, so when it happens it's a short wait, not a missed tour."
+  ],
+  "sections": [
+   {
+    "h2": "Highlights",
+    "type": "list",
+    "items": [
+     "Night show: Tuesday to Sunday (closed Monday)",
+     "Show 9:00 PM (may vary by season); open bar 8:00 PM–1:00 AM",
+     "Adults only: 18+ with ID; dress code casual elegant",
+     "Four ticket tiers",
+     "Round-trip hotel transport",
+     "Free cancellation up to 24 hours before"
+    ]
+   },
+   {
+    "h2": "Why Nightlife Lovers Choose Coco Bongo Punta Cana",
+    "type": "list",
+    "items": [
+     "Live show with music, dancers and acrobatics",
+     "Unlimited open bar (8:00 PM–1:00 AM) and a snack on every ticket",
+     "Four tickets: Regular Ticket, Premium, Gold Member, Front Row",
+     "Gold Member: VIP entrance, expedited access, reserved VIP seating upstairs and premium drinks",
+     "Front Row: front-row VIP seating with unobstructed views and personalized service",
+     "Round-trip hotel transport included"
+    ]
+   },
+   {
+    "h2": "Your Ticket Options",
+    "type": "tickets",
+    "tickets": [
+     {
+      "name": "Regular Ticket",
+      "official": "General Access | Unlimited Domestic Drinks",
+      "price": 90,
+      "wknd": 99,
+      "body": "Your way into the full Coco Bongo night: the show kicks off at 9:00 PM (the schedule may vary by season), then the party takes over. You're on the main floor, the lower level, right in the crowd where the dancing happens, with standard access and standing room (no reserved seat). The unlimited open bar pours domestic drinks from the standard menu from 8:00 PM to 1:00 AM, and you get 1 snack per person: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+      "who": "Groups of friends and first-timers who want to dance and feel the energy up close for the lowest price."
+     },
+     {
+      "name": "Premium",
+      "official": "General Access | Premium Drinks",
+      "price": 125,
+      "wknd": 135,
+      "body": "The same main-floor spot, standard access and full show and party as the Regular Ticket, with a better bar: the unlimited open bar moves up to the premium menu from 8:00 PM to 1:00 AM. It's still standing room, with no fast entry and no reserved seat. Your snack is included too: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+      "who": "Guests who want to be on the dance floor but care about what's in the glass."
+     },
+     {
+      "name": "Gold Member",
+      "official": "VIP Zone | Premium Drinks",
+      "price": 170,
+      "wknd": 180,
+      "body": "Walk in through the VIP entrance with expedited access and head upstairs to the Gold Member VIP area, where reserved VIP seating is waiting for you (the Front Row seats are separate). You watch the acrobats and tributes from above, with room to sit between songs and get up to dance when you want. The unlimited open bar pours from the premium menu from 8:00 PM to 1:00 AM, and your snack is included: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+      "who": "Couples, birthdays and anyone who wants a reserved seat and a less crowded spot for a show that runs late into the night."
+     },
+     {
+      "name": "Front Row",
+      "official": "VIP Zone | Premium Drinks",
+      "price": 190,
+      "wknd": 200,
+      "body": "The front row of the Gold Member VIP area, with unobstructed visibility of the performers and the aerial acts. You get the VIP entrance and expedited access, personalized assistance and service through the night, the unlimited premium open bar from 8:00 PM to 1:00 AM and your snack: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Seats aren't pre-assigned: on arrival, staff seat you in the front row according to the zone map. Round-trip hotel transport is included; the tip isn't.",
+      "who": "Proposals, anniversaries, bachelor and bachelorette parties, and anyone who wants an unobstructed view of the show."
+     }
+    ]
+   },
+   {
+    "h2": "Compare Ticket Options",
+    "type": "table",
+    "cols": [
+     "Regular Ticket",
+     "Premium",
+     "Gold Member",
+     "Front Row"
+    ],
+    "rows": [
+     [
+      "Official ticket",
+      "General Access, Unlimited Domestic Drinks",
+      "General Access, Premium Drinks",
+      "VIP Zone, Premium Drinks",
+      "VIP Zone, Premium Drinks"
+     ],
+     [
+      "Where you are",
+      "Main floor (lower level)",
+      "Main floor (lower level)",
+      "Upstairs Gold Member VIP area",
+      "Front row of the Gold Member VIP area"
+     ],
+     [
+      "Seating",
+      "Standing, no reserved seat",
+      "Standing, no reserved seat",
+      "Reserved VIP seating (excluding Front Row)",
+      "Reserved Front Row VIP seating, unobstructed view; staff assign seats on arrival"
+     ],
+     [
+      "Entry",
+      "Standard access",
+      "Standard access",
+      "VIP entrance, expedited access",
+      "VIP entrance, expedited access"
+     ],
+     [
+      "Open bar (8:00 PM–1:00 AM)",
+      "Unlimited, standard menu",
+      "Unlimited, premium menu",
+      "Unlimited, premium menu",
+      "Unlimited, premium menu"
+     ],
+     [
+      "Snack",
+      "1 per person, with French fries",
+      "1 per person, with French fries",
+      "1 per person, with French fries",
+      "1 per person, with French fries"
+     ],
+     [
+      "Service",
+      "–",
+      "–",
+      "–",
+      "Personalized assistance and service"
+     ],
+     [
+      "Show",
+      "9:00 PM",
+      "9:00 PM",
+      "9:00 PM",
+      "9:00 PM"
+     ],
+     [
+      "Tip",
+      "Not included",
+      "Not included",
+      "Not included",
+      "Not included"
+     ],
+     [
+      "Tue–Thu & Sun",
+      "$90",
+      "$125",
+      "$170",
+      "$190"
+     ],
+     [
+      "Fri–Sat",
+      "$99",
+      "$135",
+      "$180",
+      "$200"
+     ]
+    ],
+    "note": "Snack options: mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Show time may vary by season."
+   },
+   {
+    "h2": "What to Expect",
+    "type": "steps",
+    "items": [
+     "Evening hotel pickup",
+     "Arrival and entry",
+     "Live show and party with open bar",
+     "Return",
+     "Hotel drop-off"
+    ]
+   },
+   {
+    "h2": "What's Included / Not Included",
+    "type": "inc",
+    "groups": [
+     {
+      "label": "Included",
+      "items": [
+       "Ticket for your chosen tier",
+       "Live show at 9:00 PM (the schedule may vary by season) Unlimited open bar from 8:00 PM to 1:00 AM (Regular: domestic drinks from the standard menu; Premium, Gold Member and Front Row: the premium menu)",
+       "1 snack per person (mini burger, hot dog, tequeños or mini sandwich, all served with French fries) on all four tickets",
+       "Gold Member and Front Row: VIP entrance, expedited access and reserved VIP seating in the upstairs Gold Member area (Gold Member excludes the Front Row seats)",
+       "Front Row: reserved Front Row VIP seating with unobstructed visibility, plus personalized assistance and service",
+       "Round-trip hotel transport"
+      ]
+     },
+     {
+      "label": "Not included",
+      "items": [
+       "Tip (not included on any ticket)",
+       "Bottle upgrades",
+       "Personal purchases"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "Pickup Times & Zones",
+    "type": "text",
+    "paras": [
+     "Evening pickup; we confirm your exact hotel pickup time on WhatsApp."
+    ]
+   },
+   {
+    "h2": "What to Bring",
+    "type": "list",
+    "items": [
+     "Valid ID",
+     "Casual elegant attire (the Coco Bongo dress code)",
+     "Comfortable shoes",
+     "Cash or card",
+     "Phone for photos"
+    ]
+   },
+   {
+    "h2": "Pros & Cons",
+    "type": "pc",
+    "groups": [
+     {
+      "label": "Pros",
+      "items": [
+       "A show and a party in one night",
+       "Open bar on every ticket",
+       "Hotel transport included"
+      ]
+     },
+     {
+      "label": "Cons",
+      "items": [
+       "Adults only (18+)",
+       "It's a late night"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "FAQs",
+    "type": "faq",
+    "faq": [
+     {
+      "q": "Can I take photos during the show?",
+      "a": "Yes. Photos are allowed during the show, so bring your phone."
+     },
+     {
+      "q": "Which ticket should I choose?",
+      "a": "Regular if you want to dance on the main floor with unlimited domestic drinks from the standard menu. Premium for the same main floor with the premium drinks menu. Gold Member if you want the VIP entrance, expedited access and a reserved seat upstairs in the Gold Member VIP area. Front Row for front-row VIP seats with an unobstructed view and personalized service; staff assign your seats on arrival. Every ticket includes the open bar and a snack."
+     },
+     {
+      "q": "What days and times is the show?",
+      "a": "Tuesday to Sunday; closed Monday. The show starts at 9:00 PM (the schedule may vary by season) and the open bar runs from 8:00 PM to 1:00 AM."
+     },
+     {
+      "q": "Is food included?",
+      "a": "Yes, every ticket includes 1 snack per person (mini burger, hot dog, tequeños or mini sandwich, all served with French fries)."
+     },
+     {
+      "q": "Is there a dress code?",
+      "a": "Yes, casual elegant."
+     },
+     {
+      "q": "Is the tip included?",
+      "a": "No, the tip isn't included on any ticket."
+     },
+     {
+      "q": "Is there a minimum age?",
+      "a": "Yes, guests must be 18+. Bring ID."
+     },
+     {
+      "q": "Is transport included?",
+      "a": "Yes, round-trip hotel transport with evening pickup."
+     },
+     {
+      "q": "Are prices different on weekends?",
+      "a": "Yes. Friday and Saturday cost more: Regular $99, Premium $135, Gold Member $180, Front Row $200. Tuesday to Thursday and Sunday: Regular $90, Premium $125, Gold Member $170, Front Row $190. Closed Monday."
+     },
+     {
+      "q": "Can I book for a group?",
+      "a": "Yes, ask on WhatsApp."
+     },
+     {
+      "q": "Can I cancel for free?",
+      "a": "Yes. Free cancellation up to 24 hours before the tour."
+     }
+    ]
+   },
+   {
+    "h2": "You Might Also Like",
+    "type": "links",
+    "items": [
+     "Hip Hop Party Boat",
+     "Catamaran Party Boat",
+     "Saona Island Tour",
+     "Buggy Tour Punta Cana"
+    ]
+   }
+  ],
+  "prices": "Regular $90 · Premium $125 · Gold Member $170 · Front Row $190",
+  "from": 90,
+  "options": [
+   {
+    "label": "Regular Ticket",
+    "price": 90.0,
+    "priceWknd": 99.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Premium",
+    "price": 125.0,
+    "priceWknd": 135.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Gold Member",
+    "price": 170.0,
+    "priceWknd": 180.0,
+    "people": 1,
+    "group": false
+   },
+   {
+    "label": "Front Row",
+    "price": 190.0,
+    "priceWknd": 200.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": false,
+  "alts": [
+   "Coco Bongo Punta Cana show with dancers and acrobats over the crowd",
+   "Guests enjoying the open bar at Coco Bongo Punta Cana"
+  ],
+  "breadcrumb": "Home › Punta Cana › Shows & Nightlife › Coco Bongo Punta Cana",
+  "num": "24",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/coco-bongo/#trip",
+     "name": "Coco Bongo Punta Cana",
+     "description": "Coco Bongo Punta Cana: 9 PM live show, unlimited open bar, a snack and hotel transport. Regular, Premium, Gold Member and Front Row from $90. Adults 18+.",
+     "url": "https://www.trip2puntacana.com/tour/coco-bongo/",
+     "audience": {
+      "@type": "PeopleAudience",
+      "suggestedMinAge": 18
+     },
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Regular Ticket",
+       "price": "90",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/coco-bongo/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Premium",
+       "price": "125",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/coco-bongo/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Gold Member",
+       "price": "170",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/coco-bongo/"
+      },
+      {
+       "@type": "Offer",
+       "name": "Front Row",
+       "price": "190",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/coco-bongo/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Shows & Nightlife",
+       "item": "https://www.trip2puntacana.com/tour-activity/punta-cana-nightlife-experiences/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Coco Bongo Punta Cana",
+       "item": "https://www.trip2puntacana.com/tour/coco-bongo/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Can I take photos during the show?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Photos are allowed during the show, so bring your phone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Which ticket should I choose?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regular if you want to dance on the main floor with unlimited domestic drinks from the standard menu. Premium for the same main floor with the premium drinks menu. Gold Member if you want the VIP entrance, expedited access and a reserved seat upstairs in the Gold Member VIP area. Front Row for front-row VIP seats with an unobstructed view and personalized service; staff assign your seats on arrival. Every ticket includes the open bar and a snack."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What days and times is the show?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuesday to Sunday; closed Monday. The show starts at 9:00 PM (the schedule may vary by season) and the open bar runs from 8:00 PM to 1:00 AM."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is food included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every ticket includes 1 snack per person (mini burger, hot dog, tequeños or mini sandwich, all served with French fries)."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a dress code?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, casual elegant."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is the tip included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the tip isn't included on any ticket."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is there a minimum age?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, guests must be 18+. Bring ID."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Is transport included?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, round-trip hotel transport with evening pickup."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Are prices different on weekends?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Friday and Saturday cost more: Regular $99, Premium $135, Gold Member $180, Front Row $200. Tuesday to Thursday and Sunday: Regular $90, Premium $125, Gold Member $170, Front Row $190. Closed Monday."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I book for a group?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, ask on WhatsApp."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/coco-bongo/",
+  "cat": "Day Trips",
+  "closedDays": [
+   1
+  ],
+  "minAge": 18,
+  "draftSeo": true,
+  "pack": "Trip2_31_Tours",
+  "name": "Coco Bongo Punta Cana"
+ },
+ {
   "slug": "atv-miches",
   "title": "ATV Tour Miches | Off-Road Trails & Beach Adventure",
   "metaTitle": "ATV Tour Miches | Off-Road Trails & Beach Adventure",
@@ -8982,6 +9822,295 @@
   "name": "Montaña Redonda Tour Miches"
  },
  {
+  "slug": "montana-redonda-horseback-riding-miches",
+  "title": "Montaña Redonda + Horseback Riding Combo Miches | From $105",
+  "metaTitle": "Montaña Redonda + Horseback Riding Combo Miches | From $105",
+  "meta": "Montaña Redonda summit swings and 360° views, then a horseback ride through Miches countryside. Half day, 7 AM or 1 PM Miches hotel pickup. From $105.",
+  "h1": "Montaña Redonda + Horseback Riding Combo Miches – Swings & Views",
+  "keyword": "montaña redonda horseback riding",
+  "intro": [
+   "Stand on top of a mountain and breathe in the silence. Ride up to Montaña Redonda by 4x4 truck, swing out over the valley with 360° views of the lagoon and the ocean, then saddle up for a quiet horseback ride through the Miches countryside. Summit entry and the swings are included; photos at the summit cost extra. Guides lead the ride at a walking pace, so no riding experience is needed. Round-trip hotel pickup is included from Miches hotels at 7:00 AM or 1:00 PM. Adults only (10+), $105 per person, minimum 2 people per booking. For kids, book the Montaña Redonda Tour Miches. Free cancellation up to 24 hours before. Honest note This is one of our high-demand excursions, so on busy days your transport can run 15 to 20 minutes behind schedule because of island traffic and full pickup routes. It doesn't happen every time, but it does happen, and we'd rather tell you now than surprise you. We choose our operators carefully, so when it happens it's a short wait, not a missed tour."
+  ],
+  "sections": [
+   {
+    "h2": "Highlights",
+    "type": "list",
+    "items": [
+     "Duration: half day",
+     "Departures: 7:00 AM or 1:00 PM only, from Miches hotels",
+     "Adults only (10+), no child price",
+     "Minimum 2 people per booking",
+     "4x4 ride to the summit, entry and swings included",
+     "Photos at the summit cost extra",
+     "Free cancellation up to 24 hours before"
+    ]
+   },
+   {
+    "h2": "Why Couples & Families Choose This Montaña Redonda Horseback Combo",
+    "type": "list",
+    "items": [
+     "Summit swings with 360° views, then a countryside ride",
+     "4x4 safari truck ride to the top",
+     "Guides lead the ride at a walking pace, no experience needed",
+     "Round-trip hotel pickup included",
+     "Two experiences in one half day"
+    ]
+   },
+   {
+    "h2": "What to Expect",
+    "type": "steps",
+    "items": [
+     "Hotel pickup (7:00 AM or 1:00 PM)",
+     "4x4 ride to the Montaña Redonda summit",
+     "Swings and 360° views over the lagoon and ocean",
+     "Horseback ride through the Miches countryside",
+     "Return",
+     "Hotel drop-off"
+    ]
+   },
+   {
+    "h2": "What's Included / Not Included",
+    "type": "inc",
+    "groups": [
+     {
+      "label": "Included",
+      "items": [
+       "4x4 safari truck ride to the summit",
+       "Montaña Redonda entry and swings",
+       "Horseback ride with a local guide",
+       "Round-trip hotel pickup included"
+      ]
+     },
+     {
+      "label": "Not included",
+      "items": [
+       "Photos at the summit (extra cost)",
+       "Tips",
+       "Personal expenses"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "Pickup Times & Zones",
+    "type": "text",
+    "paras": [
+     "Pickup at 7:00 AM or 1:00 PM from Miches-area hotels only: Viva Miches by Wyndham, Club Med Miches Playa Esmeralda, Zemi Miches Beach Resort by Hilton, Dreams Playa Esmeralda, Secrets Playa Esmeralda and Marriott Miches Beach Resort. Round-trip hotel pickup included. Minimum 2 people."
+    ]
+   },
+   {
+    "h2": "What to Bring",
+    "type": "list",
+    "items": [
+     "Comfortable clothes you don't mind getting dirty",
+     "Closed shoes",
+     "Sunscreen and sunglasses",
+     "Camera or phone",
+     "Cash for summit photos"
+    ]
+   },
+   {
+    "h2": "Pros & Cons",
+    "type": "pc",
+    "groups": [
+     {
+      "label": "Pros",
+      "items": [
+       "Summit swings and horseback ride in one tour",
+       "4x4 ride, entry and swings included",
+       "Pickup from your Miches hotel"
+      ]
+     },
+     {
+      "label": "Cons",
+      "items": [
+       "Adults only (10+)",
+       "Minimum 2 people per booking"
+      ]
+     }
+    ]
+   },
+   {
+    "h2": "FAQs",
+    "type": "faq",
+    "faq": [
+     {
+      "q": "Is there a minimum group size?",
+      "a": "Yes, every booking needs at least 2 people. A solo traveler can't book this tour alone."
+     },
+     {
+      "q": "Can kids come?",
+      "a": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour Miches."
+     },
+     {
+      "q": "Do I need riding experience?",
+      "a": "No. Guides lead at a walking pace."
+     },
+     {
+      "q": "How do we get to the top?",
+      "a": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+     },
+     {
+      "q": "Can I add a zipline?",
+      "a": "Yes, choose the Montaña Redonda + Horseback + Zipline combo."
+     },
+     {
+      "q": "What times are available?",
+      "a": "7:00 AM or 1:00 PM from Miches-area hotels."
+     },
+     {
+      "q": "Can I cancel for free?",
+      "a": "Yes. Free cancellation up to 24 hours before the tour."
+     }
+    ]
+   },
+   {
+    "h2": "You Might Also Like",
+    "type": "links",
+    "items": [
+     "Horseback Riding Miches",
+     "Montaña Redonda + Horseback + Zipline Combo",
+     "Montaña Redonda Tour Miches",
+     "Things to Do in Miches"
+    ]
+   }
+  ],
+  "prices": "Adult (10+) $105",
+  "from": 105,
+  "options": [
+   {
+    "label": "Adult (10+)",
+    "price": 105.0,
+    "people": 1,
+    "group": false
+   }
+  ],
+  "min2": true,
+  "alts": [
+   "Riders on horseback below Montaña Redonda, Miches",
+   "Couple on the Montaña Redonda swing before the horseback ride"
+  ],
+  "breadcrumb": "Home › Miches › Montaña Redonda + Horseback Combo",
+  "num": "30",
+  "schema": {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "TouristTrip",
+     "@id": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-miches/#trip",
+     "name": "Montaña Redonda + Horseback Combo",
+     "description": "Montaña Redonda summit swings and 360° views, then a horseback ride through Miches countryside. Half day, 7 AM or 1 PM Miches hotel pickup. From $105.",
+     "url": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-miches/",
+     "provider": {
+      "@type": "TravelAgency",
+      "name": "Trip2 Punta Cana",
+      "legalName": "Trip2 LLC",
+      "telephone": "+1-809-485-3099",
+      "url": "https://www.trip2puntacana.com/"
+     },
+     "offers": [
+      {
+       "@type": "Offer",
+       "name": "Adult (10+)",
+       "price": "105",
+       "priceCurrency": "USD",
+       "availability": "https://schema.org/InStock",
+       "url": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.trip2puntacana.com/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Miches",
+       "item": "https://www.trip2puntacana.com/miches/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Montaña Redonda + Horseback Combo",
+       "item": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-miches/"
+      }
+     ]
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "Is there a minimum group size?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every booking needs at least 2 people. A solo traveler can't book this tour alone."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can kids come?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This combo is adults only (10+), with no child price. For kids, book the Montaña Redonda Tour Miches."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Do I need riding experience?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Guides lead at a walking pace."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "How do we get to the top?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By 4x4 safari truck. Summit entry and the swings are included; photos cost extra."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I add a zipline?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, choose the Montaña Redonda + Horseback + Zipline combo."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What times are available?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:00 AM or 1:00 PM from Miches-area hotels."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "Can I cancel for free?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Free cancellation up to 24 hours before the tour."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "canonical": "https://www.trip2puntacana.com/tour/montana-redonda-horseback-riding-miches/",
+  "cat": "Miches",
+  "pack": "Trip2_31_Tours",
+  "name": "Montaña Redonda + Horseback Combo"
+ },
+ {
   "slug": "montana-redonda-horseback-riding-zipline-miches",
   "title": "Montaña Redonda + Horseback + Zipline | Miches | From $155",
   "metaTitle": "Montaña Redonda + Horseback + Zipline | Miches | From $155",
@@ -9006,8 +10135,13 @@
      "Zipline weight limit: 250 lb (113 kg)",
      "Summit entry and swings included",
      "Free cancellation up to 24 hours before",
-     "Minimum 2 people per booking",
-     "Why Explorers Choose This Montaña Redonda Horseback & Zipline Combo",
+     "Minimum 2 people per booking"
+    ]
+   },
+   {
+    "h2": "Why Explorers Choose This Montaña Redonda Horseback & Zipline Combo",
+    "type": "list",
+    "items": [
      "Three experiences in one half day: Montaña Redonda, zipline and horseback riding",
      "360° views of mountains, coastline and lagoons",
      "The summit swings, entry included",

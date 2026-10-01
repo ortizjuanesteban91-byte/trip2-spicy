@@ -9,6 +9,7 @@ const CATPAGES = {
   "family-experiences": ["family", "Family-Friendly Excursions in Punta Cana", "Dolphin encounters, Monkey Land, buggy and zipline combos and fun days out for all ages."],
   "eco-nature": ["eco", "Eco & Nature Tours in Punta Cana", "Los Haitises caves and mangroves, whale watching, El Limón waterfall and Cayo Levantado."],
   "culture-city": ["culture", "Culture & City Tours in Punta Cana", "Santo Domingo colonial zone and Higüey city tours with local guides."],
+  "shows-nightlife": ["nightlife", "Shows & Nightlife in Punta Cana", "Coco Bongo Punta Cana tickets with the live show, open bar and hotel transport."],
   "things-to-do-in-miches": ["miches", "Things to Do in Miches", "ATV trails, horseback rides and Montaña Redonda swings on the wild Emerald Coast. Miches hotel pickup only."],
 };
 const find = (slug) => CATPAGES[slug];

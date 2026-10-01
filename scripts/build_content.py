@@ -2,6 +2,9 @@ import os, re, json, subprocess, sys, glob
 ROOT = "/tmp/claude-0/t2"
 LABELS = ["URL slug","Canonical","301 redirect from","SEO Title","Meta Description","Focus keyword","Secondary keywords","H1","H2 order","Image alt texts","Breadcrumb","Schema prices","Schema JSON-LD","Internal links","Category"]
 def pdf(path, layout=False):
+    m = re.search(r"/(\d\d) - [^/]*/1 - Page Copy\.pdf$", path)
+    if m and os.path.exists(os.path.join(os.path.dirname(__file__), "manual", m.group(1) + ".txt")):
+        return "\n\n\n\n\n" + open(os.path.join(os.path.dirname(__file__), "manual", m.group(1) + ".txt")).read()
     a = ["pdftotext"] + (["-layout"] if layout else []) + [path, "-"]
     return subprocess.run(a, capture_output=True, text=True).stdout.replace("\f", "\n")
 def parse_seo(path):
@@ -139,8 +142,14 @@ def parse_schema(path):
     except Exception: return None
 def build(kind, folder, copyname):
     seo = parse_seo(os.path.join(folder, "2 - SEO Settings.pdf"))
+    man = None
+    mp = os.path.join(os.path.dirname(__file__), "manual", os.path.basename(folder)[:2] + ".json")
+    if os.path.exists(mp):
+        man = json.load(open(mp)); seo = man["seo"]
     slug = join(seo.get("URL slug", [])).strip("/").split("/")[-1]
     h2s = [re.sub(r"^[\d\s]*\.\s*", "", x) for x in seo.get("H2 order", []) if x.strip()]
+    h2s = [(h2s[k - 1] + " " + x if k and x == "Combo" else x) for k, x in enumerate(h2s)]
+    h2s = [x for k, x in enumerate(h2s) if not (k + 1 < len(h2s) and h2s[k + 1].startswith(x + " ") and x != h2s[k + 1])]
     lines = clean_lines(pdf(os.path.join(folder, copyname)))
     # drop the front matter up to the "Headings = H1/H2." line
     start = next((i for i, l in enumerate(lines) if "Headings = H1/H2" in l), 0) + 1
@@ -178,6 +187,21 @@ def build(kind, folder, copyname):
     d = {"slug": slug, "title": title, "metaTitle": title, "meta": meta, "h1": h1, "keyword": join(seo.get("Focus keyword", [])),
          "intro": paras(intro_lines), "sections": sections, "prices": prices, "from": FROM.get(os.path.basename(folder)[:2], next((a for a in allp if a), None)), "options": options(os.path.basename(folder)[:2], prices), "min2": os.path.basename(folder)[:2] in MIN2,
          "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2], "schema": parse_schema(os.path.join(folder, "2 - SEO Settings.pdf")), "canonical": join(seo.get("Canonical", [])).replace(" ", ""), "cat": (lambda b: "Miches" if "Miches" in b else "Boats & Water" if "Boats" in b else "Adventures" if "Adventures" in b else "Day Trips")(join(seo.get("Breadcrumb", [])) or "")}
+    if man:
+        for sec in d["sections"]:
+            if sec["h2"] == "Your Ticket Options": sec.clear(); sec.update({"h2": "Your Ticket Options", "type": "tickets", "tickets": man["tickets"]})
+            if sec["h2"] == "Compare Ticket Options": sec.clear(); sec.update({"h2": "Compare Ticket Options", "type": "table", **man["table"]})
+        d["options"] = [{"label": t["name"], "price": float(t["price"]), "priceWknd": float(t["wknd"]), "people": 1, "group": False} for t in man["tickets"]]
+        d["from"] = 90; d["closedDays"] = [1]; d["minAge"] = 18; d["draftSeo"] = bool(man.get("draft_seo"))
+        u = d["canonical"]; faq = next((x["faq"] for x in d["sections"] if x["type"] == "faq"), [])
+        d["schema"] = {"@context": "https://schema.org", "@graph": [
+            {"@type": "TouristTrip", "@id": u + "#trip", "name": "Coco Bongo Punta Cana", "description": d["meta"], "url": u, "audience": {"@type": "PeopleAudience", "suggestedMinAge": 18},
+             "provider": {"@type": "TravelAgency", "name": "Trip2 Punta Cana", "legalName": "Trip2 LLC", "telephone": "+1-809-485-3099", "url": "https://www.trip2puntacana.com/"},
+             "offers": [{"@type": "Offer", "name": t["name"], "price": str(t["price"]), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": u} for t in man["tickets"]]},
+            {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.trip2puntacana.com/"}, {"@type": "ListItem", "position": 2, "name": "Shows & Nightlife", "item": "https://www.trip2puntacana.com/tour-activity/punta-cana-nightlife-experiences/"}, {"@type": "ListItem", "position": 3, "name": "Coco Bongo Punta Cana", "item": u}]},
+            {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]}]}
+    if slug == "montana-redonda-horseback-riding-miches" and d.get("schema"):
+        d["schema"] = json.loads(json.dumps(d["schema"]).replace("horsebackriding-miches", "horseback-riding-miches"))
     return fix_family(d)
 tours, posts, warn = [], [], []
 for pack, sub in [("45119b76-Trip2_31_Tours_PDF5", "Trip2_31_Tours"), ("82b38293-Trip2_RunnersAdventures_Tours_PDF5", "Trip2_Ohana_Tours")]:

@@ -1,0 +1,168 @@
+{
+ "seo": {
+  "URL slug": [
+   "/tour/coco-bongo/"
+  ],
+  "Canonical": [
+   "https://www.trip2puntacana.com/tour/coco-bongo/"
+  ],
+  "SEO Title": [
+   "Coco Bongo Punta Cana Tickets | Show, Open Bar & VIP Seating"
+  ],
+  "Meta Description": [
+   "Coco Bongo Punta Cana: 9 PM live show, unlimited open bar, a snack and hotel transport. Regular, Premium, Gold Member and Front Row from $90. Adults 18+."
+  ],
+  "Focus keyword": [
+   "coco bongo punta cana"
+  ],
+  "H1": [
+   "Coco Bongo Punta Cana Tickets – Show, Open Bar & VIP Seating"
+  ],
+  "H2 order": [
+   "Highlights",
+   "Why Nightlife Lovers Choose Coco Bongo Punta Cana",
+   "Your Ticket Options",
+   "Compare Ticket Options",
+   "What to Expect",
+   "What's Included / Not Included",
+   "Pickup Times & Zones",
+   "What to Bring",
+   "Pros & Cons",
+   "FAQs",
+   "You Might Also Like"
+  ],
+  "Image alt texts": [
+   "Coco Bongo Punta Cana show with dancers and acrobats over the crowd",
+   "Guests enjoying the open bar at Coco Bongo Punta Cana"
+  ],
+  "Breadcrumb": [
+   "Home › Punta Cana › Shows & Nightlife › Coco Bongo Punta Cana"
+  ],
+  "Schema prices": [
+   "Regular $90 · Premium $125 · Gold Member $170 · Front Row $190"
+  ]
+ },
+ "tickets": [
+  {
+   "name": "Regular Ticket",
+   "official": "General Access | Unlimited Domestic Drinks",
+   "price": 90,
+   "wknd": 99,
+   "body": "Your way into the full Coco Bongo night: the show kicks off at 9:00 PM (the schedule may vary by season), then the party takes over. You're on the main floor, the lower level, right in the crowd where the dancing happens, with standard access and standing room (no reserved seat). The unlimited open bar pours domestic drinks from the standard menu from 8:00 PM to 1:00 AM, and you get 1 snack per person: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+   "who": "Groups of friends and first-timers who want to dance and feel the energy up close for the lowest price."
+  },
+  {
+   "name": "Premium",
+   "official": "General Access | Premium Drinks",
+   "price": 125,
+   "wknd": 135,
+   "body": "The same main-floor spot, standard access and full show and party as the Regular Ticket, with a better bar: the unlimited open bar moves up to the premium menu from 8:00 PM to 1:00 AM. It's still standing room, with no fast entry and no reserved seat. Your snack is included too: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+   "who": "Guests who want to be on the dance floor but care about what's in the glass."
+  },
+  {
+   "name": "Gold Member",
+   "official": "VIP Zone | Premium Drinks",
+   "price": 170,
+   "wknd": 180,
+   "body": "Walk in through the VIP entrance with expedited access and head upstairs to the Gold Member VIP area, where reserved VIP seating is waiting for you (the Front Row seats are separate). You watch the acrobats and tributes from above, with room to sit between songs and get up to dance when you want. The unlimited open bar pours from the premium menu from 8:00 PM to 1:00 AM, and your snack is included: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Round-trip hotel transport is included; the tip isn't.",
+   "who": "Couples, birthdays and anyone who wants a reserved seat and a less crowded spot for a show that runs late into the night."
+  },
+  {
+   "name": "Front Row",
+   "official": "VIP Zone | Premium Drinks",
+   "price": 190,
+   "wknd": 200,
+   "body": "The front row of the Gold Member VIP area, with unobstructed visibility of the performers and the aerial acts. You get the VIP entrance and expedited access, personalized assistance and service through the night, the unlimited premium open bar from 8:00 PM to 1:00 AM and your snack: a mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Seats aren't pre-assigned: on arrival, staff seat you in the front row according to the zone map. Round-trip hotel transport is included; the tip isn't.",
+   "who": "Proposals, anniversaries, bachelor and bachelorette parties, and anyone who wants an unobstructed view of the show."
+  }
+ ],
+ "table": {
+  "cols": [
+   "Regular Ticket",
+   "Premium",
+   "Gold Member",
+   "Front Row"
+  ],
+  "rows": [
+   [
+    "Official ticket",
+    "General Access, Unlimited Domestic Drinks",
+    "General Access, Premium Drinks",
+    "VIP Zone, Premium Drinks",
+    "VIP Zone, Premium Drinks"
+   ],
+   [
+    "Where you are",
+    "Main floor (lower level)",
+    "Main floor (lower level)",
+    "Upstairs Gold Member VIP area",
+    "Front row of the Gold Member VIP area"
+   ],
+   [
+    "Seating",
+    "Standing, no reserved seat",
+    "Standing, no reserved seat",
+    "Reserved VIP seating (excluding Front Row)",
+    "Reserved Front Row VIP seating, unobstructed view; staff assign seats on arrival"
+   ],
+   [
+    "Entry",
+    "Standard access",
+    "Standard access",
+    "VIP entrance, expedited access",
+    "VIP entrance, expedited access"
+   ],
+   [
+    "Open bar (8:00 PM–1:00 AM)",
+    "Unlimited, standard menu",
+    "Unlimited, premium menu",
+    "Unlimited, premium menu",
+    "Unlimited, premium menu"
+   ],
+   [
+    "Snack",
+    "1 per person, with French fries",
+    "1 per person, with French fries",
+    "1 per person, with French fries",
+    "1 per person, with French fries"
+   ],
+   [
+    "Service",
+    "–",
+    "–",
+    "–",
+    "Personalized assistance and service"
+   ],
+   [
+    "Show",
+    "9:00 PM",
+    "9:00 PM",
+    "9:00 PM",
+    "9:00 PM"
+   ],
+   [
+    "Tip",
+    "Not included",
+    "Not included",
+    "Not included",
+    "Not included"
+   ],
+   [
+    "Tue–Thu & Sun",
+    "$90",
+    "$125",
+    "$170",
+    "$190"
+   ],
+   [
+    "Fri–Sat",
+    "$99",
+    "$135",
+    "$180",
+    "$200"
+   ]
+  ],
+  "note": "Snack options: mini burger, hot dog, tequeños or mini sandwich, all served with French fries. Show time may vary by season."
+ },
+ "draft_seo": true
+}
