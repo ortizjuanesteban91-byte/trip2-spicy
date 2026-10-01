@@ -569,7 +569,7 @@
    "Hands on the wheel, spray in the air, turquoise water racing past. On this Speedboat Punta Cana tour you drive your own boat along the Bávaro coast, following our guide boat in a convoy.",
    "No boat licence needed (drivers 18+): you get a safety briefing first, and the guide boat leads the way. When it's time to slow down, we stop at a coral reef so you can snorkel clear water and colorful marine life before racing back.",
    "You see the Punta Cana coastline from the driver's seat, with speed, freedom and ocean views in about 3 hours.",
-   "From $50 per person on a Double boat. Choose a Single boat (1 person, $75), a Double (2 people, $99) or a Family boat ($160 for 2 adults + 1 child, or up to 4 adults). Minimum 2 people per booking, so a solo Single needs a second Single alongside it. Morning or afternoon departure, snorkel gear, safety equipment and round-trip hotel transport included, with free cancellation up to 24 hours before."
+   "From $50 per person on a Double boat. Choose a Single boat (1 person, $75), a Double (2 people, $99) or a Family boat ($160 for 2 adults + 1 child, up to 3 people). Minimum 2 people per booking, so a solo Single needs a second Single alongside it. Morning or afternoon departure, snorkel gear, safety equipment and round-trip hotel transport included, with free cancellation up to 24 hours before."
   ],
   "sections": [
    {
@@ -579,7 +579,7 @@
      "Duration: about 3 hours",
      "Departures: 10:00 AM or 1:00 PM",
      "Drivers 18+ (no boat licence needed); kids ride as passengers from 5",
-     "Single 1 · Double 2 · Family: 2 adults + 1 child, or up to 4 adults",
+     "Single 1 · Double 2 · Family: 2 adults + 1 child, up to 3 people",
      "Minimum 2 people per booking",
      "Round-trip hotel transport",
      "Free cancellation up to 24 hours before"
@@ -688,7 +688,7 @@
      },
      {
       "q": "How many people per boat?",
-      "a": "Single 1 person ($75), Double 2 people ($99), Family 2 adults + 1 child, or up to 4 adults ($160)."
+      "a": "Single 1 person ($75), Double 2 people ($99), Family 2 adults + 1 child, up to 3 people ($160)."
      },
      {
       "q": "Is there a minimum number of people?",
@@ -696,7 +696,7 @@
      },
      {
       "q": "What does the Family boat include?",
-      "a": "One boat for 2 adults + 1 child, or for up to 4 adults, at $160."
+      "a": "One boat for 2 adults + 1 child (up to 3 people), at $160."
      },
      {
       "q": "How long is it?",
@@ -719,7 +719,7 @@
     ]
    }
   ],
-  "prices": "Single (1 person, per boat) $75 · Double (2 people, per boat) $99 · Family (2 adults + 1 child, or up to 4 adults), per boat $160",
+  "prices": "Single (1 person, per boat) $75 · Double (2 people, per boat) $99 · Family (2 adults + 1 child, up to 3 people), per boat $160",
   "from": 50,
   "options": [
    {
@@ -735,7 +735,7 @@
     "group": true
    },
    {
-    "label": "Family (2 adults + 1 child, or up to 4 adults), per boat",
+    "label": "Family (2 adults + 1 child, up to 3 people), per boat",
     "price": 160.0,
     "people": 3,
     "group": true

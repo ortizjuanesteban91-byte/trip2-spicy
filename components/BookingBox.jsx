@@ -5,6 +5,8 @@ const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
 export default function BookingBox({ tour }) {
   const [q, setQ] = useState({});
   const [state, setState] = useState("idle");
+  const [date, setDateV] = useState("");
+  const today = new Date().toISOString().slice(0, 10);
   const opts = tour.options || [];
   const lines = opts.map((o, i) => ({ ...o, qty: q[i] || 0 })).filter((o) => o.qty > 0);
   const total = lines.reduce((a, l) => a + l.qty * l.price, 0);
@@ -35,7 +37,7 @@ export default function BookingBox({ tour }) {
         <p className="mt-1 text-4xl font-black text-brand">{money(tour.from)} <span className="text-xs font-bold text-ink/50">Base Price · per person</span></p>
       </div>
       <div className="grid gap-3 rounded-3xl bg-sky-50 p-4">
-        <div className="relative"><span className={ic}>📅</span><input name="date" type="date" required className={f} /></div>
+        <div className="relative"><span className={ic}>📅</span><input name="date" type="date" required min={today} value={date} onChange={(e) => setDateV(e.target.value)} className={f + " appearance-none"} />{!date && <span className="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-sm text-ink/50">Select date*</span>}</div>
         <div className="grid gap-2">
           {opts.map((o, i) => (
             <div key={i} className="flex items-center justify-between gap-3 rounded-2xl border border-sky-200 bg-sky-50/60 p-3">

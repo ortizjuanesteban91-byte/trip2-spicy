@@ -28,6 +28,7 @@ export default async function Tour({ params }) {
       <div className="mx-auto max-w-6xl px-5 pt-8">
         <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{t.cat}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
         <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
+        <a href="#book" className="mt-5 inline-block rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover">⚡ BOOK NOW</a>
         <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
           <div className={`h-64 rounded-2xl bg-gradient-to-br sm:col-span-2 sm:row-span-2 sm:h-auto ${grad(i)}`} role="img" aria-label={t.alts[0] || t.h1} />
           <div className={`h-32 rounded-2xl bg-gradient-to-br sm:col-span-2 ${grad(i + 1)}`} role="img" aria-label={t.alts[1] || t.h1} />
@@ -45,6 +46,7 @@ export default async function Tour({ params }) {
           <aside id="book" className="lg:sticky lg:top-24 lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
         </div>
       </div>
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur lg:hidden"><a href="#book" className="flex items-center justify-between rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white"><span>From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} / person</span><span>⚡ BOOK NOW</span></a></div>
     </main>
   );
 }

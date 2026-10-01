@@ -101,6 +101,17 @@ def options(num, prices):
         label = ("Observer / C" + label) if label.startswith("ompanion") else label
         res.append({"label": label.strip(" ·"), "price": price, "people": people, "group": unit == "group"})
     return res
+def fix_family(t):
+    if isinstance(t, str):
+        t = t.replace("for 2 adults + 1 child, or for up to 4 adults, at $160", "for 2 adults + 1 child (up to 3 people), at $160")
+        t = t.replace("Family 2 adults + 1 child, or up to 4 adults ($160)", "Family 2 adults + 1 child, up to 3 people ($160)")
+        t = t.replace("($160 for 2 adults + 1 child, or up to 4 adults)", "($160 for 2 adults + 1 child, up to 3 people)")
+        t = t.replace("Family (2 adults + 1 child, or up to 4 adults), per boat", "Family (2 adults + 1 child, up to 3 people), per boat")
+        t = t.replace("Family: 2 adults + 1 child, or up to 4 adults", "Family: 2 adults + 1 child, up to 3 people")
+        return t
+    if isinstance(t, list): return [fix_family(x) for x in t]
+    if isinstance(t, dict): return {k: fix_family(v) for k, v in t.items()}
+    return t
 def build(kind, folder, copyname):
     seo = parse_seo(os.path.join(folder, "2 - SEO Settings.pdf"))
     slug = join(seo.get("URL slug", [])).strip("/").split("/")[-1]
@@ -141,7 +152,7 @@ def build(kind, folder, copyname):
     d = {"slug": slug, "title": title, "metaTitle": title, "meta": meta, "h1": h1, "keyword": join(seo.get("Focus keyword", [])),
          "intro": paras(intro_lines), "sections": sections, "prices": prices, "from": FROM.get(os.path.basename(folder)[:2], next((a for a in allp if a), None)), "options": options(os.path.basename(folder)[:2], prices), "min2": os.path.basename(folder)[:2] in MIN2,
          "alts": [a for a in seo.get("Image alt texts", []) if a], "breadcrumb": join(seo.get("Breadcrumb", [])), "num": os.path.basename(folder)[:2], "cat": (lambda b: "Miches" if "Miches" in b else "Boats & Water" if "Boats" in b else "Adventures" if "Adventures" in b else "Day Trips")(join(seo.get("Breadcrumb", [])) or "")}
-    return d
+    return fix_family(d)
 tours, posts, warn = [], [], []
 for pack, sub in [("45119b76-Trip2_31_Tours_PDF5", "Trip2_31_Tours"), ("82b38293-Trip2_RunnersAdventures_Tours_PDF5", "Trip2_Ohana_Tours")]:
     base = os.path.join(ROOT, pack, sub)
