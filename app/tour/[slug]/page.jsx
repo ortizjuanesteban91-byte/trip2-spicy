@@ -15,28 +15,36 @@ export default async function Tour({ params }) {
   const t = tourBySlug((await params).slug);
   if (!t) notFound();
   const i = tours.indexOf(t);
+  const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
   const faq = t.sections.find((s) => s.type === "faq");
   const ld = [
     { "@context": "https://schema.org", "@type": "TouristTrip", name: t.h1, description: t.meta, url: `${SITE}/tour/${t.slug}/`, offers: t.from ? { "@type": "Offer", price: String(t.from), priceCurrency: "USD", availability: "https://schema.org/InStock" } : undefined, provider: { "@type": "TravelAgency", name: "Trip2 Punta Cana" } },
     faq && { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
   ].filter(Boolean);
   return (
-    <main className="mx-auto max-w-4xl px-5 py-10">
+    <main>
       {ld.map((o, k) => <script key={k} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(o) }} />)}
-      <p className="mb-3 text-xs text-ink/60"><Link href="/" className="hover:text-brand">Home</Link> › <Link href="/tours" className="hover:text-brand">Tours</Link> › {t.name}</p>
-      <div data-aos="zoom-in" className={`h-64 rounded-2xl bg-gradient-to-br sm:h-80 ${grad(i)}`} role="img" aria-label={t.alts[0] || t.h1} />
-      <h1 className="mt-6 text-3xl font-black text-brand" data-aos="zoom-out-left">{t.h1}</h1>
-      <div className="mt-4 rounded-2xl bg-ice p-5" data-aos="zoom-out-right">
-        {t.from && <p className="text-2xl font-black">From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} <span className="text-sm font-normal text-ink/60">/ person</span></p>}
-        
-        <div className="mt-3 flex flex-wrap gap-2"><a href="#book" className="rounded-full bg-brand px-6 py-2.5 text-xs font-extrabold text-white hover:bg-brand-hover">BOOK NOW</a><a href={whatsappLink(`Hi, I'd like to book: ${t.h1}`)} className="rounded-full bg-emerald-500 px-6 py-2.5 text-xs font-extrabold text-white">WHATSAPP</a></div>
+      <div className="bg-sky-50/80 py-3"><div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-5 text-xs text-ink/60"><p><Link href="/" className="hover:text-brand">Home</Link> › <Link href="/tours" className="hover:text-brand">Excursions</Link> › {t.cat} › {t.name}</p><p className="flex flex-wrap gap-2 font-bold"><span className="rounded-full bg-white px-3 py-1 text-brand">{duration}</span><span className="rounded-full bg-white px-3 py-1 text-amber-700">Free Cancellation up to 24h</span></p></div></div>
+      <div className="mx-auto max-w-6xl px-5 pt-8">
+        <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{t.cat}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
+        <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
+        <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
+          <div className={`h-64 rounded-2xl bg-gradient-to-br sm:col-span-2 sm:row-span-2 sm:h-auto ${grad(i)}`} role="img" aria-label={t.alts[0] || t.h1} />
+          <div className={`h-32 rounded-2xl bg-gradient-to-br sm:col-span-2 ${grad(i + 1)}`} role="img" aria-label={t.alts[1] || t.h1} />
+          <div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 2)}`} /><div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 3)}`} />
+        </div>
+        <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
+          <div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4" data-aos="zoom-out-right">
+              {[["DURATION", duration], ["GROUP SIZE", "Private & small groups"], ["PICKUP", "Hotel / resort"], ["LANGUAGE", "Eng & Spa"]].map(([k, v]) => <div key={k} className="rounded-xl bg-ice p-3"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">{k}</p><p className="mt-1 text-sm font-bold">{v}</p></div>)}
+            </div>
+            <h2 className="mb-3 mt-8 text-2xl font-black text-ink">Tour Details</h2>
+            <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
+            <Sections sections={t.sections} />
+          </div>
+          <aside id="book" className="lg:sticky lg:top-24 lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
+        </div>
       </div>
-      <div className="mt-6" data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
-      <Sections sections={t.sections} />
-      <section id="book" className="mt-12" data-aos="zoom-in">
-        <h2 className="mb-3 text-2xl font-black text-brand">Book this tour</h2>
-        <BookingBox tour={t} />
-      </section>
     </main>
   );
 }

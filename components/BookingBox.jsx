@@ -17,8 +17,8 @@ export default function BookingBox({ tour }) {
     if (!lines.length || tooFew) return;
     setState("sending");
     const f = Object.fromEntries(new FormData(e.target));
-    const { first, last, email, phone, website, notes, date, hotel } = f;
-    const details = { Tour: tour.name, Date: date, Hotel: hotel, Guests: String(people), Order: lines.map((l) => `${l.label} · ${l.qty} × ${money(l.price)} = ${money(l.qty * l.price)}`).join(" | "), Total: money(total) };
+    const { first, last, email, phone, website, notes, date, hotel, time } = f;
+    const details = { Tour: tour.name, Date: date, Time: time, Hotel: hotel, Guests: String(people), Order: lines.map((l) => `${l.label} · ${l.qty} × ${money(l.price)} = ${money(l.qty * l.price)}`).join(" | "), Total: money(total) };
     try {
       const r = await fetch("/api/leads", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind: "booking", name: `${first} ${last}`.trim(), email, phone, message: notes, website, details }) });
       setState(r.ok ? "done" : "error");
@@ -27,7 +27,7 @@ export default function BookingBox({ tour }) {
   if (state === "done") return <p className="rounded-xl bg-white p-6 font-bold text-brand">Thank you! Your request is in. Our concierge will confirm your pickup on WhatsApp. You pay later.</p>;
   return (
     <form onSubmit={submit} className="grid gap-4 rounded-2xl bg-white p-5 shadow ring-1 ring-sky-100">
-      <h3 className="font-extrabold">Choose your option</h3>
+      <div className="-m-5 mb-0 rounded-t-2xl bg-sky-100 p-5"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">BEST RATE DIRECT · OFFICIAL TRIP2 GUARANTEE</p><p className="mt-1 text-3xl font-black text-brand">{money(tour.from)} <span className="text-xs font-bold text-ink/60">Base Price · per person</span></p></div>
       <div className="grid gap-2">
         {opts.map((o, i) => (
           <div key={i} className="flex items-center justify-between gap-3 rounded-xl bg-ice p-3">
@@ -43,7 +43,7 @@ export default function BookingBox({ tour }) {
       {lines.length > 0 && (
         <div className="rounded-xl border border-sky-100 p-3 text-sm">
           {lines.map((l, i) => <p key={i} className="py-0.5">{tour.name} · {l.label} · {l.qty} × {money(l.price)} = <b>{money(l.qty * l.price)}</b></p>)}
-          <p className="mt-2 border-t pt-2 font-extrabold">Total: {money(total)} ({people} {people === 1 ? "person" : "people"})</p>
+          <p className="mt-2 flex justify-between text-xs"><span>Resort Roundtrip Pickup</span><b>FREE</b></p><p className="mt-2 border-t pt-2 font-extrabold">Total Amount Due: {money(total)} ({people} {people === 1 ? "person" : "people"})</p>
         </div>
       )}
       {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
@@ -51,10 +51,12 @@ export default function BookingBox({ tour }) {
       <div className="grid grid-cols-2 gap-3"><input name="first" required placeholder="First name *" className={inp} /><input name="last" required placeholder="Last name *" className={inp} /></div>
       <input name="email" type="email" required placeholder="Email *" className={inp} />
       <input name="phone" required placeholder="Phone / WhatsApp *" className={inp} />
-      <div className="grid grid-cols-2 gap-3"><input name="date" type="date" required className={inp} /><input name="hotel" placeholder="Hotel name" className={inp} /></div>
+      <input name="date" type="date" required className={inp} />
+      <select name="time" required defaultValue="" className={inp}><option value="" disabled>Time of day *</option><option>Morning</option><option>Afternoon</option></select>
+      <input name="hotel" required placeholder="Hotel *" className={inp} />
       <textarea name="notes" rows={3} placeholder="Notes" className={inp} />
       <input name="website" tabIndex={-1} autoComplete="off" className="hidden" />
-      <button disabled={!lines.length || tooFew || state === "sending"} className="rounded-full bg-brand px-6 py-3 text-sm font-extrabold text-white disabled:opacity-40">{state === "sending" ? "Sending…" : "RESERVE NOW – PAY LATER"}</button>
+      <button disabled={!lines.length || tooFew || state === "sending"} className="rounded-full bg-brand px-6 py-3 text-sm font-extrabold text-white disabled:opacity-40">{state === "sending" ? "Sending…" : "RESERVE NOW"}</button>
       {state === "error" && <p className="text-sm font-bold text-rose-600">Something went wrong. Please try again or use WhatsApp.</p>}
       <p className="text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
     </form>
