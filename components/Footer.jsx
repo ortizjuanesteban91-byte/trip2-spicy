@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { getSite } from "@/lib/siteconf";
+import { getReviews, GOOGLE_READ } from "@/lib/reviews";
 const col = (t, items) => (<div><h4 className="mb-3 text-xs font-extrabold tracking-widest text-sky-200">{t.toUpperCase()}</h4><ul className="space-y-2 text-sm">{items.map(([l, h]) => <li key={l}>{h ? <Link href={h} className="hover:text-white">{l}</Link> : l}</li>)}</ul></div>);
 export default async function Footer() {
   const { phone, email, wa: whatsapp } = await getSite();
+  const { tripadvisor } = await getReviews();
   return (
     <footer className="bg-[#0a2a30] text-sky-100/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
@@ -17,6 +19,7 @@ export default async function Footer() {
         {col("Information", [["Cancellation Policy"], ["Refund Policy"], ["Terms of Service"], ["Privacy Policy"]])}
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs">
+        <p className="mb-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-bold text-sky-100"><span className="text-sky-200">Find us on</span><a href={GOOGLE_READ} target="_blank" rel="noopener noreferrer" className="hover:text-white">Google ★</a>{tripadvisor && <a href={tripadvisor} target="_blank" rel="noopener noreferrer" className="hover:text-white">TripAdvisor ↗</a>}</p>
         <p className="mb-2 font-bold text-sky-200">Stripe · VISA · Mastercard · Apple Pay · Google Pay · PayPal</p>
         <p>Reserve Now — Pay Later Guaranteed</p>
         <p className="mt-2">Copyright © 2026 Trip2 Punta Cana. All rights reserved.</p>
