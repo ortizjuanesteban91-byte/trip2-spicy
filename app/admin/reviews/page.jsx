@@ -9,7 +9,7 @@ export default async function Page({ searchParams }) {
   const session = await getSession();
   if (!session) redirect("/admin");
   if (!can(session, "reviews")) redirect(firstArea(session));
-  const { items, tripadvisor, google, score, count } = await getReviews(true);
+  const { items, tripadvisor, google, score, count, taScore, taCount } = await getReviews(true);
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <h1 className="text-2xl font-extrabold">Reviews</h1>
@@ -29,7 +29,8 @@ export default async function Page({ searchParams }) {
         <input name="tripadvisor" defaultValue={tripadvisor} placeholder="TripAdvisor page link (https://...)" className={inp} />
         <input name="google" defaultValue={google} placeholder="Google reviews link (https://...)" className={inp} />
         <div className="grid grid-cols-2 gap-3"><label className="grid gap-1 text-sm font-bold">Google rating<input name="score" type="number" step="0.1" min="1" max="5" defaultValue={score} className={inp} /></label><label className="grid gap-1 text-sm font-bold">Number of Google reviews<input name="count" type="number" min="0" defaultValue={count} className={inp} /></label></div>
-        <p className="text-xs text-[#667085]">Copy these two numbers from your Google Business Profile now and then. Set reviews to 0 to hide the line.</p>
+        <div className="grid grid-cols-2 gap-3"><label className="grid gap-1 text-sm font-bold">TripAdvisor rating<input name="taScore" type="number" step="0.1" min="0" max="5" defaultValue={taScore || ""} className={inp} /></label><label className="grid gap-1 text-sm font-bold">TripAdvisor reviews<input name="taCount" type="number" min="0" defaultValue={taCount || ""} className={inp} /></label></div>
+        <p className="text-xs text-[#667085]">Copy these numbers from your Google Business Profile now and then. Set reviews to 0 to hide the line.</p>
         <button className="rounded-xl bg-[#0d1626] p-3 font-extrabold text-white">Save</button>
       </form>
       <h2 className="mt-8 text-lg font-bold">Current reviews ({items.length})</h2>
