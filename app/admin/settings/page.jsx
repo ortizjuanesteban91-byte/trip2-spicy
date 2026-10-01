@@ -21,15 +21,22 @@ export default async function Page({ searchParams }) {
       {saved && <p className="mt-4 rounded-xl bg-emerald-50 p-3 text-sm font-bold text-emerald-800">Saved. The website updates within a minute.</p>}
 
       <section className="mt-6">
-        <h2 className="text-xl font-extrabold">Booking alerts by email</h2>
-        <p className="mt-1 text-sm text-[#667085]">Every new booking or message is emailed to this address.</p>
+        <h2 className="text-xl font-extrabold">Contact details</h2>
+        <p className="mt-1 text-sm text-[#667085]">Shown in the header, footer, WhatsApp buttons and tour pages. Booking alerts also go to the email below.</p>
+        <form method="post" action="/api/admin/settings" className="mt-3 grid gap-4 rounded-2xl bg-white p-5 shadow">
+          <F label="Phone (as shown)" hint="Example: +1 (809) 485-3099"><input name="phone" defaultValue={site.phone} className={inp} /></F>
+          <F label="WhatsApp number" hint="Country code, numbers only. Example: 18094853099"><input name="whatsapp" inputMode="numeric" defaultValue={site.whatsapp} className={inp} /></F>
+          <F label="Email (also receives booking alerts)"><input name="email" type="email" defaultValue={site.email} className={inp} /></F>
+          <button className="rounded-xl bg-brand p-3 font-extrabold text-white">Save contact details</button>
+        </form>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-xl font-extrabold">Email alerts</h2>
+        <p className="mt-1 text-sm text-[#667085]">Every new booking, enquiry or message is emailed to the address above.</p>
         <div className="mt-3 grid gap-1 rounded-xl bg-white p-4 text-sm shadow-sm">
           <p>{smtp ? "✅" : "⬜"} Email sending set up in Vercel (<code>SMTP_USER</code> + <code>SMTP_PASS</code>)</p>
         </div>
-        <form method="post" action="/api/admin/settings" className="mt-3 grid gap-4 rounded-2xl bg-white p-5 shadow">
-          <F label="Send alerts to"><input name="email" type="email" defaultValue={site.email} className={inp} /></F>
-          <button className="rounded-xl bg-brand p-3 font-extrabold text-white">Save</button>
-        </form>
       </section>
 
       <section className="mt-8">

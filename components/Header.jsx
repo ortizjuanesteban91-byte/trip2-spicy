@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { nav, brand, whatsapp } from "@/data/site";
-export default function Header() {
+import { nav } from "@/data/site";
+import { getSite } from "@/lib/siteconf";
+export default async function Header() {
+  const { wa: whatsapp } = await getSite();
   return (
     <header className="sticky top-0 z-40 border-b border-sky-100 bg-ice/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">

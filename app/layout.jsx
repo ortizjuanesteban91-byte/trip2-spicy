@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Chrome from "@/components/Chrome";
 import AosInit from "@/components/AosInit";
 import { robotsMeta, agencySchema, SITE } from "@/lib/site";
-export const metadata = { metadataBase: new URL(SITE), title: "Trip2 Spicy | Punta Cana VIP Excursions", description: "Official Punta Cana VIP excursions, island adventures and authentic Dominican experiences.", robots: robotsMeta };
+export const metadata = { metadataBase: new URL(SITE), title: "Trip2 Punta Cana | VIP Excursions", description: "Official Punta Cana VIP excursions, island adventures and authentic Dominican experiences.", robots: robotsMeta };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -47,3 +47,12 @@ create table if not exists settings (
   data jsonb not null default '{}'::jsonb
 );
 alter table settings enable row level security;
+
+-- Blog posts written or edited in /admin (on top of the built-in posts)
+create table if not exists posts (
+  slug text primary key,
+  updated_at timestamptz default now(),
+  hidden boolean default false,
+  data jsonb not null default '{}'::jsonb   -- title, intro, meta, image, body
+);
+alter table posts enable row level security;  -- server-only via service key

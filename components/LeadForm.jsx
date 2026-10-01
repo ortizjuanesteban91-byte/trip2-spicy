@@ -42,7 +42,7 @@ export default function LeadForm({ kind, intro, fields }) {
               ))}
             </span>
           ) : f.type === "textarea" ? (
-            <textarea name={f.name} rows={4} className={inp} />
+            <textarea name={f.name} rows={4} defaultValue={f.defaultValue} className={inp} />
           ) : (
             <input name={f.name} defaultValue={f.defaultValue} required={f.required} className={inp} />
           )}

@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { tours as baseTours, grad, catOf, CATS } from "@/lib/content";
 import { allTours, getTour } from "@/lib/tours";
-import { SITE, whatsappLink } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import { getSite } from "@/lib/siteconf";
 import BookingBox from "@/components/BookingBox";
 import Sections from "@/components/Sections";
 import { Clock, Users, Car, Languages } from "@/components/Icon";
@@ -20,6 +21,7 @@ export default async function Tour({ params }) {
   if (!t) notFound();
   const i = baseTours.findIndex((x) => x.slug === t.slug);
   const ph = t.photos || [];
+  const { wa } = await getSite();
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
   const ld = [t.schema]; // JSON-LD copied from the zip SEO Settings (TouristTrip + BreadcrumbList + FAQPage)
@@ -44,10 +46,10 @@ export default async function Tour({ params }) {
             <h2 className="mb-3 mt-10 text-lg font-extrabold text-ink">Tour Details</h2>
             <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
             <Sections sections={t.sections.slice(0, 1)} />
-            <div id="book-m" className="mt-10 scroll-mt-24 lg:hidden"><BookingBox tour={t} /></div>
+            <div id="book-m" className="mt-10 scroll-mt-24 lg:hidden"><BookingBox tour={t} wa={wa} /></div>
             <Sections sections={t.sections.slice(1)} />
           </div>
-          <aside id="book" className="hidden min-w-0 lg:sticky lg:top-24 lg:block lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
+          <aside id="book" className="hidden min-w-0 lg:sticky lg:top-24 lg:block lg:self-start" data-aos="zoom-in"><BookingBox tour={t} wa={wa} /></aside>
         </div>
       </div>
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur lg:hidden"><a href="#book-m" className="flex items-center justify-between rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white"><span>From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} / person</span><span className="inline-flex items-center gap-1"><Zap className="h-4 w-4" />BOOK NOW</span></a></div>

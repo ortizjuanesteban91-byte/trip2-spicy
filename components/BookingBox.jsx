@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { whatsappLink } from "@/lib/site";
 import { PUNTA_CANA_HOTELS as PC, MICHES_HOTELS as MICHES } from "@/data/hotels";
 import { CalendarDays, Users, Sun, BedDouble, Zap, MessageCircle, ShieldCheck, ChevronDown } from "lucide-react";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
@@ -8,7 +7,7 @@ const field = "relative";
 const sel = "w-full appearance-none rounded-2xl border border-sky-200 bg-sky-50/70 py-4 pl-12 pr-10 text-[15px] text-ink";
 const Ic = ({ children }) => <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-brand">{children}</span>;
 const Chev = () => <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" />;
-export default function BookingBox({ tour }) {
+export default function BookingBox({ tour, wa }) {
   const [q, setQ] = useState({});
   const [date, setDate] = useState("");
   const [hotel, setHotel] = useState("");
@@ -77,7 +76,8 @@ export default function BookingBox({ tour }) {
         </div>
         <p className="mt-3 px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
         <button disabled={!lines.length || tooFew || state === "sending"} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand py-4 text-sm font-extrabold text-white disabled:bg-slate-300"><Zap className="h-4 w-4" />{state === "sending" ? "SENDING…" : "RESERVE NOW"}</button>
-        <a href={whatsappLink(`Hi, I have a question about: ${tour.name}`)} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sky-100 py-3 text-sm font-bold text-brand"><MessageCircle className="h-4 w-4" />Enquiry Form</a>
+        <a href={`/contact?tour=${tour.slug}`} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sky-100 py-3 text-sm font-bold text-brand"><MessageCircle className="h-4 w-4" />Enquiry Form</a>
+        <a href={`${wa || "https://wa.me/18094853099"}?text=${encodeURIComponent(`Hi, I have a question about: ${tour.name}`)}`} className="mt-2 block text-center text-xs font-bold text-brand underline">or ask on WhatsApp</a>
         {state === "error" && <p className="mt-3 text-sm font-bold text-rose-600">Something went wrong. Please try again or use WhatsApp.</p>}
         <p className="mt-3 text-center text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
       </div>

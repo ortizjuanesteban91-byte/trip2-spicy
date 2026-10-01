@@ -2,7 +2,8 @@ import Link from "next/link";
 import { photo } from "@/data/photos";
 import { allTours as getAll } from "@/lib/tours";
 export const revalidate = 60;
-import { trust, categories, advantages, reviews, itinerary, guides, whatsapp } from "@/data/site";
+import { trust, categories, advantages, itinerary, guides } from "@/data/site";
+import { getSite } from "@/lib/siteconf";
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", nightlife: "coco-bongo", miches: "atv-miches" };
 const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", family: "family-experiences", eco: "eco-nature", culture: "culture-city", nightlife: "shows-nightlife", miches: "things-to-do-in-miches" };
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-brand/70">{children}</p>;
@@ -10,6 +11,7 @@ const H2 = ({ children }) => <h2 data-aos="zoom-in" className="mt-2 text-center 
 const Btn = ({ href, children, ghost }) => <Link href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-white/20 text-white backdrop-blur hover:bg-white/30" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</Link>;
 export default async function Home() {
   const allTours = await getAll();
+  const { wa: whatsapp } = await getSite();
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
@@ -52,11 +54,6 @@ export default async function Home() {
         <Eyebrow>THE TRIP2 ADVANTAGE</Eyebrow><H2>YOUR PUNTA CANA ADVENTURE STARTS HERE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">We make discovering Punta Cana simple, exciting, and stress-free — from choosing your experience to seamless transfers back to your resort.</p>
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">{advantages.map(([t, d], i) => <div key={t} data-aos="zoom-in" data-aos-delay={(i % 3) * 120} className="rounded-2xl bg-white p-6 shadow-sm"><div className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">✓</div><h3 className="font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}</div>
-      </section>
-      <section className="mx-auto max-w-7xl px-5 py-16">
-        <Eyebrow>REAL GUEST SENTIMENT</Eyebrow><H2>WHAT OUR GUESTS SAY</H2>
-        <p className="mt-4 text-center text-sm font-bold text-ink/70">4.9 / 5 · Google Reviews • Tripadvisor Certificate of Excellence • Trustpilot · 1,200+ Travelers</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">{reviews.map(([q, n, t], i) => <figure key={n} data-aos="zoom-in" data-aos-delay={i * 120} className="rounded-2xl bg-white p-6 shadow ring-1 ring-sky-100"><p className="text-amber-500">★★★★★</p><blockquote className="mt-3 text-sm leading-6 text-ink/80">"{q}"</blockquote><figcaption className="mt-4"><b className="block">{n}</b><span className="text-xs text-ink/60">{t}</span></figcaption></figure>)}</div>
       </section>
       <section className="relative overflow-hidden bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-20 text-white">
         {photo("saona-island") && <img src={photo("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
