@@ -10,3 +10,5 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); color: var(--color-ink); background: #fff; }
 h1, h2, h3 { font-family: var(--font-display); }
+
+body { overflow-x: clip; }
