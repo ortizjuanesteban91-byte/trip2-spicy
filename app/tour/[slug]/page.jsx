@@ -4,6 +4,8 @@ import { tours, tourBySlug, grad, catOf, CATS } from "@/lib/content";
 import { SITE, whatsappLink } from "@/lib/site";
 import BookingBox from "@/components/BookingBox";
 import Sections from "@/components/Sections";
+import { Clock, Users, Car, Languages } from "@/components/Icon";
+import { Zap } from "lucide-react";
 export function generateStaticParams() { return tours.map((t) => ({ slug: t.slug })); }
 export async function generateMetadata({ params }) {
   const t = tourBySlug((await params).slug);
@@ -29,7 +31,7 @@ export default async function Tour({ params }) {
       <div className="mx-auto max-w-6xl px-5 pt-8">
         <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{catName}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
         <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
-        <a href="#book" className="mt-5 inline-block rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover">⚡ BOOK NOW</a>
+        <a href="#book" className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover"><Zap className="h-4 w-4" />BOOK NOW</a>
         <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
           <div className={`h-64 rounded-2xl bg-gradient-to-br sm:col-span-2 sm:row-span-2 sm:h-auto ${grad(i)}`} role="img" aria-label={t.alts[0] || t.h1} />
           <div className={`h-32 rounded-2xl bg-gradient-to-br sm:col-span-2 ${grad(i + 1)}`} role="img" aria-label={t.alts[1] || t.h1} />
@@ -38,7 +40,7 @@ export default async function Tour({ params }) {
         <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
           <div className="min-w-0">
             <div className="grid grid-cols-2 gap-5 rounded-3xl border border-sky-100 bg-ice p-5 sm:grid-cols-4" data-aos="zoom-out-right">
-              {[["DURATION", duration, "⏱️"], ["GROUP SIZE", "Small groups", "👥"], ["PICKUP", "Resorts", "🚐"], ["LANGUAGE", "Eng & Spa", "🌐"]].map(([k, v, ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-lg">{ic}</span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
+              {[["DURATION", duration, Clock], ["GROUP SIZE", "Small groups", Users], ["PICKUP", "Resorts", Car], ["LANGUAGE", "Eng & Spa", Languages]].map(([k, v, Ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-brand"><Ic className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
             </div>
             <h2 className="mb-3 mt-10 text-lg font-extrabold text-ink">Tour Details</h2>
             <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
@@ -47,7 +49,7 @@ export default async function Tour({ params }) {
           <aside id="book" className="min-w-0 lg:sticky lg:top-24 lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
         </div>
       </div>
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur lg:hidden"><a href="#book" className="flex items-center justify-between rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white"><span>From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} / person</span><span>⚡ BOOK NOW</span></a></div>
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur lg:hidden"><a href="#book" className="flex items-center justify-between rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white"><span>From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} / person</span><span className="inline-flex items-center gap-1"><Zap className="h-4 w-4" />BOOK NOW</span></a></div>
     </main>
   );
 }

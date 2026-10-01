@@ -1,0 +1,37 @@
+import { Clock, Users, Car, Languages, Bus, Ship, Sailboat, Fish, Mountain, Camera, Utensils, Wine, Music, ShieldCheck, Footprints, Shirt, Sun, Glasses, Bike, Landmark, Droplets, Trees, Wallet, PawPrint, Wind, Waves, Cable, TreePalm, CircleCheck, Baby, Shell, LifeBuoy, Undo2, Hourglass, Binoculars, Ticket, Backpack, Check, MapPin } from "lucide-react";
+const RULES = [
+  [/^(drive|bus ride|van ride|4x4 safari truck)/i, Bus],
+  [/pick-?up|drop-?off|round-?trip|transport|transfer/i, Car],
+  [/cancel/i, CircleCheck],
+  [/snorkel|reef|coral/i, Waves],
+  [/natural pool|sandbar|starfish/i, Shell],
+  [/open bar|rum|beer|drinks|cocktail/i, Wine],
+  [/lunch|buffet|bbq|snack|breakfast|food|meal/i, Utensils],
+  [/music|party|dj|dance/i, Music],
+  [/life vest|safety|briefing|harness|helmet|equipment/i, ShieldCheck],
+  [/fish|angler|marlin|tuna|mahi|rod/i, Fish],
+  [/whale/i, Binoculars],
+  [/dolphin/i, Fish],
+  [/monkey|horse/i, PawPrint],
+  [/parasail|flight/i, Wind],
+  [/zip/i, Cable],
+  [/buggy|\batv\b|utv|polaris|off-road|mud|trail/i, Bike],
+  [/speedboat|catamaran|boat|cruise|sail|bay\b|dock/i, Sailboat],
+  [/waterfall|river|swim in/i, Droplets],
+  [/cave|mangrove|park|taino|forest|jungle/i, Trees],
+  [/summit|mountain|montaña|360|view|swing|panoram/i, Mountain],
+  [/beach|white-sand|sand|swim|cayo|playa/i, TreePalm],
+  [/colonial|city|santo domingo|cathedral|historic|culture|higüey|basilica/i, Landmark],
+  [/photo|camera|picture/i, Camera],
+  [/kids|child|famil|ages?\b|infant|couple/i, Baby],
+  [/minimum|group|private|shared/i, Users],
+  [/\$|price|free\b|cash|tip/i, Wallet],
+  [/hour|minute|duration|half day|full day|morning|afternoon|departure|am\b|pm\b/i, Clock],
+  [/return|back|arrive/i, Undo2],
+  [/sun|hat|sunscreen|sunglass|bandana|face cover/i, Glasses],
+  [/towel|swimwear|swimsuit|clothes|shirt|dirty/i, Shirt],
+  [/shoes|toe|walking/i, Footprints],
+];
+export const iconFor = (t, fallback = Check) => (RULES.find(([r]) => r.test(t)) || [0, fallback])[1];
+export function TextIcon({ text, className = "h-5 w-5", fallback }) { const I = iconFor(text, fallback); return <I className={className} strokeWidth={1.8} aria-hidden="true" />; }
+export { Clock, Users, Car, Languages, Sun, MapPin, ShieldCheck, Backpack, Ticket, Hourglass, LifeBuoy };
