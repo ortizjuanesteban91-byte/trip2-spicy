@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#0a2a30] text-sky-100/80">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <p className="font-display text-2xl font-black text-white">Trip2 Spicy</p>
+          <img src="/img/logo-white.webp" alt="Trip2 Punta Cana" width="220" height="82" className="block h-16 w-auto" />
           <p className="mt-3 text-sm font-bold text-sky-200">Explore. Experience. Remember.</p>
           <p className="mt-2 max-w-xs text-sm leading-6">Handcrafted excursions and VIP transfer experiences in Punta Cana. Curated luxury, licensed local captains, and guaranteed unforgettable memories.</p>
           <p className="mt-4 space-y-1 text-sm"><a className="block hover:text-white" href={whatsapp}>WhatsApp Direct Support</a><a className="block hover:text-white" href={`tel:${phone.replace(/[^+\d]/g, "")}`}>{phone}</a><a className="block hover:text-white" href={`mailto:${email}`}>{email}</a></p>

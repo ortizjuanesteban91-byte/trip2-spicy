@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-sky-100 bg-ice/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="font-display text-2xl font-black leading-none text-brand">{brand}</Link>
+        <Link href="/" aria-label="Trip2 Punta Cana home"><img src="/img/logo.webp" alt="Trip2 Punta Cana" width="140" height="52" className="block h-[46px] w-auto" /></Link>
         <nav className="hidden gap-8 text-[13px] font-bold tracking-wide md:flex" aria-label="Main">
           {nav.map(([l, h]) => <Link key={l} href={h} className="hover:text-brand-hover">{l}</Link>)}
         </nav>
