@@ -36,4 +36,6 @@ const P = {
   "triple-adventure": "2025/01/atv-punta-cana-tour-001--700x500.jpg",
   "bavaro-runners": "2025/02/safari-punta-cana-tour-011-700x500.jpg",
 };
+// Home page header picture (TEMPORARY, change here or send the final photo).
+export const HERO = "catamaran-party-boat";
 export const photo = (slug) => (P[slug] ? B + P[slug] : null);
