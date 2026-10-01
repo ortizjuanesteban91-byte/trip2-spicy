@@ -7,9 +7,9 @@ import { getSite } from "@/lib/siteconf";
 import Reviews from "@/components/Reviews";
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", nightlife: "coco-bongo", miches: "atv-miches" };
 const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", family: "family-experiences", eco: "eco-nature", culture: "culture-city", nightlife: "shows-nightlife", miches: "things-to-do-in-miches" };
-const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-brand/70">{children}</p>;
-const H2 = ({ children }) => <h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2>;
-const Btn = ({ href, children, ghost }) => <Link href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-white/20 text-white backdrop-blur hover:bg-white/30" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</Link>;
+const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-[#a97c1f]">{children}</p>;
+const H2 = ({ children }) => <><h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2><span aria-hidden="true" className="mx-auto mt-3 block h-1 w-16 rounded-full bg-gold" /></>;
+const Btn = ({ href, children, ghost }) => <Link href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-gold/35 text-white ring-1 ring-gold/70 backdrop-blur hover:bg-gold/55" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</Link>;
 export default async function Home() {
   const allTours = await getAll();
   const { wa: whatsapp } = await getSite();
@@ -19,12 +19,12 @@ export default async function Home() {
         {photo(HERO) && <img src={photo(HERO)} alt="Punta Cana excursions" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/50" />
         <div className="relative max-w-4xl">
-          <p className="mx-auto inline-block rounded-full bg-white/20 px-4 py-1.5 text-[11px] font-extrabold tracking-widest backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
+          <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
           <h1 className="mt-5 text-5xl font-black leading-[1.05] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/90">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3"><Btn href="/tours">EXPLORE EXCURSIONS →</Btn><Btn href="#featured" ghost>BOOK YOUR ADVENTURE</Btn></div>
           <form action="/tours" className="mx-auto mt-10 flex max-w-3xl flex-col gap-3 rounded-2xl bg-white p-3 text-left text-ink shadow-xl sm:flex-row">
-            <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-brand/70">TOUR</span><input name="q" placeholder="Enter destination" className="w-full bg-transparent py-1 text-sm outline-none" /></label>
+            <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-[#a97c1f]">FIND YOUR TOUR</span><input name="q" placeholder="Search tours, islands, adventures" className="w-full bg-transparent py-1 text-sm outline-none" /></label>
             <button className="rounded-xl bg-brand px-8 py-3 text-sm font-bold text-white hover:bg-brand-hover">Find Tours</button>
           </form>
         </div>

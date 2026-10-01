@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getSite } from "@/lib/siteconf";
 import { getReviews, GOOGLE_READ, TA_WRITE } from "@/lib/reviews";
-const col = (t, items) => (<div><h4 className="mb-3 text-xs font-extrabold tracking-widest text-sky-200">{t.toUpperCase()}</h4><ul className="space-y-2 text-sm">{items.map(([l, h]) => <li key={l}>{h ? <Link href={h} className="hover:text-white">{l}</Link> : l}</li>)}</ul></div>);
+const col = (t, items) => (<div><h4 className="mb-3 text-xs font-extrabold tracking-widest text-gold">{t.toUpperCase()}</h4><ul className="space-y-2 text-sm">{items.map(([l, h]) => <li key={l}>{h ? <Link href={h} className="hover:text-white">{l}</Link> : l}</li>)}</ul></div>);
 export default async function Footer() {
   const { phone, email, wa: whatsapp } = await getSite();
   const { tripadvisor } = await getReviews();
