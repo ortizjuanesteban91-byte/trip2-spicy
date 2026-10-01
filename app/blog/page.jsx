@@ -8,9 +8,9 @@ export default function Page() {
       <h1 className="text-center text-4xl font-black text-brand" data-aos="zoom-in">Blogs</h1>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {posts.map((p, i) => (
-          <article key={p.slug} className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-sky-100" data-aos="zoom-in">
+          <article key={p.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow ring-1 ring-sky-100" data-aos="zoom-in">
             <div className={`h-40 bg-gradient-to-br ${grad(i)}`} />
-            <div className="p-5"><h2 className="text-lg font-extrabold leading-snug">{p.h1}</h2><p className="mt-2 line-clamp-3 text-sm leading-6 text-ink/70">{p.meta}</p><Link href={`/blog/${p.slug}`} className="mt-3 inline-block text-sm font-bold text-brand">Read guide →</Link></div>
+            <div className="p-5"><h2 className="text-lg font-extrabold leading-snug">{p.h1}</h2><p className="mt-2 line-clamp-3 text-sm leading-6 text-ink/70">{p.meta}</p><Link href={`/blog/${p.slug}`} className="mt-3 inline-block text-sm font-bold text-brand after:absolute after:inset-0 after:content-['']">Read guide →</Link></div>
           </article>
         ))}
       </div>
