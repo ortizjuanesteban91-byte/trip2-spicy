@@ -11,4 +11,8 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); color: var(--color-ink); background: #fff; }
 h1, h2, h3 { font-family: var(--font-display); }
 
-body { overflow-x: clip; }
+html, body { overflow-x: hidden; max-width: 100%; }
+body { position: relative; width: 100%; }
+.page-clip { overflow-x: clip; max-width: 100vw; }
+/* AOS slide offsets must never widen the page */
+[data-aos] { max-width: 100%; }

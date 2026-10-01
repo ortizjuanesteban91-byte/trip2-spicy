@@ -36,7 +36,7 @@ export default async function Tour({ params }) {
           <div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 2)}`} /><div className={`h-32 rounded-2xl bg-gradient-to-br ${grad(i + 3)}`} />
         </div>
         <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
-          <div>
+          <div className="min-w-0">
             <div className="grid grid-cols-2 gap-5 rounded-3xl border border-sky-100 bg-ice p-5 sm:grid-cols-4" data-aos="zoom-out-right">
               {[["DURATION", duration, "⏱️"], ["GROUP SIZE", "Small groups", "👥"], ["PICKUP", "Resorts", "🚐"], ["LANGUAGE", "Eng & Spa", "🌐"]].map(([k, v, ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-lg">{ic}</span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
             </div>
@@ -44,7 +44,7 @@ export default async function Tour({ params }) {
             <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
             <Sections sections={t.sections} />
           </div>
-          <aside id="book" className="lg:sticky lg:top-24 lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
+          <aside id="book" className="min-w-0 lg:sticky lg:top-24 lg:self-start" data-aos="zoom-in"><BookingBox tour={t} /></aside>
         </div>
       </div>
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 p-3 backdrop-blur lg:hidden"><a href="#book" className="flex items-center justify-between rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white"><span>From ${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)} / person</span><span>⚡ BOOK NOW</span></a></div>
