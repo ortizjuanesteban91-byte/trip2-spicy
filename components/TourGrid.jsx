@@ -9,14 +9,14 @@ export default function TourGrid({ tours, cats: C, initial, initialDest }) {
   const cats = [["all", "All"], ...C];
   const [c, setC] = useState(initial);
   const [qq, setQq] = useState("");
-  const list = tours.filter((t) => (d === "all" || t.dest === d) && (c === "all" || t.cats.includes(c)) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
+  const list = [...tours].sort((a, b) => (a.dest === b.dest ? 0 : a.dest === "punta-cana" ? -1 : 1)).filter((t) => (d === "all" || t.dest === d) && (c === "all" || t.cats.includes(c)) && (!qq || (t.name + t.meta).toLowerCase().includes(qq.toLowerCase())));
   return (
     <>
-      <div className="mt-8 flex justify-center gap-2">
-        {[["all", "All destinations"], ["punta-cana", "Punta Cana"], ["miches", "Miches"]].map(([k, l]) => <button key={k} onClick={() => setD(k)} className={`rounded-full px-6 py-2.5 text-sm font-extrabold ${d === k ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-slate-200"}`}>{l}</button>)}
+      <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-2 rounded-full bg-white p-1.5 shadow ring-1 ring-slate-200">
+        {[["punta-cana", "Punta Cana"], ["miches", "Miches"], ["all", "All"]].map(([k, l]) => <button key={k} onClick={() => setD(k)} className={`rounded-full px-3 py-2.5 text-sm font-extrabold ${d === k ? "bg-ink text-white" : "text-ink"}`}>{l}</button>)}
       </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-2">
-        {cats.map(([x, lbl]) => <button key={x} onClick={() => setC(x)} className={`rounded-full px-5 py-2 text-xs font-extrabold ${c === x ? "bg-brand text-white" : "bg-white text-brand ring-1 ring-sky-200"}`}>{lbl.toUpperCase()}</button>)}
+      <div className="-mx-5 mt-4 flex gap-2 overflow-x-auto px-5 pb-2 sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
+        {cats.map(([x, lbl]) => <button key={x} onClick={() => setC(x)} className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-xs font-extrabold ${c === x ? "bg-brand text-white" : "bg-white text-brand ring-1 ring-sky-200"}`}>{lbl.toUpperCase()}</button>)}
       </div>
       <input value={qq} onChange={(e) => setQq(e.target.value)} placeholder="Search tours" className="mx-auto mt-4 block w-full max-w-md rounded-full border border-sky-200 bg-white px-5 py-3 text-sm" />
       <p className="mt-4 text-center text-xs text-ink/60">{list.length} tours</p>
