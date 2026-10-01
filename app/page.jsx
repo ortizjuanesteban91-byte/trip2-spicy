@@ -3,6 +3,7 @@ import { photo } from "@/data/photos";
 import { tours as allTours } from "@/lib/content";
 import { trust, categories, advantages, reviews, itinerary, guides, whatsapp } from "@/data/site";
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", miches: "atv-miches" };
+const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", family: "family-experiences", eco: "eco-nature", culture: "culture-city", miches: "things-to-do-in-miches" };
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-brand/70">{children}</p>;
 const H2 = ({ children }) => <h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2>;
 const Btn = ({ href, children, ghost }) => <Link href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-white/20 text-white backdrop-blur hover:bg-white/30" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</Link>;
@@ -29,7 +30,7 @@ export default function Home() {
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map(([t, d, g, k], i) => <Link key={t} href={`/tours?cat=${k}`} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{photo(CATPIC[k]) && <img src={photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
+          {categories.map(([t, d, g, k], i) => <Link key={t} href={`/tours/${CATSLUG[k]}`} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{photo(CATPIC[k]) && <img src={photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
       <section id="featured" className="mx-auto max-w-7xl px-5 py-16">
