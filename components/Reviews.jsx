@@ -48,6 +48,7 @@ export default async function Reviews() {
         )}
         <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm font-extrabold">
           <a href={google} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/10 px-6 py-3 ring-1 ring-white/30 backdrop-blur hover:bg-white/20">Read all on Google ↗</a>
+          <a href={tripadvisor} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/10 px-6 py-3 ring-1 ring-white/30 backdrop-blur hover:bg-white/20">Read all on TripAdvisor ↗</a>
           <a href={GOOGLE_WRITE} target="_blank" rel="noopener noreferrer" className="rounded-full bg-gold px-6 py-3 text-[#10222b] shadow-lg hover:brightness-105">Review us on Google ★</a>
           <a href={TA_WRITE} target="_blank" rel="noopener noreferrer" className="rounded-full bg-emerald-500 px-6 py-3 text-white shadow-lg hover:bg-emerald-400">Review us on TripAdvisor ★</a>
         </div>
