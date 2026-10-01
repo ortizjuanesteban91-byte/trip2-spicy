@@ -20,21 +20,21 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto grid max-w-7xl gap-5 px-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
-        {trust.map(([t, d]) => <div key={t} className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm"><h3 className="text-base font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}
+        {trust.map(([t, d], i) => <div key={t} data-aos="fade-up" data-aos-delay={i * 100} className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm"><h3 className="text-base font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}
       </section>
       <section id="excursions" className="bg-ice px-5 py-16">
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map(([t, d, g]) => <Link key={t} href="#featured" className={`group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl bg-gradient-to-br ${g} p-5 text-white shadow transition hover:-translate-y-1`}><div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
+          {categories.map(([t, d, g], i) => <Link key={t} href="#featured" data-aos="fade-up" data-aos-delay={(i % 3) * 120} className={`group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl bg-gradient-to-br ${g} p-5 text-white shadow transition hover:-translate-y-1`}><div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
       <section id="featured" className="mx-auto max-w-7xl px-5 py-16">
         <Eyebrow>GUARANTEED BEST RATES</Eyebrow><H2>PUNTA CANA'S MOST POPULAR EXPERIENCES</H2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">Handpicked top-rated excursions with instant mobile vouchers, verified local guides, and 24-hour cancellation freedom.</p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {tours.map((t) => (
-            <article key={t.slug} className="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
+          {tours.map((t, i) => (
+            <article key={t.slug} data-aos="fade-up" data-aos-delay={i * 120} className="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
               <div className="relative h-52 bg-gradient-to-br from-emerald-300 to-teal-700"><span className="absolute left-3 top-3 rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span><span className="absolute right-3 top-3 rounded-full bg-white px-3 py-1 text-xs font-bold">★ 4.9 (100+)</span></div>
               <div className="p-5"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t.title}</h3><p className="mt-2 text-xs text-ink/60">Half Day · Verified Guide</p>
                 <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">{t.price}</b> / person</p><Link href={`/tours/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs font-extrabold text-white hover:bg-brand-hover">VIEW TOUR</Link></div></div>
@@ -45,12 +45,12 @@ export default function Home() {
       <section className="bg-ice px-5 py-16">
         <Eyebrow>THE TRIP2 ADVANTAGE</Eyebrow><H2>YOUR PUNTA CANA ADVENTURE STARTS HERE</H2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">We make discovering Punta Cana simple, exciting, and stress-free — from choosing your experience to seamless transfers back to your resort.</p>
-        <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">{advantages.map(([t, d]) => <div key={t} className="rounded-2xl bg-white p-6 shadow-sm"><div className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">✓</div><h3 className="font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}</div>
+        <div className="mx-auto mt-10 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">{advantages.map(([t, d], i) => <div key={t} data-aos="fade-up" data-aos-delay={(i % 3) * 120} className="rounded-2xl bg-white p-6 shadow-sm"><div className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">✓</div><h3 className="font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}</div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16">
         <Eyebrow>REAL GUEST SENTIMENT</Eyebrow><H2>WHAT OUR GUESTS SAY</H2>
         <p className="mt-4 text-center text-sm font-bold text-ink/70">4.9 / 5 · Google Reviews • Tripadvisor Certificate of Excellence • Trustpilot · 1,200+ Travelers</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">{reviews.map(([q, n, t]) => <figure key={n} className="rounded-2xl bg-white p-6 shadow ring-1 ring-sky-100"><p className="text-amber-500">★★★★★</p><blockquote className="mt-3 text-sm leading-6 text-ink/80">"{q}"</blockquote><figcaption className="mt-4"><b className="block">{n}</b><span className="text-xs text-ink/60">{t}</span></figcaption></figure>)}</div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">{reviews.map(([q, n, t], i) => <figure key={n} data-aos="fade-up" data-aos-delay={i * 120} className="rounded-2xl bg-white p-6 shadow ring-1 ring-sky-100"><p className="text-amber-500">★★★★★</p><blockquote className="mt-3 text-sm leading-6 text-ink/80">"{q}"</blockquote><figcaption className="mt-4"><b className="block">{n}</b><span className="text-xs text-ink/60">{t}</span></figcaption></figure>)}</div>
       </section>
       <section className="bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-20 text-white">
         <div className="mx-auto max-w-3xl text-center">
@@ -69,12 +69,12 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 py-16">
         <Eyebrow>ITINERARY INSPIRATION</Eyebrow><H2>ONE DESTINATION. ENDLESS ADVENTURES.</H2>
         <p className="mx-auto mt-3 max-w-xl text-center text-sm text-ink/70">Craft your Dominican story across dawn, day, and sunset with balanced, memorable pacing.</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">{itinerary.map(([time, t, d, cta, g]) => <article key={t} className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-sky-100"><div className={`h-48 bg-gradient-to-br ${g}`} /><div className="p-5"><p className="text-[11px] font-extrabold tracking-widest text-brand/70">{time}</p><h3 className="mt-1 text-lg font-extrabold">{t}</h3><p className="mt-2 text-sm leading-6 text-ink/70">{d}</p><Link href="/tours" className="mt-3 inline-block text-sm font-bold text-brand">{cta} →</Link></div></article>)}</div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">{itinerary.map(([time, t, d, cta, g], i) => <article key={t} data-aos="fade-up" data-aos-delay={i * 120} className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-sky-100"><div className={`h-48 bg-gradient-to-br ${g}`} /><div className="p-5"><p className="text-[11px] font-extrabold tracking-widest text-brand/70">{time}</p><h3 className="mt-1 text-lg font-extrabold">{t}</h3><p className="mt-2 text-sm leading-6 text-ink/70">{d}</p><Link href="/tours" className="mt-3 inline-block text-sm font-bold text-brand">{cta} →</Link></div></article>)}</div>
       </section>
       <section className="bg-ice px-5 py-16">
         <Eyebrow>INSIDER INTELLIGENCE</Eyebrow><H2>PUNTA CANA TRAVEL GUIDE</H2>
         <p className="mx-auto mt-3 max-w-xl text-center text-sm text-ink/70">Tips, packing lists, and local recommendations written by resident excursion coordinators.</p>
-        <div className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-3">{guides.map(([c, m, t, d, g]) => <article key={t} className="overflow-hidden rounded-2xl bg-white shadow"><div className={`h-44 bg-gradient-to-br ${g}`} /><div className="p-5"><p className="text-[11px] font-extrabold tracking-widest text-brand/70">{c} • {m}</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t}</h3><p className="mt-2 text-sm leading-6 text-ink/70">{d}</p><Link href="/blog" className="mt-3 inline-block text-sm font-bold text-brand">Read Article →</Link></div></article>)}</div>
+        <div className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-3">{guides.map(([c, m, t, d, g], i) => <article key={t} data-aos="fade-up" data-aos-delay={i * 120} className="overflow-hidden rounded-2xl bg-white shadow"><div className={`h-44 bg-gradient-to-br ${g}`} /><div className="p-5"><p className="text-[11px] font-extrabold tracking-widest text-brand/70">{c} • {m}</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t}</h3><p className="mt-2 text-sm leading-6 text-ink/70">{d}</p><Link href="/blog" className="mt-3 inline-block text-sm font-bold text-brand">Read Article →</Link></div></article>)}</div>
       </section>
       <section className="bg-gradient-to-r from-teal-800 to-cyan-700 px-5 py-16 text-center text-white">
         <h2 className="mx-auto max-w-2xl text-3xl font-black md:text-4xl">READY FOR YOUR PUNTA CANA ADVENTURE?</h2>
