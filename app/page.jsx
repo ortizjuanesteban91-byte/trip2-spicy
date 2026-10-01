@@ -57,21 +57,53 @@ export default async function Home() {
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">We make discovering Punta Cana simple, exciting, and stress-free — from choosing your experience to seamless transfers back to your resort.</p>
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">{advantages.map(([t, d], i) => <div key={t} data-aos="zoom-in" data-aos-delay={(i % 3) * 120} className="rounded-2xl bg-white p-6 shadow-sm"><div className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">✓</div><h3 className="font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}</div>
       </section>
-      <section className="relative overflow-hidden bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-20 text-white">
-        {photo("saona-island") && <img src={photo("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 to-cyan-800/70" />
-        <div className="relative mx-auto max-w-3xl text-center" data-aos="zoom-in">
-          <p className="text-[11px] font-extrabold tracking-[.25em] text-sky-100">THE #1 MUST-DO EXCURSION</p>
-          <h2 className="mt-2 text-4xl font-black md:text-5xl">ESCAPE TO SAONA ISLAND</h2>
-          <h3 className="mt-3 text-xl font-bold text-sky-100">Turquoise water. White-sand beaches. Caribbean paradise.</h3>
-          <p className="mt-4 text-white/90">Experience the Dominican Republic’s most celebrated coastal sanctuary. Glide across calm waters on high-speed catamarans, swim in chest-deep natural pools alongside giant cushion starfish, and relax beneath leaning coconut palms on pristine white sands.</p>
-          <ul className="mt-6 flex flex-wrap justify-center gap-2 text-sm font-bold">{["Natural Sandbar Swimming Pools", "Open Bar & Dominican Buffet", "Starfish Sanctuary Visits", "Direct Hotel Roundtrip Transport"].map((x) => <li key={x} className="rounded-full bg-white/15 px-4 py-2">{x}</li>)}</ul>
-          <div className="mt-8"><Link href="#featured" className="inline-block rounded-full bg-white px-7 py-3 text-xs font-extrabold text-brand">EXPLORE SAONA ISLAND</Link></div>
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-24 text-white md:py-32">
+        {photo("saona-island") && <img src={photo("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#021f24]/90 via-[#05444c]/60 to-[#0b5f66]/20" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#021f24]/70 to-transparent" />
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_.85fr]">
+          <div data-aos="fade-right">
+            <p className="inline-block -rotate-2 rounded-full bg-gold px-4 py-1.5 text-[11px] font-black tracking-[.2em] text-[#10222b] shadow-lg">★ THE #1 MUST-DO EXCURSION</p>
+            <p className="mt-6 text-2xl font-extrabold tracking-[.18em] text-cyan-100 md:text-3xl">ESCAPE TO</p>
+            <h2 className="bg-gradient-to-r from-white via-cyan-100 to-sky-300 bg-clip-text text-6xl font-black leading-[.88] tracking-tighter text-transparent drop-shadow-sm sm:text-7xl md:text-8xl">SAONA<br />ISLAND</h2>
+            <p className="mt-5 text-xl font-bold text-cyan-50">Turquoise water. White-sand beaches. Caribbean paradise.</p>
+            <p className="mt-3 max-w-xl text-white/85">Glide across calm waters on a high-speed catamaran, swim in chest-deep natural pools beside giant starfish, and unwind under leaning coconut palms.</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/tour/saona-island" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-black tracking-wide text-[#10222b] shadow-xl transition hover:-translate-y-0.5 hover:brightness-105">BOOK SAONA ISLAND <span aria-hidden="true">→</span></Link>
+              <Link href="/tours/water-adventures" className="inline-flex rounded-full bg-white/10 px-7 py-4 text-sm font-extrabold ring-1 ring-white/40 backdrop-blur transition hover:bg-white/20">ALL WATER TOURS</Link>
+              {allTours.find((t) => t.slug === "saona-island") && <p className="ml-1 text-sm font-bold text-cyan-100">From <b className="text-3xl font-black text-white">${allTours.find((t) => t.slug === "saona-island").from}</b> / person</p>}
+            </div>
+          </div>
+          <ul className="grid grid-cols-2 gap-3 sm:gap-4" data-aos="fade-left">
+            {[["🏝️", "Natural Sandbar Swimming Pools"], ["🍹", "Open Bar & Dominican Buffet"], ["⭐", "Starfish Sanctuary Visits"], ["🚐", "Direct Hotel Round-Trip Transport"]].map(([e, x], i) => (
+              <li key={x} className={`rounded-3xl bg-white/12 p-5 shadow-xl ring-1 ring-white/30 backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20 ${i % 2 ? "translate-y-4" : ""}`}><span className="text-4xl" aria-hidden="true">{e}</span><p className="mt-3 text-base font-extrabold leading-snug">{x}</p></li>
+            ))}
+          </ul>
         </div>
       </section>
-      <section className="grid md:grid-cols-2">
-        <div className="min-h-72 overflow-hidden"><div className="relative h-full min-h-72"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-green-800" />{photo("montana-redonda-atv-miches") && <img data-aos="zoom-out-right" src={photo("montana-redonda-atv-miches")} alt="Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}</div></div>
-        <div className="px-6 py-14 md:px-14" data-aos="zoom-out-left"><p className="text-[11px] font-extrabold tracking-[.25em] text-brand/70">UNSPOILED DOMINICAN REPUBLIC</p><h3 className="mt-1 text-sm font-bold text-ink/60">Montaña Redonda & Emerald Coast</h3><p className="mt-5 text-[11px] font-extrabold tracking-[.25em] text-brand/70">OFF THE BEATEN PATH</p><h2 className="text-4xl font-black text-brand">DISCOVER MICHES</h2><p className="mt-3 text-sm leading-6 text-ink/75">Go beyond the typical resort corridors and discover the raw ecological beauty, virgin beaches, towering mountaintop swings, and authentic fishing communities of the emerging Miches coastline.</p><ul className="mt-4 grid grid-cols-2 gap-2 text-sm font-bold text-brand">{["Montaña Redonda Swings", "ATV Mountain Trails", "Untouched Emerald Coast", "Laguna Limón Nature", "Private Guided Excursions"].map((x) => <li key={x}>✓ {x}</li>)}</ul><div className="mt-6"><Btn href="/tours?dest=miches">EXPLORE MICHES TOURS</Btn></div></div>
+      <section className="relative isolate overflow-hidden bg-[#04262b] px-5 py-20 text-white md:py-28">
+        <p aria-hidden="true" className="pointer-events-none absolute -right-4 top-6 -z-10 select-none text-[34vw] font-black leading-none tracking-tighter md:text-[20rem]" style={{ color: "transparent", WebkitTextStroke: "2px rgba(125,211,199,.22)" }}>MICHES</p>
+        <div className="absolute -left-24 bottom-0 -z-10 h-80 w-80 rounded-full bg-emerald-500/20 blur-3xl" />
+        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1fr_1.05fr]">
+          <div className="relative" data-aos="fade-right">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-300 to-green-800 shadow-2xl ring-1 ring-white/20 md:rotate-[-2deg]">
+              {photo("montana-redonda-atv-miches") && <img src={photo("montana-redonda-atv-miches")} alt="ATV adventure in Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-xs font-black tracking-[.2em] text-white/90">MONTAÑA REDONDA · EMERALD COAST</p>
+            </div>
+            <span className="absolute -right-2 -top-4 rotate-6 rounded-full bg-gold px-5 py-2 text-xs font-black tracking-[.15em] text-[#10222b] shadow-xl">OFF THE BEATEN PATH</span>
+          </div>
+          <div data-aos="fade-left">
+            <p className="text-[11px] font-extrabold tracking-[.3em] text-emerald-300">UNSPOILED DOMINICAN REPUBLIC</p>
+            <h2 className="mt-2 text-5xl font-black leading-[.9] tracking-tighter sm:text-6xl md:text-7xl">DISCOVER<br /><span className="bg-gradient-to-r from-emerald-300 to-gold bg-clip-text text-transparent">MICHES</span></h2>
+            <p className="mt-5 max-w-xl text-white/80">Leave the resort corridor behind. Virgin beaches, mountaintop swings with 360° views, muddy ATV trails and authentic fishing villages on the wild Emerald Coast.</p>
+            <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">{["Montaña Redonda Swings", "ATV Mountain Trails", "Untouched Emerald Coast", "Laguna Limón Nature", "Private Guided Excursions"].map((x) => <li key={x} className="flex items-center gap-3 rounded-2xl bg-white/8 px-4 py-3 text-sm font-bold ring-1 ring-white/15"><span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-emerald-400 text-xs font-black text-[#04262b]">✓</span>{x}</li>)}</ul>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/tours?dest=miches" className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-8 py-4 text-sm font-black tracking-wide text-[#04262b] shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-300">EXPLORE MICHES TOURS <span aria-hidden="true">→</span></Link>
+              {allTours.find((t) => t.slug === "atv-miches") && <p className="text-sm font-bold text-emerald-100">From <b className="text-3xl font-black text-white">${allTours.find((t) => t.slug === "atv-miches").from}</b> / person</p>}
+            </div>
+          </div>
+        </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16">
         <Eyebrow>ITINERARY INSPIRATION</Eyebrow><H2>ONE DESTINATION. ENDLESS ADVENTURES.</H2>
