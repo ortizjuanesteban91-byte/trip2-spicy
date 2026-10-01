@@ -1,3 +1,19 @@
+import Link from "next/link";
+import { posts, grad } from "@/lib/content";
+import { SITE } from "@/lib/site";
+export const metadata = { title: "Punta Cana Travel Blog | Trip2", description: "Guides and tips for choosing the best Punta Cana excursions.", alternates: { canonical: `${SITE}/blog/` } };
 export default function Page() {
-  return (<main className="mx-auto max-w-4xl px-5 py-20 text-center"><h1 className="text-4xl font-black text-brand">Blogs</h1><p className="mt-3 text-ink/70">Coming soon.</p></main>);
+  return (
+    <main className="mx-auto max-w-6xl px-5 py-12">
+      <h1 className="text-center text-4xl font-black text-brand" data-aos="zoom-in">Blogs</h1>
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {posts.map((p, i) => (
+          <article key={p.slug} className="overflow-hidden rounded-2xl bg-white shadow ring-1 ring-sky-100" data-aos="zoom-in">
+            <div className={`h-40 bg-gradient-to-br ${grad(i)}`} />
+            <div className="p-5"><h2 className="text-lg font-extrabold leading-snug">{p.h1}</h2><p className="mt-2 line-clamp-3 text-sm leading-6 text-ink/70">{p.meta}</p><Link href={`/blog/${p.slug}`} className="mt-3 inline-block text-sm font-bold text-brand">Read guide →</Link></div>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
 }
