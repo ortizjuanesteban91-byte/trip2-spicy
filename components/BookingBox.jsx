@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import SecurePay from "./SecurePay";
+import SecurePay, { TrustTop } from "./SecurePay";
 import { PUNTA_CANA_HOTELS as PC, MICHES_HOTELS as MICHES } from "@/data/hotels";
 import { CalendarDays, Users, Sun, BedDouble, Zap, MessageCircle, ShieldCheck, ChevronDown } from "lucide-react";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
@@ -43,10 +43,12 @@ export default function BookingBox({ tour, wa }) {
       <div className="bg-sky-100 p-5">
         <div className="flex items-center justify-between gap-2"><span className="rounded-full bg-amber-200 px-3 py-1 text-[10px] font-extrabold tracking-wider text-amber-900">BEST RATE DIRECT</span><span className="flex items-center gap-1 text-xs font-bold text-ink/60"><ShieldCheck className="h-4 w-4 text-brand" />Official Trip2 Guarantee</span></div>
         <p className="mt-3 text-4xl font-black text-brand">{money(tour.from)} <span className="text-sm font-semibold text-ink/50">Base Price</span></p>
+        <TrustTop />
       </div>
       <div className="p-4">
         <div className="grid gap-3 rounded-3xl border border-sky-200 bg-sky-50 p-4">
           <div className={field}><Ic><CalendarDays className="h-5 w-5" /></Ic><input name="date" type="date" required min={today} value={date} onChange={(e) => setDate(e.target.value)} className={sel + " pr-4"} />{!date && <span className="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-[15px] text-ink/50">Select date*</span>}</div>
+          {date && <p className={`-mt-1 px-1 text-sm font-extrabold ${closed ? "text-amber-700" : "text-brand"}`}>📅 {new Date(date + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}{closed ? " · closed this day" : ""}</p>}
           <div className={opts.length > 1 ? "grid grid-cols-2 gap-3" : "grid gap-3"}>
             {opts.map((o, i) => (
               <div key={i} className={field}><Ic><Users className="h-5 w-5" /></Ic>
@@ -81,8 +83,7 @@ export default function BookingBox({ tour, wa }) {
         <a href={`/contact?tour=${tour.slug}`} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sky-100 py-3 text-sm font-bold text-brand"><MessageCircle className="h-4 w-4" />Enquiry Form</a>
         <a href={`${wa || "https://wa.me/18094853099"}?text=${encodeURIComponent(`Hi, I have a question about: ${tour.name}`)}`} className="mt-2 block text-center text-xs font-bold text-brand underline">or ask on WhatsApp</a>
         {state === "error" && <p className="mt-3 text-sm font-bold text-rose-600">Something went wrong. Please try again or use WhatsApp.</p>}
-        <p className="mt-3 text-center text-xs text-ink/60">Free cancellation up to 24 hours before.</p>
-        <div className="mt-4 border-t border-sky-100 pt-3"><SecurePay /></div>
+                <div className="mt-4 border-t border-sky-100 pt-3"><SecurePay /></div>
       </div>
     </form>
   );
