@@ -8,7 +8,7 @@ const CHIPS = ["Book a tour", "What's popular?", "Reservar en español"];
 const KEY = "t2chat";
 const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?])/;
 function Bubble({ m }) {
-  const parts = m.content.split(urlRe);
+  const parts = m.content.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\s*[*-]\s+/gm, "• ").split(urlRe); // show plain text, no stray asterisks
   return (
     <div className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
       <div className={`max-w-[85%] whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2.5 text-[14px] leading-snug ${m.role === "user" ? "bg-brand text-white" : "bg-sky-50 text-ink"}`}>
