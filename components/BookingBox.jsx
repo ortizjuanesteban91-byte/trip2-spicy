@@ -80,7 +80,8 @@ export default function BookingBox({ tour, wa }) {
                 </div>
               </div>); })}
           </div>
-          <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>{miches ? "Morning (7AM)" : "Morning"}</option><option>{miches ? "Afternoon (1PM)" : "Afternoon"}</option></select><Chev /></div>
+          <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>{miches ? "Morning (7AM)" : "Morning pickup · 7:00 – 8:00 AM"}</option><option>{miches ? "Afternoon (1PM)" : "Afternoon pickup · 12:00 – 2:00 PM"}</option></select><Chev /></div>
+          {!miches && <p className="-mt-1 px-1 text-xs font-semibold text-ink/55">Exact pickup time depends on your hotel area. We confirm it by WhatsApp.</p>}
           <div className={field}><Ic><BedDouble className="h-5 w-5" /></Ic><select name="hotel" required value={hotel} onChange={(e) => setHotel(e.target.value)} className={sel}><option value="" disabled>Hotels*</option>
             {(miches ? MICHES : PC).map((h) => <option key={h}>{h}</option>)}
             <option>Other</option></select><Chev /></div>
