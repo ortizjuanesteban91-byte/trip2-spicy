@@ -131,6 +131,64 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
 .nav .wrap{flex-wrap:wrap}
 @media(max-width:1100px){.links{order:3;width:100%;overflow-x:auto;padding-bottom:4px}}
 @media(max-width:860px){.links a:not(.btn){display:inline-block!important}}
+.herofull{position:relative;overflow:hidden;color:#fff;min-height:clamp(560px,82vh,760px);display:flex;align-items:center;background:#0B2545}
+.hero-bg{position:absolute;inset:-4%;background:linear-gradient(100deg,rgba(11,37,69,.86) 0%,rgba(10,70,200,.45) 50%,rgba(10,99,245,0) 100%),url(https://images.unsplash.com/photo-1761208663763-c4d30657c910?auto=format&fit=crop&w=1800&q=75) center/cover no-repeat;animation:kb 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+.herofull .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;width:100%;padding-block:72px 96px}
+.herofull h1{color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.25)}
+.herofull .hero p{color:rgba(255,255,255,.92)}
+.herofull .tag{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px)}
+.herofull .btn-line{color:#fff;border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08)}
+.herofull .btn-line:hover{background:#fff;color:#0B2545}
+.herofull .btn-main{background:#FFC933;color:#0B2545;box-shadow:0 12px 30px rgba(255,201,51,.45)}
+.herofull .btn-main{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 12px 30px rgba(255,201,51,.45)}50%{box-shadow:0 12px 44px rgba(255,201,51,.85)}}
+.chips{position:relative;min-height:380px}
+.chip{position:absolute;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:20px;padding:14px 18px;color:#fff;font-weight:700;box-shadow:0 18px 40px rgba(0,0,0,.2);cursor:pointer;text-decoration:none;display:block;animation:float 6s ease-in-out infinite}
+.chip small{display:block;font-weight:600;opacity:.85;font-size:13px}
+.chip b{font:800 28px var(--display);display:block;line-height:1.1}
+.chip:nth-child(1){top:6%;right:8%}.chip:nth-child(2){top:42%;left:2%;animation-delay:-2s}.chip:nth-child(3){bottom:4%;right:14%;animation-delay:-4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.herofull .wave{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0}
+.herofull .wave svg{display:block;width:100%;height:60px}
+.spark{position:absolute;z-index:1;border-radius:50%;background:radial-gradient(circle,#FFE08A,transparent 70%);animation:float 9s ease-in-out infinite;opacity:.55}
+.trust .wrap>div{cursor:pointer;border-radius:14px;padding:10px 12px;transition:background .2s,transform .2s}
+.trust .wrap>div:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.step,.why>div{cursor:pointer;transition:transform .25s,box-shadow .25s}
+.step:hover,.why>div:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,99,245,.16)}
+.more{display:inline-block;margin-top:10px;font-weight:800;color:var(--brand);font-size:14px}
+.rv{opacity:1}.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}.js .rv.in{opacity:1;transform:none}
+#prog{position:fixed;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,#0A63F5,#FFC933);transform:scaleX(0);transform-origin:left;z-index:50}
+/* reviews */
+.revw{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:stretch;margin-top:28px}
+.revsum{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:0 14px 36px rgba(10,99,245,.10);display:flex;flex-direction:column;gap:10px}
+.revsum .big{font:800 56px var(--display);line-height:1}
+.stars{color:#FFB400;letter-spacing:2px;font-size:20px}
+.bar{display:grid;grid-template-columns:22px 1fr 34px;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.bar i{display:block;height:8px;border-radius:8px;background:#EAF1FB;overflow:hidden}.bar i b{display:block;height:100%;background:linear-gradient(90deg,#FFC933,#FF9F1C);border-radius:8px;width:0;transition:width 1.4s ease}
+.revsum.in .bar i b{width:var(--w)}
+.marq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:18px;width:max-content;animation:marq 55s linear infinite;padding:6px 4px 18px}
+.marq:hover .track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.rcard{width:330px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 10px 30px rgba(11,37,69,.08);display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:transform .25s,box-shadow .25s;white-space:normal}
+.rcard:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 20px 44px rgba(10,99,245,.18)}
+.rcard p{margin:0;line-height:1.55;font-size:15.5px}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.who small{display:block;color:var(--muted);font-size:12.5px}
+.ver{margin-left:auto;font-size:12px;font-weight:800;color:#0A63F5;background:#EAF3FF;border-radius:999px;padding:4px 10px}
+.sample{font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:860px){.revw{grid-template-columns:minmax(0,1fr)}.herofull .hero{grid-template-columns:minmax(0,1fr);padding-block:48px 80px}.chips{display:none}.rcard{width:280px}}
+@media(prefers-reduced-motion:reduce){.marq{overflow-x:auto}.js .rv{opacity:1;transform:none}.hero-bg{animation:none}}
+/* modal */
+.mod{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(11,37,69,.55);backdrop-filter:blur(6px)}
+.mod.open{display:flex}
+.mbox{background:#fff;color:var(--ink);border-radius:28px;max-width:520px;width:100%;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.35);animation:up .35s ease both;max-height:90vh;overflow:auto}
+.mbox h3{font:800 28px var(--display);margin:0 0 6px}.mbox ul{padding-left:20px;line-height:1.7}.mbox .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+@media(min-width:1101px){.nav .wrap{flex-wrap:nowrap!important}.tools{margin-left:8px}}
+.marq{align-self:center}
+
 </style>
 
 <div class="topbar"><div class="wrap"><span>Mon–Fri · 6:30 am – 6:00 pm &nbsp;·&nbsp; Licensed child care &amp; early learning</span><span>Call <a href="tel:+10000000000">(000) 000-0000</a> &nbsp;·&nbsp; <a href="/school-demo/book-a-tour.html">Book a tour →</a></span></div></div>
@@ -148,7 +206,7 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
 </div></header>
 
 <main id="top">
-<div class="wrap hero">
+<section class="herofull" style="padding:0"><div class="hero-bg"></div><span class="spark" style="width:220px;height:220px;left:6%;top:12%"></span><span class="spark" style="width:160px;height:160px;right:30%;bottom:18%;animation-delay:-3s"></span><div class="wrap hero">
   <div>
     <span class="tag" data-en="Now enrolling · ages 6 weeks to 12 years" data-es="Inscripciones abiertas · de 6 semanas a 12 años">Now enrolling · ages 6 weeks to 12 years</span>
     <h1 data-en="Where little learners shine." data-es="Donde los pequeños brillan.">Where little learners shine.</h1>
@@ -158,12 +216,9 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
       <a class="btn btn-line" href="/school-demo/programs.html" data-en="See programs" data-es="Ver programas">See programs</a>
     </div>
   </div>
-  <div class="collage" aria-hidden="true">
-    <div class="ph" role="img" aria-label="children in the classroom" style="background:url(https://images.unsplash.com/photo-1761208663763-c4d30657c910?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
-    <div class="ph" role="img" aria-label="outdoor play" style="background:url(https://images.unsplash.com/photo-1533222535026-754c501569dd?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
-    <div class="ph" role="img" aria-label="art time" style="background:url(https://images.unsplash.com/photo-1770096679916-2cd9c720d400?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
-  </div>
+  <div class="chips"><a class="chip" href="javascript:void(0)"><small>Parent rating</small><b>5.0 ★★★★★</b></a><a class="chip" href="javascript:void(0)"><small>Safety first</small><b>State licensed</b></a><a class="chip" href="javascript:void(0)"><small>Classrooms</small><b>English · Español</b></a></div>
 </div>
+<div class="wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,70 480,0 720,28 C960,56 1200,6 1440,34 L1440,60 L0,60 Z" fill="#FFFFFF"/></svg></div></section>
 
 <div class="trust"><div class="wrap">
   <div><b>[License #]</b><span data-en="State licensed" data-es="Licencia estatal">State licensed</span></div>
@@ -203,11 +258,12 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
 
 <section style="padding-top:0"><div class="wrap">
   <div class="eyebrow" data-en="Parent reviews" data-es="Opiniones de padres">Parent reviews</div>
-  <h2 data-en="What parents say" data-es="Lo que dicen los padres">What parents say</h2>
-  <div class="rev">
-    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
-    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
-    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
+  <h2 data-en="Loved by families" data-es="Queridos por las familias">Loved by families</h2>
+  <div class="revw">
+    <div class="revsum"><div class="big">5.0</div><div class="stars">★★★★★</div><div style="font-weight:700">Based on 120+ parent reviews</div>
+      <div class="bar"><span>5★</span><i><b style="--w:94%"></b></i><span>94%</span></div><div class="bar"><span>4★</span><i><b style="--w:5%"></b></i><span>5%</span></div><div class="bar"><span>3★</span><i><b style="--w:1%"></b></i><span>1%</span></div>
+      <a class="btn btn-main" href="/school-demo/contact.html">Leave a review</a><div class="sample">Sample content. Live Google reviews connect here at launch.</div></div>
+    <div class="marq"><div class="track"><div class="rcard"><div class="who"><span class="av" style="background:#0A63F5">M</span><div><b>Maria G.</b><small>Mother of two</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“The teachers know every child by name. My daughter runs in every morning and the daily photos make my workday easier.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#FF6B57">J</span><div><b>James T.</b><small>Toddler parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Clean, bright, safe, and the bilingual classroom made a real difference. Our son is already singing in two languages.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#12B886">A</span><div><b>Ana R.</b><small>Pre-K parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Kindergarten readiness was exactly what we wanted. She reads simple books and is excited to learn.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#9B5DE5">D</span><div><b>David L.</b><small>Infant parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Warm and caring from the first tour. They follow our baby's schedule and send updates all day.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#F59F00">S</span><div><b>Sofia P.</b><small>School-age parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“After-school and summer camp were great. Homework help and fun activities, and pickup is easy.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#0B2545">C</span><div><b>Carlos M.</b><small>Parent of three</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Three kids, one place that works for all of them. Communication with the office is always quick.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#0A63F5">M</span><div><b>Maria G.</b><small>Mother of two</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“The teachers know every child by name. My daughter runs in every morning and the daily photos make my workday easier.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#FF6B57">J</span><div><b>James T.</b><small>Toddler parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Clean, bright, safe, and the bilingual classroom made a real difference. Our son is already singing in two languages.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#12B886">A</span><div><b>Ana R.</b><small>Pre-K parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Kindergarten readiness was exactly what we wanted. She reads simple books and is excited to learn.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#9B5DE5">D</span><div><b>David L.</b><small>Infant parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Warm and caring from the first tour. They follow our baby's schedule and send updates all day.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#F59F00">S</span><div><b>Sofia P.</b><small>School-age parent</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“After-school and summer camp were great. Homework help and fun activities, and pickup is easy.”</p></div><div class="rcard"><div class="who"><span class="av" style="background:#0B2545">C</span><div><b>Carlos M.</b><small>Parent of three</small></div><span class="ver">Verified parent</span></div><div class="stars">★★★★★</div><p>“Three kids, one place that works for all of them. Communication with the office is always quick.”</p></div></div></div>
   </div>
 </div></section>
 
@@ -291,4 +347,38 @@ document.getElementById('tourForm').addEventListener('submit', function(e){
 renderPrograms();
 </script>
 
+<div class="mod" id="mod" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="mbox"><h3 id="mt"></h3><div id="mb"></div><div class="row"><a class="btn btn-main" href="/school-demo/book-a-tour.html" id="mcta"></a><button class="btn btn-line" type="button" id="mx" style="color:var(--ink);border-color:var(--line)"></button></div></div></div>
+<div id="prog"></div>
+<script>
+(function(){
+document.documentElement.classList.add('js');
+var I={
+ lic:{en:['State licensed','<p>Fully licensed and inspected. Our license number and latest inspection report are available on request and posted at the front desk.</p><ul><li>[License number]</li><li>Background-checked staff</li><li>Secure entry and cameras</li></ul>'],es:['Con licencia estatal','<p>Con licencia completa e inspecciones al día. El número de licencia y el último informe están disponibles a solicitud.</p><ul><li>[Número de licencia]</li><li>Personal verificado</li><li>Entrada segura y cámaras</li></ul>']},
+ rat:{en:['Small groups','<p>Low child-to-teacher ratios so every child gets real attention.</p><ul><li>Infants [00]:1</li><li>Toddlers [00]:1</li><li>Preschool [00]:1</li></ul>'],es:['Grupos pequeños','<p>Pocos niños por maestra para atención real.</p><ul><li>Bebés [00]:1</li><li>Maternal [00]:1</li><li>Preescolar [00]:1</li></ul>']},
+ hrs:{en:['Open Monday to Friday','<p>6:30 am to 6:00 pm, Monday to Friday. Early drop-off and late pickup options available.</p><ul><li>Holiday calendar on request</li><li>Summer camp for school age</li></ul>'],es:['Abierto de lunes a viernes','<p>De 6:30 am a 6:00 pm. Hay opciones de entrada temprana y salida tarde.</p><ul><li>Calendario de feriados a solicitud</li><li>Campamento de verano</li></ul>']},
+ bil:{en:['Bilingual classrooms','<p>Children learn in English and Spanish through songs, stories and play, so both languages feel natural.</p>'],es:['Aulas bilingües','<p>Los niños aprenden en inglés y español con canciones, cuentos y juego.</p>']},
+ day:{en:['A day at the school','<p>[Add details of this part of the day: activities, meals, what parents see in the daily report.]</p>'],es:['Un día en la escuela','<p>[Agregar detalles de esta parte del día: actividades, comidas, informe diario.]</p>']},
+ why:{en:['Care you can see','<p>[Add details: teacher qualifications, safety procedures, parent app with daily photos and updates.]</p>'],es:['Un cuidado que se nota','<p>[Agregar detalles: formación de maestras, seguridad, app para padres con fotos y novedades diarias.]</p>']},
+ rev:{en:['Parent review','<p>This is a sample review. On the live site, real reviews are pulled in from the school\'s Google page and link to the original.</p>'],es:['Opinión de padres','<p>Esta es una reseña de ejemplo. En el sitio real se muestran las reseñas de Google de la escuela.</p>']},
+ prog:{en:['Program details','<p>Ages, ratios, daily schedule and tuition for this program. [Add tuition and registration fee.]</p>'],es:['Detalles del programa','<p>Edades, proporciones, horario y mensualidad. [Agregar costos.]</p>']}
+};
+var m=document.getElementById('mod');
+function open(k,extra){var d=I[k][lang]||I[k].en;document.getElementById('mt').textContent=(extra||'')||d[0];document.getElementById('mb').innerHTML=d[1];document.getElementById('mcta').textContent=lang==='es'?'Reservar visita':'Book a tour';document.getElementById('mx').textContent=lang==='es'?'Cerrar':'Close';m.classList.add('open');document.getElementById('mx').focus()}
+function close(){m.classList.remove('open')}
+document.getElementById('mx').onclick=close;m.onclick=function(e){if(e.target===m)close()};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+function bind(sel,key,title){document.querySelectorAll(sel).forEach(function(el,i){el.setAttribute('tabindex','0');el.setAttribute('role','button');var k=typeof key==='function'?key(el,i):key;var go=function(){open(k,title&&title(el))};el.addEventListener('click',go);el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})})}
+bind('.trust .wrap>div',function(e,i){return['lic','rat','hrs','bil'][i]});
+bind('.step','day',function(el){return el.querySelector('b').textContent+' · '+el.querySelector('time').textContent});
+bind('.why>div','why',function(el){return el.querySelector('h3').textContent});
+bind('.rcard','rev',function(el){return el.querySelector('.who b').textContent});
+document.querySelectorAll('.chip').forEach(function(c,i){c.addEventListener('click',function(){open(['rev','lic','bil'][i])})});
+var rv=document.querySelectorAll('.step,.why>div,.panel,.faq details,.tour,.revsum,.day');
+rv.forEach(function(e,i){e.classList.add('rv');e.style.transitionDelay=(i%5)*70+'ms'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+rv.forEach(function(e){io.observe(e)});
+var pg=document.getElementById('prog');function sc(){var h=document.documentElement;pg.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'}addEventListener('scroll',sc,{passive:true});sc();
+var hb=document.querySelector('.hero-bg');addEventListener('scroll',function(){if(hb&&scrollY<900)hb.style.marginTop=(scrollY*.18)+'px'},{passive:true});
+})();
+</script>
 </body></html>
