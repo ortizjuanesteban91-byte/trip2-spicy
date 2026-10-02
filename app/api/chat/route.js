@@ -21,7 +21,7 @@ RULES
 
 async function claude(body) {
   const r = await fetch(API, { method: "POST", headers: { "x-api-key": process.env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" }, body: JSON.stringify(body) });
-  if (!r.ok) throw new Error(`claude-${r.status}`);
+  if (!r.ok) { let m = ""; try { m = (await r.json())?.error?.message || ""; } catch {} throw new Error(`claude-${r.status}${m ? ": " + m.slice(0, 120) : ""}`); }
   return r.json();
 }
 const clean = (m) => (Array.isArray(m) ? m : []).filter((x) => x && (x.role === "user" || x.role === "assistant") && typeof x.content === "string" && x.content.trim()).slice(-24).map((x) => ({ role: x.role, content: x.content.slice(0, 1500) }));
@@ -60,7 +60,8 @@ export async function POST(req) {
       conv.push({ role: "user", content: results });
     }
     return Response.json({ ok: true, reply: `Let me connect you with our team on WhatsApp: ${site.wa}` });
-  } catch {
-    return Response.json({ ok: false, error: "down" }, { status: 502 });
+  } catch (e) {
+    console.error("chat failed:", e?.message);
+    return Response.json({ ok: false, error: "down", why: String(e?.message || "").slice(0, 160) }, { status: 502 }); // why = Anthropic status + message, never a key
   }
 }
