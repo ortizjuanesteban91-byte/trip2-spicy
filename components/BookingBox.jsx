@@ -73,7 +73,7 @@ export default function BookingBox({ tour, wa }) {
               <div key={i} className={field + (opts.length > 1 && opts.length % 2 === 1 && i === opts.length - 1 ? " col-span-2" : "")}><Ic><Users className="h-5 w-5" /></Ic>
                 <select value={q[i] || 0} onChange={(e) => setQ((s) => ({ ...s, [i]: Number(e.target.value) }))} className={sel + " text-sm"} aria-label={o.label}>
                   <option value={0}>{o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")}</option>
-                  {Array.from({ length: 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(px(o))}</option>)}
+                  {Array.from({ length: px(o) === 0 ? 5 : 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(px(o))}</option>)}
                 </select><Chev /></div>
             ))}
           </div>
