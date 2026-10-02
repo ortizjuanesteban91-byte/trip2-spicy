@@ -16,7 +16,7 @@ export default async function Admin({ searchParams }) {
         {!process.env.ADMIN_PASSWORD && <p className="mt-3 rounded-xl bg-amber-50 p-3 text-sm text-amber-800">ADMIN_PASSWORD is not set in Vercel yet.</p>}
         <form method="post" action="/api/admin/login" className="grid gap-3">
           <input name="email" type="text" inputMode="email" autoCapitalize="none" placeholder="Email (leave empty if you are the owner)" className="rounded-xl border border-[#d9dee5] p-3" />
-          <input type="password" name="password" placeholder="Password" required className="rounded-xl border border-[#d9dee5] p-3" />
+          <input type="password" name="password" placeholder="Password" required autoCapitalize="none" autoCorrect="off" spellCheck={false} autoComplete="current-password" className="rounded-xl border border-[#d9dee5] p-3" />
           <button className="rounded-xl bg-brand p-3 font-extrabold text-white">Log in</button>
           {e && <p className="text-sm text-red-600">Wrong email or password.</p>}
         </form>
