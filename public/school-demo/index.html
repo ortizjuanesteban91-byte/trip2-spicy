@@ -145,9 +145,9 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
     </div>
   </div>
   <div class="collage" aria-hidden="true">
-    <div class="ph">[Photo: children in the classroom]</div>
-    <div class="ph">[Photo: outdoor play]</div>
-    <div class="ph">[Photo: art time]</div>
+    <div class="ph" role="img" aria-label="children in the classroom" style="background:url(https://images.unsplash.com/photo-1761208663763-c4d30657c910?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
+    <div class="ph" role="img" aria-label="outdoor play" style="background:url(https://images.unsplash.com/photo-1533222535026-754c501569dd?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
+    <div class="ph" role="img" aria-label="art time" style="background:url(https://images.unsplash.com/photo-1770096679916-2cd9c720d400?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div>
   </div>
 </div>
 
@@ -181,9 +181,9 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
   <div class="eyebrow" data-en="Why families choose us" data-es="Por qué nos eligen">Why families choose us</div>
   <h2 data-en="Care you can see" data-es="Un cuidado que se nota">Care you can see</h2>
   <div class="why">
-    <div><div class="ph" style="background:var(--mint)">[Photo: teacher reading]</div><h3 data-en="Learning through play" data-es="Aprender jugando">Learning through play</h3><p data-en="[Two lines about your teaching approach.]" data-es="[Dos líneas sobre su enfoque educativo.]">[Two lines about your teaching approach.]</p></div>
-    <div><div class="ph" style="background:var(--sky)">[Photo: safe classroom]</div><h3 data-en="Safe and secure" data-es="Seguro y protegido">Safe and secure</h3><p data-en="[Licensing, ratios, secure entry, background-checked staff.]" data-es="[Licencia, proporciones, entrada segura, personal verificado.]">[Licensing, ratios, secure entry, background-checked staff.]</p></div>
-    <div><div class="ph" style="background:var(--blush)">[Photo: parent pickup]</div><h3 data-en="Parents in the loop" data-es="Padres siempre informados">Parents in the loop</h3><p data-en="[Daily updates and photos through your parent app.]" data-es="[Actualizaciones y fotos diarias por la app para padres.]">[Daily updates and photos through your parent app.]</p></div>
+    <div><div class="ph" role="img" aria-label="teacher reading" style="background:url(https://images.unsplash.com/photo-1786292949404-084cbd10c7b1?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div><h3 data-en="Learning through play" data-es="Aprender jugando">Learning through play</h3><p data-en="[Two lines about your teaching approach.]" data-es="[Dos líneas sobre su enfoque educativo.]">[Two lines about your teaching approach.]</p></div>
+    <div><div class="ph" role="img" aria-label="safe classroom" style="background:url(https://images.unsplash.com/photo-1763310225230-6e15b125935a?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div><h3 data-en="Safe and secure" data-es="Seguro y protegido">Safe and secure</h3><p data-en="[Licensing, ratios, secure entry, background-checked staff.]" data-es="[Licencia, proporciones, entrada segura, personal verificado.]">[Licensing, ratios, secure entry, background-checked staff.]</p></div>
+    <div><div class="ph" role="img" aria-label="parent pickup" style="background:url(https://images.unsplash.com/photo-1788882681162-41c2fc0d7594?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;color:transparent;font-size:0"></div><h3 data-en="Parents in the loop" data-es="Padres siempre informados">Parents in the loop</h3><p data-en="[Daily updates and photos through your parent app.]" data-es="[Actualizaciones y fotos diarias por la app para padres.]">[Daily updates and photos through your parent app.]</p></div>
   </div>
 </div></section>
 
@@ -227,7 +227,7 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span><a href="/school-demo/careers.html">Careers</a> · <a href="/school-demo/enroll.html">Enroll</a> · <a href="/school-demo/privacy.html">Privacy</a> · <a href="/school-demo/terms.html">Terms</a></span></div></footer>
+<footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span><a href="/school-demo/careers.html">Careers</a> · <a href="/school-demo/enroll.html">Enroll</a> · <a href="/school-demo/privacy.html">Privacy</a> · <a href="/school-demo/terms.html">Terms</a></span></div><p style="font-size:12px;opacity:.7">Demo photos: Unsplash (stand-ins until real photos arrive)</p></footer>
 
 <script>
 var lang = 'en';
@@ -257,7 +257,7 @@ function renderPrograms(){
   var p = PROGRAMS[sel];
   var panel = document.getElementById('panel');
   panel.setAttribute('aria-labelledby','t'+sel);
-  panel.innerHTML = '<div><h3>'+p[lang]+'</h3><span class="age">'+p.age[lang]+'</span><p>'+p.d[lang]+'</p><ul>'+p.l[lang].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p style="margin-top:20px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">'+(lang==='en'?'Book a tour':'Reservar visita')+'</a></p></div><div class="ph" style="background:'+p.c+'">'+(lang==='en'?'[Photo: ':'[Foto: ')+p[lang]+']</div>';
+  panel.innerHTML = '<div><h3>'+p[lang]+'</h3><span class="age">'+p.age[lang]+'</span><p>'+p.d[lang]+'</p><ul>'+p.l[lang].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p style="margin-top:20px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">'+(lang==='en'?'Book a tour':'Reservar visita')+'</a></p></div><div class="ph" style="background:url(https://images.unsplash.com/photo-1761208663763-c4d30657c910?auto=format&fit=crop&w=900&q=75) center/cover no-repeat;min-height:320px"></div>';
 }
 function applyLang(){
   document.documentElement.lang = lang;
