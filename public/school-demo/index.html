@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>Little Stars Academy</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Little Stars Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -101,7 +101,7 @@ input,select{font:500 17px var(--body);padding:13px 14px;border-radius:12px;bord
 footer{padding-block:32px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:860px){
-  .links a{display:none}
+  .links a:not(.btn){display:none}
   .hero,.panel,.tour{grid-template-columns:minmax(0,1fr)}
   .collage{grid-template-rows:150px 150px}
   .trust .wrap,.day{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -113,12 +113,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 
 <header class="nav"><div class="wrap">
-  <a class="logo" href="#top"><i aria-hidden="true"></i><span>Little Stars Academy</span></a>
+  <a class="logo" href="/school-demo/index.html"><i aria-hidden="true"></i><span>Little Stars Academy</span></a>
   <nav class="links" aria-label="Main">
-    <a href="#programs" data-en="Programs" data-es="Programas">Programs</a>
+    <a href="/school-demo/programs.html" data-en="Programs" data-es="Programas">Programs</a><a href="/school-demo/locations.html" data-en="Locations" data-es="Sedes">Locations</a><a href="/school-demo/about.html" data-en="About" data-es="Nosotros">About</a><a href="/school-demo/contact.html" data-en="Contact" data-es="Contacto">Contact</a><a href="/school-demo/parent-portal.html" data-en="Parent Portal" data-es="Portal de Padres">Parent Portal</a>
     <a href="#day" data-en="A day here" data-es="Un día aquí">A day here</a>
     <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
-    <a href="#tour" class="btn btn-sun" style="padding:10px 20px" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
+    <a href="/school-demo/book-a-tour.html" class="btn btn-sun" style="padding:10px 20px" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
   </nav>
   <div class="tools">
     <button class="pill" id="lang" type="button" aria-pressed="false" aria-label="Switch language">EN / ES</button>
@@ -132,8 +132,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h1 data-en="Where little learners shine." data-es="Donde los pequeños brillan.">Where little learners shine.</h1>
     <p data-en="[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]" data-es="[Una frase sobre su enfoque: aprendizaje a través del juego, grupos pequeños y maestras que conocen a cada niño por su nombre.]">[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]</p>
     <div class="cta">
-      <a class="btn btn-main" href="#tour" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
-      <a class="btn btn-line" href="#programs" data-en="See programs" data-es="Ver programas">See programs</a>
+      <a class="btn btn-main" href="/school-demo/book-a-tour.html" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
+      <a class="btn btn-line" href="/school-demo/programs.html" data-en="See programs" data-es="Ver programas">See programs</a>
     </div>
   </div>
   <div class="collage" aria-hidden="true">
@@ -219,7 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span>Privacy · Terms</span></div></footer>
+<footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span><a href="/school-demo/careers.html">Careers</a> · <a href="/school-demo/enroll.html">Enroll</a> · <a href="/school-demo/privacy.html">Privacy</a> · <a href="/school-demo/terms.html">Terms</a></span></div></footer>
 
 <script>
 var lang = 'en';
@@ -249,7 +249,7 @@ function renderPrograms(){
   var p = PROGRAMS[sel];
   var panel = document.getElementById('panel');
   panel.setAttribute('aria-labelledby','t'+sel);
-  panel.innerHTML = '<div><h3>'+p[lang]+'</h3><span class="age">'+p.age[lang]+'</span><p>'+p.d[lang]+'</p><ul>'+p.l[lang].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p style="margin-top:20px"><a class="btn btn-main" href="#tour">'+(lang==='en'?'Book a tour':'Reservar visita')+'</a></p></div><div class="ph" style="background:'+p.c+'">'+(lang==='en'?'[Photo: ':'[Foto: ')+p[lang]+']</div>';
+  panel.innerHTML = '<div><h3>'+p[lang]+'</h3><span class="age">'+p.age[lang]+'</span><p>'+p.d[lang]+'</p><ul>'+p.l[lang].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p style="margin-top:20px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">'+(lang==='en'?'Book a tour':'Reservar visita')+'</a></p></div><div class="ph" style="background:'+p.c+'">'+(lang==='en'?'[Photo: ':'[Foto: ')+p[lang]+']</div>';
 }
 function applyLang(){
   document.documentElement.lang = lang;
