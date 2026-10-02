@@ -43,8 +43,314 @@ const CL = "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto";
 const GALLERY = {
   "saona-island": ["f64f3515-5222-4fda-9f67-3b068e13611c", "Saona_Eco_Adventure_21", "image00003", "eb95bc4e-d1f5-49cc-9c61-32560f221a88", "image00017", "Saona_Eco_Adventure_57", "image00016", "edc3ef5b-5850-4d61-b1e0-f22d724efd64", "eca0ab27-24b5-41c4-aa16-42dbb4b71331"],
 };
-export const gallery = (slug, w = 1400) => (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
-export const photo = (slug) => (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
+const LOCAL = {
+ "zipline-punta-cana": [
+  "/tours/zipline-01.webp",
+  "/tours/zipline-02.webp",
+  "/tours/zipline-03.webp",
+  "/tours/zipline-04.webp",
+  "/tours/zipline-05.webp",
+  "/tours/zipline-06.webp",
+  "/tours/zipline-07.webp",
+  "/tours/zipline-08.webp",
+  "/tours/zipline-09.webp",
+  "/tours/zipline-10.webp"
+ ],
+ "monkeyland": [
+  "/tours/monkeyland-01.webp",
+  "/tours/monkeyland-02.webp",
+  "/tours/monkeyland-03.webp",
+  "/tours/monkeyland-04.webp",
+  "/tours/monkeyland-05.webp",
+  "/tours/monkeyland-06.webp",
+  "/tours/monkeyland-07.webp",
+  "/tours/monkeyland-08.webp",
+  "/tours/monkeyland-10.webp"
+ ],
+ "parasailing": [
+  "/tours/parasail-04.webp",
+  "/tours/parasail-05.webp",
+  "/tours/parasail-01.webp",
+  "/tours/parasail-02.webp",
+  "/tours/parasail-03.webp",
+  "/tours/parasail-06.webp",
+  "/tours/parasail-07.webp",
+  "/tours/parasail-08.webp",
+  "/tours/parasail-09.webp",
+  "/tours/parasail-10.webp"
+ ],
+ "santo-domingo": [
+  "/tours/santo-07.webp",
+  "/tours/santo-03.webp",
+  "/tours/santo-09.webp",
+  "/tours/santo-02.webp",
+  "/tours/santo-08.webp",
+  "/tours/santo-01.webp",
+  "/tours/santo-10.webp",
+  "/tours/santo-04.webp"
+ ],
+ "montana-redonda-miches": [
+  "/tours/viewpoint-02.webp",
+  "/tours/viewpoint-01.webp",
+  "/tours/viewpoint-03.webp",
+  "/tours/viewpoint-04.webp",
+  "/tours/viewpoint-05.webp",
+  "/tours/viewpoint-06.webp",
+  "/tours/viewpoint-07.webp",
+  "/tours/viewpoint-08.webp",
+  "/tours/viewpoint-09.webp",
+  "/tours/viewpoint-10.webp",
+  "/tours/viewpoint-11.webp",
+  "/tours/viewpoint-12.webp"
+ ],
+ "montana-redonda-from-punta-cana": [
+  "/tours/viewpoint-02.webp",
+  "/tours/viewpoint-01.webp",
+  "/tours/viewpoint-03.webp",
+  "/tours/viewpoint-04.webp",
+  "/tours/viewpoint-05.webp",
+  "/tours/viewpoint-06.webp",
+  "/tours/viewpoint-07.webp",
+  "/tours/viewpoint-08.webp",
+  "/tours/viewpoint-09.webp",
+  "/tours/viewpoint-10.webp",
+  "/tours/viewpoint-11.webp",
+  "/tours/viewpoint-12.webp"
+ ],
+ "atv-miches": [
+  "/tours/miches-03.webp",
+  "/tours/miches-08.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp",
+  "/tours/miches-01.webp",
+  "/tours/miches-04.webp",
+  "/tours/miches-05.webp",
+  "/tours/miches-06.webp",
+  "/tours/miches-10.webp",
+  "/tours/miches-12.webp"
+ ],
+ "montana-redonda-atv-miches": [
+  "/tours/miches-03.webp",
+  "/tours/miches-08.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp",
+  "/tours/miches-01.webp",
+  "/tours/miches-04.webp",
+  "/tours/viewpoint-02.webp",
+  "/tours/viewpoint-01.webp",
+  "/tours/viewpoint-03.webp",
+  "/tours/viewpoint-04.webp"
+ ],
+ "montana-redonda-atv-zipline-miches": [
+  "/tours/miches-03.webp",
+  "/tours/miches-08.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp",
+  "/tours/miches-01.webp",
+  "/tours/zipline-01.webp",
+  "/tours/zipline-03.webp",
+  "/tours/zipline-05.webp"
+ ],
+ "montana-redonda-atv-from-punta-cana": [
+  "/tours/miches-03.webp",
+  "/tours/miches-08.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp",
+  "/tours/miches-01.webp",
+  "/tours/miches-04.webp",
+  "/tours/viewpoint-02.webp",
+  "/tours/viewpoint-01.webp",
+  "/tours/viewpoint-03.webp",
+  "/tours/viewpoint-04.webp"
+ ],
+ "montana-redonda-atv-zipline-from-punta-cana": [
+  "/tours/miches-03.webp",
+  "/tours/miches-08.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp",
+  "/tours/miches-01.webp",
+  "/tours/zipline-01.webp",
+  "/tours/zipline-03.webp",
+  "/tours/zipline-05.webp"
+ ],
+ "horseback-riding-miches": [
+  "/tours/horse-01.webp",
+  "/tours/horse-02.webp",
+  "/tours/horse-03.webp",
+  "/tours/horse-04.webp",
+  "/tours/horse-05.webp",
+  "/tours/horse-06.webp",
+  "/tours/horse-07.webp",
+  "/tours/horse-08.webp",
+  "/tours/horse-09.webp",
+  "/tours/horse-10.webp",
+  "/tours/horse-11.webp",
+  "/tours/horse-12.webp"
+ ],
+ "horseback-riding-punta-cana": [
+  "/tours/horse-01.webp",
+  "/tours/horse-02.webp",
+  "/tours/horse-03.webp",
+  "/tours/horse-04.webp",
+  "/tours/horse-05.webp",
+  "/tours/horse-06.webp",
+  "/tours/horse-07.webp",
+  "/tours/horse-08.webp",
+  "/tours/horse-09.webp",
+  "/tours/horse-10.webp",
+  "/tours/horse-11.webp",
+  "/tours/horse-12.webp",
+  "/tours/miches-02.webp",
+  "/tours/miches-10.webp"
+ ],
+ "montana-redonda-horseback-riding-zipline-miches": [
+  "/tours/horse-01.webp",
+  "/tours/horse-02.webp",
+  "/tours/horse-03.webp",
+  "/tours/horse-04.webp",
+  "/tours/horse-05.webp",
+  "/tours/horse-06.webp",
+  "/tours/zipline-01.webp",
+  "/tours/zipline-03.webp",
+  "/tours/zipline-05.webp"
+ ],
+ "speedboat": [
+  "/tours/speed-08.webp",
+  "/tours/speed-09.webp",
+  "/tours/speed-10.webp",
+  "/tours/speed-01.webp",
+  "/tours/speed-03.webp",
+  "/tours/speed-05.webp",
+  "/tours/speed-04.webp",
+  "/tours/speed-06.webp",
+  "/tours/speed-07.webp",
+  "/tours/speed-12.webp"
+ ],
+ "speedboat-parasailing-snorkeling": [
+  "/tours/speed-08.webp",
+  "/tours/speed-09.webp",
+  "/tours/speed-10.webp",
+  "/tours/speed-01.webp",
+  "/tours/speed-03.webp",
+  "/tours/parasail-04.webp",
+  "/tours/parasail-05.webp",
+  "/tours/parasail-01.webp"
+ ],
+ "buggy": [
+  "/tours/bavaro-06.webp",
+  "/tours/bavaro-09.webp",
+  "/tours/bavaro-12.webp",
+  "/tours/bavaro-08.webp",
+  "/tours/bavaro-10.webp"
+ ],
+ "polaris-utv": [
+  "/tours/bavaro-12.webp",
+  "/tours/bavaro-09.webp",
+  "/tours/bavaro-06.webp",
+  "/tours/bavaro-08.webp",
+  "/tours/bavaro-10.webp"
+ ],
+ "atv-punta-cana": [
+  "/tours/bavaro-09.webp",
+  "/tours/bavaro-12.webp",
+  "/tours/bavaro-06.webp",
+  "/tours/bavaro-08.webp",
+  "/tours/bavaro-10.webp"
+ ],
+ "bavaro-runners": [
+  "/tours/bavaro-06.webp",
+  "/tours/bavaro-12.webp",
+  "/tours/bavaro-09.webp",
+  "/tours/bavaro-01.webp",
+  "/tours/bavaro-11.webp",
+  "/tours/bavaro-07.webp"
+ ],
+ "safari": [
+  "/tours/bavaro-12.webp",
+  "/tours/bavaro-09.webp",
+  "/tours/bavaro-06.webp",
+  "/tours/bavaro-02.webp",
+  "/tours/bavaro-05.webp",
+  "/tours/bavaro-08.webp",
+  "/tours/bavaro-10.webp"
+ ]
+};
+const GALLERY_X = {
+ "dolphin-explorer": [
+  "dolphin-punta-cana-001",
+  "dolphin-punta-cana-002",
+  "dolphin-punta-cana-003",
+  "dolphin-punta-cana-004",
+  "dolphin-punta-cana-005",
+  "dolphin-punta-cana-006",
+  "dolphin-punta-cana-007",
+  "dolphin-punta-cana-008",
+  "dolphin-punta-cana-009",
+  "dolphin-punta-cana-010",
+  "dolphin-punta-cana-011",
+  "dolphin-punta-cana-012",
+  "dolphin-punta-cana-013",
+  "dolphin-punta-cana-014",
+  "dolphin-punta-cana-015"
+ ],
+ "deep-sea-fishing": [
+  "09b4172e-22bc-4056-b3d0-10541b94e4f5",
+  "55be8760-25e8-4479-a28c-aab6ab702b2e",
+  "IMG-20210522-WA0082",
+  "IMG-20210525-WA0217",
+  "IMG-20210603-WA0086",
+  "IMG-20210603-WA0105",
+  "IMG-20210624-WA0121",
+  "IMG-20210715-WA0145",
+  "IMG-20210715-WA0152",
+  "c3b3ae15-2f16-4d48-af4d-b500d5283a51",
+  "34dade54-4f4a-46d2-a9a4-729ae48ea876",
+  "e2d390f1-0984-4743-be0e-69845cc7c933"
+ ],
+ "catamaran-party-boat": [
+  "image00010",
+  "image00015",
+  "image00020",
+  "image00025",
+  "image00030",
+  "image00035",
+  "image00040",
+  "image00045",
+  "image00050",
+  "image00055",
+  "image00060"
+ ],
+ "hip-hop-party-boat": [
+  "image00018",
+  "image00012",
+  "image00030",
+  "image00040",
+  "image00050",
+  "image00060"
+ ],
+ "coco-bongo": [
+  "IMG_0406",
+  "IMG_0407",
+  "IMG_0408",
+  "IMG_0409",
+  "IMG_0410",
+  "IMG_0421",
+  "IMG_0423",
+  "IMG_0425",
+  "IMG_0427",
+  "IMG_0430"
+ ],
+ "los-haitises": [
+  "DSC_6091",
+  "DSC_6179",
+  "DSC_6201",
+  "AMS05361",
+  "0001112"
+ ]
+};
+Object.assign(GALLERY, GALLERY_X);
+export const gallery = (slug, w = 1400) => LOCAL[slug] ? LOCAL[slug] : (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
+export const photo = (slug) => LOCAL[slug] ? LOCAL[slug][0] : (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
 
 // Combo tours show a strip of photos (one per part of the combo), like the Speedboat combo. Each panel uses the photo of that tour,
 // so when real photos are uploaded the strip updates by itself.

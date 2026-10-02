@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { photo, strip, HERO } from "@/data/photos";
+import { photo, gallery, strip, HERO } from "@/data/photos";
 import { allTours as getAll } from "@/lib/tours";
 export const revalidate = 60;
 import { trust, categories, advantages, itinerary, guides } from "@/data/site";
@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        {photo(HERO) && <img src={photo(HERO)} alt="Punta Cana excursions" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
+        {photo(HERO) && <img src={(gallery(HERO, 2000) || [])[0] || photo(HERO)} alt="Punta Cana excursions" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/50" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
