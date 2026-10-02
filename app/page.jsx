@@ -1,3 +1,4 @@
+import GlowLink from "@/components/GlowLink";
 import Link from "next/link";
 import { photo, gallery, strip, HERO } from "@/data/photos";
 import { allTours as getAll } from "@/lib/tours";
@@ -72,8 +73,8 @@ export default async function Home() {
             <p className="mt-5 text-xl font-bold text-cyan-50">Turquoise water. White-sand beaches. Caribbean paradise.</p>
             <p className="mt-3 max-w-xl text-white/85">Glide across calm waters on a high-speed catamaran, swim in chest-deep natural pools beside giant starfish, and unwind under leaning coconut palms.</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/tour/saona-island" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-black tracking-wide text-[#10222b] shadow-xl transition hover:-translate-y-0.5 hover:brightness-105">BOOK SAONA ISLAND <span aria-hidden="true">→</span></Link>
-              <Link href="/tours/water-adventures" className="inline-flex rounded-full bg-white/10 px-7 py-4 text-sm font-extrabold ring-1 ring-white/40 backdrop-blur transition hover:bg-white/20">ALL WATER TOURS</Link>
+              <GlowLink glow="gold" href="/tour/saona-island" className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-black tracking-wide text-[#10222b] shadow-xl transition hover:-translate-y-0.5 hover:brightness-105">BOOK SAONA ISLAND <span aria-hidden="true">→</span></GlowLink>
+              <GlowLink glow="white" href="/tours/water-adventures" className="inline-flex rounded-full bg-white/10 px-7 py-4 text-sm font-extrabold ring-1 ring-white/40 backdrop-blur transition hover:bg-white/20">ALL WATER TOURS</GlowLink>
               {allTours.find((t) => t.slug === "saona-island") && <p className="ml-1 text-sm font-bold text-cyan-100">From <b className="text-3xl font-black text-white">${allTours.find((t) => t.slug === "saona-island").from}</b> / person</p>}
             </div>
           </div>
@@ -102,7 +103,8 @@ export default async function Home() {
             <p className="mt-5 max-w-xl text-white/80">Leave the resort corridor behind. Virgin beaches, mountaintop swings with 360° views, muddy ATV trails and authentic fishing villages on the wild Emerald Coast.</p>
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">{["Montaña Redonda Swings", "ATV Mountain Trails", "Untouched Emerald Coast", "Laguna Limón Nature", "Private Guided Excursions"].map((x) => <li key={x} className="flex items-center gap-3 rounded-2xl bg-white/8 px-4 py-3 text-sm font-bold ring-1 ring-white/15"><span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-emerald-400 text-xs font-black text-[#04262b]">✓</span>{x}</li>)}</ul>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/tours?dest=miches" className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-8 py-4 text-sm font-black tracking-wide text-[#04262b] shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-300">EXPLORE MICHES TOURS <span aria-hidden="true">→</span></Link>
+              <GlowLink glow="green" href="/tours?dest=miches" className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-8 py-4 text-sm font-black tracking-wide text-[#04262b] shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-300">EXPLORE MICHES TOURS <span aria-hidden="true">→</span></GlowLink>
+              <GlowLink glow="white" href="/tours?dest=miches" className="inline-flex rounded-full bg-white/10 px-7 py-4 text-sm font-extrabold ring-1 ring-white/40 backdrop-blur transition hover:bg-white/20">MICHES TOURS FROM PUNTA CANA</GlowLink>
               {allTours.find((t) => t.slug === "atv-miches") && <p className="text-sm font-bold text-emerald-100">From <b className="text-3xl font-black text-white">${allTours.find((t) => t.slug === "atv-miches").from}</b> / person</p>}
             </div>
           </div>
