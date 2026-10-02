@@ -1,0 +1,43 @@
+/* hours widget */
+.topbar{position:relative;z-index:30;background:linear-gradient(100deg,#0B2545,#0A3F9E,#0B2545);background-size:200% 100%;animation:shim 12s ease infinite}
+@keyframes shim{50%{background-position:100% 0}}
+.topbar .wrap{position:relative;align-items:center}
+.hrs{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:7px 16px;font:700 14px var(--body);cursor:pointer;transition:transform .2s,background .2s}
+.hrs:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.live{width:10px;height:10px;border-radius:50%;background:#2EE59D;box-shadow:0 0 0 0 rgba(46,229,157,.7);animation:ping 1.8s infinite}
+.live.off{background:#FF6B57;box-shadow:none;animation:none}
+@keyframes ping{to{box-shadow:0 0 0 12px rgba(46,229,157,0)}}
+.chev{transition:transform .25s}.hrs[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.tbk{background:#FFC933;color:#0B2545!important;font-weight:800;padding:7px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(255,201,51,.5);transition:transform .2s}
+.tbk:hover{transform:translateY(-2px) scale(1.05)}
+.hpop{position:absolute;left:0;top:calc(100% + 10px);width:min(340px,92vw);background:#fff;color:#0B2545;border-radius:24px;padding:20px;box-shadow:0 30px 70px rgba(8,28,70,.35);opacity:0;transform:translateY(-12px) scale(.96);pointer-events:none;transition:opacity .25s,transform .3s cubic-bezier(.2,.9,.2,1);z-index:60}
+.hpop.open{opacity:1;transform:none;pointer-events:auto}
+.hpop h4{margin:0 0 10px;font:800 18px var(--display)}
+.hrow{display:flex;justify-content:space-between;padding:9px 12px;border-radius:12px;font-weight:600;font-size:14.5px}
+.hrow.today{background:linear-gradient(90deg,#E8F1FF,#FFF3CC);font-weight:800}
+.hrow.closed{color:#8A99AE}
+.hbar{height:8px;border-radius:8px;background:#EAF1FB;margin:12px 0;overflow:hidden}.hbar b{display:block;height:100%;width:0;background:linear-gradient(90deg,#0A63F5,#FFC933);border-radius:8px;transition:width 1.2s ease}
+.hpop .btn{width:100%;text-align:center;margin-top:6px}
+@media(max-width:640px){.topbar .mid{display:none}}
+/* age toggle */
+.tabs{position:relative;display:inline-flex;gap:0;padding:6px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 14px 36px rgba(10,99,245,.12);flex-wrap:wrap}
+.tabs .thumb{position:absolute;top:6px;bottom:6px;left:0;width:0;border-radius:999px;background:linear-gradient(135deg,#0A63F5,#6C8BFF 60%,#FFC933);box-shadow:0 10px 26px rgba(10,99,245,.45);transition:left .45s cubic-bezier(.3,1.3,.5,1),width .45s cubic-bezier(.3,1.3,.5,1)}
+.tab{position:relative;z-index:1;background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important;color:var(--ink);padding:13px 22px!important}
+.tab[aria-selected="true"]{color:#fff!important}
+.tab:nth-child(2)::before{content:"🍼 "}.tab:nth-child(3)::before{content:"🧸 "}.tab:nth-child(4)::before{content:"🎨 "}.tab:nth-child(5)::before{content:"🎒 "}
+.tab:hover{transform:scale(1.06)!important}
+.panel>div{animation:pin .7s cubic-bezier(.2,.9,.2,1) both}.panel>div:nth-child(2){animation-name:pin2}
+@keyframes pin{from{opacity:0;transform:translateX(-50px) rotate(-1.5deg)}to{opacity:1;transform:none}}
+@keyframes pin2{from{opacity:0;transform:translateX(70px) scale(.9) rotate(2deg)}to{opacity:1;transform:none}}
+.panel li{animation:pin .6s ease both}.panel li:nth-child(2){animation-delay:.12s}.panel li:nth-child(3){animation-delay:.24s}.panel li:nth-child(4){animation-delay:.36s}
+.panel .ph{border-radius:24px;overflow:hidden}
+@media(max-width:700px){.tabs{border-radius:26px;display:flex}.tab{flex:1 1 40%}}
+/* flow */
+.fl{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.2,1)}
+.js .fl.l{transform:translateX(-80px) rotate(-2.5deg)}.js .fl.r{transform:translateX(80px) rotate(2.5deg)}.js .fl.u{transform:translateY(70px) scale(.94)}
+.js .fl.in{opacity:1;transform:none}
+body:not(.js) .fl,.no-js .fl{opacity:1}
+.tilt{transform-style:preserve-3d;transition:transform .2s ease-out}
+.blob{position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;will-change:transform}
+@media(prefers-reduced-motion:reduce){.fl{opacity:1!important;transform:none!important}}
+.hpop{left:20px!important}.hpop a.btn{color:#fff!important}

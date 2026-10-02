@@ -1,0 +1,42 @@
+.herofull{min-height:clamp(620px,92vh,860px)}
+.hero-bg{display:none}
+.slides{position:absolute;inset:0;overflow:hidden}
+.slide{position:absolute;inset:-5%;background-size:cover;background-position:center;opacity:0;transition:opacity 1.3s ease;animation:kb 18s ease-in-out infinite alternate}
+.slide.on{opacity:1}
+.herofull::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,28,70,.78) 0%,rgba(8,28,70,.35) 48%,rgba(8,28,70,0) 78%),linear-gradient(0deg,rgba(8,28,70,.55),transparent 38%)}
+.herofull::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(420px circle at var(--mx,70%) var(--my,40%),rgba(255,214,90,.28),transparent 60%)}
+.herofull h1{font-size:clamp(40px,5.6vw,80px);line-height:1;letter-spacing:-.03em}
+.herofull h1 .w{display:inline-block;opacity:0;transform:translateY(60%) rotate(4deg);animation:wr .8s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes wr{to{opacity:1;transform:none}}
+.herofull h1 em{font-style:normal;background:linear-gradient(90deg,#FFE08A,#FFC933 50%,#FF9F6B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hdots{position:absolute;z-index:4;left:0;right:0;bottom:84px}
+.hdots .wrap{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hd{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;font:800 15px var(--body);padding:12px 22px;border-radius:999px;cursor:pointer;transition:transform .2s,background .2s}
+.hd:hover{transform:translateY(-3px) scale(1.04);background:rgba(255,255,255,.28)}
+.hd i{position:absolute;left:0;bottom:0;height:4px;width:0;background:#FFC933}
+.hd.on{background:#fff;color:#0B2545;box-shadow:0 12px 30px rgba(0,0,0,.28)}
+.hd.on i{animation:fill 6.5s linear forwards}
+@keyframes fill{to{width:100%}}
+.arr{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.14);color:#fff;font-size:20px;cursor:pointer;backdrop-filter:blur(12px);transition:transform .2s,background .2s}
+.arr:hover{background:#FFC933;color:#0B2545;transform:scale(1.12)}
+.star{position:absolute;z-index:2;color:#FFD966;opacity:.8;animation:spin 14s linear infinite,float 7s ease-in-out infinite;text-shadow:0 0 18px rgba(255,201,51,.8)}
+@keyframes spin{to{rotate:360deg}}
+.tick{background:linear-gradient(90deg,#FFC933,#FFE08A,#FFC933);color:#0B2545;overflow:hidden;border-block:3px solid #0B2545}
+.tick .track{animation-duration:28s;gap:0;padding:14px 0}
+.tick span{font:800 clamp(22px,3vw,34px) var(--display);white-space:nowrap;padding-inline:26px;display:inline-flex;align-items:center;gap:26px}
+.tick span::after{content:"★";font-size:.8em}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:8px}
+.num{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px 22px;text-align:center;cursor:pointer;box-shadow:0 14px 36px rgba(10,99,245,.10);transition:transform .3s,box-shadow .3s}
+.num:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 26px 54px rgba(10,99,245,.22)}
+.num b{display:block;font:800 clamp(44px,6vw,76px) var(--display);line-height:1;background:linear-gradient(135deg,#0A63F5,#7B5CFF 60%,#FF6B57);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num span{display:block;margin-top:8px;font-weight:700;color:var(--muted)}
+@media(max-width:860px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.hdots{bottom:70px}.hd{padding:10px 16px;font-size:14px}.star{display:none}}
+.tab{transition:transform .2s,box-shadow .2s;font-size:17px;padding:13px 22px}
+.tab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 12px 26px rgba(10,99,245,.2)}
+.tab[aria-selected="true"]{background:linear-gradient(135deg,#0A63F5,#5B8DFF);box-shadow:0 12px 30px rgba(10,99,245,.4);transform:scale(1.06)}
+.faq details{transition:transform .2s,box-shadow .2s}.faq details:hover{transform:translateX(6px)}
+
+.herofull .hero{padding-block:64px 170px!important;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)!important}
+.herofull h1{max-width:13ch}
+.links{gap:18px!important}.tools{margin-left:0!important}
+@media(max-width:860px){.herofull .hero{padding-block:40px 150px!important}}

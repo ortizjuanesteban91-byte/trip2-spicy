@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Little Stars Academy</title>
+<html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Little Stars Academy</title><meta name="description" content="High-quality child care and early learning in The Colony and Lewisville, TX. More than 25 years of experience with infants, toddlers, Pre-K and school-age children. Book a tour today."><meta property="og:title" content="Little Stars Academy"><meta property="og:description" content="High-quality child care and early learning in The Colony and Lewisville, TX. More than 25 years of experience with infants, toddlers, Pre-K and school-age children. Book a tour today."><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "ChildCare", "name": "Little Stars Academy", "description": "High-quality child care and early learning in The Colony and Lewisville, TX. More than 25 years of experience with infants, toddlers, Pre-K and school-age children. Book a tour today.", "telephone": "+1-940-314-5437", "priceRange": "$$", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "06:30", "closes": "18:00"}], "location": [{"@type": "Place", "name": "Little Stars Academy The Colony", "address": {"@type": "PostalAddress", "streetAddress": "6804 Anderson Dr", "addressLocality": "The Colony", "addressRegion": "TX", "postalCode": "75056", "addressCountry": "US"}}, {"@type": "Place", "name": "Little Stars Academy Lewisville", "address": {"@type": "PostalAddress", "streetAddress": "1597 Glencairn Ln", "addressLocality": "Lewisville", "addressRegion": "TX", "postalCode": "75067", "addressCountry": "US"}}], "areaServed": ["The Colony, TX", "Lewisville, TX"], "audience": {"@type": "PeopleAudience", "suggestedMinAge": 0, "suggestedMaxAge": 12}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -319,6 +319,37 @@ html,body{overflow-x:clip}
  .links a.xtra{background:#fff;border:2px solid #E1ECF7;font-size:16px;padding:13px 20px!important}
 }
 
+.chips .chip{display:none}
+.hcard{position:absolute;right:0;top:50%;transform:translateY(-50%);width:min(380px,100%);background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:30px;padding:26px;color:#fff;box-shadow:0 30px 70px rgba(0,0,0,.35);animation:cardin .7s cubic-bezier(.2,.9,.2,1) both}
+@keyframes cardin{from{opacity:0;transform:translateY(-50%) translateX(60px) scale(.94)}to{opacity:1;transform:translateY(-50%)}}
+.hcard h3{font:800 34px var(--display);margin:0 0 4px;color:#fff}
+.hcard .sub{font-weight:700;color:#FFE08A;margin-bottom:14px}
+.hcard ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:10px}
+.hcard li{display:flex;gap:12px;align-items:flex-start;font-weight:600;line-height:1.35;opacity:0;animation:cardin2 .5s ease forwards}
+.hcard li:nth-child(2){animation-delay:.12s}.hcard li:nth-child(3){animation-delay:.24s}.hcard li:nth-child(4){animation-delay:.36s}
+@keyframes cardin2{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.hcard li i{font-style:normal;flex:none;width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:18px}
+.hcard .more2{display:block;text-align:center;background:#FFC933;color:#0B2545;font-weight:800;border:0;border-radius:999px;padding:13px;width:100%;cursor:pointer;font-size:16px;font-family:var(--body);box-shadow:0 10px 26px rgba(255,201,51,.5);transition:transform .2s}
+.hcard .more2:hover{transform:translateY(-2px) scale(1.03)}
+.pm{position:fixed;inset:0;z-index:120;display:none;align-items:flex-end;justify-content:center;padding:0;background:rgba(8,28,70,.6);backdrop-filter:blur(8px)}
+.pm.open{display:flex}
+.pmbox{background:#fff;color:#0B2545;width:100%;max-width:760px;border-radius:32px 32px 0 0;overflow:hidden;max-height:94vh;overflow-y:auto;animation:sheet .5s cubic-bezier(.2,.9,.2,1) both;box-shadow:0 -20px 80px rgba(0,0,0,.4)}
+@keyframes sheet{from{transform:translateY(100%)}to{transform:none}}
+.pmimg{height:210px;background-size:cover;background-position:center;position:relative}
+.pmimg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#fff 0%,transparent 60%)}
+.pmx{position:absolute;right:14px;top:14px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:22px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.pmin{padding:0 26px 28px;margin-top:-30px;position:relative;z-index:1}
+.pmin h3{font:800 clamp(30px,5vw,44px) var(--display);margin:0}
+.pmin .tag2{font-weight:700;color:#0A63F5;margin:4px 0 16px}
+.pmgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 18px}
+.pmgrid div{background:linear-gradient(135deg,#EAF3FF,#FFF6D6);border-radius:20px;padding:16px;font-weight:700;line-height:1.35;animation:pop .5s ease both}
+.pmgrid div i{font-style:normal;display:block;font-size:26px;margin-bottom:6px}
+.pmgrid div:nth-child(2){animation-delay:.08s}.pmgrid div:nth-child(3){animation-delay:.16s}.pmgrid div:nth-child(4){animation-delay:.24s}
+.pmstat{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.pmstat span{background:#0B2545;color:#fff;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px}
+.pmcta{display:flex;gap:10px;flex-wrap:wrap}.pmcta .btn{flex:1 1 150px;text-align:center}
+@media(min-width:700px){.pm{align-items:center;padding:20px}.pmbox{border-radius:32px}}
+@media(max-width:560px){.pmgrid{grid-template-columns:1fr 1fr;gap:8px}.pmgrid div{padding:12px;font-size:14px}}
+
 </style>
 
 <div class="topbar"><div class="wrap"><button class="hrs" id="hrs" type="button" aria-expanded="false" aria-controls="hpop"><span class="live" id="hlive"></span><b id="hst">Open now</b><span id="hsd">· Mon–Fri 6:30 am – 6:00 pm</span><span class="chev">▾</span></button><span class="mid">Child care &amp; early learning · The Colony &amp; Lewisville, TX</span><a class="tbk" href="/school-demo/book-a-tour.html">📅 Book a tour →</a>
@@ -339,9 +370,9 @@ html,body{overflow-x:clip}
 <main id="top">
 <section class="herofull" style="padding:0"><div class="slides"><div class="slide on" style="background-image:url(https://images.unsplash.com/photo-1533222535026-754c501569dd?auto=format&fit=crop&w=1800&q=75)"></div><div class="slide" style="background-image:url(https://images.unsplash.com/photo-1761208663763-c4d30657c910?auto=format&fit=crop&w=1800&q=75)"></div><div class="slide" style="background-image:url(https://images.unsplash.com/photo-1786292949404-084cbd10c7b1?auto=format&fit=crop&w=1800&q=75)"></div></div><div class="hero-bg"></div><span class="star" style="left:46%;top:16%;font-size:34px">★</span><span class="star" style="left:8%;bottom:30%;font-size:22px;animation-delay:-3s">★</span><span class="star" style="right:6%;top:10%;font-size:26px;animation-delay:-5s">★</span><span class="spark" style="width:220px;height:220px;left:6%;top:12%"></span><span class="spark" style="width:160px;height:160px;right:30%;bottom:18%;animation-delay:-3s"></span><div class="wrap hero">
   <div>
-    <span class="tag" data-en="Now enrolling · ages 6 weeks to 12 years" data-es="Inscripciones abiertas · de 6 semanas a 12 años">Now enrolling · ages 6 weeks to 12 years</span>
+    <span class="tag" data-en="25+ years · ages 6 weeks to 12 years" data-es="Inscripciones abiertas · de 6 semanas a 12 años">25+ years · ages 6 weeks to 12 years</span>
     <h1 data-en="Where little learners shine." data-es="Donde los pequeños brillan.">Where little learners shine.</h1>
-    <p data-en="[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]" data-es="[Una frase sobre su enfoque: aprendizaje a través del juego, grupos pequeños y maestras que conocen a cada niño por su nombre.]">[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]</p>
+    <p data-en="More than 25+ years of high-quality early learning in The Colony and Lewisville, Texas, where a child who struggles one week is thriving the next." data-es="[Una frase sobre su enfoque: aprendizaje a través del juego, grupos pequeños y maestras que conocen a cada niño por su nombre.]">More than 25+ years of high-quality early learning in The Colony and Lewisville, Texas, where a child who struggles one week is thriving the next.</p>
     <div class="cta">
       <a class="btn btn-main" href="/school-demo/book-a-tour.html" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
       <a class="btn btn-line" href="/school-demo/programs.html" data-en="See programs" data-es="Ver programas">See programs</a>
@@ -358,8 +389,8 @@ html,body{overflow-x:clip}
   <div><b>5 programs</b><span>Ages 6 weeks to 12 years</span></div>
 </div></div>
 
-<div class="tick"><div class="marq"><div class="track"><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span></div></div></div>
-<section id="nums" style="padding-bottom:20px"><div class="wrap"><div class="eyebrow">By the numbers</div><h2>Families trust us</h2><div class="nums"><div class="num"><b data-to="15" data-suf="+">0</b><span>Years caring for families</span></div><div class="num"><b data-to="500" data-suf="+">0</b><span>Families served</span></div><div class="num"><b data-to="100" data-suf="%">0</b><span>Background-checked staff</span></div><div class="num"><b data-to="5.0" data-dec="1">0</b><span>Average parent rating</span></div></div><div class="sample">Sample figures. Replace with the school's real numbers.</div></div></section>
+<div class="tick"><div class="marq"><div class="track"><span>25+ years of experience</span><span>10 schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span><span>25+ years of experience</span><span>10 schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span></div></div></div>
+<section id="nums" style="padding-bottom:20px"><div class="wrap"><div class="eyebrow">By the numbers</div><h2>Experience you can trust</h2><div class="nums"><div class="num"><b data-to="25" data-suf="+">0</b><span>Years of early-education experience</span></div><div class="num"><b data-to="10" data-suf="">0</b><span>Schools led by our owner</span></div><div class="num"><b data-to="100" data-suf="%">0</b><span>Background-checked staff</span></div><div class="num"><b data-to="5.0" data-dec="1">0</b><span>Average parent rating</span></div></div><div class="sample">Sample figures. Replace with the school's real numbers.</div></div></section>
 <section id="programs"><div class="wrap">
   <div class="eyebrow" data-en="Programs" data-es="Programas">Programs</div>
   <h2 data-en="The right classroom for every age" data-es="El aula adecuada para cada edad">The right classroom for every age</h2>
@@ -391,7 +422,7 @@ html,body{overflow-x:clip}
 
 <section style="padding-top:0"><div class="wrap">
   <div class="eyebrow" data-en="Parent reviews" data-es="Opiniones de padres">Parent reviews</div>
-  <h2 data-en="Loved by families" data-es="Queridos por las familias">Loved by families</h2>
+  <h2 data-en="What makes us different" data-es="Queridos por las familias">What makes us different</h2>
   <div class="revw">
     <div class="revsum"><div class="big">5.0</div><div class="stars">★★★★★</div><div style="font-weight:700">Based on 120+ parent reviews</div>
       <div class="bar"><span>5★</span><i><b style="--w:94%"></b></i><span>94%</span></div><div class="bar"><span>4★</span><i><b style="--w:5%"></b></i><span>5%</span></div><div class="bar"><span>3★</span><i><b style="--w:1%"></b></i><span>1%</span></div>
@@ -582,6 +613,29 @@ function close(){l.classList.remove('open');b.setAttribute('aria-expanded','fals
 b.onclick=function(e){e.stopPropagation();var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)};
 document.addEventListener('click',function(e){if(!l.contains(e.target)&&e.target!==b)close()});
 l.addEventListener('click',close);
+})();
+</script>
+<div class="pm" id="pm" role="dialog" aria-modal="true"><div class="pmbox"><div class="pmimg" id="pmimg"><button class="pmx" id="pmx" type="button" aria-label="Close">✕</button></div><div class="pmin"><h3 id="pmt"></h3><div class="tag2" id="pmtag"></div><div class="pmgrid" id="pmg"></div><div class="pmstat"><span>Ages 6 weeks – 12 years</span><span>The Colony · Lewisville, TX</span><span>Mon–Fri 6:30 – 6:00</span></div><div class="pmcta"><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour</a><a class="btn btn-line" id="pml" href="/school-demo/programs.html" style="color:#0B2545;border-color:#CFE0F5">See programs</a><a class="btn btn-line" href="tel:+19403145437" style="color:#0B2545;border-color:#CFE0F5">Call (940) 314-5437</a></div></div></div></div>
+<script>
+(function(){
+var D=[
+{t:'Play',tag:'Children learn best through exploration and meaningful play.',img:'1533222535026-754c501569dd',link:'/school-demo/programs-toddlers.html',
+ b:[['🎨','Imaginative play and art expression every day'],['🧩','Hands-on activities that build strong foundations'],['🌈','A sensory room for calm, curious exploring'],['🤝','Friendships that start in the first years']]},
+{t:'Learn',tag:'Cultural curriculum and kindergarten readiness.',img:'1761208663763-c4d30657c910',link:'/school-demo/programs-pre-k.html',
+ b:[['📚','Pre-K / Primary for ages 3 to 5'],['🌍','Cultural development built into the curriculum'],['✏️','Art, early reading and math, ready for kindergarten'],['🚽','Transition program that bridges toddlers to Pre-K']]},
+{t:'Grow',tag:'Trust, consistency, independence and confidence.',img:'1786292949404-084cbd10c7b1',link:'/school-demo/programs-school-age.html',
+ b:[['💛','Experienced, compassionate caregivers'],['🌱','Personalized care from infants to age 12'],['🎒','School-age programs: new skills and friendships'],['📲','Parents stay connected through the Parent Portal']]}];
+var chips=document.querySelector('.chips'),card=document.createElement('div');card.className='hcard';if(chips)chips.appendChild(card);
+var cur=0;
+function draw(i){cur=i;var d=D[i];card.style.animation='none';void card.offsetWidth;card.style.animation='';card.innerHTML='<h3>'+d.t+'</h3><div class="sub">'+d.tag+'</div><ul>'+d.b.map(function(x){return'<li><i>'+x[0]+'</i><span>'+x[1]+'</span></li>'}).join('')+'</ul><button class="more2" type="button">Tell me more →</button>';card.querySelector('.more2').onclick=function(){op(i)}}
+var pm=document.getElementById('pm');
+function op(i){var d=D[i];document.getElementById('pmt').textContent=d.t;document.getElementById('pmtag').textContent=d.tag;document.getElementById('pmimg').style.backgroundImage='url(https://images.unsplash.com/photo-'+d.img+'?auto=format&fit=crop&w=1200&q=75)';document.getElementById('pmg').innerHTML=d.b.map(function(x){return'<div><i>'+x[0]+'</i>'+x[1]+'</div>'}).join('');document.getElementById('pml').href=d.link;pm.classList.add('open')}
+function cl(){pm.classList.remove('open')}
+document.getElementById('pmx').onclick=cl;pm.onclick=function(e){if(e.target===pm)cl()};document.addEventListener('keydown',function(e){if(e.key==='Escape')cl()});
+var ds=[].slice.call(document.querySelectorAll('.hd'));
+ds.forEach(function(b,i){b.addEventListener('click',function(){draw(i);setTimeout(function(){op(i)},350)})});
+new MutationObserver(function(){var i=ds.findIndex(function(d){return d.classList.contains('on')});if(i>-1&&i!==cur)draw(i)}).observe(document.querySelector('.hdots'),{attributes:true,subtree:true,attributeFilter:['class']});
+draw(0);
 })();
 </script>
 </body></html>

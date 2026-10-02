@@ -1,0 +1,8 @@
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#0B2545; --muted:#4A5F7A; --line:#E1ECF7;
+  --brand:#0A63F5; --brand-ink:#FFFFFF; --sun:#FFC933; --sun-ink:#0B2545; --coral:#FF6B57;
+  --mint:linear-gradient(135deg,#C9F4E4,#EAFBF4); --sky:linear-gradient(135deg,#CFE6FF,#EAF4FF);
+  --blush:linear-gradient(135deg,#FFD9E4,#FFF0F4); --butter:linear-gradient(135deg,#FFE9A8,#FFF6D6);
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
+}
