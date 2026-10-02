@@ -40,3 +40,7 @@ html,body{overflow-x:clip}
  .quick a::after{display:none!important}
  .links a.xtra{background:#fff;border:2px solid #E1ECF7;font-size:16px;padding:13px 20px!important}
 }
+.links a.xtra{display:none!important}
+@media(min-width:1101px){.nav .wrap{flex-wrap:nowrap!important}.links{gap:20px!important;flex-wrap:nowrap}.links a{white-space:nowrap}}
+@media(max-width:1100px){.links a.xtra{display:block!important}}
+@media(min-width:1101px){.links a[href$="index.html"]{display:none}.links{gap:16px!important;font-size:15.5px}.logo{font-size:23px!important}}

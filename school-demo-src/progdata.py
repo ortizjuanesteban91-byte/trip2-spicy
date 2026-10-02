@@ -1,0 +1,22 @@
+CITY="The Colony and Lewisville, Texas"
+P=[
+{"k":"inf","slug":"infants","name":"Infants","ages":"6 weeks to 18 months","img":"1786292949404-084cbd10c7b1","head":"Nurturing care, safe beginnings",
+ "p":["Choosing infant care is one of the most important decisions a family makes. Our infant program in The Colony and Lewisville, Texas welcomes babies from 6 weeks to 18 months into a loving, secure environment, where experienced and compassionate caregivers build trust through consistent, personalized care.",
+      "Every day follows the rhythm of each baby: feeding, rest, cuddles, tummy time, music and gentle sensory play. Parents stay connected and informed, so you can head to work knowing your baby is safe, comforted and learning from the very first weeks."],
+ "b":["Loving, secure environment from 6 weeks","Experienced, compassionate caregivers","Personalized care that follows each baby","Gentle sensory play, music and tummy time"]},
+{"k":"tod","slug":"toddlers","name":"Toddlers","ages":"15 to 36 months","img":"1763310225230-6e15b125935a","head":"Exploring, playing, growing",
+ "p":["Hands-on learning is essential for building a strong foundation. In our toddler program in The Colony and Lewisville, TX, children from 15 to 36 months touch, build, pretend and discover, which is exactly how this age learns best.",
+      "Through imaginative play, art, stories and a sensory room, toddlers grow their language, coordination and curiosity while making their first friendships. Trust and consistency from the same caring teachers help every child feel safe enough to try something new."],
+ "b":["Hands-on learning for a strong foundation","Imaginative play, art and stories","Sensory room for calm, curious exploring","First friendships and growing independence"]},
+{"k":"trans","slug":"transition","name":"Transition and Potty Training","ages":"Toddler to Pre-K","img":"1770096679916-2cd9c720d400","head":"Confidence, one step at a time",
+ "p":["Our transition program bridges the gap between the toddler room and Pre-K for families in The Colony and Lewisville, TX. It is built for the moment your child is ready for more independence, including potty training, new routines and longer focus.",
+      "Teachers work in step with parents so children hear the same encouragement at school and at home. Small wins, patience and consistency turn a big milestone into a proud one, and children arrive in Pre-K confident and ready."],
+ "b":["Bridge from toddler to Pre-K","Potty training in partnership with parents","Routines that build independence","Patient, consistent encouragement"]},
+{"k":"pre","slug":"pre-k","name":"Preschool and Pre-K","ages":"3 to 5 years","img":"1788882681164-dbb55962857d","head":"Cultural curriculum and kindergarten readiness",
+ "p":["Our Pre-K and Primary program in The Colony and Lewisville, TX gives children ages 3 to 5 a cultural curriculum that opens their eyes to the wider world while preparing them for kindergarten.",
+      "Learning is hands-on and joyful: art expression, imaginative play, early reading and numbers, and plenty of exploration. Children build the social skills, focus and confidence they need to walk into kindergarten ready to learn and excited to go."],
+ "b":["Cultural development built into the curriculum","Art expression and imaginative play","Hands-on, kindergarten-ready learning","Confidence, focus and social skills"]},
+{"k":"sch","slug":"school-age","name":"School Age","ages":"6 to 12 years","img":"1547496614-d145e2fa88ed","head":"Learn, create, explore",
+ "p":["Our school-age programs in The Colony and Lewisville, Texas are designed for children ages 6 to 12 who are ready to explore their interests and develop new skills in a supportive space.",
+      "Children build meaningful friendships, take on creative projects and grow into confident, independent learners, with caring teachers who know them by name and celebrate every step forward."],
+ "b":["Explore interests and develop new skills","Meaningful friendships","Creative projects and hands-on activities","Confident, independent learners"]}]
