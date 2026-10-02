@@ -92,7 +92,7 @@ export default async function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1fr_1.05fr]">
           <div className="relative" data-aos="fade-right">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-300 to-green-800 shadow-2xl ring-1 ring-white/20 md:rotate-[-2deg]">
-              {bigPhoto("montana-redonda-atv-miches") && <img src={bigPhoto("montana-redonda-atv-miches")} alt="ATV adventure in Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
+              <img src="https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/a" alt="Aerial view of Miches, Dominican Republic" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
               <p className="absolute bottom-4 left-4 text-xs font-black tracking-[.2em] text-white/90">MONTAÑA REDONDA · EMERALD COAST</p>
             </div>
