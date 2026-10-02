@@ -12,6 +12,7 @@ export default function TransferBox({ wa }) {
   const one = v.prices[d.zone];
   const legs = d.trip === "Round trip" ? 2 : 1;
   const total = one == null ? null : one * legs;
+  const pick = (x) => { const n = Math.max(1, Math.min(59, x)); setD((p) => ({ ...p, pax: n, vehicle: n <= 5 ? "suv" : n <= 10 ? "van" : n <= 20 ? "minibus" : "bus" })); };
   const ok1 = d.hotel && d.date && d.time;
   async function send(e) {
     e.preventDefault(); setState("sending");
@@ -37,7 +38,11 @@ export default function TransferBox({ wa }) {
         <button type="button" disabled={!ok1} onClick={() => setStep(2)} className="rounded-full bg-brand py-3.5 font-extrabold text-white disabled:opacity-40">Next: choose vehicle</button>
       </div>}
       {step === 2 && <div className="grid gap-4">
-        <label className="grid gap-1 text-sm font-bold">How many guests?<input type="number" min="1" max="59" value={d.pax} onChange={(e) => { const n = Math.max(1, Math.min(59, Number(e.target.value) || 1)); setD({ ...d, pax: n, vehicle: n <= 5 ? "suv" : n <= 10 ? "van" : n <= 20 ? "minibus" : "bus" }); }} className={inp} /></label>
+        <div className="grid gap-2"><p className="text-sm font-bold">How many guests?</p>
+          <div className="grid grid-cols-4 gap-2">{[1, 2, 3, 4, 5, 6, 7, 8].map((n) => <button type="button" key={n} onClick={() => pick(n)} className={`rounded-xl border py-3 text-lg font-black transition active:scale-95 ${d.pax === n ? "border-brand bg-brand text-white shadow" : "border-[#d9dee5] bg-white text-ink"}`}>{n}</button>)}</div>
+          <div className="flex items-center justify-between gap-3 rounded-xl border border-[#d9dee5] bg-white p-2"><span className="pl-2 text-sm font-bold text-ink/70">More than 8? Type or tap</span>
+            <div className="flex items-center gap-1"><button type="button" onClick={() => pick(d.pax - 1)} aria-label="Fewer guests" className="grid h-10 w-10 place-items-center rounded-full bg-sky-100 text-xl font-black text-brand">−</button><input type="number" inputMode="numeric" min="1" max="59" value={d.pax} onFocus={(e) => e.target.select()} onChange={(e) => pick(Number(e.target.value) || 1)} aria-label="Number of guests" className="h-10 w-14 rounded-xl border border-sky-200 text-center text-base font-black" /><button type="button" onClick={() => pick(d.pax + 1)} aria-label="More guests" className="grid h-10 w-10 place-items-center rounded-full bg-brand text-xl font-black text-white">+</button></div></div>
+        </div>
         <div className="grid gap-2">{VEHICLES.map((x) => { const p = x.prices[d.zone]; return <button type="button" key={x.id} onClick={() => setD({ ...d, vehicle: x.id })} className={`flex items-center justify-between rounded-xl border p-4 text-left ${d.vehicle === x.id ? "border-brand bg-sky-50" : "border-[#d9dee5]"}`}><span><b>{x.name}</b><br /><span className="text-xs text-[#667085]">{x.seats} · {x.bags}</span></span><b className="text-brand">{p == null ? "Price on request" : `$${p * legs}`}</b></button>; })}</div>
         <div className="flex gap-3"><button type="button" onClick={() => setStep(1)} className="rounded-full border border-[#d9dee5] px-6 py-3.5 font-extrabold">Back</button><button type="button" onClick={() => setStep(3)} className="flex-1 rounded-full bg-brand py-3.5 font-extrabold text-white">Next: your details</button></div>
       </div>}
