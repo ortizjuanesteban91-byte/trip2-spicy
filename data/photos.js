@@ -38,7 +38,13 @@ const P = {
 };
 // Home page header picture (TEMPORARY, change here or send the final photo).
 export const HERO = "catamaran-party-boat";
-export const photo = (slug) => (P[slug] ? B + P[slug] : null);
+// REAL photos on Cloudinary (cloud o3hobtr4). Add a tour slug here with its Cloudinary public IDs (file names, no extension). First one is the cover.
+const CL = "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto";
+const GALLERY = {
+  "saona-island": ["f64f3515-5222-4fda-9f67-3b068e13611c", "Saona_Eco_Adventure_21", "image00003", "eb95bc4e-d1f5-49cc-9c61-32560f221a88", "image00017", "Saona_Eco_Adventure_57", "image00016", "edc3ef5b-5850-4d61-b1e0-f22d724efd64", "eca0ab27-24b5-41c4-aa16-42dbb4b71331"],
+};
+export const gallery = (slug, w = 1400) => (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
+export const photo = (slug) => (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
 
 // Combo tours show a strip of photos (one per part of the combo), like the Speedboat combo. Each panel uses the photo of that tour,
 // so when real photos are uploaded the strip updates by itself.

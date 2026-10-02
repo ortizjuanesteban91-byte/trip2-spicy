@@ -1,3 +1,4 @@
+import { gallery } from "@/data/photos";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { tours as baseTours, grad, catOf, CATS } from "@/lib/content";
@@ -20,7 +21,7 @@ export default async function Tour({ params }) {
   const t = await getTour((await params).slug);
   if (!t) notFound();
   const i = baseTours.findIndex((x) => x.slug === t.slug);
-  const ph = t.photos || [];
+  const ph = t.photos || gallery(t.slug) || [];
   const { wa } = await getSite();
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
