@@ -7,6 +7,7 @@ import { PERSONAS } from "@/lib/personas";
 const hello = (n) => `Hi, I'm ${n} from Trip2! Ask me anything about our tours, or tell me what you'd like to book and we'll sort it out right here. ¡Hola! También hablo español.`;
 const CHIPS = ["Book a tour", "What's popular?", "Reservar en español"];
 const KEY = "t2chat";
+const getSid = () => { try { let s = sessionStorage.getItem(KEY + "sid"); if (!s) { s = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); sessionStorage.setItem(KEY + "sid", s); } return s; } catch { return ""; } };
 const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?])/;
 function Bubble({ m }) {
   const parts = m.content.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\s*[*-]\s+/gm, "• ").split(urlRe); // show plain text, no stray asterisks
@@ -44,7 +45,7 @@ export default function ChatWidget() {
     const next = [...msgs, { role: "user", content }];
     setMsgs(next); setText(""); setBusy(true);
     try {
-      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: next, persona: who.name }) });
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: next, persona: who.name, sid: getSid() }) });
       const j = await r.json().catch(() => ({}));
       setMsgs([...next, { role: "assistant", content: j.ok ? j.reply : `Sorry, I can't answer right now. Please message our team on WhatsApp: ${whatsapp}` }]);
     } catch { setMsgs([...next, { role: "assistant", content: `Connection problem. You can reach our team on WhatsApp: ${whatsapp}` }]); }

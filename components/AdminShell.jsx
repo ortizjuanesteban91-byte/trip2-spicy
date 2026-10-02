@@ -12,7 +12,7 @@ export default function AdminShell({ items, user, role, children }) {
   const Menu = (
     <nav className="grid gap-1" aria-label="Admin menu">
       {items.map(([k, label, href, icon]) => (
-        <Link key={k} href={href} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-[15px] font-bold transition ${on(href) ? "bg-white text-[#0d1626]" : "text-[#d7dee7] hover:bg-white/10"}`}>
+        <Link key={href} href={href} className={`flex items-center gap-3 rounded-xl px-4 py-3 text-[15px] font-bold transition ${on(href) ? "bg-white text-[#0d1626]" : "text-[#d7dee7] hover:bg-white/10"}`}>
           <span className="w-6 text-center text-lg" aria-hidden="true">{icon}</span>{label}
         </Link>
       ))}
