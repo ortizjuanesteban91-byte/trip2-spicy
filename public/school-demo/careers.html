@@ -286,4 +286,23 @@ document.addEventListener('click',function(e){if(!l.contains(e.target)&&e.target
 l.addEventListener('click',close);
 })();
 </script>
-</body></html>
+<script>
+(function(){
+var HINT='<p style="margin:0;font-size:14px;opacity:.8">Phone number and email are required so we can confirm with you.</p>';
+document.querySelectorAll('form').forEach(function(f){
+ var b=f.querySelector('button[type=submit]');if(b&&!f.querySelector('.reqhint'))b.insertAdjacentHTML('beforebegin',HINT.replace('<p','<p class="reqhint"'));
+ f.addEventListener('submit',function(e){
+  e.preventDefault();e.stopImmediatePropagation();
+  var bad=[],box=f.querySelector('.ok');if(!box){box=document.createElement('div');box.className='ok';f.appendChild(box)}
+  [].forEach.call(f.querySelectorAll('input,select,textarea'),function(i){
+   var v=(i.value||'').trim(),err=false;
+   if(i.required&&!v)err=true;
+   if(v&&i.type==='tel'&&v.replace(/\D/g,'').length<10)err=true;
+   if(v&&i.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v))err=true;
+   i.style.borderColor=err?'#FF6B57':'';i.setAttribute('aria-invalid',err);if(err)bad.push(i)});
+  box.hidden=false;
+  if(bad.length){box.style.background='var(--blush)';box.textContent='Please check the highlighted fields. A valid phone number (10 digits) and email are required.';bad[0].focus()}
+  else{box.style.background='var(--mint)';box.textContent='Thank you! This is a design preview, so nothing was sent. On the live site this goes straight to the school.';f.reset()}
+ },true)})
+})();
+</script></body></html>

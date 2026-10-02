@@ -389,8 +389,8 @@ html,body{overflow-x:clip}
   <div><b>5 programs</b><span>Ages 6 weeks to 12 years</span></div>
 </div></div>
 
-<div class="tick"><div class="marq"><div class="track"><span>25+ years of experience</span><span>10 schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span><span>25+ years of experience</span><span>10 schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span></div></div></div>
-<section id="nums" style="padding-bottom:20px"><div class="wrap"><div class="eyebrow">By the numbers</div><h2>Experience you can trust</h2><div class="nums"><div class="num"><b data-to="25" data-suf="+">0</b><span>Years of early-education experience</span></div><div class="num"><b data-to="10" data-suf="">0</b><span>Schools led by our owner</span></div><div class="num"><b data-to="100" data-suf="%">0</b><span>Background-checked staff</span></div><div class="num"><b data-to="5.0" data-dec="1">0</b><span>Average parent rating</span></div></div><div class="sample">Sample figures. Replace with the school's real numbers.</div></div></section>
+<div class="tick"><div class="marq"><div class="track"><span>25+ years of experience</span><span>6+ schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span><span>25+ years of experience</span><span>6+ schools, one standard of quality</span><span>Play-based learning</span><span>Sensory room</span><span>Cultural curriculum</span><span>Daily parent updates</span><span>Small groups</span><span>Open 6:30 – 6:00</span><span>Healthy meals</span><span>Caring teachers</span></div></div></div>
+<section id="nums" style="padding-bottom:20px"><div class="wrap"><div class="eyebrow">By the numbers</div><h2>Experience you can trust</h2><div class="nums"><div class="num"><b data-to="25" data-suf="+">0</b><span>Years of early-education experience</span></div><div class="num"><b data-to="6" data-suf="+">0</b><span>Schools led by our owner</span></div><div class="num"><b data-to="100" data-suf="%">0</b><span>Background-checked staff</span></div><div class="num"><b data-to="5.0" data-dec="1">0</b><span>Average parent rating</span></div></div><div class="sample">Sample figures. Replace with the school's real numbers.</div></div></section>
 <section id="programs"><div class="wrap">
   <div class="eyebrow" data-en="Programs" data-es="Programas">Programs</div>
   <h2 data-en="The right classroom for every age" data-es="El aula adecuada para cada edad">The right classroom for every age</h2>
@@ -451,7 +451,7 @@ html,body{overflow-x:clip}
     </div>
     <form id="tourForm" novalidate>
       <label for="pn"><span data-en="Parent name" data-es="Nombre del padre o madre">Parent name</span><input id="pn" autocomplete="name" required></label>
-      <label for="pc"><span data-en="Phone or email" data-es="Teléfono o correo">Phone or email</span><input id="pc" autocomplete="tel" required></label>
+      <label for="pc"><span>Phone number (required)</span><input id="pc" type="tel" inputmode="tel" autocomplete="tel" placeholder="(940) 555-0123" required></label><label for="pe"><span>Email (required)</span><input id="pe" type="email" inputmode="email" autocomplete="email" placeholder="name@email.com" required></label>
       <label for="ca"><span data-en="Child's age" data-es="Edad del niño">Child's age</span>
         <select id="ca" required><option value="">—</option><option>6 weeks to 18 months</option><option>15 to 36 months</option><option>3 to 5 years</option><option>6 to 12 years</option></select></label>
       <button class="btn btn-main" type="submit" data-en="Request a tour" data-es="Solicitar visita">Request a tour</button>
@@ -638,4 +638,23 @@ new MutationObserver(function(){var i=ds.findIndex(function(d){return d.classLis
 draw(0);
 })();
 </script>
-</body></html>
+<script>
+(function(){
+var HINT='<p style="margin:0;font-size:14px;opacity:.8">Phone number and email are required so we can confirm with you.</p>';
+document.querySelectorAll('form').forEach(function(f){
+ var b=f.querySelector('button[type=submit]');if(b&&!f.querySelector('.reqhint'))b.insertAdjacentHTML('beforebegin',HINT.replace('<p','<p class="reqhint"'));
+ f.addEventListener('submit',function(e){
+  e.preventDefault();e.stopImmediatePropagation();
+  var bad=[],box=f.querySelector('.ok');if(!box){box=document.createElement('div');box.className='ok';f.appendChild(box)}
+  [].forEach.call(f.querySelectorAll('input,select,textarea'),function(i){
+   var v=(i.value||'').trim(),err=false;
+   if(i.required&&!v)err=true;
+   if(v&&i.type==='tel'&&v.replace(/\D/g,'').length<10)err=true;
+   if(v&&i.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(v))err=true;
+   i.style.borderColor=err?'#FF6B57':'';i.setAttribute('aria-invalid',err);if(err)bad.push(i)});
+  box.hidden=false;
+  if(bad.length){box.style.background='var(--blush)';box.textContent='Please check the highlighted fields. A valid phone number (10 digits) and email are required.';bad[0].focus()}
+  else{box.style.background='var(--mint)';box.textContent='Thank you! This is a design preview, so nothing was sent. On the live site this goes straight to the school.';f.reset()}
+ },true)})
+})();
+</script></body></html>
