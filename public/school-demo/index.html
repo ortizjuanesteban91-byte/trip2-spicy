@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Little Stars Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: sticky nav, split hero, trust strip, tabbed programs, day timeline, reviews, FAQ, tour form. Warm classroom palette on a cool ground. */
+:root{
+  --bg:#F6F8FB; --surface:#FFFFFF; --ink:#12302F; --muted:#4B6361; --line:#DCE4EA;
+  --brand:#0E5A57; --brand-ink:#FFFFFF; --sun:#F5B700; --sun-ink:#12302F;
+  --coral:#E8573C; --mint:#D7F0E6; --sky:#DCEBFA; --blush:#FFE3DA; --butter:#FFF1BF;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C1A1A; --surface:#13262A; --ink:#EAF4F2; --muted:#A5BDBA; --line:#24403F;
+  --brand:#5CD1C6; --brand-ink:#0C1A1A; --sun:#F5B700; --sun-ink:#12302F;
+  --coral:#FF8A72; --mint:#17403D; --sky:#17324A; --blush:#442A27; --butter:#43391A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1A1A; --surface:#13262A; --ink:#EAF4F2; --muted:#A5BDBA; --line:#24403F;
+  --brand:#5CD1C6; --brand-ink:#0C1A1A; --sun:#F5B700; --sun-ink:#12302F;
+  --coral:#FF8A72; --mint:#17403D; --sky:#17324A; --blush:#442A27; --butter:#43391A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 17px var(--body);padding:15px 26px;border-radius:14px;text-decoration:none;text-align:center}
+.btn-main{background:var(--brand);color:var(--brand-ink)}
+.btn-sun{background:var(--sun);color:var(--sun-ink)}
+.btn-line{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:13px 24px}
+.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border-radius:24px;font-weight:600;font-size:15px;color:var(--ink)}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.logo{font:800 24px var(--display);display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--sun);display:inline-block;position:relative}
+.links{display:flex;gap:22px;align-items:center;font-weight:600}
+.links a{text-decoration:none}
+.tools{display:flex;gap:8px;align-items:center}
+.pill{border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;font:700 14px var(--body);padding:7px 14px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:56px 40px}
+.tag{display:inline-block;background:var(--butter);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.hero h1{font-size:clamp(40px,6.2vw,76px);margin:18px 0;font-weight:800}
+.hero p{font-size:20px;color:var(--muted);max-width:520px;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.collage .ph:nth-child(1){grid-row:span 2;background:var(--mint)}
+.collage .ph:nth-child(2){background:var(--sky)}
+.collage .ph:nth-child(3){background:var(--blush)}
+/* trust */
+.trust{background:var(--brand);color:var(--brand-ink)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-block:26px}
+.trust b{display:block;font:800 26px var(--display)}
+.trust span{font-size:15px;opacity:.9}
+/* sections */
+section{padding-block:72px}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+h2{font-size:clamp(30px,4.2vw,48px);margin-top:8px;font-weight:800}
+.lede{color:var(--muted);max-width:600px;margin:12px 0 0}
+/* programs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 18px}
+.tab{border:2px solid var(--line);background:var(--surface);color:var(--ink);font:700 16px var(--body);padding:11px 18px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:28px}
+.panel h3{font-size:34px;font-weight:800}
+.age{display:inline-block;margin:10px 0 14px;background:var(--sky);padding:5px 14px;border-radius:999px;font-weight:700;font-size:15px}
+.panel ul{margin:16px 0 0;padding-left:20px;display:grid;gap:8px}
+.panel .ph{min-height:260px}
+/* day */
+.day{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:32px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px}
+.step time{font:800 20px var(--display);color:var(--brand);display:block}
+.step b{display:block;margin:4px 0 2px}
+.step span{font-size:15px;color:var(--muted)}
+/* why */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:32px}
+.why .ph{height:200px}
+.why h3{font-size:26px;margin:16px 0 6px}
+.why p{margin:0;color:var(--muted)}
+/* reviews */
+.rev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.rev blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:700}
+/* faq */
+.faq{margin-top:28px;display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 20px}
+.faq summary{cursor:pointer;font-weight:700;padding:14px 0}
+.faq p{margin:0 0 16px;color:var(--muted)}
+/* tour */
+.tour{background:var(--sun);color:var(--sun-ink);border-radius:36px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.tour h2{margin:0 0 12px}
+.tour .info{font-weight:600;line-height:1.9}
+form{background:var(--surface);color:var(--ink);border-radius:24px;padding:24px;display:grid;gap:14px}
+label{font-weight:700;font-size:15px;display:grid;gap:6px}
+input,select{font:500 17px var(--body);padding:13px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.ok{background:var(--mint);color:var(--ink);padding:18px;border-radius:16px;font-weight:700}
+footer{padding-block:32px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  .links a{display:none}
+  .hero,.panel,.tour{grid-template-columns:minmax(0,1fr)}
+  .collage{grid-template-rows:150px 150px}
+  .trust .wrap,.day{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .why,.rev{grid-template-columns:minmax(0,1fr)}
+  .tour{padding:24px}
+  section{padding-block:48px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top"><i aria-hidden="true"></i><span>Little Stars Academy</span></a>
+  <nav class="links" aria-label="Main">
+    <a href="#programs" data-en="Programs" data-es="Programas">Programs</a>
+    <a href="#day" data-en="A day here" data-es="Un día aquí">A day here</a>
+    <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+    <a href="#tour" class="btn btn-sun" style="padding:10px 20px" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
+  </nav>
+  <div class="tools">
+    <button class="pill" id="lang" type="button" aria-pressed="false" aria-label="Switch language">EN / ES</button>
+  </div>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <span class="tag" data-en="Now enrolling · ages 6 weeks to 12 years" data-es="Inscripciones abiertas · de 6 semanas a 12 años">Now enrolling · ages 6 weeks to 12 years</span>
+    <h1 data-en="Where little learners shine." data-es="Donde los pequeños brillan.">Where little learners shine.</h1>
+    <p data-en="[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]" data-es="[Una frase sobre su enfoque: aprendizaje a través del juego, grupos pequeños y maestras que conocen a cada niño por su nombre.]">[One sentence about your approach: play-based learning, small groups and teachers who know every child by name.]</p>
+    <div class="cta">
+      <a class="btn btn-main" href="#tour" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
+      <a class="btn btn-line" href="#programs" data-en="See programs" data-es="Ver programas">See programs</a>
+    </div>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <div class="ph">[Photo: children in the classroom]</div>
+    <div class="ph">[Photo: outdoor play]</div>
+    <div class="ph">[Photo: art time]</div>
+  </div>
+</div>
+
+<div class="trust"><div class="wrap">
+  <div><b>[License #]</b><span data-en="State licensed" data-es="Licencia estatal">State licensed</span></div>
+  <div><b>[00] : 1</b><span data-en="Children per teacher" data-es="Niños por maestra">Children per teacher</span></div>
+  <div><b>6:30 – 6:00</b><span data-en="Open Monday to Friday" data-es="Abierto de lunes a viernes">Open Monday to Friday</span></div>
+  <div><b>EN · ES</b><span data-en="Bilingual classrooms" data-es="Aulas bilingües">Bilingual classrooms</span></div>
+</div></div>
+
+<section id="programs"><div class="wrap">
+  <div class="eyebrow" data-en="Programs" data-es="Programas">Programs</div>
+  <h2 data-en="The right classroom for every age" data-es="El aula adecuada para cada edad">The right classroom for every age</h2>
+  <div class="tabs" role="tablist" aria-label="Programs by age" id="tabs"></div>
+  <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</div></section>
+
+<section id="day" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow" data-en="A day here" data-es="Un día aquí">A day here</div>
+  <h2 data-en="A predictable rhythm children feel safe in" data-es="Un ritmo predecible donde los niños se sienten seguros">A predictable rhythm children feel safe in</h2>
+  <div class="day">
+    <div class="step"><time>6:30</time><b data-en="Arrival" data-es="Llegada">Arrival</b><span data-en="Warm greeting, free play" data-es="Saludo cálido, juego libre">Warm greeting, free play</span></div>
+    <div class="step"><time>8:30</time><b data-en="Breakfast and circle" data-es="Desayuno y círculo">Breakfast and circle</b><span data-en="Songs, stories, the day plan" data-es="Canciones, cuentos, plan del día">Songs, stories, the day plan</span></div>
+    <div class="step"><time>9:30</time><b data-en="Learning centers" data-es="Centros de aprendizaje">Learning centers</b><span data-en="Hands-on activities by age" data-es="Actividades prácticas por edad">Hands-on activities by age</span></div>
+    <div class="step"><time>12:00</time><b data-en="Lunch and rest" data-es="Almuerzo y descanso">Lunch and rest</b><span data-en="Nap or quiet time" data-es="Siesta o tiempo tranquilo">Nap or quiet time</span></div>
+    <div class="step"><time>3:00</time><b data-en="Play and pickup" data-es="Juego y salida">Play and pickup</b><span data-en="Outdoor play, daily report" data-es="Juego al aire libre, informe diario">Outdoor play, daily report</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow" data-en="Why families choose us" data-es="Por qué nos eligen">Why families choose us</div>
+  <h2 data-en="Care you can see" data-es="Un cuidado que se nota">Care you can see</h2>
+  <div class="why">
+    <div><div class="ph" style="background:var(--mint)">[Photo: teacher reading]</div><h3 data-en="Learning through play" data-es="Aprender jugando">Learning through play</h3><p data-en="[Two lines about your teaching approach.]" data-es="[Dos líneas sobre su enfoque educativo.]">[Two lines about your teaching approach.]</p></div>
+    <div><div class="ph" style="background:var(--sky)">[Photo: safe classroom]</div><h3 data-en="Safe and secure" data-es="Seguro y protegido">Safe and secure</h3><p data-en="[Licensing, ratios, secure entry, background-checked staff.]" data-es="[Licencia, proporciones, entrada segura, personal verificado.]">[Licensing, ratios, secure entry, background-checked staff.]</p></div>
+    <div><div class="ph" style="background:var(--blush)">[Photo: parent pickup]</div><h3 data-en="Parents in the loop" data-es="Padres siempre informados">Parents in the loop</h3><p data-en="[Daily updates and photos through your parent app.]" data-es="[Actualizaciones y fotos diarias por la app para padres.]">[Daily updates and photos through your parent app.]</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="eyebrow" data-en="Parent reviews" data-es="Opiniones de padres">Parent reviews</div>
+  <h2 data-en="What parents say" data-es="Lo que dicen los padres">What parents say</h2>
+  <div class="rev">
+    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
+    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
+    <blockquote>“[Real parent review goes here.]”<cite>[Parent name]</cite></blockquote>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">FAQ</div>
+  <h2 data-en="Questions parents ask first" data-es="Lo primero que preguntan los padres">Questions parents ask first</h2>
+  <div class="faq">
+    <details open><summary data-en="How much does it cost?" data-es="¿Cuánto cuesta?">How much does it cost?</summary><p data-en="[Tuition by age group, registration fee, sibling discount.]" data-es="[Mensualidad por edad, cuota de inscripción, descuento por hermanos.]">[Tuition by age group, registration fee, sibling discount.]</p></details>
+    <details><summary data-en="What are your hours?" data-es="¿Cuál es el horario?">What are your hours?</summary><p data-en="Monday to Friday, 6:30 am to 6:00 pm. [Holiday calendar.]" data-es="De lunes a viernes, 6:30 am a 6:00 pm. [Calendario de feriados.]">Monday to Friday, 6:30 am to 6:00 pm. [Holiday calendar.]</p></details>
+    <details><summary data-en="Is the school licensed?" data-es="¿La escuela tiene licencia?">Is the school licensed?</summary><p data-en="Yes. [License number, inspection reports, ratios.]" data-es="Sí. [Número de licencia, informes de inspección, proporciones.]">Yes. [License number, inspection reports, ratios.]</p></details>
+    <details><summary data-en="How do I enroll?" data-es="¿Cómo inscribo a mi hijo?">How do I enroll?</summary><p data-en="Book a tour, meet the team, then complete a short enrollment form. We confirm your start date within one day." data-es="Reserve una visita, conozca al equipo y complete un formulario breve. Confirmamos la fecha de inicio en un día.">Book a tour, meet the team, then complete a short enrollment form. We confirm your start date within one day.</p></details>
+  </div>
+</div></section>
+
+<section id="tour" style="padding-top:0"><div class="wrap">
+  <div class="tour">
+    <div>
+      <h2 data-en="Come see us in person." data-es="Venga a conocernos.">Come see us in person.</h2>
+      <p data-en="Tours take 20 minutes. We show you the classrooms and answer every question." data-es="Las visitas duran 20 minutos. Le mostramos las aulas y respondemos todas sus preguntas.">Tours take 20 minutes. We show you the classrooms and answer every question.</p>
+      <div class="info">[Street address]<br>[Phone number]<br><span data-en="Monday to Friday, 6:30 am to 6:00 pm" data-es="Lunes a viernes, 6:30 am a 6:00 pm">Monday to Friday, 6:30 am to 6:00 pm</span></div>
+    </div>
+    <form id="tourForm" novalidate>
+      <label for="pn"><span data-en="Parent name" data-es="Nombre del padre o madre">Parent name</span><input id="pn" autocomplete="name" required></label>
+      <label for="pc"><span data-en="Phone or email" data-es="Teléfono o correo">Phone or email</span><input id="pc" autocomplete="tel" required></label>
+      <label for="ca"><span data-en="Child's age" data-es="Edad del niño">Child's age</span>
+        <select id="ca" required><option value="">—</option><option>6 weeks to 18 months</option><option>15 to 36 months</option><option>3 to 5 years</option><option>6 to 12 years</option></select></label>
+      <button class="btn btn-main" type="submit" data-en="Request a tour" data-es="Solicitar visita">Request a tour</button>
+      <div class="ok" id="ok" hidden data-en="Thank you. This is a design preview, so nothing was sent. On the live site this goes straight to the school's inbox." data-es="Gracias. Esto es una vista previa, así que no se envió nada. En el sitio real llega directo al correo de la escuela.">Thank you. This is a design preview, so nothing was sent. On the live site this goes straight to the school's inbox.</div>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span>Privacy · Terms</span></div></footer>
+
+<script>
+var lang = 'en';
+var PROGRAMS = [
+  {k:'inf', en:'Infants', es:'Bebés', age:{en:'6 weeks to 18 months',es:'6 semanas a 18 meses'}, c:'var(--mint)',
+   d:{en:'Gentle, responsive care in a calm room, with a routine that follows each baby\'s own schedule.',es:'Cuidado suave y atento en un espacio tranquilo, con una rutina que sigue el ritmo de cada bebé.'},
+   l:{en:['Feeding and sleep on each baby\'s schedule','Tummy time, music and sensory play','Daily report for parents'],es:['Alimentación y sueño según cada bebé','Tiempo boca abajo, música y juego sensorial','Informe diario para los padres']}},
+  {k:'tod', en:'Toddlers', es:'Maternal', age:{en:'15 to 36 months',es:'15 a 36 meses'}, c:'var(--sky)',
+   d:{en:'First words, first friends and a lot of safe exploring. Potty training support included.',es:'Primeras palabras, primeros amigos y mucha exploración segura. Incluye apoyo para dejar el pañal.'},
+   l:{en:['Language through songs and stories','Art, building and outdoor play','Potty training with parents'],es:['Lenguaje con canciones y cuentos','Arte, construcción y juego al aire libre','Control de esfínteres junto a los padres']}},
+  {k:'pre', en:'Preschool and Pre-K', es:'Preescolar y Pre-K', age:{en:'3 to 5 years',es:'3 a 5 años'}, c:'var(--blush)',
+   d:{en:'Letters, numbers and the confidence to start kindergarten ready to learn.',es:'Letras, números y la confianza para empezar kínder listos para aprender.'},
+   l:{en:['Early reading and math','Science and art projects','Kindergarten readiness checks'],es:['Lectura y matemáticas iniciales','Proyectos de ciencia y arte','Evaluaciones de preparación para kínder']}},
+  {k:'sch', en:'School age', es:'Edad escolar', age:{en:'6 to 12 years',es:'6 a 12 años'}, c:'var(--butter)',
+   d:{en:'After-school care with homework help, clubs and a full summer camp.',es:'Cuidado después de la escuela con ayuda con tareas, clubes y campamento de verano.'},
+   l:{en:['Homework help every day','Clubs: art, sports, coding','Summer camp, week by week'],es:['Ayuda con tareas todos los días','Clubes: arte, deportes, programación','Campamento de verano por semanas']}}
+];
+var sel = 0;
+function renderPrograms(){
+  var tabs = document.getElementById('tabs'); tabs.innerHTML = '';
+  PROGRAMS.forEach(function(p,i){
+    var b = document.createElement('button'); b.className='tab'; b.type='button'; b.id='t'+i;
+    b.setAttribute('role','tab'); b.setAttribute('aria-selected', i===sel ? 'true':'false');
+    b.textContent = p[lang]; b.onclick = function(){ sel=i; renderPrograms(); };
+    tabs.appendChild(b);
+  });
+  var p = PROGRAMS[sel];
+  var panel = document.getElementById('panel');
+  panel.setAttribute('aria-labelledby','t'+sel);
+  panel.innerHTML = '<div><h3>'+p[lang]+'</h3><span class="age">'+p.age[lang]+'</span><p>'+p.d[lang]+'</p><ul>'+p.l[lang].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><p style="margin-top:20px"><a class="btn btn-main" href="#tour">'+(lang==='en'?'Book a tour':'Reservar visita')+'</a></p></div><div class="ph" style="background:'+p.c+'">'+(lang==='en'?'[Photo: ':'[Foto: ')+p[lang]+']</div>';
+}
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-en]').forEach(function(el){ el.textContent = el.getAttribute('data-'+lang); });
+  document.getElementById('lang').setAttribute('aria-pressed', lang==='es' ? 'true':'false');
+  renderPrograms();
+}
+document.getElementById('lang').onclick = function(){ lang = lang==='en' ? 'es':'en'; applyLang(); };
+document.getElementById('tourForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = ['pn','pc','ca'].every(function(id){ return document.getElementById(id).value.trim(); });
+  var box = document.getElementById('ok');
+  box.hidden = false;
+  if(!ok){ box.style.background='var(--blush)'; box.textContent = lang==='en' ? 'Please fill in all three fields.' : 'Complete los tres campos.'; }
+  else { box.style.background='var(--mint)'; box.textContent = box.getAttribute('data-'+lang); }
+});
+renderPrograms();
+</script>
+
+</body></html>
