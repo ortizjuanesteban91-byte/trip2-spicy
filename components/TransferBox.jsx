@@ -21,7 +21,7 @@ export default function TransferBox({ wa }) {
       setState(r.ok ? "done" : "error");
     } catch { setState("error"); }
   }
-  if (state === "done") return <div className="rounded-2xl bg-white p-8 text-center shadow"><p className="text-3xl">✅</p><p className="mt-2 text-xl font-black text-brand">Request received</p><p className="mt-2 text-[#667085]">We will confirm your driver{total == null ? " and price" : ""} on WhatsApp or email shortly.</p><a href={wa} className="mt-4 inline-block rounded-full bg-brand px-6 py-3 font-extrabold text-white">Chat on WhatsApp</a></div>;
+  if (state === "done") return <div className="rounded-2xl bg-white p-8 text-center shadow"><p className="text-3xl">✅</p><p className="mt-2 text-xl font-black text-brand">Request received</p><p className="mt-2 text-[#667085]">We will confirm your driver{total == null ? " and price" : ""} on WhatsApp or email shortly.</p><a href={wa} className="mt-4 inline-block rounded-full bg-brand px-6 py-3 font-extrabold text-white">Chat on WhatsApp</a><p className="mt-6 border-t border-sky-100 pt-5 font-extrabold text-brand">While you are here: make the most of your trip</p><div className="mt-3 flex flex-wrap justify-center gap-2 text-sm font-bold">{[["Saona Island", "/tour/saona-island"], ["All excursions", "/tours"], ["Best-selling adventures", "/tours/adventure-safari"]].map(([a, h]) => <a key={h} href={h} className="rounded-full bg-sky-50 px-4 py-2 text-brand ring-1 ring-sky-200">{a}</a>)}</div></div>;
   const dot = (n, t) => <div className={`flex items-center gap-2 text-sm font-extrabold ${step >= n ? "text-brand" : "text-[#98a2b3]"}`}><span className={`grid h-7 w-7 place-items-center rounded-full ${step >= n ? "bg-brand text-white" : "bg-[#eef2f6]"}`}>{n}</span>{t}</div>;
   return (
     <form onSubmit={send} className="rounded-2xl bg-white p-5 shadow-lg sm:p-7">
@@ -45,9 +45,9 @@ export default function TransferBox({ wa }) {
         <div className="rounded-xl bg-sky-50 p-4 text-sm"><b>{d.trip}</b> · {d.hotel}<br />{d.date} at {d.time} · {d.pax} guest{d.pax > 1 ? "s" : ""} · {v.name}<br /><b className="text-brand">{total == null ? "Price confirmed on WhatsApp within minutes" : `Total $${total}`}</b></div>
         <input required value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} placeholder="Full name *" className={inp} />
         <input required value={f.phone} onChange={(e) => setF({ ...f, phone: e.target.value })} placeholder="WhatsApp / phone *" className={inp} />
-        <input type="email" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} placeholder="Email" className={inp} />
+        <input type="email" required value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} placeholder="Email *" className={inp} />
         {state === "error" && <p className="text-sm font-bold text-red-600">Something went wrong. Please message us on WhatsApp.</p>}
-        <div className="flex gap-3"><button type="button" onClick={() => setStep(2)} className="rounded-full border border-[#d9dee5] px-6 py-3.5 font-extrabold">Back</button><button disabled={state === "sending" || !f.name || !f.phone} className="flex-1 rounded-full bg-brand py-3.5 font-extrabold text-white disabled:opacity-40">{state === "sending" ? "Sending…" : "Request my transfer"}</button></div>
+        <div className="flex gap-3"><button type="button" onClick={() => setStep(2)} className="rounded-full border border-[#d9dee5] px-6 py-3.5 font-extrabold">Back</button><button disabled={state === "sending" || !f.name || !f.phone || !f.email} className="flex-1 rounded-full bg-brand py-3.5 font-extrabold text-white disabled:opacity-40">{state === "sending" ? "Sending…" : "Request my transfer"}</button></div>
       </div>}
     </form>
   );

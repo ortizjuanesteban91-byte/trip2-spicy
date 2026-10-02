@@ -24,7 +24,7 @@ export default async function Home() {
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
           <h1 className="mt-5 text-5xl font-black leading-[1.05] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/90">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3"><Btn href="/tours">EXPLORE EXCURSIONS →</Btn><Btn href="#featured" ghost>BOOK YOUR ADVENTURE</Btn></div>
+          <div className="mt-7 flex flex-wrap justify-center gap-3"><Btn href="/airport-transfer">AIRPORT TRANSFERS →</Btn><Btn href="/tours" ghost>EXPLORE EXCURSIONS</Btn></div>
           <form action="/tours" className="mx-auto mt-10 flex max-w-3xl flex-col gap-3 rounded-2xl bg-white p-3 text-left text-ink shadow-xl sm:flex-row">
             <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-[#a97c1f]">FIND YOUR TOUR</span><input name="q" placeholder="Search tours, islands, adventures" className="w-full bg-transparent py-1 text-sm outline-none" /></label>
             <button className="rounded-xl bg-brand px-8 py-3 text-sm font-bold text-white hover:bg-brand-hover">Find Tours</button>

@@ -19,8 +19,8 @@ export default async function NewHome() {
           <h1 className="max-w-3xl text-5xl font-black leading-[1.02] tracking-tight md:text-7xl">Your best day in Punta Cana starts here.</h1>
           <p className="mt-5 max-w-xl text-lg text-white/85">Island days, jungle rides and private transfers. Pick it, pay securely, and a local team handles the rest.</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/tours" className="rounded-full bg-[#dcb14e] px-7 py-3.5 text-sm font-extrabold text-[#07161b] shadow-lg transition hover:-translate-y-0.5">Explore excursions</Link>
-            <Link href="/airport-transfer" className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-extrabold backdrop-blur transition hover:bg-white/20">Book an airport transfer</Link>
+            <Link href="/airport-transfer" className="rounded-full bg-[#dcb14e] px-7 py-3.5 text-sm font-extrabold text-[#07161b] shadow-lg transition hover:-translate-y-0.5">Book an airport transfer</Link>
+            <Link href="/tours" className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-extrabold backdrop-blur transition hover:bg-white/20">Explore excursions</Link>
           </div>
           <div className="mt-10 grid max-w-3xl grid-cols-3 gap-3 text-center text-xs font-bold sm:text-sm">
             {[["24h", "Free cancellation"], ["Visa · MC · Amex", "Secure checkout"], ["Hotel pickup", "Round trip included"]].map(([a, b]) => <div key={b} className="rounded-2xl border border-white/15 bg-white/10 px-3 py-4 backdrop-blur"><p className="text-base font-black sm:text-xl">{a}</p><p className="text-white/70">{b}</p></div>)}
