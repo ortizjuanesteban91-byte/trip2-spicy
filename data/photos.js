@@ -406,7 +406,9 @@ export const gallery = (slug, w = 1400) => {
   const out = []; for (let k = 0; out.length < 12 && parts.some((p) => k < p.length); k++) for (const p of parts) if (k < p.length && out.length < 12) out.push(p[k]);
   return out;
 };
-export const photo = (slug) => LOCAL[slug] ? LOCAL[slug][0] : (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
+// Card/thumbnail photo chosen by hand (overrides the first gallery photo). Add a slug here to change its card picture.
+const CARDPIC = { "saona-island": "image00017" };
+export const photo = (slug) => CARDPIC[slug] ? `${CL},w_700,h_500,c_fill/${CARDPIC[slug]}` : LOCAL[slug] ? LOCAL[slug][0] : (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
 
 // Combo tours show a strip of photos (one per part of the combo), like the Speedboat combo. Each panel uses the photo of that tour,
 // so when real photos are uploaded the strip updates by itself.
