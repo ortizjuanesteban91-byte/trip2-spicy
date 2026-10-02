@@ -1,3 +1,4 @@
+import ChatOpen from "@/components/ChatOpen";
 import { gallery } from "@/data/photos";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -53,7 +54,7 @@ export default async function Tour({ params }) {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur lg:hidden">
         <div className="mx-auto flex max-w-xl items-center gap-2.5">
           <div className="min-w-0 pl-2 leading-tight"><p className="text-[10px] font-bold uppercase tracking-widest text-ink/50">From</p><p className="whitespace-nowrap text-xl font-black text-brand">${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)}<span className="text-xs font-bold text-ink/60"> /person</span></p></div>
-          <a href="#book-m" className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white shadow-md transition active:scale-95"><Zap className="h-4 w-4" />BOOK NOW</a>
+          <div className="ml-auto flex items-center gap-2"><ChatOpen /><a href="#book-m" className="flex shrink-0 items-center gap-1 rounded-full bg-brand px-4 py-2.5 text-xs font-extrabold text-white shadow-md transition active:scale-95"><Zap className="h-3.5 w-3.5" />BOOK NOW</a></div>
         </div>
       </div>
     <style>{"@media(max-width:1023px){#hdr-book{display:none!important}}"}</style>
