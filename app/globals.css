@@ -22,10 +22,10 @@ body { position: relative; width: 100%; }
 @keyframes t2shake{0%,100%{transform:translateX(0)}15%{transform:translateX(-9px)}30%{transform:translateX(8px)}45%{transform:translateX(-6px)}60%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
 .t2-shake{animation:t2shake .45s ease}
 input:user-invalid,select:user-invalid{border-color:#f59e0b!important;background:#fffbeb!important}
-@keyframes ctaGold{0%,100%{box-shadow:0 0 0 0 rgba(255,200,60,0),0 10px 25px rgba(0,0,0,.25);transform:scale(1)}50%{box-shadow:0 0 0 8px rgba(255,200,60,.35),0 0 38px 10px rgba(255,200,60,.65);transform:scale(1.05)}}
-@keyframes ctaGreen{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,0),0 10px 25px rgba(0,0,0,.25);transform:scale(1)}50%{box-shadow:0 0 0 8px rgba(52,211,153,.35),0 0 38px 10px rgba(52,211,153,.65);transform:scale(1.05)}}
-@keyframes ctaWhite{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0);transform:scale(1)}50%{box-shadow:0 0 0 6px rgba(255,255,255,.3),0 0 30px 8px rgba(255,255,255,.55);transform:scale(1.04)}}
-.cta-glow-gold{animation:ctaGold 1.3s ease-in-out 3}
-.cta-glow-green{animation:ctaGreen 1.3s ease-in-out 3}
-.cta-glow-white{animation:ctaWhite 1.3s ease-in-out 3}
+@keyframes ctaGold{0%,100%{box-shadow:0 0 0 0 rgba(255,200,60,0);transform:scale(1)}50%{box-shadow:0 0 14px 2px rgba(255,200,60,.38);transform:scale(1.015)}}
+@keyframes ctaGreen{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,0);transform:scale(1)}50%{box-shadow:0 0 14px 2px rgba(52,211,153,.38);transform:scale(1.015)}}
+@keyframes ctaWhite{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,0);transform:scale(1)}50%{box-shadow:0 0 12px 2px rgba(255,255,255,.28);transform:scale(1.015)}}
+.cta-glow-gold{animation:ctaGold 1.8s ease-in-out 2}
+.cta-glow-green{animation:ctaGreen 1.8s ease-in-out 2}
+.cta-glow-white{animation:ctaWhite 1.8s ease-in-out 2}
 @media (prefers-reduced-motion:reduce){.cta-glow-gold,.cta-glow-green,.cta-glow-white{animation:none}}
