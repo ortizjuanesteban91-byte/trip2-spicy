@@ -91,8 +91,8 @@ export default async function Home() {
         <div className="absolute -left-24 bottom-0 -z-10 h-80 w-80 rounded-full bg-emerald-500/20 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1fr_1.05fr]">
           <div className="relative" data-aos="fade-right">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-300 to-green-800 shadow-2xl ring-1 ring-white/20 md:rotate-[-2deg]">
-              <img src="https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/a" alt="Aerial view of Miches, Dominican Republic" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-300 to-green-800 shadow-2xl ring-1 ring-white/20 md:rotate-[-2deg]">
+              <img src="https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/a" alt="Aerial view of Miches, Dominican Republic" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[35%_50%]" />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
               <p className="absolute bottom-4 left-4 text-xs font-black tracking-[.2em] text-white/90">MONTAÑA REDONDA · EMERALD COAST</p>
             </div>
