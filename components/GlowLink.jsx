@@ -8,7 +8,7 @@ export default function GlowLink({ className = "", glow = "gold", children, ...p
   useEffect(() => {
     const el = ref.current;
     if (!el || typeof IntersectionObserver === "undefined") return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }, { threshold: 0.9 });
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }, { threshold: 0.4 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
