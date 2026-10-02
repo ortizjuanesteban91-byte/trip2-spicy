@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getSession, can, firstArea, fetchLeads } from "@/lib/admin";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Admin | Trip2 Spicy", robots: { index: false, follow: false } };
-const KIND = { booking: "Booking", contact: "Contact", enquiry: "Enquiry" };
+const KIND = { booking: "Booking", contact: "Contact", enquiry: "Enquiry", transfer: "Transfer" };
 const wa = (p) => `https://wa.me/${String(p || "").replace(/\D/g, "")}`;
 export default async function Admin({ searchParams }) {
   const { e } = await searchParams;
