@@ -47,11 +47,11 @@ export default function BookingBox({ tour, wa }) {
       </div>
       <div className="p-4">
         <div className="grid gap-3 rounded-3xl border border-sky-200 bg-sky-50 p-4">
-          <div className={field}><Ic><CalendarDays className="h-5 w-5" /></Ic><input name="date" type="date" required min={today} value={date} onChange={(e) => setDate(e.target.value)} className={sel + " pr-4"} />{!date && <span className="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-[15px] text-ink/50">Select date*</span>}</div>
+          <div className={field}><Ic><CalendarDays className="h-5 w-5" /></Ic><input name="date" type="date" required min={today} value={date} onChange={(e) => setDate(e.target.value)} onClick={(e) => { try { e.currentTarget.showPicker?.(); } catch {} }} className={sel + " pr-4" + (!date ? " text-transparent [&::-webkit-datetime-edit]:opacity-0" : "")} />{!date && <span className="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-[15px] text-ink/50">Select date*</span>}</div>
           {date && <p className={`-mt-1 px-1 text-sm font-extrabold ${closed ? "text-amber-700" : "text-brand"}`}>📅 {new Date(date + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}{closed ? " · closed this day" : ""}</p>}
           <div className={opts.length > 1 ? "grid grid-cols-2 gap-3" : "grid gap-3"}>
             {opts.map((o, i) => (
-              <div key={i} className={field}><Ic><Users className="h-5 w-5" /></Ic>
+              <div key={i} className={field + (opts.length > 1 && opts.length % 2 === 1 && i === opts.length - 1 ? " col-span-2" : "")}><Ic><Users className="h-5 w-5" /></Ic>
                 <select value={q[i] || 0} onChange={(e) => setQ((s) => ({ ...s, [i]: Number(e.target.value) }))} className={sel + " text-sm"} aria-label={o.label}>
                   <option value={0}>{o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")}</option>
                   {Array.from({ length: 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(px(o))}</option>)}
