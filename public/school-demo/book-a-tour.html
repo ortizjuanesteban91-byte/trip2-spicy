@@ -2,22 +2,14 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Book a tour | Little Stars Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-/* Layout: sticky nav, split hero, trust strip, tabbed programs, day timeline, reviews, FAQ, tour form. Warm classroom palette on a cool ground. */
-:root{
-  --bg:#F6F8FB; --surface:#FFFFFF; --ink:#12302F; --muted:#4B6361; --line:#DCE4EA;
-  --brand:#0E5A57; --brand-ink:#FFFFFF; --sun:#F5B700; --sun-ink:#12302F;
-  --coral:#E8573C; --mint:#D7F0E6; --sky:#DCEBFA; --blush:#FFE3DA; --butter:#FFF1BF;
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"><style>:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#0B2545; --muted:#4A5F7A; --line:#E1ECF7;
+  --brand:#0A63F5; --brand-ink:#FFFFFF; --sun:#FFC933; --sun-ink:#0B2545; --coral:#FF6B57;
+  --mint:linear-gradient(135deg,#C9F4E4,#EAFBF4); --sky:linear-gradient(135deg,#CFE6FF,#EAF4FF);
+  --blush:linear-gradient(135deg,#FFD9E4,#FFF0F4); --butter:linear-gradient(135deg,#FFE9A8,#FFF6D6);
   --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'Figtree',system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0C1A1A; --surface:#13262A; --ink:#EAF4F2; --muted:#A5BDBA; --line:#24403F;
-  --brand:#5CD1C6; --brand-ink:#0C1A1A; --sun:#F5B700; --sun-ink:#12302F;
-  --coral:#FF8A72; --mint:#17403D; --sky:#17324A; --blush:#442A27; --butter:#43391A; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0C1A1A; --surface:#13262A; --ink:#EAF4F2; --muted:#A5BDBA; --line:#24403F;
-  --brand:#5CD1C6; --brand-ink:#0C1A1A; --sun:#F5B700; --sun-ink:#12302F;
-  --coral:#FF8A72; --mint:#17403D; --sky:#17324A; --blush:#442A27; --butter:#43391A; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
 h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
@@ -108,6 +100,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   section{padding-block:48px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),radial-gradient(700px 420px at -5% 6%,#FFEFB8,transparent 70%),radial-gradient(600px 400px at 60% 40%,#FFE0EA66,transparent 70%)}
+.trust{background:linear-gradient(90deg,#0A63F5,#0A74E6)}
+.band{background:linear-gradient(120deg,#FFC933,#FFE08A)}
+.tour{background:linear-gradient(120deg,#FFC933,#FFD966 60%,#FFE9A8)}
+.ph{background-size:cover;background-position:center;box-shadow:0 10px 30px rgba(10,99,245,.10)}
+.card,.panel,.step,.rev blockquote,.faq details{box-shadow:0 6px 22px rgba(11,37,69,.06)}
+.card{transition:transform .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,99,245,.16)}
+.btn{transition:transform .2s ease,filter .2s ease}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero>div{animation:up .8s ease both}.hero>div:nth-child(2){animation-delay:.15s}
+@supports (animation-timeline:view()){section .wrap>*,.band{animation:up linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
 .sub{padding-block:56px 24px}.sub h1{font-size:clamp(36px,5vw,60px);font-weight:800;margin:10px 0 14px}
 .crumbs{font-size:14px;color:var(--muted)}.crumbs a{color:var(--brand)}
