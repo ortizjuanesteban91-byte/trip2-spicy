@@ -398,7 +398,14 @@ const GALLERY_X = {
  ]
 };
 Object.assign(GALLERY, GALLERY_X);
-export const gallery = (slug, w = 1400) => LOCAL[slug] ? LOCAL[slug] : (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
+const own = (slug, w) => LOCAL[slug] ? LOCAL[slug] : (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
+// Combo tours (no photos of their own) borrow photos from their parts, interleaved so every part shows up in the first four.
+export const gallery = (slug, w = 1400) => {
+  const g = own(slug, w); if (g) return g;
+  const parts = (COMBO[slug] || []).map((s) => own(s, w)).filter(Boolean); if (!parts.length) return null;
+  const out = []; for (let k = 0; out.length < 12 && parts.some((p) => k < p.length); k++) for (const p of parts) if (k < p.length && out.length < 12) out.push(p[k]);
+  return out;
+};
 export const photo = (slug) => LOCAL[slug] ? LOCAL[slug][0] : (GALLERY[slug] ? `${CL},w_700,h_500,c_fill/${GALLERY[slug][0]}` : P[slug] ? B + P[slug] : null);
 
 // Combo tours show a strip of photos (one per part of the combo), like the Speedboat combo. Each panel uses the photo of that tour,

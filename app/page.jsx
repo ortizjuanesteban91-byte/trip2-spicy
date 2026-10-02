@@ -18,12 +18,12 @@ export default async function Home() {
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        {photo(HERO) && <img src={(gallery(HERO, 2000) || [])[0] || photo(HERO)} alt="Punta Cana excursions" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/50" />
+        {<img src="/tours/parasail-03.webp" alt="Turquoise Caribbean water in Punta Cana" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/60" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
-          <h1 className="mt-5 text-5xl font-black leading-[1.05] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg text-white/90">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
+          <h1 className="mt-5 text-5xl font-black leading-[1.05] text-white [text-shadow:0_2px_4px_rgba(0,0,0,.55),0_6px_28px_rgba(0,0,0,.6)] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
+          <p className="mx-auto mt-5 max-w-xl text-lg font-semibold text-white [text-shadow:0_1px_3px_rgba(0,0,0,.7),0_4px_18px_rgba(0,0,0,.55)]">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3"><Btn href="/airport-transfer">AIRPORT TRANSFERS →</Btn><Btn href="/tours" ghost>EXPLORE EXCURSIONS</Btn></div>
           <form action="/tours" className="mx-auto mt-10 flex max-w-3xl flex-col gap-3 rounded-2xl bg-white p-3 text-left text-ink shadow-xl sm:flex-row">
             <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-[#a97c1f]">FIND YOUR TOUR</span><input name="q" placeholder="Search tours, islands, adventures" className="w-full bg-transparent py-1 text-sm outline-none" /></label>

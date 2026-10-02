@@ -7,6 +7,7 @@ import { SITE } from "@/lib/site";
 import { getSite } from "@/lib/siteconf";
 import BookingBox from "@/components/BookingBox";
 import Sections from "@/components/Sections";
+import TourGallery from "@/components/TourGallery";
 import { Clock, Users, Car, Languages } from "@/components/Icon";
 import { Zap } from "lucide-react";
 export const revalidate = 60;
@@ -34,11 +35,7 @@ export default async function Tour({ params }) {
         <p className="flex flex-wrap items-center gap-3 text-xs font-bold text-ink/70"><span className="rounded-full bg-sky-100 px-3 py-1 uppercase tracking-wide">{catName}</span><span>{t.breadcrumb.startsWith("Home › Miches") ? "Miches" : "Punta Cana"}, Dominican Republic</span></p>
         <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight text-ink sm:text-5xl" data-aos="zoom-out-left">{t.h1}</h1>
         <a href="#book" className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3.5 text-sm font-extrabold text-white shadow-lg hover:bg-brand-hover"><Zap className="h-4 w-4" />BOOK NOW</a>
-        <div className="mt-8 grid gap-3 sm:grid-cols-4 sm:grid-rows-2" data-aos="zoom-in">
-          {[["h-64 sm:col-span-2 sm:row-span-2 sm:h-auto", 0, t.alts[0] || t.h1], ["h-32 sm:col-span-2", 1, t.alts[1] || t.h1], ["h-32", 2, t.h1], ["h-32", 3, t.h1]].map(([c, k, alt]) => (
-            <div key={k} className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${c} ${grad(i + k)}`} role="img" aria-label={alt}>{ph[k] && <img src={ph[k]} alt={alt} loading={k ? "lazy" : "eager"} className="absolute inset-0 h-full w-full object-cover" />}</div>
-          ))}
-        </div>
+        <TourGallery photos={ph} alts={t.alts || []} title={t.h1} grads={[grad(i), grad(i + 1)]} />
         <div className="mt-8 grid gap-10 pb-16 lg:grid-cols-[1fr_380px]">
           <div className="min-w-0">
             <div className="grid grid-cols-2 gap-5 rounded-3xl border border-sky-100 bg-ice p-5 sm:grid-cols-4" data-aos="zoom-out-right">
