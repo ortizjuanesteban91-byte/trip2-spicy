@@ -49,8 +49,8 @@ export default function ChatWidget() {
   return (
     <>
       {!open && (
-        <button onClick={() => setOpen(true)} aria-label="Chat and book" className={`fixed right-4 z-[45] flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-extrabold text-white shadow-xl ring-2 ring-amber-300 ${onTour ? "bottom-24 lg:bottom-5" : "bottom-5"}`}>
-          <MessageCircle className="h-5 w-5" /> Chat &amp; book
+        <button onClick={() => setOpen(true)} aria-label="Chat and book" className={`fixed right-3 z-[45] grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-lg ring-1 ring-white/70 sm:right-4 sm:flex sm:h-auto sm:w-auto sm:items-center sm:gap-2 sm:px-4 sm:py-3 sm:text-sm sm:font-extrabold sm:ring-2 sm:ring-amber-300 ${onTour ? "bottom-[5.9rem] lg:bottom-5" : "bottom-5"}`}>
+          <MessageCircle className="h-5 w-5" /><span className="hidden sm:inline">Chat &amp; book</span>
         </button>
       )}
       {open && (
