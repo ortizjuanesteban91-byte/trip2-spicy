@@ -36,8 +36,8 @@ export default function BookingBox({ tour, wa }) {
     let el, msg;
     if (closed) { msg = "We are closed that day. Please pick another date."; el = form.elements.date; }
     else if (!form.elements.date.value) { msg = "Please choose your date."; el = form.elements.date; }
-    else if (!lines.length) { msg = "Please choose how many guests."; el = form.querySelector("select[aria-label]"); }
-    else if (tooFew) { msg = "Minimum 2 people on this tour."; el = form.querySelector("select[aria-label]"); }
+    else if (!lines.length) { msg = "Please choose how many guests."; el = form.querySelector("[data-qty]"); }
+    else if (tooFew) { msg = "Minimum 2 people on this tour."; el = form.querySelector("[data-qty]"); }
     else { el = form.querySelector(":invalid"); msg = "Please fill: " + (el?.getAttribute("placeholder") || el?.getAttribute("name") || "the highlighted field").replace(/\*|\*$/g, "").trim(); }
     setHint(msg);
     el?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -68,14 +68,17 @@ export default function BookingBox({ tour, wa }) {
         <div className="grid gap-3 rounded-3xl border border-sky-200 bg-sky-50 p-4">
           <div className={field}><Ic><CalendarDays className="h-5 w-5" /></Ic><input name="date" type="date" required min={today} value={date} onChange={(e) => setDate(e.target.value)} onClick={(e) => { try { e.currentTarget.showPicker?.(); } catch {} }} className={sel + " pr-4" + (!date ? " text-transparent [&::-webkit-datetime-edit]:opacity-0" : "")} />{!date && <span className="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-[15px] text-ink/50">Select date*</span>}</div>
           {date && <p className={`-mt-1 px-1 text-sm font-extrabold ${closed ? "text-amber-700" : "text-brand"}`}>📅 {new Date(date + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}{closed ? " · closed this day" : ""}</p>}
-          <div className={opts.length > 1 ? "grid grid-cols-2 gap-3" : "grid gap-3"}>
-            {opts.map((o, i) => (
-              <div key={i} className={field + (opts.length > 1 && opts.length % 2 === 1 && i === opts.length - 1 ? " col-span-2" : "")}><Ic><Users className="h-5 w-5" /></Ic>
-                <select value={q[i] || 0} onChange={(e) => setQ((s) => ({ ...s, [i]: Number(e.target.value) }))} className={sel + " text-sm"} aria-label={o.label}>
-                  <option value={0}>{o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")}</option>
-                  {Array.from({ length: px(o) === 0 ? 5 : 20 }, (_, n) => n + 1).map((n) => <option key={n} value={n}>{n} × {o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, "")} · {money(px(o))}</option>)}
-                </select><Chev /></div>
-            ))}
+          <div data-qty className="grid gap-2">
+            {opts.map((o, i) => { const n = q[i] || 0, nm = o.label.replace(/\s*\(.*$/, "").replace(/,.*$/, ""), set = (v) => setQ((s) => ({ ...s, [i]: Math.max(0, Math.min(99, v)) }));
+              return (
+              <div key={i} className={`flex items-center justify-between gap-2 rounded-2xl border bg-white px-3 py-2.5 ${n ? "border-brand ring-1 ring-brand/30" : "border-sky-200"}`}>
+                <div className="min-w-0 leading-tight"><p className="truncate text-sm font-extrabold text-ink">{nm}</p><p className="text-xs font-bold text-ink/55">{money(px(o))}</p></div>
+                <div className="flex shrink-0 items-center gap-1" aria-label={o.label}>
+                  <button type="button" onClick={() => set(n - 1)} disabled={!n} aria-label={`Fewer ${nm}`} className="grid h-10 w-10 place-items-center rounded-full bg-sky-100 text-xl font-black text-brand disabled:opacity-30">−</button>
+                  <input type="number" inputMode="numeric" min={0} max={99} value={n} onChange={(e) => set(parseInt(e.target.value, 10) || 0)} onFocus={(e) => e.target.select()} aria-label={`${nm} quantity`} className="h-10 w-12 rounded-xl border border-sky-200 bg-white text-center text-base font-black text-ink [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none" />
+                  <button type="button" onClick={() => set(n + 1)} aria-label={`More ${nm}`} className="grid h-10 w-10 place-items-center rounded-full bg-brand text-xl font-black text-white">+</button>
+                </div>
+              </div>); })}
           </div>
           <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>{miches ? "Morning (7AM)" : "Morning"}</option><option>{miches ? "Afternoon (1PM)" : "Afternoon"}</option></select><Chev /></div>
           <div className={field}><Ic><BedDouble className="h-5 w-5" /></Ic><select name="hotel" required value={hotel} onChange={(e) => setHotel(e.target.value)} className={sel}><option value="" disabled>Hotels*</option>
