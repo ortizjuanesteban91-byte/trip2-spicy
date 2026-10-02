@@ -53,7 +53,7 @@ export default function ChatWidget() {
   return (
     <>
       {!open && (
-        <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
+        <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "bottom-[5.9rem] lg:bottom-5" : "bottom-5"}`}>
           {tip && (
             <div className="relative max-w-[230px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100">
               <button onClick={hideTip} aria-label="Close" className="absolute right-1.5 top-1 text-base leading-none text-ink/40">×</button>

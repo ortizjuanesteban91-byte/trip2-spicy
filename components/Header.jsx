@@ -12,7 +12,7 @@ export default async function Header() {
         </nav>
         <div className="flex items-center gap-2">
           <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#25D366] px-3 py-2.5 text-xs font-extrabold text-white shadow-sm sm:px-4">WhatsApp</a>
-          <Link href="/tours" className="rounded-full bg-brand px-4 py-2.5 text-xs sm:px-5 font-extrabold tracking-wide text-white shadow hover:bg-brand-hover">BOOK NOW</Link>
+          <Link id="hdr-book" href="/tours" className="rounded-full bg-brand px-4 py-2.5 text-xs sm:px-5 font-extrabold tracking-wide text-white shadow hover:bg-brand-hover">BOOK NOW</Link>
         </div>
       </div>
     </header>
