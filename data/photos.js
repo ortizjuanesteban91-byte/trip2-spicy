@@ -424,3 +424,6 @@ const COMBO = {
   "montana-redonda-horseback-riding-zipline-miches": ["montana-redonda-miches", "horseback-riding-miches", "zipline-punta-cana"],
 };
 export const strip = (slug) => { const u = (COMBO[slug] || []).map(photo).filter(Boolean); return u.length >= 2 ? u : null; };
+
+// Large version for full-width backgrounds (the card photo() is only 700px wide and looks fuzzy when stretched).
+export const bigPhoto = (slug, w = 2200) => (GALLERY[slug] ? `${CL},w_${w},c_limit,q_auto:best/${GALLERY[slug][0]}` : photo(slug));

@@ -1,6 +1,6 @@
 import GlowLink from "@/components/GlowLink";
 import Link from "next/link";
-import { photo, gallery, strip, HERO } from "@/data/photos";
+import { photo, bigPhoto, gallery, strip, HERO } from "@/data/photos";
 import { allTours as getAll } from "@/lib/tours";
 export const revalidate = 60;
 import { trust, categories, advantages, itinerary, guides } from "@/data/site";
@@ -63,8 +63,8 @@ export default async function Home() {
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">{advantages.map(([t, d], i) => <div key={t} data-aos="zoom-in" data-aos-delay={(i % 3) * 120} className="rounded-2xl bg-white p-6 shadow-sm"><div className="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">✓</div><h3 className="font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}</div>
       </section>
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-teal-800 to-cyan-600 px-5 py-24 text-white md:py-32">
-        {photo("saona-island") && <img src={photo("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#021f24]/90 via-[#05444c]/60 to-[#0b5f66]/20" />
+        {bigPhoto("saona-island") && <img src={bigPhoto("saona-island")} alt="Saona Island" loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover" />}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#021f24]/80 via-[#05444c]/40 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-[#021f24]/70 to-transparent" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.15fr_.85fr]">
           <div data-aos="fade-right">
@@ -92,7 +92,7 @@ export default async function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1fr_1.05fr]">
           <div className="relative" data-aos="fade-right">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-emerald-300 to-green-800 shadow-2xl ring-1 ring-white/20 md:rotate-[-2deg]">
-              {photo("montana-redonda-atv-miches") && <img src={photo("montana-redonda-atv-miches")} alt="ATV adventure in Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
+              {bigPhoto("montana-redonda-atv-miches") && <img src={bigPhoto("montana-redonda-atv-miches")} alt="ATV adventure in Miches" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
               <p className="absolute bottom-4 left-4 text-xs font-black tracking-[.2em] text-white/90">MONTAÑA REDONDA · EMERALD COAST</p>
             </div>
