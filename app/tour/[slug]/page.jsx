@@ -1,3 +1,4 @@
+import ChatOpen from "@/components/ChatOpen";
 import { gallery } from "@/data/photos";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -53,7 +54,7 @@ export default async function Tour({ params }) {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-sky-100 bg-white/95 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur lg:hidden">
         <div className="mx-auto flex max-w-xl items-center gap-2.5">
           <div className="min-w-0 pl-2 leading-tight"><p className="text-[10px] font-bold uppercase tracking-widest text-ink/50">From</p><p className="whitespace-nowrap text-xl font-black text-brand">${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)}<span className="text-xs font-bold text-ink/60"> /person</span></p></div>
-          <a href={`${wa}?text=${encodeURIComponent(`Hi Trip2! I'd like info about: ${t.name}`)}`} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="ml-auto grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#25D366] text-white shadow-md transition active:scale-95"><svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a12 12 0 0 0 5.7 1.5h.1c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.6-8.4zM12.1 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.800 1 1-3.700-.2-.4a9.900 9.900 0 0 1-1.500-5.200c0-5.500 4.400-9.900 9.900-9.900 2.600 0 5.100 1 7 2.900a9.800 9.800 0 0 1 2.900 7c0 5.500-4.500 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.200c-.2.200-.4.200-.7.100-.3-.1-1.200-.4-2.300-1.400-.9-.8-1.400-1.700-1.600-2-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500.7.300 1.300.5 1.700.6.700.2 1.400.2 1.900.1.600-.1 1.800-.7 2-1.400.3-.7.3-1.300.2-1.400-.1-.1-.3-.2-.6-.3z" /></svg></a>
+          <ChatOpen />
           <a href="#book-m" className="flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-6 py-3.5 text-sm font-extrabold text-white shadow-md transition active:scale-95"><Zap className="h-4 w-4" />BOOK NOW</a>
         </div>
       </div>

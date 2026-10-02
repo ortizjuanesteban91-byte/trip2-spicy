@@ -32,6 +32,7 @@ export default function ChatWidget() {
   useEffect(() => { try { let i = Number(sessionStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || sessionStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); sessionStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
   useEffect(() => { try { const s = JSON.parse(sessionStorage.getItem(KEY) || "[]"); if (Array.isArray(s)) setMsgs(s); } catch {} }, []);
   useEffect(() => { try { sessionStorage.setItem(KEY, JSON.stringify(msgs.slice(-30))); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
+  useEffect(() => { const f = () => setOpen(true); window.addEventListener("t2-chat-open", f); return () => window.removeEventListener("t2-chat-open", f); }, []);
   if (path.startsWith("/admin") || path.startsWith("/booking-")) return null;
   const onTour = path.startsWith("/tour/");
   async function send(t) {
@@ -49,7 +50,7 @@ export default function ChatWidget() {
   return (
     <>
       {!open && (
-        <button onClick={() => setOpen(true)} aria-label="Chat and book" className={`fixed right-3 z-[45] grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-lg ring-1 ring-white/70 sm:right-4 sm:flex sm:h-auto sm:w-auto sm:items-center sm:gap-2 sm:px-4 sm:py-3 sm:text-sm sm:font-extrabold sm:ring-2 sm:ring-amber-300 ${onTour ? "bottom-[5.9rem] lg:bottom-5" : "bottom-5"}`}>
+        <button onClick={() => setOpen(true)} aria-label="Chat and book" className={`fixed right-3 z-[45] grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-lg ring-1 ring-white/70 sm:right-4 sm:flex sm:h-auto sm:w-auto sm:items-center sm:gap-2 sm:px-4 sm:py-3 sm:text-sm sm:font-extrabold sm:ring-2 sm:ring-amber-300 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
           <MessageCircle className="h-5 w-5" /><span className="hidden sm:inline">Chat &amp; book</span>
         </button>
       )}
