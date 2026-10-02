@@ -141,6 +141,91 @@ main{background:radial-gradient(900px 460px at 88% -8%,#CFE6FF,transparent 70%),
 @media(max-width:1100px){.links{order:3;width:100%;overflow-x:auto;padding-bottom:4px}}
 @media(max-width:860px){.links a:not(.btn){display:inline-block!important}}
 .links a.cur{color:var(--brand);text-decoration:underline;text-underline-offset:6px}
+/* hours widget */
+.topbar{position:relative;z-index:30;background:linear-gradient(100deg,#0B2545,#0A3F9E,#0B2545);background-size:200% 100%;animation:shim 12s ease infinite}
+@keyframes shim{50%{background-position:100% 0}}
+.topbar .wrap{position:relative;align-items:center}
+.hrs{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:7px 16px;font:700 14px var(--body);cursor:pointer;transition:transform .2s,background .2s}
+.hrs:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.live{width:10px;height:10px;border-radius:50%;background:#2EE59D;box-shadow:0 0 0 0 rgba(46,229,157,.7);animation:ping 1.8s infinite}
+.live.off{background:#FF6B57;box-shadow:none;animation:none}
+@keyframes ping{to{box-shadow:0 0 0 12px rgba(46,229,157,0)}}
+.chev{transition:transform .25s}.hrs[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.tbk{background:#FFC933;color:#0B2545!important;font-weight:800;padding:7px 16px;border-radius:999px;box-shadow:0 6px 18px rgba(255,201,51,.5);transition:transform .2s}
+.tbk:hover{transform:translateY(-2px) scale(1.05)}
+.hpop{position:absolute;left:0;top:calc(100% + 10px);width:min(340px,92vw);background:#fff;color:#0B2545;border-radius:24px;padding:20px;box-shadow:0 30px 70px rgba(8,28,70,.35);opacity:0;transform:translateY(-12px) scale(.96);pointer-events:none;transition:opacity .25s,transform .3s cubic-bezier(.2,.9,.2,1);z-index:60}
+.hpop.open{opacity:1;transform:none;pointer-events:auto}
+.hpop h4{margin:0 0 10px;font:800 18px var(--display)}
+.hrow{display:flex;justify-content:space-between;padding:9px 12px;border-radius:12px;font-weight:600;font-size:14.5px}
+.hrow.today{background:linear-gradient(90deg,#E8F1FF,#FFF3CC);font-weight:800}
+.hrow.closed{color:#8A99AE}
+.hbar{height:8px;border-radius:8px;background:#EAF1FB;margin:12px 0;overflow:hidden}.hbar b{display:block;height:100%;width:0;background:linear-gradient(90deg,#0A63F5,#FFC933);border-radius:8px;transition:width 1.2s ease}
+.hpop .btn{width:100%;text-align:center;margin-top:6px}
+@media(max-width:640px){.topbar .mid{display:none}}
+/* age toggle */
+.tabs{position:relative;display:inline-flex;gap:0;padding:6px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 14px 36px rgba(10,99,245,.12);flex-wrap:wrap}
+.tabs .thumb{position:absolute;top:6px;bottom:6px;left:0;width:0;border-radius:999px;background:linear-gradient(135deg,#0A63F5,#6C8BFF 60%,#FFC933);box-shadow:0 10px 26px rgba(10,99,245,.45);transition:left .45s cubic-bezier(.3,1.3,.5,1),width .45s cubic-bezier(.3,1.3,.5,1)}
+.tab{position:relative;z-index:1;background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important;color:var(--ink);padding:13px 22px!important}
+.tab[aria-selected="true"]{color:#fff!important}
+.tab:nth-child(2)::before{content:"🍼 "}.tab:nth-child(3)::before{content:"🧸 "}.tab:nth-child(4)::before{content:"🎨 "}.tab:nth-child(5)::before{content:"🎒 "}
+.tab:hover{transform:scale(1.06)!important}
+.panel>div{animation:pin .7s cubic-bezier(.2,.9,.2,1) both}.panel>div:nth-child(2){animation-name:pin2}
+@keyframes pin{from{opacity:0;transform:translateX(-50px) rotate(-1.5deg)}to{opacity:1;transform:none}}
+@keyframes pin2{from{opacity:0;transform:translateX(70px) scale(.9) rotate(2deg)}to{opacity:1;transform:none}}
+.panel li{animation:pin .6s ease both}.panel li:nth-child(2){animation-delay:.12s}.panel li:nth-child(3){animation-delay:.24s}.panel li:nth-child(4){animation-delay:.36s}
+.panel .ph{border-radius:24px;overflow:hidden}
+@media(max-width:700px){.tabs{border-radius:26px;display:flex}.tab{flex:1 1 40%}}
+/* flow */
+.fl{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.9,.2,1)}
+.js .fl.l{transform:translateX(-80px) rotate(-2.5deg)}.js .fl.r{transform:translateX(80px) rotate(2.5deg)}.js .fl.u{transform:translateY(70px) scale(.94)}
+.js .fl.in{opacity:1;transform:none}
+body:not(.js) .fl,.no-js .fl{opacity:1}
+.tilt{transform-style:preserve-3d;transition:transform .2s ease-out}
+.blob{position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;will-change:transform}
+@media(prefers-reduced-motion:reduce){.fl{opacity:1!important;transform:none!important}}
+.hpop{left:20px!important}.hpop a.btn{color:#fff!important}
+
 </style></head><body>
-<div class="topbar"><div class="wrap"><span>Mon–Fri · 6:30 am – 6:00 pm &nbsp;·&nbsp; Licensed child care &amp; early learning</span><span>Call <a href="tel:+10000000000">(000) 000-0000</a> &nbsp;·&nbsp; <a href="/school-demo/book-a-tour.html">Book a tour →</a></span></div></div>
-<header class="nav"><div class="wrap"><a class="logo" href="/school-demo/index.html"><i aria-hidden="true"></i><span>Little Stars Academy</span></a><nav class="links" aria-label="Main"><a href="/school-demo/index.html">Home</a><a href="/school-demo/programs.html">Programs</a><a href="/school-demo/locations.html" class=cur>Locations</a><a href="/school-demo/about.html">About</a><a href="/school-demo/contact.html">Contact</a><a href="/school-demo/parent-portal.html">Parent Portal</a><a href="/school-demo/book-a-tour.html" class="btn btn-sun" style="padding:10px 20px">Book a tour</a></nav></div></header><main><div class="wrap"><div class="sub"><div class="crumbs"><a href="/school-demo/index.html">Home</a> / Locations</div><h1>Our campuses</h1><p class="lede">Two welcoming places to learn. [Edit to match the real campuses.]</p></div><div class="grid2"><div class="card"><h3>Campus One</h3><p>[Street address]<br>[City, State ZIP]<br>[Phone number]<br>Monday to Friday, 6:30 am to 6:00 pm</p><p style="margin-top:14px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour here</a></p></div><div class="card"><h3>Campus Two</h3><p>[Street address]<br>[City, State ZIP]<br>[Phone number]<br>Monday to Friday, 6:30 am to 6:00 pm</p><p style="margin-top:14px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour here</a></p></div></div><div class="ph" style="background:var(--sky);height:280px;margin-top:20px">[Map: add a Google Maps link for each campus]</div><div class="band"><h2>Come see us in person.</h2><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour</a></div></div></main><footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span><a href="/school-demo/careers.html">Careers</a> · <a href="/school-demo/enroll.html">Enroll</a> · <a href="/school-demo/privacy.html">Privacy</a> · <a href="/school-demo/terms.html">Terms</a></span></div><p style="font-size:12px;opacity:.7">Demo photos: Unsplash (stand-ins until real photos arrive)</p></footer><script>document.querySelectorAll('form.demo').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var ok=Array.prototype.every.call(f.querySelectorAll('[required]'),function(x){return x.value.trim()});var b=f.querySelector('.ok');b.hidden=false;b.style.background=ok?'var(--mint)':'var(--blush)';b.textContent=ok?'Thank you. This is a design preview, so nothing was sent. On the live site this goes straight to the school inbox.':'Please fill in the required fields.';});});</script></body></html>
+<div class="topbar"><div class="wrap"><button class="hrs" id="hrs" type="button" aria-expanded="false" aria-controls="hpop"><span class="live" id="hlive"></span><b id="hst">Open now</b><span id="hsd">· Mon–Fri 6:30 am – 6:00 pm</span><span class="chev">▾</span></button><span class="mid">Licensed child care &amp; early learning</span><a class="tbk" href="/school-demo/book-a-tour.html">📅 Book a tour →</a>
+<div class="hpop" id="hpop" role="dialog" aria-label="Opening hours"><h4>Opening hours</h4><div class="hrow" data-d="1"><span>Monday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="2"><span>Tuesday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="3"><span>Wednesday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="4"><span>Thursday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="5"><span>Friday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div><div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div><div class="hbar"><b></b></div><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour</a></div></div></div>
+<header class="nav"><div class="wrap"><a class="logo" href="/school-demo/index.html"><i aria-hidden="true"></i><span>Little Stars Academy</span></a><nav class="links" aria-label="Main"><a href="/school-demo/index.html">Home</a><a href="/school-demo/programs.html">Programs</a><a href="/school-demo/locations.html" class=cur>Locations</a><a href="/school-demo/about.html">About</a><a href="/school-demo/contact.html">Contact</a><a href="/school-demo/parent-portal.html">Parent Portal</a><a href="/school-demo/book-a-tour.html" class="btn btn-sun" style="padding:10px 20px">Book a tour</a></nav></div></header><main><div class="wrap"><div class="sub"><div class="crumbs"><a href="/school-demo/index.html">Home</a> / Locations</div><h1>Our campuses</h1><p class="lede">Two welcoming places to learn. [Edit to match the real campuses.]</p></div><div class="grid2"><div class="card"><h3>Campus One</h3><p>[Street address]<br>[City, State ZIP]<br>[Phone number]<br>Monday to Friday, 6:30 am to 6:00 pm</p><p style="margin-top:14px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour here</a></p></div><div class="card"><h3>Campus Two</h3><p>[Street address]<br>[City, State ZIP]<br>[Phone number]<br>Monday to Friday, 6:30 am to 6:00 pm</p><p style="margin-top:14px"><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour here</a></p></div></div><div class="ph" style="background:var(--sky);height:280px;margin-top:20px">[Map: add a Google Maps link for each campus]</div><div class="band"><h2>Come see us in person.</h2><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour</a></div></div></main><footer><div class="wrap"><span>© Little Stars Academy · design preview with placeholder content</span><span><a href="/school-demo/careers.html">Careers</a> · <a href="/school-demo/enroll.html">Enroll</a> · <a href="/school-demo/privacy.html">Privacy</a> · <a href="/school-demo/terms.html">Terms</a></span></div><p style="font-size:12px;opacity:.7">Demo photos: Unsplash (stand-ins until real photos arrive)</p></footer><script>document.querySelectorAll('form.demo').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var ok=Array.prototype.every.call(f.querySelectorAll('[required]'),function(x){return x.value.trim()});var b=f.querySelector('.ok');b.hidden=false;b.style.background=ok?'var(--mint)':'var(--blush)';b.textContent=ok?'Thank you. This is a design preview, so nothing was sent. On the live site this goes straight to the school inbox.':'Please fill in the required fields.';});});</script><script>
+(function(){
+document.documentElement.classList.add('js');
+/* hours widget */
+var hrs=document.getElementById('hrs'),pop=document.getElementById('hpop');
+if(hrs&&pop){
+ var d=new Date(),day=d.getDay(),hr=d.getHours()+d.getMinutes()/60,wk=day>=1&&day<=5,open=wk&&hr>=6.5&&hr<18;
+ var st=document.getElementById('hst'),sd=document.getElementById('hsd'),lv=document.getElementById('hlive');
+ st.textContent=open?'Open now':'Closed now';
+ sd.textContent=open?'· closes 6:00 pm':(wk&&hr<6.5?'· opens 6:30 am':'· opens '+(day===5||day===6?'Monday':'tomorrow')+' 6:30 am');
+ if(!open)lv.classList.add('off');
+ [].forEach.call(pop.querySelectorAll('.hrow'),function(r){if(+r.dataset.d===day)r.classList.add('today')});
+ hrs.onclick=function(e){e.stopPropagation();var o=pop.classList.toggle('open');hrs.setAttribute('aria-expanded',o);pop.querySelector('.hbar b').style.width=o?(open?Math.round((hr-6.5)/11.5*100):0)+'%':'0'};
+ document.addEventListener('click',function(e){if(!pop.contains(e.target)){pop.classList.remove('open');hrs.setAttribute('aria-expanded','false')}});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){pop.classList.remove('open');hrs.setAttribute('aria-expanded','false')}});
+}
+/* age toggle thumb */
+var tabs=document.getElementById('tabs');
+if(tabs){var th=document.createElement('span');th.className='thumb';tabs.insertBefore(th,tabs.firstChild);
+ function mv(){var s=tabs.querySelector('.tab[aria-selected="true"]');if(!s)return;th.style.left=s.offsetLeft+'px';th.style.width=s.offsetWidth+'px'}
+ tabs.addEventListener('click',function(){setTimeout(mv,0)});addEventListener('resize',mv);setTimeout(mv,50);setTimeout(mv,600);
+ new MutationObserver(function(){if(!tabs.querySelector('.thumb')){tabs.insertBefore(th,tabs.firstChild)}setTimeout(mv,0)}).observe(tabs,{childList:true,subtree:true,attributes:true,attributeFilter:['aria-selected']});}
+/* flowing reveals */
+var sel='.why>div,.step,.rcard,.num,.faq details,.revsum,.tour,.panel';
+var els=[].slice.call(document.querySelectorAll('.card,.cardgrid>*,.grid>*,.locs>*,.team>*,.faq details,.step,.why>div,.num,.revsum,.tour'));
+els.forEach(function(e,i){e.classList.add('fl',['l','u','r'][i%3]);e.style.transitionDelay=(i%4)*90+'ms'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+els.forEach(function(e){io.observe(e)});
+/* 3D tilt */
+[].forEach.call(document.querySelectorAll('.why>div,.num,.rcard,.card'),function(c){c.classList.add('tilt');
+ c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+x*10+'deg) rotateX('+-y*10+'deg) translateY(-6px)'});
+ c.addEventListener('mouseleave',function(){c.style.transform=''})});
+/* parallax + blobs */
+var b1=document.createElement('div'),b2=document.createElement('div');b1.className=b2.className='blob';
+b1.style.cssText='width:420px;height:420px;left:-120px;top:30%;background:#8FC1FF';b2.style.cssText='width:360px;height:360px;right:-100px;top:60%;background:#FFD36B';document.body.appendChild(b1);document.body.appendChild(b2);
+var ph=[].slice.call(document.querySelectorAll('.why .ph,.panel .ph'));
+function par(){var y=scrollY;b1.style.transform='translateY('+(y*.25)+'px)';b2.style.transform='translateY('+(-y*.18)+'px)';ph.forEach(function(p){var r=p.getBoundingClientRect(),o=(r.top+r.height/2-innerHeight/2)*-.06;p.style.backgroundPosition='center calc(50% + '+o+'px)'})}
+addEventListener('scroll',par,{passive:true});par();
+})();
+</script>
+</body></html>
