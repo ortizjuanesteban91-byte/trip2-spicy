@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MessageCircle, X, Send } from "lucide-react";
 import { whatsapp } from "@/data/site";
-const HELLO = "Hi! I'm Trip2's virtual assistant. Ask me anything about our tours, or tell me what you'd like to book and I'll do it with you right here. ¡Hola! También hablo español.";
+import { PERSONAS } from "@/lib/personas";
+const hello = (n) => `Hi, I'm ${n} from Trip2! Ask me anything about our tours, or tell me what you'd like to book and we'll sort it out right here. ¡Hola! También hablo español.`;
 const CHIPS = ["Book a tour", "What's popular?", "Reservar en español"];
 const KEY = "t2chat";
 const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?])/;
@@ -25,7 +26,10 @@ export default function ChatWidget() {
   const [msgs, setMsgs] = useState([]);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
+  const [pi, setPi] = useState(0);
+  const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
+  useEffect(() => { try { let i = Number(sessionStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || sessionStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); sessionStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
   useEffect(() => { try { const s = JSON.parse(sessionStorage.getItem(KEY) || "[]"); if (Array.isArray(s)) setMsgs(s); } catch {} }, []);
   useEffect(() => { try { sessionStorage.setItem(KEY, JSON.stringify(msgs.slice(-30))); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
   if (path.startsWith("/admin") || path.startsWith("/booking-")) return null;
@@ -36,7 +40,7 @@ export default function ChatWidget() {
     const next = [...msgs, { role: "user", content }];
     setMsgs(next); setText(""); setBusy(true);
     try {
-      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: next }) });
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: next, persona: who.name }) });
       const j = await r.json().catch(() => ({}));
       setMsgs([...next, { role: "assistant", content: j.ok ? j.reply : `Sorry, I can't answer right now. Please message our team on WhatsApp: ${whatsapp}` }]);
     } catch { setMsgs([...next, { role: "assistant", content: `Connection problem. You can reach our team on WhatsApp: ${whatsapp}` }]); }
@@ -52,11 +56,11 @@ export default function ChatWidget() {
       {open && (
         <div role="dialog" aria-label="Trip2 booking assistant" className="fixed inset-x-0 bottom-0 z-[60] flex h-[min(86dvh,640px)] flex-col overflow-hidden rounded-t-3xl border border-sky-100 bg-white shadow-2xl sm:inset-x-auto sm:bottom-5 sm:right-5 sm:w-[400px] sm:rounded-3xl">
           <div className="flex items-center justify-between bg-brand px-4 py-3 text-white">
-            <div><p className="text-sm font-black">Trip2 Booking Assistant</p><p className="text-[11px] text-white/80">Ask questions or book in minutes</p></div>
+            <div className="flex items-center gap-2.5"><span className="flex h-9 w-9 items-center justify-center rounded-full text-base font-black text-white ring-2 ring-white/70" style={{ background: who.color }}>{who.name[0]}</span><div><p className="text-sm font-black">{who.name} · Trip2</p><p className="text-[11px] text-white/80">Virtual assistant · online now</p></div></div>
             <button onClick={() => setOpen(false)} aria-label="Close chat" className="rounded-full p-1.5 hover:bg-white/15"><X className="h-5 w-5" /></button>
           </div>
           <div className="flex-1 space-y-2.5 overflow-y-auto p-3">
-            <Bubble m={{ role: "assistant", content: HELLO }} />
+            <Bubble m={{ role: "assistant", content: hello(who.name) }} />
             {!msgs.length && <div className="flex flex-wrap gap-2 pt-1">{CHIPS.map((c) => <button key={c} onClick={() => send(c)} className="rounded-full border border-sky-200 bg-white px-3 py-1.5 text-xs font-bold text-brand">{c}</button>)}</div>}
             {msgs.map((m, i) => <Bubble key={i} m={m} />)}
             {busy && <div className="flex"><div className="rounded-2xl bg-sky-50 px-3.5 py-2.5 text-sm text-ink/60">Typing…</div></div>}
