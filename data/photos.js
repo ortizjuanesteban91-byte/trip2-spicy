@@ -390,11 +390,11 @@ const GALLERY_X = {
   "IMG_0430"
  ],
  "los-haitises": [
+  "0001112",
   "DSC_6091",
   "DSC_6179",
   "DSC_6201",
-  "AMS05361",
-  "0001112"
+  "AMS05361"
  ]
 };
 Object.assign(GALLERY, GALLERY_X);
