@@ -5,6 +5,7 @@ export const revalidate = 60;
 import { trust, categories, advantages, itinerary, guides } from "@/data/site";
 import { getSite } from "@/lib/siteconf";
 import Reviews from "@/components/Reviews";
+import Story from "@/components/Story";
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", nightlife: "coco-bongo", miches: "atv-miches" };
 const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", family: "family-experiences", eco: "eco-nature", culture: "culture-city", nightlife: "shows-nightlife", miches: "things-to-do-in-miches" };
 const CATHREF = (k) => (k === "transport" ? "/airport-transfer" : `/tours/${CATSLUG[k]}`);
@@ -40,6 +41,7 @@ export default async function Home() {
           {categories.map(([t, d, g, k], i) => <Link key={t} href={CATHREF(k)} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{photo(CATPIC[k]) && <img data-aos="zoom-out-right" src={photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
+      <Story />
       <section id="featured" className="mx-auto max-w-7xl px-5 py-16">
         <Eyebrow>GUARANTEED BEST RATES</Eyebrow><H2>PUNTA CANA'S MOST POPULAR EXPERIENCES</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">Handpicked top-rated excursions with instant mobile vouchers, verified local guides, and 24-hour cancellation freedom.</p>
