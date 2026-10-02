@@ -185,6 +185,40 @@ body:not(.js) .fl,.no-js .fl{opacity:1}
 @media(prefers-reduced-motion:reduce){.fl{opacity:1!important;transform:none!important}}
 .hpop{left:20px!important}.hpop a.btn{color:#fff!important}
 
+.nav{animation:drop .8s cubic-bezier(.2,.9,.2,1) both}
+@keyframes drop{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:linear-gradient(90deg,#0A63F5,#FFC933,#FF6B57,#0A63F5);background-size:300% 100%;animation:slide 6s linear infinite}
+@keyframes slide{to{background-position:300% 0}}
+.logo i{animation:wob 4s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-6deg) scale(1)}50%{transform:rotate(8deg) scale(1.1)}}
+.logo:hover i{animation-duration:.8s}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:1px solid #CFE0F5;background:linear-gradient(135deg,#fff,#EAF3FF);cursor:pointer;position:relative;box-shadow:0 8px 20px rgba(10,99,245,.15)}
+.burger span{position:absolute;left:12px;right:12px;height:3px;border-radius:3px;background:#0B2545;transition:transform .35s cubic-bezier(.3,1.4,.5,1),opacity .2s,top .35s}
+.burger span:nth-child(1){top:14px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:30px}
+.burger[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}.burger[aria-expanded="true"] span:nth-child(2){opacity:0}.burger[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+@media(max-width:1100px){
+ .nav .wrap{flex-wrap:nowrap!important;gap:10px;padding-block:10px!important}
+ .logo{font-size:21px!important;min-width:0}.logo span{overflow:hidden;text-overflow:ellipsis}
+ .logo i{width:34px!important;height:34px!important}
+ .tools{margin-left:auto;display:flex;gap:8px}
+ .burger{display:block}
+ .links{display:none!important;position:absolute;left:0;right:0;top:100%;width:auto!important;order:0!important;flex-direction:column;align-items:stretch;gap:10px!important;padding:16px 16px 22px;background:#fff;border-radius:0 0 30px 30px;box-shadow:0 30px 60px rgba(8,28,70,.25);overflow:visible!important}
+ .links.open{display:flex!important}
+ .links a{display:block!important;padding:16px 20px!important;border-radius:18px;background:#F1F7FF;font-size:18px;font-weight:800;animation:pop .5s cubic-bezier(.2,.9,.2,1) both}
+ .links a:nth-child(2){animation-delay:.05s}.links a:nth-child(3){animation-delay:.1s}.links a:nth-child(4){animation-delay:.15s}.links a:nth-child(5){animation-delay:.2s}.links a:nth-child(6){animation-delay:.25s}
+ .links a::after{display:none!important}
+ .links .btn{background:linear-gradient(135deg,#FFC933,#FF9F1C)!important;text-align:center;padding:16px!important;font-size:19px}
+ @keyframes pop{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+}
+@media(max-width:560px){
+ .topbar .wrap{flex-wrap:nowrap!important;padding-block:8px!important;gap:8px}
+ #hsd{display:none}.hrs{padding:7px 12px;font-size:13px}.tbk{padding:7px 12px;font-size:13px;white-space:nowrap}
+ .hpop{left:12px!important}
+ .pill{padding:7px 12px!important;font-size:13px!important}
+}
+@media(max-width:860px){.herofull .hero{grid-template-columns:minmax(0,1fr)!important}.herofull h1{max-width:none}.herofull .hero p{font-size:17px}.herofull{overflow:hidden}.hdots .wrap{gap:8px}.hd{padding:10px 14px}}
+html,body{overflow-x:clip}
+
 </style></head><body>
 <div class="topbar"><div class="wrap"><button class="hrs" id="hrs" type="button" aria-expanded="false" aria-controls="hpop"><span class="live" id="hlive"></span><b id="hst">Open now</b><span id="hsd">· Mon–Fri 6:30 am – 6:00 pm</span><span class="chev">▾</span></button><span class="mid">Licensed child care &amp; early learning</span><a class="tbk" href="/school-demo/book-a-tour.html">📅 Book a tour →</a>
 <div class="hpop" id="hpop" role="dialog" aria-label="Opening hours"><h4>Opening hours</h4><div class="hrow" data-d="1"><span>Monday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="2"><span>Tuesday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="3"><span>Wednesday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="4"><span>Thursday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow" data-d="5"><span>Friday</span><span>6:30 am – 6:00 pm</span></div><div class="hrow closed" data-d="6"><span>Saturday</span><span>Closed</span></div><div class="hrow closed" data-d="0"><span>Sunday</span><span>Closed</span></div><div class="hbar"><b></b></div><a class="btn btn-main" href="/school-demo/book-a-tour.html">Book a tour</a></div></div></div>
@@ -226,6 +260,14 @@ b1.style.cssText='width:420px;height:420px;left:-120px;top:30%;background:#8FC1F
 var ph=[].slice.call(document.querySelectorAll('.why .ph,.panel .ph'));
 function par(){var y=scrollY;b1.style.transform='translateY('+(y*.25)+'px)';b2.style.transform='translateY('+(-y*.18)+'px)';ph.forEach(function(p){var r=p.getBoundingClientRect(),o=(r.top+r.height/2-innerHeight/2)*-.06;p.style.backgroundPosition='center calc(50% + '+o+'px)'})}
 addEventListener('scroll',par,{passive:true});par();
+})();
+</script>
+<script>
+(function(){var t=document.querySelector('.tools'),l=document.querySelector('.links');if(!t||!l)return;
+var b=document.createElement('button');b.className='burger';b.type='button';b.setAttribute('aria-label','Menu');b.setAttribute('aria-expanded','false');b.innerHTML='<span></span><span></span><span></span>';t.appendChild(b);
+b.onclick=function(e){e.stopPropagation();var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)};
+document.addEventListener('click',function(e){if(!l.contains(e.target)&&e.target!==b){l.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+l.addEventListener('click',function(){l.classList.remove('open');b.setAttribute('aria-expanded','false')});
 })();
 </script>
 </body></html>
