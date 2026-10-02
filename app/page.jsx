@@ -56,6 +56,7 @@ export default async function Home() {
           ))}
         </div>
       </section>
+      <Reviews />
       <section className="bg-ice px-5 py-16">
         <Eyebrow>THE TRIP2 ADVANTAGE</Eyebrow><H2>YOUR PUNTA CANA ADVENTURE STARTS HERE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">We make discovering Punta Cana simple, exciting, and stress-free — from choosing your experience to seamless transfers back to your resort.</p>
@@ -120,7 +121,6 @@ export default async function Home() {
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-xl text-center text-sm text-ink/70">Tips, packing lists, and local recommendations written by resident excursion coordinators.</p>
         <div className="mx-auto mt-10 grid max-w-6xl gap-6 md:grid-cols-3">{guides.map(([c, m, t, d, g], i) => <article key={t} className="overflow-hidden rounded-2xl bg-white shadow"><div className="h-44 overflow-hidden"><div data-aos="zoom-out-right" className={`h-full bg-gradient-to-br ${g}`} /></div><div className="p-5" data-aos="zoom-out-left"><p className="text-[11px] font-extrabold tracking-widest text-brand/70">{c} • {m}</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t}</h3><p className="mt-2 text-sm leading-6 text-ink/70">{d}</p><Link href="/blog" className="mt-3 inline-block text-sm font-bold text-brand">Read Article →</Link></div></article>)}</div>
       </section>
-      <Reviews />
       <section className="bg-gradient-to-r from-teal-800 to-cyan-700 px-5 py-16 text-center text-white"><div data-aos="zoom-in">
         <h2 className="mx-auto max-w-2xl text-3xl font-black md:text-4xl">READY FOR YOUR PUNTA CANA ADVENTURE?</h2>
         <p className="mx-auto mt-3 max-w-xl text-white/90">Lock in your excursions with guaranteed lowest prices, no reservation fees, and real-time WhatsApp coordination.</p>
