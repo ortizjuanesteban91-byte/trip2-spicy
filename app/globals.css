@@ -18,3 +18,7 @@ body { position: relative; width: 100%; }
 .page-clip { overflow-x: clip; max-width: 100vw; }
 /* AOS slide offsets must never widen the page */
 [data-aos] { max-width: 100%; }
+
+@keyframes t2shake{0%,100%{transform:translateX(0)}15%{transform:translateX(-9px)}30%{transform:translateX(8px)}45%{transform:translateX(-6px)}60%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.t2-shake{animation:t2shake .45s ease}
+input:user-invalid,select:user-invalid{border-color:#f59e0b!important;background:#fffbeb!important}

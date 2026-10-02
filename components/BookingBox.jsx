@@ -13,6 +13,8 @@ export default function BookingBox({ tour, wa }) {
   const [date, setDate] = useState("");
   const [hotel, setHotel] = useState("");
   const [state, setState] = useState("idle");
+  const [valid, setValid] = useState(false), [shake, setShake] = useState(0), [hint, setHint] = useState("");
+  const check = (f) => setValid(f.checkValidity());
   const miches = tour.breadcrumb.includes("Miches");
   const opts = tour.options || [];
   const dow = date ? new Date(date + "T12:00:00").getDay() : -1;
@@ -24,6 +26,23 @@ export default function BookingBox({ tour, wa }) {
   const tooFew = tour.min2 && people > 0 && people < 2;
   const today = new Date().toISOString().slice(0, 10);
   const mr = /^(2[1-3]|2[6-9]|3[01])$/.test(tour.num);
+  const ready = valid && lines.length > 0 && !tooFew && !closed;
+  // Tapping RESERVE NOW before the form is complete: shake the button and jump to what is missing.
+  function nudge(e) {
+    if (ready || state === "sending") return;
+    e.preventDefault();
+    const form = e.currentTarget.form;
+    setShake((n) => n + 1);
+    let el, msg;
+    if (closed) { msg = "We are closed that day. Please pick another date."; el = form.elements.date; }
+    else if (!form.elements.date.value) { msg = "Please choose your date."; el = form.elements.date; }
+    else if (!lines.length) { msg = "Please choose how many guests."; el = form.querySelector("select[aria-label]"); }
+    else if (tooFew) { msg = "Minimum 2 people on this tour."; el = form.querySelector("select[aria-label]"); }
+    else { el = form.querySelector(":invalid"); msg = "Please fill: " + (el?.getAttribute("placeholder") || el?.getAttribute("name") || "the highlighted field").replace(/\*|\*$/g, "").trim(); }
+    setHint(msg);
+    el?.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => el?.focus?.({ preventScroll: true }), 350);
+  }
   async function submit(e) {
     e.preventDefault();
     if (!lines.length || tooFew || closed) return;
@@ -39,7 +58,7 @@ export default function BookingBox({ tour, wa }) {
   if (state === "done") return <p className="rounded-2xl bg-white p-6 font-bold text-brand shadow">Thank you! Your request is in. Our concierge will confirm your pickup on WhatsApp. You pay later.</p>;
   const plain = "w-full rounded-2xl border border-sky-200 bg-sky-50/70 px-4 py-4 text-[15px] text-ink";
   return (
-    <form onSubmit={submit} className="overflow-hidden rounded-[28px] border border-sky-100 bg-white shadow-lg">
+    <form onSubmit={submit} onChange={(e) => { check(e.currentTarget); setHint(""); }} onInput={(e) => check(e.currentTarget)} className="overflow-hidden rounded-[28px] border border-sky-100 bg-white shadow-lg">
       <div className="bg-sky-100 p-5">
         <div className="flex items-center justify-between gap-2"><span className="rounded-full bg-amber-200 px-3 py-1 text-[10px] font-extrabold tracking-wider text-amber-900">BEST RATE DIRECT</span><span className="flex items-center gap-1 text-xs font-bold text-ink/60"><ShieldCheck className="h-4 w-4 text-brand" />Official Trip2 Guarantee</span></div>
         <p className="mt-3 text-4xl font-black text-brand">{money(tour.from)} <span className="text-sm font-semibold text-ink/50">Base Price</span></p>
@@ -78,7 +97,8 @@ export default function BookingBox({ tour, wa }) {
           {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
         </div>
         <p className="mt-3 px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
-        <button disabled={!lines.length || tooFew || state === "sending"} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand py-4 text-sm font-extrabold text-white disabled:bg-slate-300"><Zap className="h-4 w-4" />{state === "sending" ? "SENDING…" : "RESERVE NOW"}</button>
+        {hint && <p role="alert" className="mt-3 rounded-xl bg-amber-50 p-3 text-center text-sm font-extrabold text-amber-800">{hint}</p>}
+        <button key={shake} onClick={nudge} disabled={state === "sending"} className={`mt-4 flex w-full items-center justify-center gap-2 rounded-full py-4 text-sm font-extrabold text-white transition ${shake ? "t2-shake " : ""}${ready ? "bg-emerald-600 shadow-lg ring-4 ring-emerald-300/70 hover:bg-emerald-700" : "bg-brand/60"}`}><Zap className="h-4 w-4" />{state === "sending" ? "SENDING…" : ready ? "RESERVE NOW ✓" : "RESERVE NOW"}</button>
         <p className="mt-2 flex items-center justify-center gap-1 text-[11px] font-bold text-ink/60"><span aria-hidden="true">🔒</span> Secure checkout · Powered by Stripe</p>
         <a href={`/contact?tour=${tour.slug}`} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-sky-100 py-3 text-sm font-bold text-brand"><MessageCircle className="h-4 w-4" />Enquiry Form</a>
         <a href={`${wa || "https://wa.me/18094853099"}?text=${encodeURIComponent(`Hi, I have a question about: ${tour.name}`)}`} className="mt-2 block text-center text-xs font-bold text-brand underline">or ask on WhatsApp</a>
