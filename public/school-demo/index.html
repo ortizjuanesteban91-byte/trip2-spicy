@@ -101,7 +101,7 @@ input,select{font:500 17px var(--body);padding:13px 14px;border-radius:12px;bord
 footer{padding-block:32px;color:var(--muted);font-size:15px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:860px){
-  .links a:not(.btn){display:none}
+  
   .hero,.panel,.tour{grid-template-columns:minmax(0,1fr)}
   .collage{grid-template-rows:150px 150px}
   .trust .wrap,.day{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -110,14 +110,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   section{padding-block:48px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.links a,.pill,.logo span,.btn{white-space:nowrap}
+.nav .wrap{flex-wrap:wrap}
+@media(max-width:1100px){.links{order:3;width:100%;overflow-x:auto;padding-bottom:4px}}
+@media(max-width:860px){.links a:not(.btn){display:inline-block!important}}
 </style>
 
 <header class="nav"><div class="wrap">
   <a class="logo" href="/school-demo/index.html"><i aria-hidden="true"></i><span>Little Stars Academy</span></a>
   <nav class="links" aria-label="Main">
     <a href="/school-demo/programs.html" data-en="Programs" data-es="Programas">Programs</a><a href="/school-demo/locations.html" data-en="Locations" data-es="Sedes">Locations</a><a href="/school-demo/about.html" data-en="About" data-es="Nosotros">About</a><a href="/school-demo/contact.html" data-en="Contact" data-es="Contacto">Contact</a><a href="/school-demo/parent-portal.html" data-en="Parent Portal" data-es="Portal de Padres">Parent Portal</a>
-    <a href="#day" data-en="A day here" data-es="Un día aquí">A day here</a>
-    <a href="#faq" data-en="FAQ" data-es="Preguntas">FAQ</a>
+    
+    
     <a href="/school-demo/book-a-tour.html" class="btn btn-sun" style="padding:10px 20px" data-en="Book a tour" data-es="Reservar visita">Book a tour</a>
   </nav>
   <div class="tools">
