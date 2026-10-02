@@ -275,6 +275,55 @@ const LOCAL = {
   "/tours/bavaro-10.webp"
  ]
 };
+Object.assign(LOCAL, {
+ "catalina-island": [
+  "/tours/catalina-04.webp",
+  "/tours/catalina-05.webp",
+  "/tours/catalina-06.webp",
+  "/tours/catalina-07.webp",
+  "/tours/catalina-08.webp",
+  "/tours/catalina-01.webp"
+ ],
+ "whale-watching-cayo-levantado": [
+  "/tours/samana-02.webp",
+  "/tours/samana-08.webp",
+  "/tours/samana-06.webp",
+  "/tours/samana-03.webp"
+ ],
+ "whale-watching-el-limon": [
+  "/tours/samana-02.webp",
+  "/tours/samana-06.webp",
+  "/tours/samana-01.webp",
+  "/tours/samana-08.webp"
+ ],
+ "whale-watching-half-day": [
+  "/tours/samana-02.webp",
+  "/tours/samana-08.webp",
+  "/tours/samana-03.webp",
+  "/tours/samana-05.webp"
+ ],
+ "el-limon-cayo-levantado": [
+  "/tours/samana-01.webp",
+  "/tours/samana-06.webp",
+  "/tours/samana-08.webp",
+  "/tours/samana-03.webp",
+  "/tours/samana-05.webp",
+  "/tours/samana-07.webp"
+ ],
+ "playa-rincon-cayo-levantado": [
+  "/tours/samana-03.webp",
+  "/tours/samana-08.webp",
+  "/tours/samana-05.webp",
+  "/tours/samana-02.webp"
+ ],
+ "best-beaches-samana": [
+  "/tours/samana-03.webp",
+  "/tours/samana-08.webp",
+  "/tours/samana-05.webp",
+  "/tours/samana-02.webp",
+  "/tours/samana-04.webp"
+ ]
+});
 const GALLERY_X = {
  "dolphin-explorer": [
   "dolphin-punta-cana-001",
