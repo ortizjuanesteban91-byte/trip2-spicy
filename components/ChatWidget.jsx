@@ -27,6 +27,9 @@ export default function ChatWidget() {
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [pi, setPi] = useState(0);
+  const [tip, setTip] = useState(false);
+  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; const a = setTimeout(() => setTip(true), 2500), b = setTimeout(() => setTip(false), 14000); return () => { clearTimeout(a); clearTimeout(b); }; }, []);
+  const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
   useEffect(() => { try { let i = Number(sessionStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || sessionStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); sessionStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
@@ -50,9 +53,17 @@ export default function ChatWidget() {
   return (
     <>
       {!open && (
-        <button onClick={() => setOpen(true)} aria-label="Chat and book" className={`fixed right-3 z-[45] grid h-12 w-12 place-items-center rounded-full bg-brand text-white shadow-lg ring-1 ring-white/70 sm:right-4 sm:flex sm:h-auto sm:w-auto sm:items-center sm:gap-2 sm:px-4 sm:py-3 sm:text-sm sm:font-extrabold sm:ring-2 sm:ring-amber-300 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
-          <MessageCircle className="h-5 w-5" /><span className="hidden sm:inline">Chat &amp; book</span>
-        </button>
+        <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
+          {tip && (
+            <div className="relative max-w-[230px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100">
+              <button onClick={hideTip} aria-label="Close" className="absolute right-1.5 top-1 text-base leading-none text-ink/40">×</button>
+              Tell me the tour and how many people, I'll book it for you 👋
+            </div>
+          )}
+          <button onClick={() => { hideTip(); setOpen(true); }} aria-label="Chat and book" className="flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-extrabold text-white shadow-lg ring-2 ring-amber-300">
+            <MessageCircle className="h-5 w-5" />Chat &amp; book
+          </button>
+        </div>
       )}
       {open && (
         <div role="dialog" aria-label="Trip2 booking assistant" className="fixed inset-x-0 bottom-0 z-[60] flex h-[min(86dvh,640px)] flex-col overflow-hidden rounded-t-3xl border border-sky-100 bg-white shadow-2xl sm:inset-x-auto sm:bottom-5 sm:right-5 sm:w-[400px] sm:rounded-3xl">
