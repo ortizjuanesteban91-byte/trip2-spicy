@@ -105,7 +105,7 @@ export default async function Home() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <GlowLink glow="green" href="/tours?dest=miches" className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-8 py-4 text-sm font-black tracking-wide text-[#04262b] shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-300">EXPLORE MICHES TOURS <span aria-hidden="true">→</span></GlowLink>
               <GlowLink glow="white" href="/tours?dest=miches" className="inline-flex rounded-full bg-white/10 px-7 py-4 text-sm font-extrabold ring-1 ring-white/40 backdrop-blur transition hover:bg-white/20">MICHES TOURS FROM PUNTA CANA</GlowLink>
-              {allTours.find((t) => t.slug === "atv-miches") && <p className="text-sm font-bold text-emerald-100">From <b className="text-3xl font-black text-white">${allTours.find((t) => t.slug === "atv-miches").from}</b> / person</p>}
+              
             </div>
           </div>
         </div>
