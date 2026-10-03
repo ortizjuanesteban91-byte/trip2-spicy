@@ -17,6 +17,7 @@ export default function Privacy() {
         <p>Card payments are handled by Stripe on its secure page. We never see or store your full card number. Please never type card details in the chat.</p>
         <H>Chat assistant</H>
         <p>Our chat assistant is an AI virtual assistant. Your conversation is saved in your browser for 24 hours so you can continue, and saved by us to give you service and improve answers.</p>
+        <p>For the safety of our guests and team, the chat does not accept sexual, violent or threatening language. If a message like that is sent, we keep a safety record (the date and time, your IP address, browser details, the message and the conversation) and may block that person from using the chat. We keep these records only as long as needed to protect our service and, where necessary, to report abuse to the authorities.</p>
         <H>Cookies</H>
         <p>We use essential cookies and similar storage for the booking process, chat memory and affiliate links, and may use analytics to understand site usage. You can block cookies in your browser; some features may stop working.</p>
         <H>How long we keep it</H>
