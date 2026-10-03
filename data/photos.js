@@ -237,25 +237,17 @@ const LOCAL = {
   "/tours/parasail-01.webp"
  ],
  "buggy": [
-  "/tours/bavaro-06.webp",
-  "/tours/bavaro-09.webp",
-  "/tours/bavaro-12.webp",
-  "/tours/bavaro-08.webp",
-  "/tours/bavaro-10.webp"
+  "/tours/bavaro-06.webp"
  ],
  "polaris-utv": [
-  "/tours/bavaro-12.webp",
   "/tours/bavaro-09.webp",
-  "/tours/bavaro-06.webp",
-  "/tours/bavaro-08.webp",
-  "/tours/bavaro-10.webp"
+  "/tours/bavaro-12.webp"
  ],
  "atv-punta-cana": [
-  "/tours/bavaro-09.webp",
-  "/tours/bavaro-12.webp",
-  "/tours/bavaro-06.webp",
-  "/tours/bavaro-08.webp",
-  "/tours/bavaro-10.webp"
+  "/tours/miches-08.webp",
+  "/tours/miches-03.webp",
+  "/tours/miches-11.webp",
+  "/tours/miches-07.webp"
  ],
  "bavaro-runners": [
   "/tours/bavaro-06.webp",

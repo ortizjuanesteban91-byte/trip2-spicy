@@ -33,7 +33,7 @@ export default function ChatWidget() {
   const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
-  useEffect(() => { try { let i = Number(localStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || localStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); localStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
+  useEffect(() => { try { let i = Number(localStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || localStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); localStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} fetch("/api/chat").then((r) => r.json()).then((d) => { const j = PERSONAS.findIndex((x) => x.name === d?.name); if (j >= 0) setPi(j); }).catch(() => {}); }, []);
   useEffect(() => { try { const o = JSON.parse(localStorage.getItem(KEY + "v2") || "null"); if (o && Date.now() - o.t < 864e5 && Array.isArray(o.m)) setMsgs(o.m); } catch {} }, []);
   useEffect(() => { try { if (msgs.length) localStorage.setItem(KEY + "v2", JSON.stringify({ t: Date.now(), m: msgs.slice(-30) })); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
   useEffect(() => { const f = () => setOpen(true); window.addEventListener("t2-chat-open", f); return () => window.removeEventListener("t2-chat-open", f); }, []);

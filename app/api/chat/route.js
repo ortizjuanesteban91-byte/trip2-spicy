@@ -1,4 +1,4 @@
-import { personaByName } from "@/lib/personas";
+import { personaByName, personaForIp } from "@/lib/personas";
 import { headers, cookies } from "next/headers";
 import { TOOLS, runTool } from "@/lib/chatTools";
 import { getSite, saveSetting } from "@/lib/siteconf";
@@ -60,11 +60,17 @@ async function logChat(sid, list, persona) {
     await saveSetting(`chat:${id}`, { persona: persona || "", at: new Date().toISOString(), msgs: list.slice(-40).map((m) => ({ role: m.role, content: String(m.content).slice(0, 1500) })) });
   } catch {}
 }
+export async function GET() {
+  const h = await headers();
+  const ip = (h.get("x-forwarded-for") || "x").split(",")[0].trim();
+  return Response.json({ name: personaForIp(ip).name });
+}
 export async function POST(req) {
   if (!KEY()) return Response.json({ ok: false, error: "off" }, { status: 503 });
   let b; try { b = await req.json(); } catch { return Response.json({ ok: false }, { status: 400 }); }
   const h = await headers();
-  const ip = (h.get("x-forwarded-for") || "x").split(",")[0], now = Date.now();
+  const ip = (h.get("x-forwarded-for") || "x").split(",")[0].trim(), now = Date.now();
+  b.persona = personaForIp(ip).name;
   const recent = (hits.get(ip) || []).filter((t) => now - t < 3600000);
   if (recent.length >= 60) return Response.json({ ok: false, error: "slow-down" }, { status: 429 });
   hits.set(ip, [...recent, now]);
