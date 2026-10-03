@@ -30,7 +30,7 @@ export default function TourGallery({ photos = [], alts = [], title = "", grads 
     grid = (
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {tile(0, "col-span-2 h-64 sm:row-span-2 sm:h-auto sm:min-h-[16rem]")}
-        {small.map((k) => tile(k, "h-32 sm:h-36", k === shown - 1 && n > shown))}
+        {small.map((k, j) => tile(k, `h-32 sm:h-36 ${j === small.length - 1 && small.length % 2 === 1 ? "col-span-2 h-40 sm:h-auto sm:col-span-1" : ""} ${j === small.length - 1 && small.length === 3 ? "sm:row-span-2 sm:h-auto" : ""}`, k === shown - 1 && n > shown))}
       </div>
     );
   }
