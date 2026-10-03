@@ -21,6 +21,17 @@ export default async function Page() {
           <TransferBox wa={wa} />
         </div>
       </section>
+      <section className="mx-auto max-w-3xl px-5 pt-12">
+        <p className="text-xs font-extrabold tracking-widest text-[#a97c1f]">WELCOME TO PUNTA CANA</p>
+        <h2 className="mt-1 text-2xl font-black text-brand md:text-3xl">Why we only offer private transfers</h2>
+        <div className="mt-4 grid gap-3 text-[15px] leading-7 text-[#475467]">
+          <p>Welcome! One honest recommendation before you book: we do not sell shared transfers, and we do it on purpose. You are paying for a vacation, so the ride from the airport should be part of it, not the part you want to forget.</p>
+          <p>A shared shuttle picks up other passengers and stops at hotel after hotel. A hotel that is 30 minutes from the airport can easily turn into a very long ride, and after a long flight that is the last thing you want. The same happens on the way back: you are collected early and wait while the vehicle fills.</p>
+          <p>A private transfer goes straight from the airport to your hotel, with your driver waiting at arrivals with your name, no strangers and no stops. When two or more people travel, the cost is split between you and often stays close to a shared seat, while you get your time back.</p>
+          <p className="font-bold text-ink">Tip: if your tours use big shared buses, ask how many pickups come before yours. Fewer stops means more time for the experience.</p>
+          <p><a href="/blog/private-vs-shared-airport-transfer-punta-cana" className="font-extrabold text-brand underline">Read: Private vs shared airport transfer in Punta Cana →</a></p>
+        </div>
+      </section>
       <section className="mx-auto max-w-5xl px-5 py-10">
         <h2 className="mb-5 text-center text-2xl font-black text-brand">Choose your ride</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{[["Private SUV", "1–5 guests · 5 bags", "Couples, small families"], ["Private Van", "6–10 guests · 10 bags", "Families and friends"], ["Mini Bus", "11–20 guests", "Weddings and groups"], ["Bus", "21–59 guests", "Big events and teams"]].map(([n, a, b]) => <div key={n} className="rounded-2xl bg-white p-5 text-center shadow-sm ring-1 ring-sky-100"><p className="text-3xl">🚐</p><h3 className="mt-2 font-black text-brand">{n}</h3><p className="text-sm font-bold text-ink/80">{a}</p><p className="text-xs text-ink/60">{b}</p></div>)}</div>
