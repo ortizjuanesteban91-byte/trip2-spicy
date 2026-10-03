@@ -22,6 +22,8 @@ export default function TrustSlider({ items }) {
   }, [cur]);
   return (
     <section className="mx-auto max-w-7xl px-5 py-10 sm:py-12">
+      <p className="text-center text-[11px] font-extrabold tracking-[.25em] text-[#a97c1f]">WHY TRIP2</p>
+      <h2 className="mb-6 mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">Why choose us</h2>
       <div ref={box} className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible lg:grid-cols-4">
         {items.map(([t, d]) => (
           <div key={t} className="min-w-[82%] snap-center rounded-2xl border border-sky-100 bg-white p-5 shadow-sm sm:min-w-0">
