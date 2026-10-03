@@ -49,7 +49,7 @@ export default function BookingBox({ tour, wa }) {
     setState("sending");
     const f = Object.fromEntries(new FormData(e.target));
     try {
-      const r = await fetch("/api/book", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tour: tour.slug, date: f.date, time: f.time, hotel: f.hotel === "Other" ? f.hotelOther : f.hotel, qty: q, name: `${f.first} ${f.last}`.trim(), email: f.email, phone: f.phone, notes: f.notes, website: f.website }) });
+      const r = await fetch("/api/book", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tour: tour.slug, date: f.date, time: f.time, hotel: f.hotel === "Other" ? f.hotelOther : f.hotel, qty: q, name: `${f.first} ${f.last}`.trim(), email: f.email, phone: f.phone, notes: f.notes, terms: f.terms === "yes", website: f.website }) });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.url) { window.location.href = j.url; return; }
       setState(r.ok ? "done" : "error");
@@ -89,6 +89,7 @@ export default function BookingBox({ tour, wa }) {
           <div className="grid grid-cols-2 gap-3"><input name="first" required placeholder="First name *" className={plain} /><input name="last" required placeholder="Last name *" className={plain} /></div>
           <input name="email" type="email" required placeholder="Email *" className={plain} />
           <input name="phone" required placeholder="Phone / WhatsApp *" className={plain} />
+          <label className="flex items-start gap-3 rounded-2xl bg-sky-50/70 p-3 text-[13px] leading-snug text-ink/80"><input type="checkbox" name="terms" value="yes" required className="mt-0.5 h-5 w-5 shrink-0 accent-[#0e7490]" /><span>I have read and agree to the <a href="/terms" target="_blank" className="font-bold text-brand underline">Terms &amp; Conditions and Activity Waiver</a> and the <a href="/privacy" target="_blank" className="font-bold text-brand underline">Privacy Policy</a>. *</span></label>
           <textarea name="notes" rows={2} placeholder="Notes" className={plain} />
           <input name="website" tabIndex={-1} autoComplete="off" className="hidden" />
           <div className="mt-1 border-t border-sky-200 pt-4 text-[15px]">
@@ -100,7 +101,7 @@ export default function BookingBox({ tour, wa }) {
           {closed && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Closed on Mondays. Please pick another date.</p>}
           {tooFew && <p className="rounded-xl bg-amber-50 p-3 text-sm font-bold text-amber-800">Minimum 2 people on this tour. Add a Double or a second guest.</p>}
         </div>
-        <p className="mt-3 px-1 text-xs text-ink/60">"From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
+        <p className="mt-3 px-1 text-xs text-ink/60">Tours are run by independent licensed partner operators; Trip2 books them for you. "From" prices are per person, based on the Double. You pay the Single or Double you select.</p>
         {hint && <p role="alert" className="mt-3 rounded-xl bg-amber-50 p-3 text-center text-sm font-extrabold text-amber-800">{hint}</p>}
         <button key={shake} onClick={nudge} disabled={state === "sending"} className={`mt-4 flex w-full items-center justify-center gap-2 rounded-full py-4 text-sm font-extrabold text-white transition ${shake ? "t2-shake " : ""}${ready ? "bg-emerald-600 shadow-lg ring-4 ring-emerald-300/70 hover:bg-emerald-700" : "bg-brand/60"}`}><Zap className="h-4 w-4" />{state === "sending" ? "SENDING…" : ready ? "RESERVE NOW ✓" : "RESERVE NOW"}</button>
         <p className="mt-2 flex items-center justify-center gap-1 text-[11px] font-bold text-ink/60"><span aria-hidden="true">🔒</span> Secure checkout · Powered by Stripe</p>

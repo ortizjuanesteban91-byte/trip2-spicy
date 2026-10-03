@@ -17,7 +17,7 @@ export default async function Footer() {
         </div>
         {col("Explore", [["Home", "/"], ["Tours", "/tours"], ["Travel Tips", "/travel-tips"], ["Blogs", "/blog"], ["Affiliates", "/affiliates"]])}
         {col("Customer Support", [["WhatsApp", whatsapp], ["Phone", `tel:${phone.replace(/[^+\d]/g, "")}`], ["Email", `mailto:${email}`], ["Contact Us", "/contact"]])}
-        {col("Information", [["Cancellation Policy"], ["Refund Policy"], ["Terms of Service"], ["Privacy Policy"]])}
+        {col("Information", [["Terms & Activity Waiver", "/terms"], ["Cancellation & Refund Policy", "/terms#cancellation"], ["Privacy Policy", "/privacy"]])}
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs">
         <p className="mb-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-bold text-sky-100"><span className="text-sky-200">Find us on</span><a href={GOOGLE_READ} target="_blank" rel="noopener noreferrer" className="hover:text-white">Google ★</a><a href={tripadvisor || TA_WRITE} target="_blank" rel="noopener noreferrer" className="hover:text-white">{tripadvisor ? "TripAdvisor ↗" : "Review us on TripAdvisor ↗"}</a></p>
