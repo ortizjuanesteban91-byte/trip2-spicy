@@ -3460,7 +3460,7 @@
         "items": [
           "Duration: half day",
           "Departures: 7:00 AM, 10:00 AM or 1:00 PM",
-          "Drivers 16+ with an adult; passengers from 7",
+          "Drivers 16+; passengers from 7",
           "No driver's licence needed",
           "Round-trip hotel transport",
           "Free cancellation up to 24 hours before",
@@ -3565,7 +3565,7 @@
           },
           {
             "q": "What is the minimum age?",
-            "a": "Drivers must be 16 or older and ride with an adult; passengers from age 7."
+            "a": "Drivers must be 16 or older; passengers from age 7."
           },
           {
             "q": "Can two people share one ATV?",
@@ -3699,7 +3699,7 @@
               "name": "What is the minimum age?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Drivers must be 16 or older and ride with an adult; passengers from age 7."
+                "text": "Drivers must be 16 or older; passengers from age 7."
               }
             },
             {
@@ -3763,7 +3763,7 @@
         "items": [
           "Duration: half day (1.5–2 hours of driving)",
           "Departures: 7:00 AM, 10:00 AM or 1:00 PM",
-          "Drivers 16+ with an adult; passengers from 5",
+          "Drivers 16+; passengers from 5",
           "Single · Double · Family",
           "Round-trip hotel transport",
           "Free cancellation up to 24 hours before"
@@ -3857,7 +3857,7 @@
             "label": "Cons",
             "items": [
               "You will get muddy",
-              "Drivers must be 16+ (with an adult)"
+              "Drivers must be 16+"
             ]
           }
         ]
@@ -3872,7 +3872,7 @@
           },
           {
             "q": "What is the minimum age?",
-            "a": "Drivers must be 16 or older and ride with an adult; passengers from age 5."
+            "a": "Drivers must be 16 or older; passengers from age 5."
           },
           {
             "q": "How long do we drive?",
@@ -4020,7 +4020,7 @@
               "name": "What is the minimum age?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Drivers must be 16 or older and ride with an adult; passengers from age 5."
+                "text": "Drivers must be 16 or older; passengers from age 5."
               }
             },
             {
@@ -4083,7 +4083,7 @@
         "items": [
           "Duration: about 3 hours plus transfers (half day)",
           "Departures: 7:00 AM, 10:00 AM or 1:00 PM",
-          "Drivers 16+ with an adult; passengers 6+ and at least 1.30 m (4 ft 3 in)",
+          "Drivers 16+; passengers 6+ and at least 1.30 m (4 ft 3 in)",
           "Single 1 · Double 2 · Family up to 4",
           "Round-trip hotel transport",
           "Free cancellation up to 24 hours before"
@@ -4193,7 +4193,7 @@
           },
           {
             "q": "What is the minimum driver age?",
-            "a": "16, with an adult."
+            "a": "16."
           },
           {
             "q": "Can kids ride as passengers?",
@@ -4345,7 +4345,7 @@
               "name": "What is the minimum driver age?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "16, with an adult."
+                "text": "16."
               }
             },
             {
