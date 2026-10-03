@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { tours, catOf, catsOf, CATS } from "@/lib/content";
 import { allTours } from "@/lib/tours";
 import { SITE } from "@/lib/site";
