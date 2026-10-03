@@ -272,15 +272,6 @@ const LOCAL = {
   "/tours/bavaro-11.webp",
   "/tours/bavaro-07.webp"
  ],
- "safari": [
-  "/tours/bavaro-12.webp",
-  "/tours/bavaro-09.webp",
-  "/tours/bavaro-06.webp",
-  "/tours/bavaro-02.webp",
-  "/tours/bavaro-05.webp",
-  "/tours/bavaro-08.webp",
-  "/tours/bavaro-10.webp"
- ]
 };
 Object.assign(LOCAL, {
  "catalina-island": [
@@ -405,6 +396,7 @@ const GALLERY_X = {
  ]
 };
 Object.assign(GALLERY, GALLERY_X);
+GALLERY["safari"] = ["trip2/supreme-true-safari/supreme-true-safari-07", "trip2/supreme-true-safari/supreme-true-safari-10", "trip2/supreme-true-safari/supreme-true-safari-04", "trip2/supreme-true-safari/supreme-true-safari-05", "trip2/supreme-true-safari/supreme-true-safari-03", "trip2/supreme-true-safari/supreme-true-safari-02", "trip2/supreme-true-safari/supreme-true-safari-06", "trip2/supreme-true-safari/supreme-true-safari-08", "trip2/supreme-true-safari/supreme-true-safari-09", "trip2/supreme-true-safari/supreme-true-safari-01", "trip2/supreme-true-safari/supreme-true-safari-11", "trip2/supreme-true-safari/supreme-true-safari-12"]; // Supreme True Safari (Cloudinary)
 const own = (slug, w) => LOCAL[slug] ? LOCAL[slug] : (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
 // Combo tours (no photos of their own) borrow photos from their parts, interleaved so every part shows up in the first four.
 export const gallery = (slug, w = 1400) => {
