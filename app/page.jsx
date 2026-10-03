@@ -13,6 +13,8 @@ import RatingBadge from "@/components/RatingBadge";
 import StarBadge from "@/components/StarBadge";
 import { getSitePhotos } from "@/lib/sitephotos";
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
+// Transportation card: vehicle photos from the live Trip2 site (temporary hotlink; upload your own in Admin > Photos > category pics to replace).
+const VEH = ["https://www.trip2puntacana.com/wp-content/uploads/2025/01/surburban-1.png", "https://www.trip2puntacana.com/wp-content/uploads/2025/01/busmini.png"];
 const IT_HREF = ["/tours/adventure-safari", "/tours/water-adventures", "/tours/shows-nightlife"];
 const GUIDE_HREF = ["/blog/best-punta-cana-tours", "/blog/saona-vs-catalina-island", "/blog/things-to-do-in-miches"];
 const GUIDE_PIC = ["catamaran-party-boat", "saona-island", "montana-redonda-miches"];
@@ -49,7 +51,7 @@ export default async function Home() {
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map(([t, d, g, k], i) => <Link key={t} href={CATHREF(k)} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{(ph.cats[k] || CATURL[k] || photo(CATPIC[k])) && <img data-aos="zoom-out-right" src={ph.cats[k] || CATURL[k] || photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: CATPOS[k] || "50% 50%" }} />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
+          {categories.map(([t, d, g, k], i) => <Link key={t} href={CATHREF(k)} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{(ph.cats[k] || CATURL[k] || photo(CATPIC[k])) && <img data-aos="zoom-out-right" src={ph.cats[k] || CATURL[k] || photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: CATPOS[k] || "50% 50%" }} />}{k === "transport" && !ph.cats[k] && <div className="absolute inset-x-0 top-6 flex items-end justify-center gap-1 px-4"><img src={VEH[0]} alt="Suburban" loading="lazy" className="h-28 w-auto drop-shadow-[0_8px_10px_rgba(0,0,0,.35)]" /><img src={VEH[1]} alt="Mini bus" loading="lazy" className="h-32 w-auto drop-shadow-[0_8px_10px_rgba(0,0,0,.35)]" /></div>}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
       <Story />
