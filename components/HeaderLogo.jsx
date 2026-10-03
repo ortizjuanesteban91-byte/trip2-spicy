@@ -32,7 +32,7 @@ export function DestBar({ michesSlugs = [] }) {
     <div className="border-t border-sky-100/60 bg-white/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-1.5 text-[12px] font-bold sm:px-5">
         <Link href="/" className="inline-flex items-center gap-1 rounded-full bg-brand px-3 py-1 font-extrabold text-white shadow-sm hover:bg-brand-hover">&larr; Back to Punta Cana</Link>
-        <Link href="/tours?dest=miches" className="text-brand/80 underline-offset-2 hover:underline">All Miches tours</Link>
+        <span className="text-brand/70">Trip2 Miches</span>
       </div>
     </div>
   );

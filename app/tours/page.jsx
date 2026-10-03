@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { tours, catOf, catsOf, CATS } from "@/lib/content";
 import { allTours } from "@/lib/tours";
 import { SITE } from "@/lib/site";
@@ -7,11 +8,12 @@ export const metadata = { title: "Punta Cana Tours & Excursions | Trip2", descri
 export default async function Page({ searchParams }) {
   const { cat, dest, q } = await searchParams;
   const query = typeof q === "string" ? q.slice(0, 80) : "";
+  if (dest === "miches" && !query) redirect("/m"); // one Miches hub only
   const list = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, keyword: t.keyword, slug2: t.slug, catLabel: (CATS.find(([k]) => k === catOf(t.slug)) || [0, ""])[1], from: t.from, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i: tours.findIndex((x) => x.slug === t.slug) }));
   return (
     <main>
       <section className="bg-brand py-16 text-center text-white"><h1 className="text-4xl font-black" data-aos="zoom-in">All Tours</h1></section>
-      <div className="mx-auto max-w-6xl px-5 py-10"><TourGrid ov={(await getSitePhotos()).cards} tours={list} cats={CATS} initialQ={query} initialDest={query ? "all" : dest === "miches" || dest === "punta-cana" ? dest : "all"} initial={CATS.some(([k]) => k === cat) ? cat : "all"} /></div>
+      <div className="mx-auto max-w-6xl px-5 py-10"><TourGrid ov={(await getSitePhotos()).cards} tours={list} cats={CATS} initialQ={query} initialDest={dest === "punta-cana" ? "punta-cana" : query ? "all" : "all"} initial={CATS.some(([k]) => k === cat) ? cat : "all"} /></div>
     </main>
   );
 }

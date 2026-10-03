@@ -21,6 +21,7 @@ export async function generateMetadata({ params }) {
   return { title: `${c[1]} | Trip2`, description: c[2], alternates: { canonical: `${SITE}/tours/${cat}/` } };
 }
 export default async function Page({ params }) {
+  if ((await params).cat === "things-to-do-in-miches") redirect("/m"); // one Miches hub only
   const { cat } = await params; const c = find(cat); if (!c) notFound();
   const list = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, from: t.from, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i: tours.findIndex((x) => x.slug === t.slug) }));
   return (
