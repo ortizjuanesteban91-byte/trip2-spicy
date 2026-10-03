@@ -65,7 +65,7 @@ export default function ChatWidget() {
       )}
       {!open && (
         <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
-          <span className="rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-semibold text-brand/80 shadow-sm ring-1 ring-sky-100">Tell me the tour, I quote and book</span>
+          <span className="rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-semibold text-brand/80 shadow-sm ring-1 ring-sky-100">Tell me the tour. I quote, book &amp; send your payment link.</span>
           <button onClick={() => { hideTip(); setOpen(true); }} aria-label="Chat and book" className="flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-extrabold text-white shadow-lg ring-2 ring-amber-300">
             <MessageCircle className="h-5 w-5" />Chat &amp; book
           </button>
