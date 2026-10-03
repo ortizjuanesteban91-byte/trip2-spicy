@@ -11,8 +11,8 @@ export default async function Header() {
           {nav.map(([l, h]) => <Link key={l} href={h} className="hover:text-brand-hover">{l}</Link>)}
         </nav>
         <div className="flex items-center gap-2">
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#25D366] px-3 py-2.5 text-xs font-extrabold text-white shadow-sm sm:px-4">WhatsApp</a>
-          <Link id="hdr-book" href="/tours" className="rounded-full bg-brand px-4 py-2.5 text-xs sm:px-5 font-extrabold tracking-wide text-white shadow hover:bg-brand-hover">BOOK NOW</Link>
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex min-w-[104px] items-center justify-center rounded-full bg-[#25D366] px-4 py-2.5 text-xs font-extrabold tracking-wide text-white shadow hover:brightness-95 sm:px-5">WhatsApp</a>
+          <Link id="hdr-book" href="/tours" className="inline-flex min-w-[104px] items-center justify-center rounded-full bg-brand px-4 py-2.5 text-xs font-extrabold tracking-wide text-white shadow hover:bg-brand-hover sm:px-5">BOOK NOW</Link>
         </div>
       </div>
     </header>
