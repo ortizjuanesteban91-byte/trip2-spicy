@@ -35,7 +35,8 @@ export default async function MichesHome() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section className="bg-brand px-5 py-16 text-center text-white sm:py-24">
+      <section className="bg-brand px-5 py-14 text-center text-white sm:py-20">
+        <img src="/img/logo-white-miches.webp?v=2" alt="Trip2 Miches" width="280" height="98" className="mx-auto mb-6 block h-24 w-auto sm:h-28" />
         <p className="text-xs font-extrabold tracking-[.25em] text-amber-300">MICHES · EMERALD COAST · DOMINICAN REPUBLIC</p>
         <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-black leading-tight sm:text-5xl">Miches Tours &amp; Excursions</h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-white/90">ATV trails, horseback rides to the beach and Montaña Redonda swings with 360° views, picked up at your Miches hotel. Free cancellation. Reserve now, pay later.</p>
