@@ -7,6 +7,15 @@ import { trust, categories, advantages, itinerary, guides } from "@/data/site";
 import { getSite } from "@/lib/siteconf";
 import Reviews from "@/components/Reviews";
 import Story from "@/components/Story";
+import TrustSlider from "@/components/TrustSlider";
+import HeroImage from "@/components/HeroImage";
+const HERO_SLIDES = [
+  { src: "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/image00017", alt: "Aerial view of the turquoise Caribbean sea and island near Punta Cana" },
+  { src: bigPhoto("saona-island", 2200), alt: "Saona Island beach and turquoise water" },
+  { src: bigPhoto("catamaran-party-boat", 2200), alt: "Catamaran party boat sailing off Punta Cana" },
+  { src: bigPhoto("dolphin-explorer", 2200), alt: "Dolphin experience near Punta Cana" },
+  { src: bigPhoto("los-haitises", 2200), alt: "Los Haitises National Park mangroves" },
+];
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
 const GUIDE_PIC = ["catamaran-party-boat", "speedboat", "montana-redonda-miches"];
 const CATPOS = {};
@@ -23,7 +32,7 @@ export default async function Home() {
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        <img src="https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/image00017" alt="Aerial view of the turquoise Caribbean sea and island near Punta Cana" fetchPriority="high" className="hero-zoom absolute inset-0 h-full w-full object-cover" />
+        <HeroImage slides={HERO_SLIDES} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/40" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
@@ -36,9 +45,7 @@ export default async function Home() {
           </form>
         </div>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-5 px-5 py-12 sm:grid-cols-2 lg:grid-cols-4">
-        {trust.map(([t, d], i) => <div key={t} data-aos="zoom-in" data-aos-delay={i * 100} className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm"><h3 className="text-base font-extrabold text-brand">{t}</h3><p className="mt-1 text-sm leading-6 text-ink/70">{d}</p></div>)}
-      </section>
+      <TrustSlider items={trust} />
       <section id="excursions" className="bg-ice px-5 py-16">
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
