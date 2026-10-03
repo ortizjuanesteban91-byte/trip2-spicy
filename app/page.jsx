@@ -26,7 +26,7 @@ const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", fami
 const CATHREF = (k) => (k === "transport" ? "/airport-transfer" : `/tours/${CATSLUG[k]}`);
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-[#a97c1f]">{children}</p>;
 const H2 = ({ children }) => <><h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2><span aria-hidden="true" className="mx-auto mt-3 block h-1 w-16 rounded-full bg-gold" /></>;
-const Btn = ({ href, children, ghost }) => <GlowLink glow={ghost ? "white" : "white"} href={href} className={`inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-extrabold tracking-wide shadow-lg transition hover:-translate-y-0.5 ${ghost ? "bg-[#04262b]/60 text-white ring-2 ring-white/80 backdrop-blur hover:bg-[#04262b]/75" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</GlowLink>;
+const Btn = ({ href, children, ghost }) => <GlowLink glow={ghost ? "white" : "white"} href={href} className={`inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-extrabold tracking-wide shadow-lg transition hover:-translate-y-0.5 ${ghost ? "bg-brand text-white ring-2 ring-white/80 hover:bg-brand-hover" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</GlowLink>;
 export default async function Home() {
   const allTours = await getAll();
   const { wa: whatsapp } = await getSite();
