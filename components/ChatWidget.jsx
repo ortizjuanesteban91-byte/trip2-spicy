@@ -36,6 +36,7 @@ export default function ChatWidget() {
   useEffect(() => { try { let i = Number(localStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || localStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); localStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} fetch("/api/chat").then((r) => r.json()).then((d) => { const j = PERSONAS.findIndex((x) => x.name === d?.name); if (j >= 0) setPi(j); }).catch(() => {}); }, []);
   useEffect(() => { try { const o = JSON.parse(localStorage.getItem(KEY + "v2") || "null"); if (o && Date.now() - o.t < 864e5 && Array.isArray(o.m)) setMsgs(o.m); } catch {} }, []);
   useEffect(() => { try { if (msgs.length) localStorage.setItem(KEY + "v2", JSON.stringify({ t: Date.now(), m: msgs.slice(-30) })); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
+  useEffect(() => { if (!open) return; const b = document.body, o = b.style.overflow; b.style.overflow = "hidden"; return () => { b.style.overflow = o; }; }, [open]);
   useEffect(() => { const f = () => setOpen(true); window.addEventListener("t2-chat-open", f); return () => window.removeEventListener("t2-chat-open", f); }, []);
   if (path.startsWith("/admin") || path.startsWith("/booking-")) return null;
   const onTour = path.startsWith("/tour/");
@@ -74,7 +75,7 @@ export default function ChatWidget() {
             <div className="flex items-center gap-2.5"><span className="flex h-9 w-9 items-center justify-center rounded-full text-base font-black text-white ring-2 ring-white/70" style={{ background: who.color }}>{who.name[0]}</span><div><p className="text-sm font-black">{who.name} · Trip2</p><p className="text-[11px] text-white/80">Virtual assistant · online now</p></div></div>
             <button onClick={() => setOpen(false)} aria-label="Close chat" className="rounded-full p-1.5 hover:bg-white/15"><X className="h-5 w-5" /></button>
           </div>
-          <div className="flex-1 space-y-2.5 overflow-y-auto p-3">
+          <div className="flex-1 space-y-2.5 overflow-y-auto overscroll-contain p-3">
             <Bubble m={{ role: "assistant", content: hello(who.name) }} />
             {!msgs.length && <div className="flex flex-wrap gap-2 pt-1">{CHIPS.map((c) => <button key={c} onClick={() => send(c)} className="rounded-full border border-sky-200 bg-white px-3 py-1.5 text-xs font-bold text-brand">{c}</button>)}</div>}
             {msgs.map((m, i) => <Bubble key={i} m={m} />)}
@@ -83,7 +84,7 @@ export default function ChatWidget() {
           </div>
           <p className="border-t border-sky-100 px-3 pt-2 text-center text-[10px] text-ink/50">🔒 Never type card numbers here. Payment is on Stripe's secure page.</p>
           <form onSubmit={(e) => { e.preventDefault(); send(); }} className="flex items-center gap-2 p-3 pt-2">
-            <input value={text} onChange={(e) => setText(e.target.value)} placeholder="Type your message…" maxLength={500} className="min-w-0 flex-1 rounded-full border border-sky-200 bg-sky-50/70 px-4 py-3 text-[15px] text-ink" />
+            <input value={text} onChange={(e) => setText(e.target.value)} placeholder="Type your message…" maxLength={500} className="min-w-0 flex-1 rounded-full border border-sky-200 bg-sky-50/70 px-4 py-3 text-base text-ink" />
             <button disabled={busy || !text.trim()} aria-label="Send" className="rounded-full bg-brand p-3 text-white disabled:bg-slate-300"><Send className="h-5 w-5" /></button>
           </form>
           <a href={whatsapp} target="_blank" rel="noopener" className="border-t border-sky-100 py-2 text-center text-xs font-bold text-brand">Prefer a person? Chat on WhatsApp</a>

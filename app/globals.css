@@ -33,3 +33,7 @@ input:user-invalid,select:user-invalid{border-color:#f59e0b!important;background
 
 @keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
 .hero-zoom{animation:heroZoom 22s ease-in-out infinite alternate}
+
+/* Phones: 16px fields so iOS never zooms/shifts the page when a field is tapped; no sideways scroll anywhere */
+@media (max-width: 767px){ input,select,textarea{font-size:16px!important} }
+html,body{overflow-x:clip;max-width:100%}
