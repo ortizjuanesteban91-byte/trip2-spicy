@@ -29,7 +29,7 @@ export default function ChatWidget() {
   const [busy, setBusy] = useState(false);
   const [pi, setPi] = useState(0);
   const [tip, setTip] = useState(false);
-  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; const a = setTimeout(() => setTip(true), 2500), b = setTimeout(() => setTip(false), 16000); return () => { clearTimeout(a); clearTimeout(b); }; }, []);
+  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; const a = setTimeout(() => setTip(true), 4000), b = setTimeout(() => setTip(false), 10000); return () => { clearTimeout(a); clearTimeout(b); }; }, []);
   const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
@@ -54,10 +54,10 @@ export default function ChatWidget() {
   return (
     <>
       {!open && tip && (
-        <div className={`fixed right-3 z-[46] max-w-[250px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100 sm:right-4 ${onTour ? "bottom-[5.6rem] lg:bottom-20" : "bottom-20"}`}>
+        <div className={`fixed right-3 z-[46] max-w-[200px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100 sm:right-4 ${onTour ? "bottom-[5.6rem] lg:bottom-20" : "bottom-20"}`}>
           <button onClick={hideTip} aria-label="Close" className="absolute right-1.5 top-1 text-base leading-none text-ink/40">×</button>
           <span className="block text-brand">Booking assistant</span>
-          I answer your questions, give exact prices and book your tour right here in the chat. No forms needed. Just tell me the tour, the date and how many people.
+          Ask me anything. I give exact prices and book your tour right here, no forms.
         </div>
       )}
       {!open && (

@@ -9,15 +9,7 @@ import Reviews from "@/components/Reviews";
 import Story from "@/components/Story";
 import TrustSlider from "@/components/TrustSlider";
 import HeroImage from "@/components/HeroImage";
-const CLH = "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/";
-const HERO_SLIDES = [
-  { src: bigPhoto("saona-island", 2200), alt: "Aerial view of Saona Island beach and turquoise water" },
-  { src: "/tours/monkeyland-06.webp", alt: "Squirrel monkey and zipline at Monkey Land, Punta Cana" },
-  { src: "/tours/bavaro-06.webp", alt: "Buggy tour in Punta Cana" },
-  { src: "/tours/parasail-01.webp", alt: "Parasailing over the turquoise sea in Punta Cana" },
-  { src: bigPhoto("los-haitises", 2200), alt: "Aerial view of Los Haitises National Park" },
-  { src: CLH + "image00020", alt: "Friends enjoying a catamaran party boat in Punta Cana" },
-];
+import { getSitePhotos } from "@/lib/sitephotos";
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
 const GUIDE_PIC = ["catamaran-party-boat", "speedboat", "montana-redonda-miches"];
 const CATPOS = {};
@@ -31,10 +23,11 @@ const Btn = ({ href, children, ghost }) => <GlowLink glow={ghost ? "white" : "wh
 export default async function Home() {
   const allTours = await getAll();
   const { wa: whatsapp } = await getSite();
+  const ph = await getSitePhotos();
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        <HeroImage slides={HERO_SLIDES} />
+        <HeroImage slides={ph.hero} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/40" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
@@ -52,7 +45,7 @@ export default async function Home() {
         <Eyebrow>CURATED CATEGORIES</Eyebrow><H2>FIND YOUR PERFECT ADVENTURE</H2>
         <p data-aos="zoom-in" className="mx-auto mt-3 max-w-2xl text-center text-sm text-ink/70">From tranquil island shallows and turquoise reefs to adrenaline-packed mountain tracks, select the experience custom-crafted for your traveling party.</p>
         <div className="mx-auto mt-10 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map(([t, d, g, k], i) => <Link key={t} href={CATHREF(k)} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{(CATURL[k] || photo(CATPIC[k])) && <img data-aos="zoom-out-right" src={CATURL[k] || photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: CATPOS[k] || "50% 50%" }} />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
+          {categories.map(([t, d, g, k], i) => <Link key={t} href={CATHREF(k)} className="group relative flex h-72 flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow transition hover:-translate-y-1"><div data-aos="zoom-out-right" className={`absolute inset-0 bg-gradient-to-br ${g}`} />{(ph.cats[k] || CATURL[k] || photo(CATPIC[k])) && <img data-aos="zoom-out-right" src={ph.cats[k] || CATURL[k] || photo(CATPIC[k])} alt={t} loading="lazy" className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: CATPOS[k] || "50% 50%" }} />}<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" /><div className="relative" data-aos="zoom-out-left"><h3 className="text-xl font-black">{t}</h3><p className="mt-1 text-sm text-white/85">{d}</p></div></Link>)}
         </div>
       </section>
       <Story />
@@ -62,7 +55,7 @@ export default async function Home() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {["saona-island","atv-punta-cana","catamaran-party-boat"].map((x) => allTours.find((t) => t.slug === x)).filter(Boolean).map((t, i) => (
             <article key={t.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
-              <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-teal-700" />{strip(t.slug) ? <div data-aos="zoom-out-right" className="absolute inset-0 flex gap-0.5">{strip(t.slug).map((u, k) => <img key={k} src={u} alt={k ? "" : t.name} loading="lazy" className="h-full min-w-0 flex-1 object-cover" />)}</div> : photo(t.slug) && <img data-aos="zoom-out-right" src={photo(t.slug)} alt={t.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<span className="absolute left-3 top-3 z-10 pointer-events-none rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span></div>
+              <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-teal-700" />{strip(t.slug) && !ph.cards[t.slug] ? <div data-aos="zoom-out-right" className="absolute inset-0 flex gap-0.5">{strip(t.slug).map((u, k) => <img key={k} src={u} alt={k ? "" : t.name} loading="lazy" className="h-full min-w-0 flex-1 object-cover" />)}</div> : (ph.cards[t.slug] || photo(t.slug)) && <img data-aos="zoom-out-right" src={ph.cards[t.slug] || photo(t.slug)} alt={t.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<span className="absolute left-3 top-3 z-10 pointer-events-none rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span></div>
               <div className="p-5"><div data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t.name}</h3><p className="mt-2 text-xs text-ink/60">Half Day · Verified Guide</p></div>
                 <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)}</b> / person</p><Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs after:absolute after:inset-0 after:z-20 after:content-[''] font-extrabold text-white hover:bg-brand-hover">VIEW TOUR</Link></div></div>
             </article>
