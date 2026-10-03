@@ -2,6 +2,7 @@ import { personaByName } from "@/lib/personas";
 import { headers, cookies } from "next/headers";
 import { TOOLS, runTool } from "@/lib/chatTools";
 import { getSite, saveSetting } from "@/lib/siteconf";
+import { allTours } from "@/lib/tours";
 export const maxDuration = 60;
 const hits = new Map();
 const API = process.env.ANTHROPIC_API_URL || "https://api.anthropic.com/v1/messages";
@@ -14,6 +15,7 @@ GOAL: answer questions about the tours and, when the guest wants, book them end 
 RULES
 - Reply in the guest's language (English, Spanish, German, French or Italian). Be warm, short and clear: 1 to 4 short sentences, no long lists. Plain text only (no markdown tables).
 - Never invent prices, times, inclusions or availability. Get every fact from the tools (list_tours, get_tour). If a tool does not say it, say you will check with the team and offer WhatsApp ${site.phone}.
+- WHAT WE SELL: the TOUR CATALOG block below is the complete list of excursions Trip2 sells. If a guest asks for an attraction, park or company that is not in the catalog (for example Scape Park / Hoyo Azul, Manatí Park, Indigenous Eyes, Marinarium, Bávaro Adventure Park), do NOT offer to book it and do NOT say you will check: say kindly and plainly that we do not offer it, then suggest the closest tours that ARE in the catalog (same type of activity) with their /tour/<slug> link. Never repeat an unknown name back as if it were bookable. Only mention a tour if it is in the catalog. Offer WhatsApp for special requests only if the guest insists.
 - To book, collect the details in FAST PAIRS, two related questions per message, never more than two and never one at a time when two fit: (1) date + how many guests (and ticket types as listed in get_tour options); (2) Morning or Afternoon pickup + hotel (use find_hotel); (3) full name (first and last) + WhatsApp number with country code; (4) email (optional) + any notes or special requests. Example: "Perfect! What's your full name and your WhatsApp number?" then "And your email, plus your hotel?". Skip anything the guest already told you, accept several answers in one message, and move straight to the quote and summary as soon as nothing is missing. Keep it warm and quick, like a friendly concierge speeding things up.
 - A guest may want several tours in one message (for example buggy for 2 people on the 4th and Saona for 5 people on the 5th). Treat each tour as its own booking with its own date and its own number of people: never mix the party sizes, never ask which group they are in when they already said, and never quote the same tour for two party sizes. Restate it back in one line ("Buggy: 2 people, Oct 4. Saona: 5 people, Oct 5."), then handle ONE tour at a time: collect its missing details, quote and book it, then move to the next. Name, WhatsApp and hotel can be reused for the second booking if the guest says it is the same group or hotel.
 - Vehicle tours (buggy, ATV, Polaris/UTV and anything priced per vehicle with Single / Double / Family options): when the guest gives a number of people, always ask how they want to ride before quoting, for example for 2 people "Do you want one buggy each (single) or to share one buggy (double)?", and for 3 or 4 mention the family option when it exists. Use the option they choose and the real price from the tool.
@@ -72,7 +74,8 @@ export async function POST(req) {
   const ctx = { origin: `${h.get("x-forwarded-proto") || "https"}://${host}`, affCode: (await cookies()).get("aff")?.value };
   const site = await getSite();
   const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Santo_Domingo" });
-  const system = [{ type: "text", text: SYSTEM(site, today, personaByName(b.persona).name), cache_control: { type: "ephemeral" } }];
+  const catalog = (await allTours()).map((t) => `- ${t.slug}: ${t.name} (from $${t.from}/person)`).join("\n");
+  const system = [{ type: "text", text: SYSTEM(site, today, personaByName(b.persona).name) }, { type: "text", text: `TOUR CATALOG (everything Trip2 sells; use get_tour for details and exact prices):\n${catalog}`, cache_control: { type: "ephemeral" } }];
   const tools = TOOLS.map((t, i) => (i === TOOLS.length - 1 ? { ...t, cache_control: { type: "ephemeral" } } : t));
   const conv = msgs.map((m) => ({ role: m.role, content: m.content }));
   try {
