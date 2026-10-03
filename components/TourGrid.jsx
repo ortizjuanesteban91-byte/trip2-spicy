@@ -34,7 +34,7 @@ export default function TourGrid({ tours, cats: C, initial, initialDest, initial
               <div data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p>
               <h2 className="mt-1 text-lg font-extrabold leading-snug">{t.title}</h2>
               <RatingBadge /></div>
-              <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">{money(t.from)}</b> / person</p><Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs font-extrabold text-white after:absolute after:inset-0 after:z-20 after:content-[''] hover:bg-brand-hover">VIEW TOUR</Link></div>
+              <div className="mt-4 flex items-end justify-between">{t.inquiry ? <p className="text-xs text-ink/60">Private charter<br /><b className="text-lg text-brand">Quote on request</b></p> : <p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">{money(t.from)}</b> / person</p>}<Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs font-extrabold text-white after:absolute after:inset-0 after:z-20 after:content-[''] hover:bg-brand-hover">VIEW TOUR</Link></div>
             </div>
           </article>
         ))}

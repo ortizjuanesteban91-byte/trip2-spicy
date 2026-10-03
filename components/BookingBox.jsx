@@ -8,7 +8,7 @@ const field = "relative";
 const sel = "w-full appearance-none rounded-2xl border border-sky-200 bg-sky-50/70 py-4 pl-12 pr-10 text-[15px] text-ink";
 const Ic = ({ children }) => <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-brand">{children}</span>;
 const Chev = () => <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand" />;
-export default function BookingBox({ tour, wa }) {
+function Inner({ tour, wa }) {
   const [q, setQ] = useState({});
   const [date, setDate] = useState("");
   const [hotel, setHotel] = useState("");
@@ -113,3 +113,30 @@ export default function BookingBox({ tour, wa }) {
     </form>
   );
 }
+
+// Private charters: no online price or payment. Guest sends date, group size and hotel; the team replies with a quote.
+function QuoteBox({ tour, wa }) {
+  const [date, setDate] = useState(""), [n, setN] = useState(""), [hotel, setHotel] = useState(""), [name, setName] = useState("");
+  const max = tour.maxGuests || 70;
+  const msg = `Hello Trip2! I'd like a quote for: ${tour.name}.\nDate: ${date || "(to confirm)"}\nGuests: ${n || "(to confirm)"}\nHotel: ${hotel || "(to confirm)"}\nName: ${name || ""}`;
+  const href = `${wa}${wa.includes("?") ? "&" : "?"}text=${encodeURIComponent(msg)}`;
+  const inp = "w-full rounded-2xl border border-sky-200 bg-sky-50/70 px-4 py-3.5 text-[15px] text-ink";
+  const today = new Date().toISOString().slice(0, 10);
+  return (
+    <div className="rounded-3xl bg-white p-5 shadow-xl ring-1 ring-sky-100">
+      <p className="inline-block rounded-full bg-gold/30 px-3 py-1 text-[11px] font-extrabold tracking-widest text-ink">PRIVATE CHARTER</p>
+      <h3 className="mt-3 text-2xl font-black text-brand">Quote on request</h3>
+      <p className="mt-1 text-sm text-ink/70">Tell us your date and group size (up to {max} guests). We reply with your boat options and price. Nothing is charged until you accept.</p>
+      <div className="mt-4 grid gap-3">
+        <input type="date" min={today} value={date} onChange={(e) => setDate(e.target.value)} className={inp} aria-label="Date" />
+        <input type="number" inputMode="numeric" min="1" max={max} value={n} onChange={(e) => setN(e.target.value)} placeholder={`Number of guests (max ${max})`} className={inp} />
+        <input value={hotel} onChange={(e) => setHotel(e.target.value)} placeholder="Your hotel" className={inp} />
+        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className={inp} />
+      </div>
+      <a href={href} target="_blank" rel="noopener noreferrer" className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-brand py-4 text-sm font-extrabold text-white hover:bg-brand-hover"><MessageCircle className="h-4 w-4" />REQUEST MY QUOTE ON WHATSAPP</a>
+      <button type="button" onClick={() => window.dispatchEvent(new Event("t2-chat-open"))} className="mt-2.5 w-full rounded-full border-2 border-brand py-3.5 text-sm font-extrabold text-brand">Or ask in the chat</button>
+      <p className="mt-3 text-center text-xs text-ink/60">Free cancellation up to 72 hours before for private groups.</p>
+    </div>
+  );
+}
+export default function BookingBox(props) { return props.tour.inquiry ? <QuoteBox {...props} /> : <Inner {...props} />; }

@@ -14160,5 +14160,184 @@
         }
       ]
     }
+  },
+  {
+    "slug": "private-saona-island-catamaran",
+    "inquiry": true,
+    "maxGuests": 70,
+    "title": "Private Saona Island Catamaran | Groups up to 70 | Trip2",
+    "metaTitle": "Private Saona Island Catamaran | Groups up to 70 | Trip2",
+    "meta": "Private Saona Island catamaran charter from Punta Cana for families, weddings, birthdays and groups up to 70 guests. Choose your boat. Quote on request, free 72-hour cancellation.",
+    "h1": "Private Saona Island Catamaran – Your Own Boat, Groups up to 70",
+    "keyword": "private saona island catamaran",
+    "intro": [
+      "Take the whole boat to Saona Island. A private catamaran day means your group, your crew and your pace, with turquoise water, the natural pool and a white-sand beach all to yourselves.",
+      "We work with different boats, from smaller boats for a family or a few friends to a large catamaran that carries up to 70 guests, ideal for weddings, birthdays, company trips and big reunions. Tell us your date and group size and we match the right boat.",
+      "Because every group is different, private charters are quoted on request. Send us the date, the number of guests and your hotel and we reply with your price, what is included and the next steps. Nothing is charged until you accept.",
+      "Honest note: availability depends on the boat and the season, so for busy dates it is best to ask early."
+    ],
+    "sections": [
+      {
+        "h2": "Highlights",
+        "type": "list",
+        "items": [
+          "Private boat for your group only",
+          "Groups from small up to 70 guests",
+          "Choose your boat, we confirm what is available for your date",
+          "Saona Island beach, natural pool and swim stops",
+          "Round-trip hotel pickup",
+          "Quote on request, free cancellation up to 72 hours before"
+        ]
+      },
+      {
+        "h2": "Perfect For",
+        "type": "list",
+        "items": [
+          "Family reunions and birthdays",
+          "Weddings, bachelor and bachelorette parties",
+          "Company trips and team days",
+          "Large groups that want their own boat"
+        ]
+      },
+      {
+        "h2": "What to Expect",
+        "type": "steps",
+        "items": [
+          "Send your date, group size and hotel",
+          "Receive your quote and boat options",
+          "Confirm and we reserve your boat",
+          "Hotel pickup on the day",
+          "Cruise to Saona Island, swim and relax",
+          "Return and hotel drop-off"
+        ]
+      },
+      {
+        "h2": "FAQs",
+        "type": "faq",
+        "faq": [
+          {
+            "q": "How much is a private Saona Island catamaran?",
+            "a": "Private charters are quoted for your date and group size, so there is no fixed online price. Tell us the date, how many guests and your hotel and we send your quote."
+          },
+          {
+            "q": "How many people can come?",
+            "a": "Groups from small to large. Our biggest catamaran takes up to 70 guests. Tell us your group size and we match the right boat."
+          },
+          {
+            "q": "Can we choose the boat?",
+            "a": "Yes. We work with different boats, from smaller boats to a large catamaran. Tell us what you prefer and we confirm what is available for your date."
+          },
+          {
+            "q": "What is included?",
+            "a": "Round-trip hotel pickup, the boat and crew, and the Saona Island day. Food, drinks and extras depend on the boat and package, and we confirm them in your quote."
+          },
+          {
+            "q": "How do I book?",
+            "a": "Send us the request below, on WhatsApp or in the chat. We reply with the quote and the next steps. Nothing is charged until you accept."
+          },
+          {
+            "q": "What is the cancellation policy?",
+            "a": "Private groups can cancel free up to 72 hours before the tour."
+          }
+        ]
+      },
+      {
+        "h2": "You Might Also Like",
+        "type": "links",
+        "items": [
+          "Saona Island Tour",
+          "Catamaran Party Boat",
+          "Speedboat Punta Cana",
+          "Catalina Island"
+        ]
+      }
+    ],
+    "prices": "Private charter · quote on request",
+    "from": 0,
+    "options": [],
+    "min2": false,
+    "alts": [
+      "Aerial view of Saona Island beach and turquoise water",
+      "Saona Island palm beach seen from above",
+      "Saona Island natural pool and boats"
+    ],
+    "breadcrumb": "Home › Punta Cana › Boats › Private Saona Island Catamaran",
+    "num": "44",
+    "canonical": "https://www.trip2puntacana.com/tour/private-saona-island-catamaran/",
+    "cat": "Boats & Water",
+    "pack": "Trip2_31_Tours",
+    "name": "Private Saona Island Catamaran",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "@id": "https://www.trip2puntacana.com/tour/private-saona-island-catamaran/#trip",
+          "name": "Private Saona Island Catamaran",
+          "description": "Private catamaran charter to Saona Island for groups up to 70 guests. Quote on request.",
+          "url": "https://www.trip2puntacana.com/tour/private-saona-island-catamaran/",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Trip2 Punta Cana",
+            "legalName": "Trip2 LLC",
+            "telephone": "+1-809-485-3099",
+            "url": "https://www.trip2puntacana.com/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much is a private Saona Island catamaran?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Private charters are quoted for your date and group size, so there is no fixed online price. Tell us the date, how many guests and your hotel and we send your quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many people can come?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Groups from small to large. Our biggest catamaran takes up to 70 guests. Tell us your group size and we match the right boat."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can we choose the boat?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We work with different boats, from smaller boats to a large catamaran. Tell us what you prefer and we confirm what is available for your date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Round-trip hotel pickup, the boat and crew, and the Saona Island day. Food, drinks and extras depend on the boat and package, and we confirm them in your quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Send us the request below, on WhatsApp or in the chat. We reply with the quote and the next steps. Nothing is charged until you accept."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the cancellation policy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Private groups can cancel free up to 72 hours before the tour."
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

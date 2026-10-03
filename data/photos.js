@@ -77,6 +77,11 @@ const LOCAL = {
   "/tours/scuba-doo-07.webp",
   "/tours/scuba-doo-08.webp"
  ],
+ "private-saona-island-catamaran": [
+  "/hero/hero-01.webp",
+  "/hero/hero-02.webp",
+  "/hero/hero-08.webp"
+ ],
  "parasailing": [
   "/tours/parasail-04.webp",
   "/tours/parasail-05.webp",

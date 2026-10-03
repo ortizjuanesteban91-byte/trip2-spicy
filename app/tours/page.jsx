@@ -9,7 +9,7 @@ export default async function Page({ searchParams }) {
   const { cat, dest, q } = await searchParams;
   const query = typeof q === "string" ? q.slice(0, 80) : "";
   if (dest === "miches" && !query) redirect("/m"); // one Miches hub only
-  const list = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, keyword: t.keyword, slug2: t.slug, catLabel: (CATS.find(([k]) => k === catOf(t.slug)) || [0, ""])[1], from: t.from, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i: tours.findIndex((x) => x.slug === t.slug) }));
+  const list = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, meta: t.meta, keyword: t.keyword, slug2: t.slug, catLabel: (CATS.find(([k]) => k === catOf(t.slug)) || [0, ""])[1], from: t.from, inquiry: !!t.inquiry, dest: t.breadcrumb.includes("Miches") ? "miches" : "punta-cana", cat: catOf(t.slug), cats: catsOf(t.slug), i: tours.findIndex((x) => x.slug === t.slug) }));
   return (
     <main>
       <section className="bg-brand py-16 text-center text-white"><h1 className="text-4xl font-black" data-aos="zoom-in">All Tours</h1></section>
