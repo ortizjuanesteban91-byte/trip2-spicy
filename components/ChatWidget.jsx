@@ -29,9 +29,9 @@ export default function ChatWidget() {
   const [busy, setBusy] = useState(false);
   const [pi, setPi] = useState(0);
   const [tip, setTip] = useState(false);
-  // Pop-up comes and goes while the guest browses: appears 1.5 s after arrival, 6 s on, 30 s off, until they close it or open the chat.
-  // Pop-up comes and goes while the guest browses: appears 1.5 s after arrival, 6 s on, 30 s off, until they close it or open the chat.
-  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; let on, off; const cycle = () => { setTip(true); off = setTimeout(() => { setTip(false); on = setTimeout(cycle, 30000); }, 6000); }; on = setTimeout(cycle, 1500); return () => { clearTimeout(on); clearTimeout(off); }; }, []);
+  // Pop-up comes and goes while the guest browses: appears 1.5 s after arrival, 3 s on, 30 s off, until they close it or open the chat.
+  // Pop-up comes and goes while the guest browses: appears 1.5 s after arrival, 3 s on, 30 s off, until they close it or open the chat.
+  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; let on, off; const cycle = () => { setTip(true); off = setTimeout(() => { setTip(false); on = setTimeout(cycle, 30000); }, 3000); }; on = setTimeout(cycle, 1500); return () => { clearTimeout(on); clearTimeout(off); }; }, []);
   const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
