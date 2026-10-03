@@ -1,18 +1,28 @@
 "use client";
-import { useEffect, useState } from "react";
-// Shows a different header photo each visit AND every time the visitor scrolls down and comes back up to the top.
+import { useEffect, useRef, useState } from "react";
+// Header photo: a different one each visit AND every time the visitor scrolls down and comes back up to the top.
+// Photos cross-fade smoothly (the new one fades in over the old one once it has loaded).
 export default function HeroImage({ slides }) {
-  const [i, setI] = useState(0);
-  const [ready, setReady] = useState(true);
+  const [layers, setLayers] = useState([{ id: 0, i: 0, on: true }]);
+  const cur = useRef(0), uid = useRef(0);
+  const show = (next) => {
+    const im = new Image();
+    const go = () => {
+      const id = ++uid.current; cur.current = next;
+      setLayers((L) => [...L, { id, i: next, on: false }]);
+      requestAnimationFrame(() => requestAnimationFrame(() => setLayers((L) => L.map((l) => (l.id === id ? { ...l, on: true } : l)))));
+      setTimeout(() => setLayers((L) => L.filter((l) => l.id >= id)), 1600);
+    };
+    im.onload = go; im.onerror = go; im.src = slides[next].src;
+  };
   useEffect(() => {
     try {
       const last = Number(localStorage.getItem("t2hero"));
       const next = Number.isInteger(last) && localStorage.getItem("t2hero") !== null ? (last + 1) % slides.length : 0;
       localStorage.setItem("t2hero", String(next));
-      if (next !== 0) { setReady(false); setI(next); }
+      if (next !== 0) show(next);
     } catch {}
   }, [slides.length]);
-  // Scrolled down past the header, then back up to the top: fade to the next photo.
   useEffect(() => {
     if (slides.length < 2) return;
     let away = false;
@@ -21,18 +31,19 @@ export default function HeroImage({ slides }) {
       if (y > vh * 0.7) away = true;
       else if (y < 60 && away) {
         away = false;
-        setI((n) => {
-          const next = (n + 1) % slides.length;
-          const im = new Image(); im.src = slides[next].src; // preload so the swap is smooth
-          setReady(false);
-          try { localStorage.setItem("t2hero", String(next)); } catch {}
-          return next;
-        });
+        const next = (cur.current + 1) % slides.length;
+        try { localStorage.setItem("t2hero", String(next)); } catch {}
+        show(next);
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [slides]);
-  const s = slides[i];
-  return <img key={i} src={s.src} alt={s.alt} fetchPriority="high" onLoad={() => setReady(true)} className={`hero-zoom absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${ready ? "opacity-100" : "opacity-0"}`} />;
+  return (
+    <>
+      {layers.map((l, k) => (
+        <img key={l.id} src={slides[l.i].src} alt={slides[l.i].alt} fetchPriority={k === 0 ? "high" : "auto"} className="hero-zoom absolute inset-0 h-full w-full object-cover" style={{ opacity: l.on ? 1 : 0, transition: "opacity 1.4s ease-in-out" }} />
+      ))}
+    </>
+  );
 }
