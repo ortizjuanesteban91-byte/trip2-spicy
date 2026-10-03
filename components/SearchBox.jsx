@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { matches } from "@/lib/search";
+import { filterTours } from "@/lib/search";
 export default function SearchBox({ tours }) {
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
@@ -10,7 +10,7 @@ export default function SearchBox({ tours }) {
   const router = useRouter();
   useEffect(() => { if (open) inp.current?.focus(); }, [open]);
   useEffect(() => { const k = (e) => e.key === "Escape" && setOpen(false); window.addEventListener("keydown", k); return () => window.removeEventListener("keydown", k); }, []);
-  const res = q.trim() ? tours.filter((t) => matches(t, q)).slice(0, 8) : [];
+  const res = q.trim() ? filterTours(tours, q).slice(0, 8) : [];
   const go = (e) => { e.preventDefault(); if (q.trim()) { setOpen(false); router.push(`/tours?q=${encodeURIComponent(q.trim())}`); } };
   return (
     <>
