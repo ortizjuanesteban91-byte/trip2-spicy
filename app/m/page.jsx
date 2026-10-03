@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/site";
 import Link from "next/link";
 import { allTours } from "@/lib/tours";
 import { photo } from "@/data/photos";
@@ -18,7 +19,7 @@ const DESC = "Book Miches tours with hotel pickup: Montaña Redonda swings and 3
 export const metadata = {
   title: TITLE, description: DESC, alternates: { canonical: `${MICHES_URL}/` },
   robots: michesLive ? { index: true, follow: true } : { index: false, follow: false },
-  openGraph: { title: TITLE, description: DESC, url: `${MICHES_URL}/`, type: "website" },
+  openGraph: { title: TITLE, description: DESC, url: `${MICHES_URL}/`, type: "website", images: [OG_IMAGE] },
 };
 const money = (n) => `$${Number.isInteger(n) ? n : Number(n).toFixed(2)}`;
 

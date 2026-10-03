@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/site";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { posts as basePosts, grad } from "@/lib/content";
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }) {
   const p = await getPost((await params).slug);
   if (!p) return {};
   const url = `${SITE}/blog/${p.slug}/`;
-  return { title: p.metaTitle, description: p.meta, alternates: { canonical: url }, openGraph: { title: p.metaTitle, description: p.meta, url, type: "article" } };
+  return { title: p.metaTitle, description: p.meta, alternates: { canonical: url }, openGraph: { title: p.metaTitle, description: p.meta, url, type: "article", images: [OG_IMAGE] } };
 }
 export default async function Post({ params }) {
   const p = await getPost((await params).slug);

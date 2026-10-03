@@ -1,3 +1,4 @@
+import { OG_IMAGE } from "@/lib/site";
 import ChatOpen from "@/components/ChatOpen";
 import { gallery } from "@/data/photos";
 import { notFound } from "next/navigation";
@@ -15,11 +16,12 @@ export const revalidate = 60;
 // Tours using the "highlights first, booking next, full description after" layout (testing on one tour first).
 const LEAN = new Set(["saona-island"]);
 export function generateStaticParams() { return baseTours.map((t) => ({ slug: t.slug })); }
+const ogImage = (slug) => { const g = gallery(slug, 1200); const u = g && g[0]; if (!u) return OG_IMAGE; return { url: /^https?:/.test(u) ? u.replace("f_auto", "f_jpg") : OG_IMAGE.url.replace("/og/share.jpg", u), width: 1200, height: 630 }; };
 export async function generateMetadata({ params }) {
   const t = await getTour((await params).slug);
   if (!t) return {};
   const url = t.canonical || `${SITE}/tour/${t.slug}/`;
-  return { title: t.metaTitle, description: t.meta, alternates: { canonical: url }, openGraph: { title: t.metaTitle, description: t.meta, url } };
+  return { title: t.metaTitle, description: t.meta, alternates: { canonical: url }, openGraph: { title: t.metaTitle, description: t.meta, url, images: [ogImage(t.slug)] } };
 }
 export default async function Tour({ params }) {
   const t = await getTour((await params).slug);
