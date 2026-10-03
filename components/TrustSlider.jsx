@@ -19,6 +19,7 @@ export default function TrustSlider({ items }) {
     }, 4200);
     return () => { clearInterval(t); el.removeEventListener("scroll", onScroll); el.removeEventListener("touchstart", stop); };
   }, [cur]);
+  const go = (i) => { const el = box.current; if (!el) return; touched.current = true; const k = el.children, n = (i + k.length) % k.length; el.scrollTo({ left: k[n].offsetLeft - k[0].offsetLeft, behavior: "smooth" }); };
   return (
     <section className="mx-auto max-w-7xl px-5 py-10 sm:py-12">
       <div ref={box} className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible lg:grid-cols-4">
@@ -29,8 +30,10 @@ export default function TrustSlider({ items }) {
           </div>
         ))}
       </div>
-      <div className="mt-3 flex justify-center gap-2 sm:hidden" aria-hidden="true">
-        {items.map(([t], i) => <span key={t} className={`h-2 rounded-full transition-all ${i === cur ? "w-6 bg-brand" : "w-2 bg-brand/25"}`} />)}
+      <div className="mt-3 flex items-center justify-center gap-3 sm:hidden">
+        <button type="button" onClick={() => go(cur - 1)} aria-label="Previous" className="grid h-8 w-8 place-items-center rounded-full bg-white text-brand shadow ring-1 ring-sky-200">‹</button>
+        <div className="flex gap-2">{items.map(([t], i) => <button type="button" key={t} onClick={() => go(i)} aria-label={`Go to ${t}`} className={`h-2.5 rounded-full transition-all ${i === cur ? "w-6 bg-brand" : "w-2.5 bg-brand/25"}`} />)}</div>
+        <button type="button" onClick={() => go(cur + 1)} aria-label="Next" className="grid h-8 w-8 place-items-center rounded-full bg-white text-brand shadow ring-1 ring-sky-200">›</button>
       </div>
     </section>
   );
