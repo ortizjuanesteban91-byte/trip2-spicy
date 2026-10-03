@@ -13840,5 +13840,913 @@
     "cat": "Day Trips",
     "pack": "Trip2_Ohana_Tours",
     "name": "Best Beaches Tour Samaná from Punta Cana"
+  },
+  {
+    "slug": "buggy-catamaran-party-boat",
+    "title": "Buggy + Catamaran Party Boat Punta Cana | Open Bar From $149",
+    "metaTitle": "Buggy + Catamaran Party Boat Punta Cana | Open Bar From $149",
+    "meta": "Buggy ride to a cenote and Dominican village, waterfall pool, then 3 hours on a catamaran with open bar, snacks and snorkeling. Lunch and hotel pickup. Adults $149, kids $104.",
+    "h1": "Buggy + Catamaran Party Boat Punta Cana – Off-Road, Waterfall Pool & Open Bar",
+    "keyword": "buggy and catamaran punta cana",
+    "intro": [
+      "Start the morning behind the wheel of an off-road buggy, with a stop at the Blue Lagoon Cenote and a visit to a Dominican village.",
+      "Cool off in the waterfall pool and have a typical Dominican lunch, then board a catamaran for 3 hours of sailing along the Bávaro coast.",
+      "On board: an unlimited open bar of national drinks, nachos and dips, a snorkeling stop and entertainment.",
+      "About 7 hours with shared round-trip hotel transport. Adults $149, kids $104, infants free, and free cancellation up to 24 hours before."
+    ],
+    "sections": [
+      {
+        "h2": "Highlights",
+        "type": "list",
+        "items": [
+          "Duration: full day (about 7 hours)",
+          "Buggy ride with Blue Lagoon Cenote and Dominican village",
+          "Waterfall pool and Dominican lunch",
+          "3 hours on a catamaran with snorkeling",
+          "Unlimited open bar of national drinks and snacks"
+        ]
+      },
+      {
+        "h2": "What to Expect",
+        "type": "steps",
+        "items": [
+          "Shared hotel pickup",
+          "Safety briefing and buggy ride",
+          "Blue Lagoon Cenote and Dominican village",
+          "Waterfall pool and Dominican lunch",
+          "Catamaran sailing with open bar and snorkeling",
+          "Hotel drop-off"
+        ]
+      },
+      {
+        "h2": "What's Included / Not Included",
+        "type": "inc",
+        "groups": [
+          {
+            "label": "Included",
+            "items": [
+              "Shared round-trip hotel transport",
+              "Safety gear and instructions",
+              "Bilingual guides",
+              "Buggy tour with Blue Lagoon Cenote and Dominican village",
+              "Typical Dominican lunch (drinks not included)",
+              "Waterfall pool",
+              "3 hours of catamaran sailing",
+              "Unlimited open bar: Presidente beer, Barceló Añejo rum, rum punch, Coca-Cola, Sprite and water",
+              "Nachos and dips",
+              "Snorkeling",
+              "Entertainment"
+            ]
+          },
+          {
+            "label": "Not included",
+            "items": [
+              "Photos",
+              "Tips",
+              "Souvenirs",
+              "Lockers",
+              "Premium drinks and extra snacks"
+            ]
+          }
+        ]
+      },
+      {
+        "h2": "FAQs",
+        "type": "faq",
+        "faq": [
+          {
+            "q": "What is included?",
+            "a": "Round-trip shared hotel transport, safety gear and guides, the buggy tour with Blue Lagoon Cenote and a Dominican village, a typical Dominican lunch (drinks not included), the waterfall pool, 3 hours of catamaran sailing with snorkeling, nachos and dips, and an unlimited open bar of national drinks."
+          },
+          {
+            "q": "What is in the open bar?",
+            "a": "Presidente beer, Barceló Añejo rum, rum punch, Coca-Cola, Sprite and water."
+          },
+          {
+            "q": "How long is the day?",
+            "a": "About 7 hours. It is a full-day first-shift excursion that starts in the morning (9:00 AM start shown at booking)."
+          },
+          {
+            "q": "How much are kids and infants?",
+            "a": "Adults are $149, kids $104 and infants are free."
+          },
+          {
+            "q": "What is not included?",
+            "a": "Photos, tips, souvenirs, lockers, premium drinks and extra snacks."
+          }
+        ]
+      }
+    ],
+    "prices": "Adult $149 · Kid $104 · Infant free",
+    "from": 149,
+    "options": [
+      {
+        "label": "Adult",
+        "price": 149.0,
+        "people": 1,
+        "group": false
+      },
+      {
+        "label": "Kid",
+        "price": 104.0,
+        "people": 1,
+        "group": false
+      }
+    ],
+    "min2": false,
+    "alts": [
+      "Buggy ride and catamaran party boat day, Punta Cana"
+    ],
+    "breadcrumb": "Punta Cana › Adventures › Buggy + Catamaran",
+    "num": "43",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "@id": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/#trip",
+          "name": "Buggy + Catamaran Party Boat",
+          "description": "Buggy ride to a cenote and Dominican village, waterfall pool, then 3 hours on a catamaran with open bar, snacks and snorkeling. Lunch and hotel pickup. Adults $149, kids $104.",
+          "url": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Trip2 Punta Cana",
+            "legalName": "Trip2 LLC",
+            "telephone": "+1-809-485-3099",
+            "url": "https://www.trip2puntacana.com/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Adult",
+              "price": "149",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kid",
+              "price": "104",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.trip2puntacana.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Punta Cana",
+              "item": "https://www.trip2puntacana.com/punta-cana/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Adventures",
+              "item": "https://www.trip2puntacana.com/adventures/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Buggy + Catamaran Party Boat",
+              "item": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Round-trip shared hotel transport, safety gear and guides, the buggy tour with Blue Lagoon Cenote and a Dominican village, a typical Dominican lunch (drinks not included), the waterfall pool, 3 hours of catamaran sailing with snorkeling, nachos and dips, and an unlimited open bar of national drinks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is in the open bar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Presidente beer, Barceló Añejo rum, rum punch, Coca-Cola, Sprite and water."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long is the day?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "About 7 hours. It is a full-day first-shift excursion that starts in the morning (9:00 AM start shown at booking)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much are kids and infants?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Adults are $149, kids $104 and infants are free."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is not included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Photos, tips, souvenirs, lockers, premium drinks and extra snacks."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "canonical": "https://www.trip2puntacana.com/tour/buggy-catamaran-party-boat/",
+    "cat": "Adventures",
+    "pack": "Bavaro_Adventure_Park",
+    "name": "Buggy + Catamaran Party Boat"
+  },
+  {
+    "slug": "full-access-buggy-zipline-horses",
+    "title": "Full Access Punta Cana: Buggy, Zipline, Horses & Sacred River | From $169",
+    "metaTitle": "Full Access Punta Cana: Buggy, Zipline, Horses & Sacred River | From $169",
+    "meta": "One day, everything: buggy through an abandoned mine, a 6-line zipline with a mega splash, horseback riding, jungle river and a cenote swim. Adults $169, kids $118.30.",
+    "h1": "Full Access Punta Cana – Buggy, Zipline, Horseback & Sacred River",
+    "keyword": "full access adventure punta cana",
+    "intro": [
+      "The all-in adventure day: drive a buggy off-road through an abandoned mine, fly the 6-line zipline that ends in a mega splash, ride horseback on guided trails and float the jungle river.",
+      "Swim in the Blue Lagoon Cenote and visit a Dominican village with coffee and cocoa tasting.",
+      "About 6 hours. Price per person is the same for 2, 3 or 4 people sharing a buggy ($169 adults, $118.30 kids); a solo traveler in a single buggy pays $199."
+    ],
+    "sections": [
+      {
+        "h2": "Highlights",
+        "type": "list",
+        "items": [
+          "Duration: about 6 hours",
+          "Buggy through an abandoned mine, with a waterfall pool stop and Dominican lunch",
+          "6-line zipline with mega splash finish",
+          "Guided horseback ride",
+          "Jungle river tubing and Blue Lagoon Cenote",
+          "Dominican village walk with coffee and cocoa tasting"
+        ]
+      },
+      {
+        "h2": "What to Expect",
+        "type": "steps",
+        "items": [
+          "Shared hotel pickup",
+          "Safety briefing and buggy ride",
+          "Zipline Mega Splash",
+          "Horseback ride",
+          "Jungle river and Blue Lagoon Cenote",
+          "Dominican village with coffee and cocoa tasting",
+          "Hotel drop-off"
+        ]
+      },
+      {
+        "h2": "What's Included / Not Included",
+        "type": "inc",
+        "groups": [
+          {
+            "label": "Included",
+            "items": [
+              "Round-trip shared hotel shuttle",
+              "All equipment, training and safety instructions",
+              "Bilingual guides and qualified staff",
+              "Buggy VIP circuit with Dominican lunch",
+              "Zip Line Mega Splash",
+              "Horseback riding",
+              "Jungle river tubing",
+              "Blue Lagoon Cenote",
+              "Dominican village with coffee and cocoa tasting"
+            ]
+          },
+          {
+            "label": "Not included",
+            "items": [
+              "Additional drinks and snacks",
+              "Photos, tips and souvenirs",
+              "Lockers",
+              "Mandatory surcharge for Bayahibe–La Romana pickups"
+            ]
+          }
+        ]
+      },
+      {
+        "h2": "FAQs",
+        "type": "faq",
+        "faq": [
+          {
+            "q": "How is the price set?",
+            "a": "Per person: adults $169 and kids $118.30 when 2 or more share a buggy (a buggy seats up to 4). A solo traveler in a single buggy pays $199."
+          },
+          {
+            "q": "Who can drive the buggy?",
+            "a": "Drivers must be 18 or older with a valid driver's license."
+          },
+          {
+            "q": "Are there height limits?",
+            "a": "Passengers must be at least 1.30 m (4 ft 3 in). Some activities have weight, height and age limits."
+          },
+          {
+            "q": "What should I wear?",
+            "a": "Closed-toe sports shoes (no flip-flops or sandals), swimsuit and towel. Leave cameras, phones and bags behind during activities; you sign a liability waiver."
+          }
+        ]
+      }
+    ],
+    "prices": "Adult $169 · Kid $118.30 · Solo adult $199",
+    "from": 169,
+    "options": [
+      {
+        "label": "Adult (2+ people per buggy)",
+        "price": 169.0,
+        "people": 1,
+        "group": false
+      },
+      {
+        "label": "Kid (2+ people per buggy)",
+        "price": 118.3,
+        "people": 1,
+        "group": false
+      },
+      {
+        "label": "Adult, solo buggy",
+        "price": 199.0,
+        "people": 1,
+        "group": false
+      }
+    ],
+    "min2": false,
+    "alts": [
+      "Buggy, zipline and horseback full-access day, Punta Cana"
+    ],
+    "breadcrumb": "Punta Cana › Adventures › Full Access",
+    "num": "44",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "@id": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/#trip",
+          "name": "Full Access Buggy, Zipline & Horses",
+          "description": "One day, everything: buggy through an abandoned mine, a 6-line zipline with a mega splash, horseback riding, jungle river and a cenote swim. Adults $169, kids $118.30.",
+          "url": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Trip2 Punta Cana",
+            "legalName": "Trip2 LLC",
+            "telephone": "+1-809-485-3099",
+            "url": "https://www.trip2puntacana.com/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Adult (2+ people per buggy)",
+              "price": "169",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kid (2+ people per buggy)",
+              "price": "118.3",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/"
+            },
+            {
+              "@type": "Offer",
+              "name": "Adult, solo buggy",
+              "price": "199",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.trip2puntacana.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Punta Cana",
+              "item": "https://www.trip2puntacana.com/punta-cana/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Adventures",
+              "item": "https://www.trip2puntacana.com/adventures/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Full Access Buggy, Zipline & Horses",
+              "item": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is the price set?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Per person: adults $169 and kids $118.30 when 2 or more share a buggy (a buggy seats up to 4). A solo traveler in a single buggy pays $199."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who can drive the buggy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Drivers must be 18 or older with a valid driver's license."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are there height limits?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Passengers must be at least 1.30 m (4 ft 3 in). Some activities have weight, height and age limits."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should I wear?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Closed-toe sports shoes (no flip-flops or sandals), swimsuit and towel. Leave cameras, phones and bags behind during activities; you sign a liability waiver."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "canonical": "https://www.trip2puntacana.com/tour/full-access-buggy-zipline-horses/",
+    "cat": "Adventures",
+    "pack": "Bavaro_Adventure_Park",
+    "name": "Full Access Buggy, Zipline & Horses"
+  },
+  {
+    "slug": "sacred-river-zipline",
+    "title": "Sacred River + Zipline Punta Cana | Cenote & Waterfall Pool From $139",
+    "metaTitle": "Sacred River + Zipline Punta Cana | Cenote & Waterfall Pool From $139",
+    "meta": "Zipline over the jungle with a mega splash finish, then the Blue Cenote Lagoon, jungle river and waterfall pool. Lunch and hotel pickup. Adults $139, kids $97.30.",
+    "h1": "Sacred River + Zipline Punta Cana – Cenote, Jungle River & Waterfall Pool",
+    "keyword": "sacred river zipline punta cana",
+    "intro": [
+      "Fly a 7-line zipline course, including the Himalayan Bridge, ending with a mega splash into the pool.",
+      "Then swim in the Blue Cenote Lagoon, float the Jungle River in a tube and cool off at the waterfall pool, with a visit to a Dominican village.",
+      "About 6 hours with shared round-trip hotel transport and a typical Dominican lunch. Adults $139, kids $97.30, infants free."
+    ],
+    "sections": [
+      {
+        "h2": "Highlights",
+        "type": "list",
+        "items": [
+          "Duration: about 6 hours",
+          "7-line zipline with Himalayan Bridge and mega splash",
+          "Blue Cenote Lagoon swim",
+          "Jungle River tubing",
+          "Waterfall pool",
+          "Typical Dominican lunch and village visit"
+        ]
+      },
+      {
+        "h2": "What to Expect",
+        "type": "steps",
+        "items": [
+          "Shared hotel pickup",
+          "Safety briefing",
+          "Zipline Mega Splash",
+          "Blue Cenote Lagoon and Jungle River",
+          "Waterfall pool",
+          "Dominican lunch and village visit",
+          "Hotel drop-off"
+        ]
+      },
+      {
+        "h2": "What's Included / Not Included",
+        "type": "inc",
+        "groups": [
+          {
+            "label": "Included",
+            "items": [
+              "Park admission",
+              "Shared round-trip hotel transport",
+              "Safety equipment and briefing",
+              "Zipline Mega Splash (7 lines)",
+              "Blue Cenote Lagoon",
+              "Jungle River ride",
+              "Waterfall pool",
+              "Typical Dominican lunch (drinks not included)",
+              "Dominican village visit",
+              "Professional guides"
+            ]
+          },
+          {
+            "label": "Not included",
+            "items": [
+              "Photos, tips and souvenirs",
+              "Drinks and snacks",
+              "Lockers",
+              "Mandatory surcharge for Bayahibe–La Romana pickups"
+            ]
+          }
+        ]
+      },
+      {
+        "h2": "FAQs",
+        "type": "faq",
+        "faq": [
+          {
+            "q": "What should I bring?",
+            "a": "Digital or printed voucher, closed sport shoes, swimsuit, towel, sunscreen and a change of clothes."
+          },
+          {
+            "q": "Is there a height or age limit?",
+            "a": "Minimum passenger height is 1.30 m (4 ft 3 in). Some activities have weight, height and age limits."
+          },
+          {
+            "q": "Are drinks included?",
+            "a": "Lunch is included but drinks are not."
+          },
+          {
+            "q": "How much are kids and infants?",
+            "a": "Adults $139, kids $97.30, infants free."
+          }
+        ]
+      }
+    ],
+    "prices": "Adult $139 · Kid $97.30 · Infant free",
+    "from": 139,
+    "options": [
+      {
+        "label": "Adult",
+        "price": 139.0,
+        "people": 1,
+        "group": false
+      },
+      {
+        "label": "Kid",
+        "price": 97.3,
+        "people": 1,
+        "group": false
+      }
+    ],
+    "min2": false,
+    "alts": [
+      "Zipline and cenote waterfall pool day, Punta Cana"
+    ],
+    "breadcrumb": "Punta Cana › Adventures › Sacred River + Zipline",
+    "num": "45",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "@id": "https://www.trip2puntacana.com/tour/sacred-river-zipline/#trip",
+          "name": "Sacred River + Zipline",
+          "description": "Zipline over the jungle with a mega splash finish, then the Blue Cenote Lagoon, jungle river and waterfall pool. Lunch and hotel pickup. Adults $139, kids $97.30.",
+          "url": "https://www.trip2puntacana.com/tour/sacred-river-zipline/",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Trip2 Punta Cana",
+            "legalName": "Trip2 LLC",
+            "telephone": "+1-809-485-3099",
+            "url": "https://www.trip2puntacana.com/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Adult",
+              "price": "139",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/sacred-river-zipline/"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kid",
+              "price": "97.3",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/sacred-river-zipline/"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.trip2puntacana.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Punta Cana",
+              "item": "https://www.trip2puntacana.com/punta-cana/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Adventures",
+              "item": "https://www.trip2puntacana.com/adventures/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Sacred River + Zipline",
+              "item": "https://www.trip2puntacana.com/tour/sacred-river-zipline/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What should I bring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Digital or printed voucher, closed sport shoes, swimsuit, towel, sunscreen and a change of clothes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a height or age limit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Minimum passenger height is 1.30 m (4 ft 3 in). Some activities have weight, height and age limits."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are drinks included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lunch is included but drinks are not."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much are kids and infants?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Adults $139, kids $97.30, infants free."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "canonical": "https://www.trip2puntacana.com/tour/sacred-river-zipline/",
+    "cat": "Adventures",
+    "pack": "Bavaro_Adventure_Park",
+    "name": "Sacred River + Zipline"
+  },
+  {
+    "slug": "sacred-river",
+    "title": "Sacred River Punta Cana | Cenote, Jungle River & Waterfall Pool From $99",
+    "metaTitle": "Sacred River Punta Cana | Cenote, Jungle River & Waterfall Pool From $99",
+    "meta": "Underground river, Blue Cenote Lagoon, Jungle River tubing and waterfall pool in about 3.5 hours. Lunch and hotel pickup. Adults $99, kids $69.30.",
+    "h1": "Sacred River Punta Cana – Blue Cenote Lagoon, Jungle River & Waterfall Pool",
+    "keyword": "sacred river punta cana",
+    "intro": [
+      "A nature half-day: the Sacred River underground experience, a swim in the Blue Cenote Lagoon, a Jungle River tube ride and the waterfall pool.",
+      "Includes park admission, shared round-trip hotel transport, a typical Dominican lunch and a visit to a Dominican village.",
+      "About 3.5 hours. Adults $99, kids $69.30, infants free."
+    ],
+    "sections": [
+      {
+        "h2": "Highlights",
+        "type": "list",
+        "items": [
+          "Duration: about 3.5 hours",
+          "Sacred River underground experience",
+          "Blue Cenote Lagoon",
+          "Jungle River tubing and maze",
+          "Waterfall pool",
+          "Typical Dominican lunch and village visit"
+        ]
+      },
+      {
+        "h2": "What to Expect",
+        "type": "steps",
+        "items": [
+          "Shared hotel pickup",
+          "Safety briefing",
+          "Sacred River",
+          "Blue Cenote Lagoon and Jungle River",
+          "Waterfall pool",
+          "Dominican lunch and village visit",
+          "Hotel drop-off"
+        ]
+      },
+      {
+        "h2": "What's Included / Not Included",
+        "type": "inc",
+        "groups": [
+          {
+            "label": "Included",
+            "items": [
+              "Park admission",
+              "Shared round-trip hotel transport",
+              "Safety equipment and briefing",
+              "Sacred River underground experience",
+              "Blue Lagoon Cenote, Jungle River, Waterfall Pool and Maze",
+              "Typical Dominican lunch (no beverages)",
+              "Dominican village visit",
+              "Professional guides"
+            ]
+          },
+          {
+            "label": "Not included",
+            "items": [
+              "Photos, tips and souvenirs",
+              "Drinks and snacks",
+              "Lockers",
+              "Mandatory surcharge for Bayahibe–La Romana pickups"
+            ]
+          }
+        ]
+      },
+      {
+        "h2": "FAQs",
+        "type": "faq",
+        "faq": [
+          {
+            "q": "What should I bring?",
+            "a": "Digital or printed voucher, closed sport shoes, swimsuit, towel, sunscreen and a change of clothes."
+          },
+          {
+            "q": "Are drinks included?",
+            "a": "The typical Dominican lunch is included without beverages."
+          },
+          {
+            "q": "Are there age or height limits?",
+            "a": "Some activities have weight, height and age restrictions. You sign a liability waiver."
+          },
+          {
+            "q": "How much are kids and infants?",
+            "a": "Adults $99, kids $69.30, infants free."
+          }
+        ]
+      }
+    ],
+    "prices": "Adult $99 · Kid $69.30 · Infant free",
+    "from": 99,
+    "options": [
+      {
+        "label": "Adult",
+        "price": 99.0,
+        "people": 1,
+        "group": false
+      },
+      {
+        "label": "Kid",
+        "price": 69.3,
+        "people": 1,
+        "group": false
+      }
+    ],
+    "min2": false,
+    "alts": [
+      "Sacred River cenote and jungle river day, Punta Cana"
+    ],
+    "breadcrumb": "Punta Cana › Adventures › Sacred River",
+    "num": "46",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TouristTrip",
+          "@id": "https://www.trip2puntacana.com/tour/sacred-river/#trip",
+          "name": "Sacred River",
+          "description": "Underground river, Blue Cenote Lagoon, Jungle River tubing and waterfall pool in about 3.5 hours. Lunch and hotel pickup. Adults $99, kids $69.30.",
+          "url": "https://www.trip2puntacana.com/tour/sacred-river/",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Trip2 Punta Cana",
+            "legalName": "Trip2 LLC",
+            "telephone": "+1-809-485-3099",
+            "url": "https://www.trip2puntacana.com/"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Adult",
+              "price": "99",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/sacred-river/"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kid",
+              "price": "69.3",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.trip2puntacana.com/tour/sacred-river/"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.trip2puntacana.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Punta Cana",
+              "item": "https://www.trip2puntacana.com/punta-cana/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Adventures",
+              "item": "https://www.trip2puntacana.com/adventures/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Sacred River",
+              "item": "https://www.trip2puntacana.com/tour/sacred-river/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What should I bring?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Digital or printed voucher, closed sport shoes, swimsuit, towel, sunscreen and a change of clothes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are drinks included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The typical Dominican lunch is included without beverages."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are there age or height limits?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Some activities have weight, height and age restrictions. You sign a liability waiver."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much are kids and infants?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Adults $99, kids $69.30, infants free."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "canonical": "https://www.trip2puntacana.com/tour/sacred-river/",
+    "cat": "Adventures",
+    "pack": "Bavaro_Adventure_Park",
+    "name": "Sacred River"
   }
 ]
