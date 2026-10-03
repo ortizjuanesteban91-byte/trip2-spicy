@@ -30,3 +30,6 @@ input:user-invalid,select:user-invalid{border-color:#f59e0b!important;background
 .cta-glow-white{animation:ctaWhite 1.8s ease-in-out 2}
 
 .cta-glow-gold,.cta-glow-green,.cta-glow-white{animation-iteration-count:3!important}
+
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-zoom{animation:heroZoom 22s ease-in-out infinite alternate}

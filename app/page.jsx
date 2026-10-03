@@ -12,20 +12,20 @@ const CATSLUG = { water: "water-adventures", adventure: "adventure-safari", fami
 const CATHREF = (k) => (k === "transport" ? "/airport-transfer" : `/tours/${CATSLUG[k]}`);
 const Eyebrow = ({ children }) => <p data-aos="zoom-in" className="text-center text-[11px] font-extrabold tracking-[.25em] text-[#a97c1f]">{children}</p>;
 const H2 = ({ children }) => <><h2 data-aos="zoom-in" className="mt-2 text-center text-3xl font-black tracking-tight text-brand md:text-4xl">{children}</h2><span aria-hidden="true" className="mx-auto mt-3 block h-1 w-16 rounded-full bg-gold" /></>;
-const Btn = ({ href, children, ghost }) => <GlowLink glow={ghost ? "gold" : "white"} href={href} className={`inline-flex items-center rounded-full px-6 py-3 text-xs font-extrabold tracking-wide transition hover:-translate-y-0.5 ${ghost ? "bg-gold/35 text-white ring-1 ring-gold/70 backdrop-blur hover:bg-gold/55" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</GlowLink>;
+const Btn = ({ href, children, ghost }) => <GlowLink glow={ghost ? "white" : "white"} href={href} className={`inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-extrabold tracking-wide shadow-lg transition hover:-translate-y-0.5 ${ghost ? "bg-white/20 text-white ring-2 ring-white/70 backdrop-blur hover:bg-white/30" : "bg-brand text-white hover:bg-brand-hover"}`}>{children}</GlowLink>;
 export default async function Home() {
   const allTours = await getAll();
   const { wa: whatsapp } = await getSite();
   return (
     <main>
-      <section className="relative grid min-h-[78vh] place-items-center bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        {<img src="/tours/parasail-03.webp" alt="Turquoise Caribbean water in Punta Cana" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/60" />
+      <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
+        <img src={bigPhoto(HERO) || "/tours/parasail-03.webp"} alt="Catamaran on the turquoise Caribbean sea in Punta Cana" fetchPriority="high" className="hero-zoom absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/40" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
-          <h1 className="mt-5 text-5xl font-black leading-[1.05] text-white [text-shadow:0_2px_4px_rgba(0,0,0,.55),0_6px_28px_rgba(0,0,0,.6)] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
-          <p className="mx-auto mt-5 max-w-xl text-lg font-semibold text-white [text-shadow:0_1px_3px_rgba(0,0,0,.7),0_4px_18px_rgba(0,0,0,.55)]">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3"><Btn href="/tours">EXPLORE EXCURSIONS →</Btn><Btn href="/airport-transfer" ghost>AIRPORT TRANSFERS</Btn></div>
+          <h1 className="mt-5 text-5xl font-black leading-[1.05] text-white [text-shadow:0_2px_10px_rgba(0,0,0,.3)] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
+          <p className="mx-auto mt-5 max-w-xl text-lg font-semibold text-white [text-shadow:0_1px_6px_rgba(0,0,0,.35)]">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"><Btn href="/tours">EXPLORE EXCURSIONS →</Btn><Btn href="/airport-transfer" ghost>AIRPORT TRANSFERS</Btn></div>
           <form action="/tours" className="mx-auto mt-10 flex max-w-3xl flex-col gap-3 rounded-2xl bg-white p-3 text-left text-ink shadow-xl sm:flex-row">
             <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-[#a97c1f]">FIND YOUR TOUR</span><input name="q" placeholder="Search tours, islands, adventures" className="w-full bg-transparent py-1 text-sm outline-none" /></label>
             <button className="rounded-xl bg-brand px-8 py-3 text-sm font-bold text-white hover:bg-brand-hover">Find Tours</button>
