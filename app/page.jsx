@@ -35,11 +35,11 @@ export default async function Home() {
     <main>
       <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-12 text-center text-white sm:py-24">
         <HeroImage slides={ph.hero} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30 md:from-black/15 md:via-transparent md:to-black/25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/50 to-black/60 md:from-black/35 md:via-black/25 md:to-black/45" />
         <div className="relative max-w-4xl">
-          <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 ">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
+          <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
           <h1 className="mt-4 text-[2.5rem] font-black leading-[1.05] sm:mt-5 sm:text-5xl text-white [text-shadow:0_2px_14px_rgba(0,0,0,.55)] md:text-7xl">DISCOVER THE BEST OF PUNTA CANA</h1>
-          <p className="mx-auto mt-4 max-w-xl rounded-2xl border border-white/30 bg-black/20 px-5 py-3 text-base font-bold leading-snug sm:mt-5 sm:text-lg text-white [text-shadow:0_1px_6px_rgba(0,0,0,.9),0_0_2px_rgba(0,0,0,.7)]">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
+          <p className="mx-auto mt-4 max-w-xl rounded-2xl border border-white/30 bg-white/10 px-5 py-3 text-base font-bold leading-snug shadow-[0_8px_32px_rgba(0,0,0,.25),inset_0_1px_0_rgba(255,255,255,.35)] backdrop-blur-xl backdrop-saturate-150 sm:mt-5 sm:text-lg text-white [text-shadow:0_1px_8px_rgba(0,0,0,.85)]">Unforgettable excursions, island adventures, and authentic Dominican experiences — all curated in one place with VIP local care.</p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row"><Btn href="/tours">EXPLORE EXCURSIONS →</Btn><Btn href="/airport-transfer" ghost>AIRPORT TRANSFERS</Btn></div>
           <form action="/tours" className="mx-auto mt-7 flex max-w-3xl flex-col gap-3 rounded-2xl sm:mt-10 bg-white p-3 text-left text-ink shadow-xl sm:flex-row">
             <label className="flex-1 rounded-xl bg-ice px-4 py-2"><span className="block text-[10px] font-extrabold tracking-widest text-[#a97c1f]">FIND YOUR TOUR</span><input name="q" placeholder="Search tours, islands, adventures" className="w-full bg-transparent py-1 text-sm outline-none" /></label>
