@@ -29,7 +29,9 @@ export default function ChatWidget() {
   const [busy, setBusy] = useState(false);
   const [pi, setPi] = useState(0);
   const [tip, setTip] = useState(false);
-  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; const a = setTimeout(() => setTip(true), 4000), b = setTimeout(() => setTip(false), 10000); return () => { clearTimeout(a); clearTimeout(b); }; }, []);
+  // Pop-up comes and goes while the guest browses: 6 s on, 25 s off, until they close it or open the chat.
+  // Pop-up comes and goes while the guest browses: 6 s on, 25 s off, until they close it or open the chat.
+  useEffect(() => { let done = false; try { done = sessionStorage.getItem("t2tip") === "1"; } catch {} if (done) return; let on, off; const cycle = () => { setTip(true); off = setTimeout(() => { setTip(false); on = setTimeout(cycle, 25000); }, 6000); }; on = setTimeout(cycle, 4000); return () => { clearTimeout(on); clearTimeout(off); }; }, []);
   const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
@@ -55,15 +57,15 @@ export default function ChatWidget() {
   return (
     <>
       {!open && tip && (
-        <div className={`fixed right-3 z-[46] max-w-[190px] rounded-2xl bg-white px-6 py-3 text-center text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100 sm:right-4 ${onTour ? "bottom-[5.6rem] lg:bottom-20" : "bottom-20"}`}>
+        <div className={`fixed right-3 z-[46] max-w-[200px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100 sm:right-4 ${onTour ? "bottom-[5.6rem] lg:bottom-20" : "bottom-20"}`}>
           <button onClick={hideTip} aria-label="Close" className="absolute right-1.5 top-1 text-base leading-none text-ink/40">×</button>
-          <span className="block text-[15px] text-brand">Ask me anything</span>
-          Prices &amp; booking, right here.
+          <span className="block text-brand">Booking assistant</span>
+          Ask me anything. Tell me the tour you like and I quote and book it.
         </div>
       )}
       {!open && (
         <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
-          <span className="rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-brand shadow ring-1 ring-sky-100">Chat with us</span>
+          <span className="rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-brand shadow ring-1 ring-sky-100">Ask me anything · I quote &amp; book for you</span>
           <button onClick={() => { hideTip(); setOpen(true); }} aria-label="Chat and book" className="flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-extrabold text-white shadow-lg ring-2 ring-amber-300">
             <MessageCircle className="h-5 w-5" />Chat &amp; book
           </button>
