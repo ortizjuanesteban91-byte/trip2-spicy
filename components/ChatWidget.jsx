@@ -8,14 +8,14 @@ const hello = (n) => `Hi, I'm ${n} from Trip2! Ask me anything about our tours, 
 const CHIPS = ["Book a tour", "What's popular?", "Reservar en español"];
 const KEY = "t2chat";
 const getSid = () => { try { let s = sessionStorage.getItem(KEY + "sid"); if (!s) { s = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); sessionStorage.setItem(KEY + "sid", s); } return s; } catch { return ""; } };
-const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?])/;
+const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?]|\/tour\/[a-z0-9-]+)/;
 function Bubble({ m }) {
   const parts = m.content.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\s*[*-]\s+/gm, "• ").split(urlRe); // show plain text, no stray asterisks
   return (
     <div className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
       <div className={`max-w-[85%] whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2.5 text-[14px] leading-snug ${m.role === "user" ? "bg-brand text-white" : "bg-sky-50 text-ink"}`}>
         {parts.map((p, i) => i % 2 === 1
-          ? <a key={i} href={p} target={p.includes("wa.me") ? "_blank" : undefined} rel="noopener" className={`block break-all rounded-xl px-3 py-2 text-center font-extrabold underline ${p.includes("stripe") ? "my-1 bg-amber-300 text-ink no-underline" : "text-brand"}`}>{p.includes("stripe") ? "Pay securely now →" : p}</a>
+          ? <a key={i} href={p} target={p.includes("wa.me") ? "_blank" : undefined} rel="noopener" className={`block break-all rounded-xl px-3 py-2 text-center font-extrabold underline ${p.includes("stripe") ? "my-1 bg-amber-300 text-ink no-underline" : "text-brand"}`}>{p.includes("stripe") ? "Pay securely now →" : p.startsWith("/tour/") ? "See this tour →" : p}</a>
           : <span key={i}>{p}</span>)}
       </div>
     </div>
