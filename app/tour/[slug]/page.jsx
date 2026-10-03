@@ -12,6 +12,8 @@ import TourGallery from "@/components/TourGallery";
 import { Clock, Users, Car, Languages } from "@/components/Icon";
 import { Zap } from "lucide-react";
 export const revalidate = 60;
+// Tours using the "highlights first, booking next, full description after" layout (testing on one tour first).
+const LEAN = new Set(["saona-island"]);
 export function generateStaticParams() { return baseTours.map((t) => ({ slug: t.slug })); }
 export async function generateMetadata({ params }) {
   const t = await getTour((await params).slug);
@@ -27,6 +29,8 @@ export default async function Tour({ params }) {
   const { wa } = await getSite();
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
+  const lean = LEAN.has(t.slug) && t.sections[0]?.type === "list";
+  const top = lean ? t.sections[0].items.filter((x) => !/^(duration|pickup)/i.test(x)).slice(0, 4) : [];
   const ld = [t.schema]; // JSON-LD copied from the zip SEO Settings (TouristTrip + BreadcrumbList + FAQPage)
   return (
     <main>
@@ -42,11 +46,26 @@ export default async function Tour({ params }) {
             <div className="grid grid-cols-2 gap-5 rounded-3xl border border-sky-100 bg-ice p-5 sm:grid-cols-4" data-aos="zoom-out-right">
               {[["DURATION", String(duration).replace(/^duration:\s*/i, ""), Clock], ["GROUP SIZE", "Small groups", Users], ["RESORT PICKUP", <>Round trip <span className="text-emerald-600">✓</span></>, Car], ["LANGUAGE", "Eng & Spa", Languages]].map(([k, v, Ic]) => <div key={k} className="flex items-center gap-3"><span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-100 text-brand"><Ic className="h-5 w-5" strokeWidth={1.8} /></span><div><p className="text-[11px] font-extrabold tracking-widest text-ink/50">{k}</p><p className="text-base font-bold">{v}</p></div></div>)}
             </div>
-            <h2 className="mb-3 mt-10 text-lg font-extrabold text-ink">Tour Details</h2>
-            <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
-            <Sections sections={t.sections.slice(0, 1)} />
-            <div id="book-m" className="mt-10 scroll-mt-24 lg:hidden"><BookingBox tour={t} wa={wa} /></div>
-            <Sections sections={t.sections.slice(1)} />
+            {lean ? (
+              <>
+                <ul className="mt-6 grid gap-2.5 rounded-3xl border border-sky-100 bg-white p-5 shadow-sm sm:grid-cols-2">
+                  {top.map((x) => <li key={x} className="flex items-start gap-3 text-[15px] font-bold text-ink"><span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-[11px] text-white">✓</span>{x}</li>)}
+                </ul>
+                <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-bold text-ink/60"><span>🔒 Secure online booking</span><span>🏝️ Licensed local operators</span><span>💬 Reply on WhatsApp in minutes</span></p>
+                <div id="book-m" className="mt-8 scroll-mt-24 lg:hidden"><BookingBox tour={t} wa={wa} /></div>
+                <h2 className="mb-3 mt-12 text-lg font-extrabold text-ink">Tour Details</h2>
+                <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
+                <Sections sections={t.sections.slice(1)} />
+              </>
+            ) : (
+              <>
+                <h2 className="mb-3 mt-10 text-lg font-extrabold text-ink">Tour Details</h2>
+                <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
+                <Sections sections={t.sections.slice(0, 1)} />
+                <div id="book-m" className="mt-10 scroll-mt-24 lg:hidden"><BookingBox tour={t} wa={wa} /></div>
+                <Sections sections={t.sections.slice(1)} />
+              </>
+            )}
           </div>
           <aside id="book" className="hidden min-w-0 lg:sticky lg:top-24 lg:block lg:self-start" data-aos="zoom-in"><BookingBox tour={t} wa={wa} /></aside>
         </div>
