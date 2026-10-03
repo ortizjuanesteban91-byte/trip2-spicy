@@ -4,7 +4,7 @@ import { getSite } from "@/lib/siteconf";
 import { allTours } from "@/lib/tours";
 import { catOf, CATS } from "@/lib/content";
 import SearchBox from "@/components/SearchBox";
-import HeaderLogo from "@/components/HeaderLogo";
+import HeaderLogo, { DestBar } from "@/components/HeaderLogo";
 export default async function Header() {
   const { wa: whatsapp } = await getSite();
   const idx = (await allTours()).map((t) => ({ slug: t.slug, name: t.name, title: t.h1, keyword: t.keyword, meta: t.meta, from: t.from, catLabel: (CATS.find(([k]) => k === catOf(t.slug)) || [0, ""])[1] }));
@@ -23,6 +23,7 @@ export default async function Header() {
           <Link id="hdr-book" href="/tours" className="inline-flex min-w-[96px] items-center justify-center whitespace-nowrap rounded-full bg-brand px-3 py-2.5 text-xs font-extrabold tracking-wide text-white shadow hover:bg-brand-hover sm:px-5">BOOK NOW</Link>
         </div>
       </div>
+      <DestBar michesSlugs={michesSlugs} />
     </header>
   );
 }
