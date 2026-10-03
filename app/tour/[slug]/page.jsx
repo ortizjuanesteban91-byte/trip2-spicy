@@ -30,7 +30,7 @@ export default async function Tour({ params }) {
   const catName = (CATS.find(([k]) => k === catOf(t.slug)) || [0, t.cat])[1];
   const duration = (t.sections.find((s) => s.type === "list")?.items.find((x) => /hour|day|min/i.test(x)) || "Half Day").replace(/^(about|approx\.?)\s*/i, "");
   const lean = t.sections[0]?.type === "list";
-  const top = lean ? t.sections[0].items.filter((x) => !/^(duration|pickup)/i.test(x)).slice(0, 4).map((x) => (/free cancellation/i.test(x) ? "Reserve now, pay later" : x)) : [];
+  const top = lean ? t.sections[0].items.filter((x) => !/^(duration|pickup)/i.test(x) && !/free cancellation/i.test(x)).slice(0, 4) : [];
   const ld = [t.schema]; // JSON-LD copied from the zip SEO Settings (TouristTrip + BreadcrumbList + FAQPage)
   return (
     <main>
