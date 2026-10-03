@@ -9,12 +9,14 @@ import Reviews from "@/components/Reviews";
 import Story from "@/components/Story";
 import TrustSlider from "@/components/TrustSlider";
 import HeroImage from "@/components/HeroImage";
+const CLH = "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/";
 const HERO_SLIDES = [
-  { src: "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/image00017", alt: "Aerial view of the turquoise Caribbean sea and island near Punta Cana" },
-  { src: bigPhoto("saona-island", 2200), alt: "Saona Island beach and turquoise water" },
-  { src: bigPhoto("catamaran-party-boat", 2200), alt: "Catamaran party boat sailing off Punta Cana" },
-  { src: bigPhoto("dolphin-explorer", 2200), alt: "Dolphin experience near Punta Cana" },
-  { src: bigPhoto("los-haitises", 2200), alt: "Los Haitises National Park mangroves" },
+  { src: bigPhoto("saona-island", 2200), alt: "Aerial view of Saona Island beach and turquoise water" },
+  { src: "/tours/monkeyland-06.webp", alt: "Squirrel monkey and zipline at Monkey Land, Punta Cana" },
+  { src: "/tours/bavaro-06.webp", alt: "Buggy tour in Punta Cana" },
+  { src: "/tours/parasail-01.webp", alt: "Parasailing over the turquoise sea in Punta Cana" },
+  { src: bigPhoto("los-haitises", 2200), alt: "Aerial view of Los Haitises National Park" },
+  { src: CLH + "image00020", alt: "Friends enjoying a catamaran party boat in Punta Cana" },
 ];
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
 const GUIDE_PIC = ["catamaran-party-boat", "speedboat", "montana-redonda-miches"];
