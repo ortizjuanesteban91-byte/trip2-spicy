@@ -60,12 +60,12 @@ export default function ChatWidget() {
         <div className={`fixed right-3 z-[46] max-w-[200px] rounded-2xl bg-white p-3 pr-7 text-[13px] font-bold leading-snug text-ink shadow-xl ring-1 ring-sky-100 sm:right-4 ${onTour ? "bottom-[5.6rem] lg:bottom-20" : "bottom-20"}`}>
           <button onClick={hideTip} aria-label="Close" className="absolute right-1.5 top-1 text-base leading-none text-ink/40">×</button>
           <span className="block text-brand">Booking assistant</span>
-          Ask me anything. Tell me the tour you like and I quote and book it.
+          Ask me anything. I give exact prices and book your tour right here, no forms.
         </div>
       )}
       {!open && (
         <div className={`fixed right-3 z-[45] flex flex-col items-end gap-2 sm:right-4 ${onTour ? "max-lg:hidden bottom-5" : "bottom-5"}`}>
-          <span className="rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-brand shadow ring-1 ring-sky-100">Ask me anything · I quote &amp; book for you</span>
+          <span className="rounded-full bg-white/95 px-2.5 py-0.5 text-[10px] font-semibold text-brand/80 shadow-sm ring-1 ring-sky-100">Tell me the tour, I quote and book</span>
           <button onClick={() => { hideTip(); setOpen(true); }} aria-label="Chat and book" className="flex items-center gap-2 rounded-full bg-brand px-4 py-3 text-sm font-extrabold text-white shadow-lg ring-2 ring-amber-300">
             <MessageCircle className="h-5 w-5" />Chat &amp; book
           </button>
