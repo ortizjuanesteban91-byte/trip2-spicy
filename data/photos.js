@@ -425,7 +425,25 @@ const COMBO = {
   "montana-redonda-horseback-riding-miches": ["montana-redonda-miches", "horseback-riding-miches"],
   "montana-redonda-horseback-riding-zipline-miches": ["montana-redonda-miches", "horseback-riding-miches", "zipline-punta-cana"],
 };
-export const strip = (slug) => { const u = (COMBO[slug] || []).map(photo).filter(Boolean); return u.length >= 2 ? u : null; };
+// No picture is repeated across cards: single-tour cards keep their own first photo, and each combo strip panel takes the next photo
+// of its part that no other card is already using.
+const STRIP = (() => {
+  const used = new Set();
+  const singles = new Set([...Object.keys(LOCAL), ...Object.keys(GALLERY), ...Object.keys(P)].filter((k) => !COMBO[k]));
+  singles.forEach((k) => { const u = photo(k); if (u) used.add(u); });
+  const out = {};
+  for (const [slug, parts] of Object.entries(COMBO)) {
+    const urls = parts.map((part) => {
+      const list = (LOCAL[part] ? LOCAL[part] : GALLERY[part] ? GALLERY[part].map((id) => `${CL},w_700,h_500,c_fill/${id}`) : []);
+      const pick = list.find((u) => !used.has(u)) || photo(part);
+      if (pick) used.add(pick);
+      return pick;
+    }).filter(Boolean);
+    out[slug] = urls;
+  }
+  return out;
+})();
+export const strip = (slug) => { const u = STRIP[slug]; return u && u.length >= 2 ? u : null; };
 
 // Large version for full-width backgrounds (the card photo() is only 700px wide and looks fuzzy when stretched).
 export const bigPhoto = (slug, w = 2200) => (GALLERY[slug] ? `${CL},w_${w},c_limit,q_auto:best/${GALLERY[slug][0]}` : photo(slug));
