@@ -16,7 +16,7 @@ export default function TourGallery({ photos = [], alts = [], title = "", grads 
   const tile = (k, cls, more) => (
     <button key={k} type="button" onClick={() => setOpen(k)} aria-label={`Open photo ${k + 1} of ${n}`} className={`group relative overflow-hidden rounded-2xl ${cls}`}>
       <img src={photos[k]} alt={alt(k)} loading={k ? "lazy" : "eager"} className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-      {more && <span className="absolute inset-0 grid place-items-center bg-black/45 text-lg font-extrabold text-white">+{n - 9} more</span>}
+      {more && <span className="absolute inset-0 grid place-items-center bg-black/45 text-lg font-extrabold text-white">+{n - 5} more</span>}
     </button>
   );
   let grid;
@@ -25,7 +25,7 @@ export default function TourGallery({ photos = [], alts = [], title = "", grads 
   else if (n === 2) grid = <div className="grid gap-3 sm:grid-cols-2">{tile(0, "h-56 sm:h-80")}{tile(1, "h-44 sm:h-80")}</div>;
   else if (n === 3) grid = <div className="grid gap-3 sm:grid-cols-4 sm:grid-rows-2">{tile(0, "h-64 sm:col-span-2 sm:row-span-2 sm:h-auto")}{tile(1, "h-32 sm:col-span-2")}{tile(2, "h-32 sm:col-span-2")}</div>;
   else {
-    const shown = Math.min(n, 9);
+    const shown = Math.min(n, 5);
     const small = Array.from({ length: shown - 1 }, (_, j) => j + 1);
     grid = (
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
