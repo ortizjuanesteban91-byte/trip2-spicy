@@ -42,7 +42,7 @@ export default function HeroImage({ slides }) {
   return (
     <>
       {layers.map((l, k) => (
-        <img key={l.id} src={slides[l.i].src} alt={slides[l.i].alt} fetchPriority={k === 0 ? "high" : "auto"} className="hero-zoom absolute inset-0 h-full w-full object-cover" style={{ opacity: l.on ? 1 : 0, transition: "opacity 1.4s ease-in-out" }} />
+        <img key={l.id} src={slides[l.i].src} alt={slides[l.i].alt} fetchPriority={k === 0 ? "high" : "auto"} className={`${slides[l.i].still ? "" : "hero-zoom "}absolute inset-0 h-full w-full object-cover`} style={{ objectPosition: slides[l.i].pos || "center", opacity: l.on ? 1 : 0, transition: "opacity 1.4s ease-in-out" }} />
       ))}
     </>
   );
