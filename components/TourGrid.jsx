@@ -14,7 +14,8 @@ export default function TourGrid({ tours, cats: C, initial, initialDest, initial
   const cats = [["all", "All"], ...C];
   const [c, setC] = useState(initial);
   const [qq, setQq] = useState(initialQ);
-  const list = filterTours([...tours], qq).sort((a, b) => (a.dest === b.dest ? 0 : a.dest === "punta-cana" ? -1 : 1)).filter((t) => (d === "all" || t.dest === d) && (c === "all" || t.cats.includes(c)));
+  const searching = qq.trim().length > 0;
+  const list = filterTours([...tours], qq).sort((a, b) => (a.dest === b.dest ? 0 : a.dest === "punta-cana" ? -1 : 1)).filter((t) => searching || ((d === "all" || t.dest === d) && (c === "all" || t.cats.includes(c)))); // a search looks at ALL tours, ignoring the category and destination buttons
   return (
     <>
       <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 gap-2 rounded-full bg-white p-1.5 shadow ring-1 ring-slate-200">
@@ -24,7 +25,7 @@ export default function TourGrid({ tours, cats: C, initial, initialDest, initial
         {cats.map(([x, lbl]) => <button key={x} onClick={() => setC(x)} className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-xs font-extrabold ${c === x ? "bg-brand text-white" : "bg-white text-brand ring-1 ring-sky-200"}`}>{lbl.toUpperCase()}</button>)}
       </div>
       <input value={qq} onChange={(e) => setQq(e.target.value)} placeholder="Search excursions: ATV, Buggy, Saona…" className="mx-auto mt-4 block w-full max-w-md rounded-full border border-sky-200 bg-white px-5 py-3 text-sm" />
-      <p className="mt-4 text-center text-xs text-ink/60">{list.length} tours</p>
+      <p className="mt-4 text-center text-xs text-ink/60">{list.length} tours{searching ? " found in all categories" : ""}</p>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((t, i) => (
           <article key={t.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
