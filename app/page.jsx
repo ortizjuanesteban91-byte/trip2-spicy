@@ -19,7 +19,7 @@ export default async function Home() {
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
-        <img src={bigPhoto(HERO) || "/tours/parasail-03.webp"} alt="Catamaran on the turquoise Caribbean sea in Punta Cana" fetchPriority="high" className="hero-zoom absolute inset-0 h-full w-full object-cover" />
+        <img src="https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto:best,w_2200,c_limit/image00017" alt="Aerial view of the turquoise Caribbean sea and island near Punta Cana" fetchPriority="high" className="hero-zoom absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/40" />
         <div className="relative max-w-4xl">
           <p className="mx-auto inline-block rounded-full bg-gold/30 px-4 py-1.5 text-[11px] font-extrabold tracking-widest text-white ring-1 ring-gold/70 backdrop-blur">⭐ OFFICIAL PUNTA CANA VIP EXCURSIONS</p>
