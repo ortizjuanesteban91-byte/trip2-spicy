@@ -55,7 +55,7 @@ export default function BookingBox({ tour, wa }) {
       setState(r.ok ? "done" : "error");
     } catch { setState("error"); }
   }
-  if (state === "done") return <p className="rounded-2xl bg-white p-6 font-bold text-brand shadow">Thank you! Your request is in. You will receive your confirmation with the exact pickup time 1 day before your tour. You pay later.</p>;
+  if (state === "done") return <p className="rounded-2xl bg-white p-6 font-bold text-brand shadow">Thank you! Your request is in. Pickup is within your chosen time frame; your exact time (for example 7:15 or 7:45 AM) is sent in your confirmation 1 day before the tour. You pay later.</p>;
   const plain = "w-full rounded-2xl border border-sky-200 bg-sky-50/70 px-4 py-4 text-[15px] text-ink";
   return (
     <form onSubmit={submit} onChange={(e) => { check(e.currentTarget); setHint(""); }} onInput={(e) => check(e.currentTarget)} className="overflow-hidden rounded-[28px] border border-sky-100 bg-white shadow-lg">
@@ -81,7 +81,7 @@ export default function BookingBox({ tour, wa }) {
               </div>); })}
           </div>
           <div className={field}><Ic><Sun className="h-5 w-5" /></Ic><select name="time" required defaultValue="" className={sel}><option value="" disabled>Time of Day*</option><option>{miches ? "Morning (7AM)" : "Morning pickup · 7:00 – 8:00 AM"}</option><option>{miches ? "Afternoon (1PM)" : "Afternoon pickup · 12:00 – 2:00 PM"}</option></select><Chev /></div>
-          {!miches && <p className="-mt-1 px-1 text-xs font-semibold text-ink/55">Exact pickup time depends on your hotel area. You receive your confirmation with the exact time 1 day before your tour.</p>}
+          {!miches && <p className="-mt-1 px-1 text-xs font-semibold text-ink/55">Pickup is within the time frame above (morning 7:00 – 8:00 AM, afternoon 12:00 – 2:00 PM). Your exact time, for example 7:15 or 7:45 AM, depends on your hotel area and is sent in your confirmation 1 day before the tour.</p>}
           <div className={field}><Ic><BedDouble className="h-5 w-5" /></Ic><select name="hotel" required value={hotel} onChange={(e) => setHotel(e.target.value)} className={sel}><option value="" disabled>Hotels*</option>
             {(miches ? MICHES : PC).map((h) => <option key={h}>{h}</option>)}
             <option>Other</option></select><Chev /></div>
