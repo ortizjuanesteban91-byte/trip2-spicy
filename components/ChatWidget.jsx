@@ -7,7 +7,7 @@ import { PERSONAS } from "@/lib/personas";
 const hello = (n) => `Hi, I'm ${n} from Trip2! Ask me anything about our tours, or tell me what you'd like to book and we'll sort it out right here. ¡Hola! También hablo español.`;
 const CHIPS = ["Book a tour", "What's popular?", "Reservar en español"];
 const KEY = "t2chat";
-const getSid = () => { try { let s = sessionStorage.getItem(KEY + "sid"); if (!s) { s = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); sessionStorage.setItem(KEY + "sid", s); } return s; } catch { return ""; } };
+const getSid = () => { try { let s = localStorage.getItem(KEY + "sid"); if (!s) { s = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); localStorage.setItem(KEY + "sid", s); } return s; } catch { return ""; } };
 const urlRe = /(https?:\/\/[^\s)]+[^\s).,;!?]|\/tour\/[a-z0-9-]+)/;
 function Bubble({ m }) {
   const parts = m.content.replace(/\*\*(.+?)\*\*/g, "$1").replace(/^\s*[*-]\s+/gm, "• ").split(urlRe); // show plain text, no stray asterisks
@@ -33,9 +33,9 @@ export default function ChatWidget() {
   const hideTip = () => { setTip(false); try { sessionStorage.setItem("t2tip", "1"); } catch {} };
   const who = PERSONAS[pi] || PERSONAS[0];
   const end = useRef(null);
-  useEffect(() => { try { let i = Number(sessionStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || sessionStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); sessionStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
-  useEffect(() => { try { const s = JSON.parse(sessionStorage.getItem(KEY) || "[]"); if (Array.isArray(s)) setMsgs(s); } catch {} }, []);
-  useEffect(() => { try { sessionStorage.setItem(KEY, JSON.stringify(msgs.slice(-30))); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
+  useEffect(() => { try { let i = Number(localStorage.getItem(KEY + "p")); if (!Number.isInteger(i) || i < 0 || i >= PERSONAS.length || localStorage.getItem(KEY + "p") === null) { i = Math.floor(Math.random() * PERSONAS.length); localStorage.setItem(KEY + "p", String(i)); } setPi(i); } catch {} }, []);
+  useEffect(() => { try { const o = JSON.parse(localStorage.getItem(KEY + "v2") || "null"); if (o && Date.now() - o.t < 864e5 && Array.isArray(o.m)) setMsgs(o.m); } catch {} }, []);
+  useEffect(() => { try { if (msgs.length) localStorage.setItem(KEY + "v2", JSON.stringify({ t: Date.now(), m: msgs.slice(-30) })); } catch {} end.current?.scrollIntoView({ block: "end" }); }, [msgs, open, busy]);
   useEffect(() => { const f = () => setOpen(true); window.addEventListener("t2-chat-open", f); return () => window.removeEventListener("t2-chat-open", f); }, []);
   if (path.startsWith("/admin") || path.startsWith("/booking-")) return null;
   const onTour = path.startsWith("/tour/");
