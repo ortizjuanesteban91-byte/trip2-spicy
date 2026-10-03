@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { MessageCircle, X, Send } from "lucide-react";
 import { whatsapp } from "@/data/site";
 import { PERSONAS } from "@/lib/personas";
-const hello = (n) => `Hi, I'm ${n} from Trip2! What are you looking for: a tour, an excursion or a transfer? Tell me and we'll sort it out right here. I keep our conversation for 24 hours, so you can come back anytime and continue where we left off. ¡Hola! También hablo español.`;
+const hello = (n) => `Hi, I'm ${n} from Trip2! What are you looking for: a tour, an excursion or a transfer? Tell me and we'll sort it out right here. I keep our conversation for 24 hours, so you can come back anytime and continue where we left off.`;
 const CHIPS = ["Book a tour", "What's popular?", "Airport transfer"];
 const KEY = "t2chat";
 const getSid = () => { try { let s = localStorage.getItem(KEY + "sid"); if (!s) { s = Date.now().toString(36) + Math.random().toString(36).slice(2, 8); localStorage.setItem(KEY + "sid", s); } return s; } catch { return ""; } };
