@@ -4,9 +4,9 @@ import { getSite } from "@/lib/siteconf";
 export default async function Header() {
   const { wa: whatsapp } = await getSite();
   return (
-    <header className="sticky top-0 z-40 border-b border-sky-100/60 bg-ice/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3.5 sm:px-5">
-        <Link href="/" aria-label="Trip2 Punta Cana home"><img src="/img/logo.webp" alt="Trip2 Punta Cana" width="140" height="52" className="block h-[58px] w-auto" /></Link>
+    <header className="sticky top-0 z-40 border-b border-sky-100 bg-ice/95 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:px-5">
+        <Link href="/" aria-label="Trip2 Punta Cana home"><img src="/img/logo.webp" alt="Trip2 Punta Cana" width="140" height="52" className="block h-[46px] w-auto" /></Link>
         <nav className="hidden gap-8 text-[13px] font-bold tracking-wide md:flex" aria-label="Main">
           {nav.map(([l, h]) => <Link key={l} href={h} className="hover:text-brand-hover">{l}</Link>)}
         </nav>
