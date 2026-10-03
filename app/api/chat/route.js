@@ -3,6 +3,7 @@ import { headers, cookies } from "next/headers";
 import { TOOLS, runTool } from "@/lib/chatTools";
 import { getSite, saveSetting } from "@/lib/siteconf";
 import { allTours } from "@/lib/tours";
+import { detect, isBlocked, strike, replyFor, BLOCKED_MSG } from "@/lib/abuse";
 export const maxDuration = 60;
 const hits = new Map();
 const API = process.env.ANTHROPIC_API_URL || "https://api.anthropic.com/v1/messages";
@@ -82,6 +83,11 @@ export async function POST(req) {
   hits.set(ip, [...recent, now]);
   const msgs = clean(b.messages);
   if (!msgs.length || msgs[msgs.length - 1].role !== "user") return Response.json({ ok: false }, { status: 400 });
+  // Abuse protection: blocked visitors get a fixed message (no AI cost); sexual/violent messages get warnings, then a block, with saved evidence.
+  { const siteA = await getSite(); const ua = h.get("user-agent") || "";
+    if (await isBlocked(ip)) return Response.json({ ok: true, reply: BLOCKED_MSG(siteA.wa) });
+    const last = msgs[msgs.length - 1].content; const cat = detect(last);
+    if (cat) { const r = await strike({ ip, sid: b.sid, ua, category: cat, text: last, msgs }); const reply = replyFor(r, siteA.wa); await logChat(b.sid, [...msgs, { role: "assistant", content: reply }], b.persona); return Response.json({ ok: true, reply }); } }
   const host = h.get("x-forwarded-host") || h.get("host");
   const ctx = { origin: `${h.get("x-forwarded-proto") || "https"}://${host}`, affCode: (await cookies()).get("aff")?.value };
   const site = await getSite();
