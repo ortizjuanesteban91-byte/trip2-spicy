@@ -51,7 +51,7 @@ export default async function Tour({ params }) {
                 <ul className="mt-6 grid gap-2.5 rounded-3xl border border-sky-100 bg-white p-5 shadow-sm sm:grid-cols-2">
                   {top.map((x) => <li key={x} className="flex items-start gap-3 text-[15px] font-bold text-ink"><span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-[11px] text-white">✓</span>{x}</li>)}
                 </ul>
-                <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-bold text-ink/60"><span>🔒 Secure online booking</span><span>🏝️ Licensed local operators</span><span>💬 Reply on WhatsApp in minutes</span></p>
+                <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-bold text-ink/60"><span>🔒 Secure online booking</span><span>🏝️ Licensed local operators</span><span>💬 Our chat guides you step by step, quick replies</span></p>
                 <div id="book-m" className="mt-8 scroll-mt-24 lg:hidden"><BookingBox tour={t} wa={wa} /></div>
                 <h2 className="mb-3 mt-12 text-lg font-extrabold text-ink">Tour Details</h2>
                 <div data-aos="zoom-out-left">{t.intro.map((p, k) => <p key={k} className="mb-3 leading-7 text-ink/80">{p}</p>)}</div>
