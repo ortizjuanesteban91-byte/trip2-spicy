@@ -67,6 +67,16 @@ const LOCAL = {
   "/tours/monkeyland-08.webp",
   "/tours/monkeyland-10.webp"
  ],
+ "scuba-doo-punta-cana": [
+  "/tours/scuba-doo-01.webp",
+  "/tours/scuba-doo-02.webp",
+  "/tours/scuba-doo-03.webp",
+  "/tours/scuba-doo-04.webp",
+  "/tours/scuba-doo-05.webp",
+  "/tours/scuba-doo-06.webp",
+  "/tours/scuba-doo-07.webp",
+  "/tours/scuba-doo-08.webp"
+ ],
  "parasailing": [
   "/tours/parasail-04.webp",
   "/tours/parasail-05.webp",
