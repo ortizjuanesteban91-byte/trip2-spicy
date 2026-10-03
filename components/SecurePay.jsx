@@ -28,7 +28,7 @@ const Stripe = () => <svg viewBox="0 0 60 30" width="58" height="29" role="img" 
 export function TrustTop() {
   return (
     <div className="mt-3 grid gap-2">
-      <div className="flex items-center gap-2 rounded-xl bg-gold px-3 py-2 text-[13px] font-extrabold text-[#2a1f00] shadow-sm ring-1 ring-[#b8912f]">
+      <div className="flex items-center gap-2 rounded-xl bg-brand px-3 py-2 text-[13px] font-extrabold text-white shadow-sm">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4M9 15l2 2 4-4" /></svg>
         Reserve now, pay later
       </div>
