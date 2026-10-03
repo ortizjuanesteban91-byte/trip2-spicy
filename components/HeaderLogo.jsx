@@ -15,7 +15,7 @@ export default function HeaderLogo({ michesSlugs = [] }) {
   const miches = host || dest || path === "/m" || path.startsWith("/m/") || michesSlugs.includes(slug);
   return (
     <Link href={miches ? "/m" : "/"} aria-label={miches ? "Trip2 Miches home" : "Trip2 Punta Cana home"}>
-      <img src={miches ? "/img/logo-miches.webp" : "/img/logo.webp"} alt={miches ? "Trip2 Miches" : "Trip2 Punta Cana"} width="140" height="52" className="block h-[58px] w-auto" />
+      <img src={miches ? "/img/logo-miches.webp?v=2" : "/img/logo.webp"} alt={miches ? "Trip2 Miches" : "Trip2 Punta Cana"} width="140" height="52" className="block h-[58px] w-auto" />
     </Link>
   );
 }
