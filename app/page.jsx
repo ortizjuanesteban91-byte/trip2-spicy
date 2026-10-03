@@ -13,7 +13,7 @@ import RatingBadge from "@/components/RatingBadge";
 import StarBadge from "@/components/StarBadge";
 import { getSitePhotos } from "@/lib/sitephotos";
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
-const GUIDE_PIC = ["catamaran-party-boat", "speedboat", "montana-redonda-miches"];
+const GUIDE_PIC = ["catamaran-party-boat", "saona-island", "montana-redonda-miches"];
 const CATPOS = {};
 const CATURL = { miches: "https://res.cloudinary.com/o3hobtr4/image/upload/f_auto,q_auto,w_900,h_700,c_fill/a" };
 const CATPIC = { water: "saona-island", adventure: "atv-punta-cana", family: "dolphin-explorer", eco: "los-haitises", culture: "santo-domingo", nightlife: "coco-bongo", miches: "atv-miches" };
