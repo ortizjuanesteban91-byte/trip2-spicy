@@ -2,9 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { photo, strip } from "@/data/photos";
+import RatingBadge from "@/components/RatingBadge";
 const money = (n) => `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
 const GR = ["from-sky-300 to-teal-700", "from-emerald-300 to-emerald-800", "from-amber-200 to-lime-700", "from-cyan-200 to-blue-700", "from-green-300 to-teal-800", "from-slate-300 to-slate-700"];
-export default function TourGrid({ tours, cats: C, initial, initialDest, initialQ = "", ov = {} }) {
+export default function TourGrid({ tours, cats: C, initial, initialDest, initialQ = "", ov = {}, rt = null }) {
   const [d, setD] = useState(initialDest);
   const cats = [["all", "All"], ...C];
   const [c, setC] = useState(initial);
@@ -27,7 +28,7 @@ export default function TourGrid({ tours, cats: C, initial, initialDest, initial
             <div className="p-5">
               <div data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p>
               <h2 className="mt-1 text-lg font-extrabold leading-snug">{t.title}</h2>
-              <p className="mt-2 text-xs text-ink/60">Verified Guide · Hotel pickup</p></div>
+              <RatingBadge rt={rt} /></div>
               <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">{money(t.from)}</b> / person</p><Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs font-extrabold text-white after:absolute after:inset-0 after:z-20 after:content-[''] hover:bg-brand-hover">VIEW TOUR</Link></div>
             </div>
           </article>

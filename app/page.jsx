@@ -9,6 +9,8 @@ import Reviews from "@/components/Reviews";
 import Story from "@/components/Story";
 import TrustSlider from "@/components/TrustSlider";
 import HeroImage from "@/components/HeroImage";
+import RatingBadge from "@/components/RatingBadge";
+import { getReviews } from "@/lib/reviews";
 import { getSitePhotos } from "@/lib/sitephotos";
 const IT_PIC = ["buggy", "saona-island", "coco-bongo"];
 const GUIDE_PIC = ["catamaran-party-boat", "speedboat", "montana-redonda-miches"];
@@ -24,6 +26,7 @@ export default async function Home() {
   const allTours = await getAll();
   const { wa: whatsapp } = await getSite();
   const ph = await getSitePhotos();
+  const rt = await getReviews();
   return (
     <main>
       <section className="relative grid min-h-[78vh] place-items-center overflow-hidden bg-gradient-to-b from-teal-700 via-teal-600 to-cyan-500 px-5 py-24 text-center text-white">
@@ -56,7 +59,7 @@ export default async function Home() {
           {["saona-island","atv-punta-cana","catamaran-party-boat"].map((x) => allTours.find((t) => t.slug === x)).filter(Boolean).map((t, i) => (
             <article key={t.slug} className="relative cursor-pointer overflow-hidden transition hover:-translate-y-1 hover:shadow-xl rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
               <div className="relative h-52 overflow-hidden"><div data-aos="zoom-out-right" className="absolute inset-0 bg-gradient-to-br from-emerald-300 to-teal-700" />{strip(t.slug) && !ph.cards[t.slug] ? <div data-aos="zoom-out-right" className="absolute inset-0 flex gap-0.5">{strip(t.slug).map((u, k) => <img key={k} src={u} alt={k ? "" : t.name} loading="lazy" className="h-full min-w-0 flex-1 object-cover" />)}</div> : (ph.cards[t.slug] || photo(t.slug)) && <img data-aos="zoom-out-right" src={ph.cards[t.slug] || photo(t.slug)} alt={t.name} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />}<span className="absolute left-3 top-3 z-10 pointer-events-none rounded-full bg-amber-400 px-3 py-1 text-[10px] font-extrabold">FEATURED</span></div>
-              <div className="p-5"><div data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t.name}</h3><p className="mt-2 text-xs text-ink/60">Half Day · Verified Guide</p></div>
+              <div className="p-5"><div data-aos="zoom-out-left"><p className="text-[10px] font-extrabold tracking-widest text-brand/70">EXCURSION</p><h3 className="mt-1 text-lg font-extrabold leading-snug">{t.name}</h3><RatingBadge rt={rt} /></div>
                 <div className="mt-4 flex items-end justify-between"><p className="text-xs text-ink/60">From<br /><b className="text-2xl text-brand">${Number.isInteger(t.from) ? t.from : t.from.toFixed(2)}</b> / person</p><Link href={`/tour/${t.slug}`} className="rounded-full bg-brand px-5 py-2.5 text-xs after:absolute after:inset-0 after:z-20 after:content-[''] font-extrabold text-white hover:bg-brand-hover">VIEW TOUR</Link></div></div>
             </article>
           ))}

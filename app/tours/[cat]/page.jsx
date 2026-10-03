@@ -4,6 +4,7 @@ import { allTours } from "@/lib/tours";
 import { SITE } from "@/lib/site";
 import TourGrid from "@/components/TourGrid";
 import { getSitePhotos } from "@/lib/sitephotos";
+import { getReviews } from "@/lib/reviews";
 
 const CATPAGES = {
   "water-adventures": ["water", "Water Adventures in Punta Cana", "Saona Island, catamaran and party boats, speedboats, parasailing, snorkeling and deep sea fishing. Hotel pickup and free cancellation."],
@@ -26,7 +27,7 @@ export default async function Page({ params }) {
   return (
     <main>
       <section className="bg-brand px-5 py-16 text-center text-white"><h1 className="text-4xl font-black" data-aos="zoom-in">{c[1]}</h1><p className="mx-auto mt-3 max-w-2xl text-sm text-white/85">{c[2]}</p></section>
-      <div className="mx-auto max-w-6xl px-5 py-10"><TourGrid ov={(await getSitePhotos()).cards} tours={list} cats={CATS} initialDest="all" initial={c[0]} /></div>
+      <div className="mx-auto max-w-6xl px-5 py-10"><TourGrid rt={await getReviews()} ov={(await getSitePhotos()).cards} tours={list} cats={CATS} initialDest="all" initial={c[0]} /></div>
     </main>
   );
 }
