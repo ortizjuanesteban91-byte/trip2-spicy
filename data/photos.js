@@ -58,14 +58,11 @@ const LOCAL = {
  ],
  "monkeyland": [
   "/tours/monkeyland-01.webp",
-  "/tours/monkeyland-02.webp",
   "/tours/monkeyland-03.webp",
   "/tours/monkeyland-04.webp",
   "/tours/monkeyland-05.webp",
   "/tours/monkeyland-06.webp",
-  "/tours/monkeyland-07.webp",
-  "/tours/monkeyland-08.webp",
-  "/tours/monkeyland-10.webp"
+  "/tours/monkeyland-07.webp"
  ],
  "scuba-doo-punta-cana": [
   "/tours/scuba-doo-01.webp",
@@ -264,14 +261,6 @@ const LOCAL = {
   "/tours/miches-11.webp",
   "/tours/miches-07.webp"
  ],
- "bavaro-runners": [
-  "/tours/bavaro-06.webp",
-  "/tours/bavaro-12.webp",
-  "/tours/bavaro-09.webp",
-  "/tours/bavaro-01.webp",
-  "/tours/bavaro-11.webp",
-  "/tours/bavaro-07.webp"
- ],
 };
 Object.assign(LOCAL, {
  "catalina-island": [
@@ -282,45 +271,6 @@ Object.assign(LOCAL, {
   "/tours/catalina-08.webp",
   "/tours/catalina-01.webp"
  ],
- "whale-watching-cayo-levantado": [
-  "/tours/samana-02.webp",
-  "/tours/samana-08.webp",
-  "/tours/samana-06.webp",
-  "/tours/samana-03.webp"
- ],
- "whale-watching-el-limon": [
-  "/tours/samana-02.webp",
-  "/tours/samana-06.webp",
-  "/tours/samana-01.webp",
-  "/tours/samana-08.webp"
- ],
- "whale-watching-half-day": [
-  "/tours/samana-02.webp",
-  "/tours/samana-08.webp",
-  "/tours/samana-03.webp",
-  "/tours/samana-05.webp"
- ],
- "el-limon-cayo-levantado": [
-  "/tours/samana-01.webp",
-  "/tours/samana-06.webp",
-  "/tours/samana-08.webp",
-  "/tours/samana-03.webp",
-  "/tours/samana-05.webp",
-  "/tours/samana-07.webp"
- ],
- "playa-rincon-cayo-levantado": [
-  "/tours/samana-03.webp",
-  "/tours/samana-08.webp",
-  "/tours/samana-05.webp",
-  "/tours/samana-02.webp"
- ],
- "best-beaches-samana": [
-  "/tours/samana-03.webp",
-  "/tours/samana-08.webp",
-  "/tours/samana-05.webp",
-  "/tours/samana-02.webp",
-  "/tours/samana-04.webp"
- ]
 });
 const GALLERY_X = {
  "dolphin-explorer": [
@@ -396,6 +346,232 @@ const GALLERY_X = {
  ]
 };
 Object.assign(GALLERY, GALLERY_X);
+
+// OHANA tours (#32-41): their own photos from Ohana's Drive, on Cloudinary under trip2/ohana/.
+Object.assign(GALLERY, {
+ "best-beaches-samana": ["trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-01", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-02", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-03", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-04", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-05", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-06", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-07", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-08", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-09", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-10", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-11", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-12", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-13", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-14", "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-15"],
+ "whale-watching-cayo-levantado": [
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-01",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-01",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-02",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-02",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-03",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-03",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-04",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-04",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-05",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-05",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-06",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-06",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-07",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-07",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-08"
+ ],
+ "whale-watching-el-limon": [
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-01",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-01",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-02",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-02",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-03",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-03",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-04",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-04",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-05",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-05",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-06",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-06",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-07",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-07",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-08"
+ ],
+ "whale-watching-half-day": [
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-01",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-02",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-03",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-04",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-05",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-06",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-07",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-08",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-09",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-10",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-11",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-12",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-13",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-14",
+  "trip2/ohana/whales-watching-samana/whales-watching-samana-15"
+ ],
+ "el-limon-cayo-levantado": [
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-01",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-01",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-02",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-02",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-03",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-03",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-04",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-04",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-05",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-05",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-06",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-06",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-07",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-07",
+  "trip2/ohana/el-limon-waterfall-bacardi-island/el-limon-waterfall-bacardi-island-08"
+ ],
+ "playa-rincon-cayo-levantado": [
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-01",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-01",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-02",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-02",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-03",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-03",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-04",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-04",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-05",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-05",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-06",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-06",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-07",
+  "trip2/ohana/cayo-levantado-full-day/cayo-levantado-full-day-07",
+  "trip2/ohana/best-beaches-samana-tour-rincon-bacardi-island/best-beaches-samana-tour-rincon-bacardi-island-08"
+ ],
+ "higuey-city-tour": [
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-01",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-02",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-03",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-04",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-05",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-06",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-07",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-08",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-09",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-10",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-11",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-12",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-13",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-14",
+  "trip2/ohana/higuey-city-tour-half-day/higuey-city-tour-half-day-15"
+ ],
+ "triple-adventure": [
+  "trip2/ohana/triple-adventures/triple-adventures-01",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-01",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-01",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-01",
+  "trip2/ohana/triple-adventures/triple-adventures-02",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-02",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-02",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-02",
+  "trip2/ohana/triple-adventures/triple-adventures-03",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-03",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-03",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-03",
+  "trip2/ohana/triple-adventures/triple-adventures-04",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-04",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-04"
+ ],
+ "bavaro-runners": [
+  "trip2/ohana/bavaro-runners/bavaro-runners-01",
+  "trip2/ohana/bavaro-runners/bavaro-runners-02",
+  "trip2/ohana/bavaro-runners/bavaro-runners-03",
+  "trip2/ohana/bavaro-runners/bavaro-runners-04",
+  "trip2/ohana/bavaro-runners/bavaro-runners-05",
+  "trip2/ohana/bavaro-runners/bavaro-runners-06",
+  "trip2/ohana/bavaro-runners/bavaro-runners-07",
+  "trip2/ohana/bavaro-runners/bavaro-runners-08",
+  "trip2/ohana/bavaro-runners/bavaro-runners-09",
+  "trip2/ohana/bavaro-runners/bavaro-runners-10",
+  "trip2/ohana/bavaro-runners/bavaro-runners-11",
+  "trip2/ohana/bavaro-runners/bavaro-runners-12",
+  "trip2/ohana/bavaro-runners/bavaro-runners-13",
+  "trip2/ohana/bavaro-runners/bavaro-runners-14",
+  "trip2/ohana/bavaro-runners/bavaro-runners-15"
+ ],
+ "ohana-jungle-buggies": [
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-01",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-02",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-03",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-04",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-05",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-06",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-07",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-08",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-09",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-10",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-11",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-12",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-13",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-14",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-15"
+ ],
+ "ohana-monkeyland": [
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-01",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-02",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-03",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-04",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-05",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-06",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-07",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-08",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-09",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-10",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-11",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-12",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-13",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-14",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-15"
+ ],
+ "ohana-ziplines": [
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-01",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-02",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-03",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-04",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-05",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-06",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-07",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-08",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-09",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-10",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-11",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-12",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-13",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-14",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-15"
+ ],
+ "buggy-monkeyland": [
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-01",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-01",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-02",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-02",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-03",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-03",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-04",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-04",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-05",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-05",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-06",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-06",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-07",
+  "trip2/ohana/monkeyland-safari-half-day/monkeyland-safari-half-day-07",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-08"
+ ],
+ "buggy-zipline": [
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-01",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-01",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-02",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-02",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-03",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-03",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-04",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-04",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-05",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-05",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-06",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-06",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-07",
+  "trip2/ohana/ziplines-adventures/ziplines-adventures-07",
+  "trip2/ohana/jungle-buggies-adventures/jungle-buggies-adventures-08"
+ ]
+});
 GALLERY["safari"] = ["trip2/supreme-true-safari/supreme-true-safari-07", "trip2/supreme-true-safari/supreme-true-safari-10", "trip2/supreme-true-safari/supreme-true-safari-04", "trip2/supreme-true-safari/supreme-true-safari-05", "trip2/supreme-true-safari/supreme-true-safari-03", "trip2/supreme-true-safari/supreme-true-safari-02", "trip2/supreme-true-safari/supreme-true-safari-06", "trip2/supreme-true-safari/supreme-true-safari-08", "trip2/supreme-true-safari/supreme-true-safari-09", "trip2/supreme-true-safari/supreme-true-safari-01", "trip2/supreme-true-safari/supreme-true-safari-11", "trip2/supreme-true-safari/supreme-true-safari-12"]; // Supreme True Safari (Cloudinary)
 const own = (slug, w) => LOCAL[slug] ? LOCAL[slug] : (GALLERY[slug] ? GALLERY[slug].map((id) => `${CL},w_${w}/${id}`) : null);
 // Combo tours (no photos of their own) borrow photos from their parts, interleaved so every part shows up in the first four.
@@ -416,9 +592,9 @@ export const photo = (slug) => CARDLOCAL[slug] ? CARDLOCAL[slug] : CARDPIC[slug]
 const COMBO = {
   "catamaran-parasailing-snorkeling": ["catamaran-party-boat", "parasailing"],
   "monkeyland-zipline": ["monkeyland", "zipline-punta-cana"],
-  "buggy-monkeyland": ["buggy", "monkeyland"],
-  "buggy-zipline": ["buggy", "zipline-punta-cana"],
-  "triple-adventure": ["buggy", "zipline-punta-cana", "monkeyland"],
+  "buggy-monkeyland": ["ohana-jungle-buggies", "ohana-monkeyland"],
+  "buggy-zipline": ["ohana-jungle-buggies", "ohana-ziplines"],
+  "triple-adventure": ["ohana-jungle-buggies", "ohana-ziplines", "ohana-monkeyland"],
   "montana-redonda-atv-from-punta-cana": ["montana-redonda-from-punta-cana", "atv-punta-cana"],
   "montana-redonda-atv-zipline-from-punta-cana": ["montana-redonda-from-punta-cana", "atv-punta-cana", "zipline-punta-cana"],
   "montana-redonda-atv-miches": ["montana-redonda-miches", "atv-miches"],
